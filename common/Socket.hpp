@@ -5,6 +5,7 @@
 #include <sys/socket.h>
 #include <unistd.h>
 #include <utility>
+#include <iostream>
 
 
 class Socket {
@@ -54,6 +55,28 @@ public:
         if (!is_valid())
             return -1;
         return ::recv(fd_, buffer, capacity, 0);
+    }
+
+    std::string *receive_line() {
+        std::string *result = new std::string {};
+        std::string client_response {};
+        while (true) {
+            client_response.resize(1024);
+            ssize_t bytes_received =
+                recv(client_response.data(), client_response.size() - 1);
+            if (bytes_received <= 0)
+                return NULL;
+            std::cout << bytes_received << std::endl;
+            if (client_response[client_response.size() - 1] != '\n') {
+                std::cout << "a: "<< client_response << std::endl;
+                result->append(client_response);
+                continue;
+            } else {
+                std::cout << "b: "<< client_response << std::endl;
+                result->append(client_response);
+                return (result);
+            }
+        }
     }
 
 };

@@ -9,4 +9,4 @@
 #include "../common/Socket.hpp"
 
 
-void client_loop(Socket&);
+void client_loop(Socket);

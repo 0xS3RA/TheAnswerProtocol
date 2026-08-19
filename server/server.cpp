@@ -1,5 +1,8 @@
 #include "server.hpp"
+#include <cstdlib>
+#include <netinet/in.h>
 #include <thread>
+#include <vector>
 
 // 1 : Parser le/les fichiers .yaml pour instancier l'instance world
 
@@ -10,6 +13,20 @@
 
 // 4 : Réécris le serveur avec Asio pour découvrir le réseau asynchrone moderne.
 
+
+
+int accept_loop(struct sockaddr_in addr, Socket &server_socket) {
+    std::vector<std::jthread> thread_vector {};
+
+    while (true) {
+        socklen_t socklen = sizeof(addr);
+        std::cout << "Waiting for connection ..." << std::endl;
+        Socket client_socket(accept(server_socket.get(), reinterpret_cast<struct sockaddr *>(&addr), &socklen));
+        if (client_socket.get() < 0)
+            return (perror("Accept error"), EXIT_FAILURE);
+        thread_vector.emplace_back(client_loop, std::move(client_socket));
+    }
+}
 
 int main() {
     struct sockaddr_in addr = {};
@@ -32,12 +49,5 @@ int main() {
         return EXIT_FAILURE;
     }
 
-    while (true) {
-        socklen_t socklen = sizeof(addr);
-        std::cout << "Waiting for connection ..." << std::endl;
-        Socket client_socket(accept(server_socket.get(), reinterpret_cast<struct sockaddr *>(&addr), &socklen));
-        if (client_socket.get() < 0)
-            return (perror("Accept error"), EXIT_FAILURE);
-        client_loop(client_socket);
-    }
+    return (accept_loop(addr, server_socket) == EXIT_FAILURE);
 }

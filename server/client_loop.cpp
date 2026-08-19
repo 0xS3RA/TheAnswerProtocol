@@ -3,28 +3,36 @@
 #include <sys/socket.h>
 #include <unistd.h>
 
-void client_loop(Socket &client_socket) {
+
+// 1. Créer un .receive_line dans le wrapper Socket pour le protocole réseau.
+//    Il faut
+
+void client_loop(Socket client_socket) {
    std::cout << "Connected to someone !" << std::endl;
 
-   write(client_socket.get(), "Welcome !", 9);
+   constexpr std::string_view welcome = "Welcome!";
+   client_socket.send(welcome);
 
-   std::string help_menu {"Help menu : \n:attack  - Attack an ennemy\n"};
+   constexpr std::string_view help_menu =
+       "\nHelp menu :\n"
+       "> :attack  - Attack an ennemy\n"
+       "> :help    - Display this menu\n"
+       "> :quit    - Quit the game and close the client\n";
 
-   char client_response[1024];
-   char server_response[1024];
-
-   memset(client_response, 0, 1023);
-   memset(server_response, 0, 1023);
 
    while (true) {
-       recv(client_socket.get(), client_response, sizeof(client_response), 0);
-       std::cout << client_response;
-       if (strcmp(client_response, ":help") == 0) {
-           std::cout << "> Received help menu request" << std::endl;
-           write(client_socket.get(), help_menu.c_str(), help_menu.length());
+       auto message = client_socket.receive_line();
+       if (!message) return;
+
+       std::cout << message;
+       if (*message == ":help") {
+           std::cout << " > Received help menu request from " << client_socket.get() << std::endl;
+           client_socket.send(help_menu);
+       } else if (*message == ":quit") {
+           break;
        } else {
-           std::cout << "> Received something" << std::endl;
-           write(client_socket.get(), "Caca", 4);
+           std::cout << " > Received something from " << client_socket.get() << std::endl;
+           client_socket.send("\nAccusé de réception");
        }
    }
    return;

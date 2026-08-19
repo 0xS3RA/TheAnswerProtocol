@@ -6,9 +6,9 @@ DEBUG_FLAGS = $(FLAGS) -ggdb3 -O0
 
 SERVER_SRC = server/server.cpp server/client_loop.cpp
 
-GUI_FILES = gui/gui.cpp
+GUI_SRC = gui/gui.cpp
 
-CLI_FILES = cli/cli.cpp
+CLI_SRC = cli/cli.cpp
 
 
 SERVER_BIN = bin/server
@@ -24,12 +24,12 @@ server: $(SERVER_SRC)
 	@echo "Compiling server binary..."
 	$(COMPILER) $(FLAGS) $(SERVER_SRC) -o $(SERVER_BIN)
 
-gui:
+gui: $(GUI_SRC)
 	@echo "Compiling gui client's binary..."
 	$(COMPILER) $(FLAGS) $(GUI_SRC) -o $(GUI_BIN)
 
 
-cli:
+cli: $(CLI_SRC)
 	@echo "Compiling cli client's binary..."
 	$(COMPILER) $(FLAGS) $(CLI_SRC) -o $(CLI_BIN)
 
