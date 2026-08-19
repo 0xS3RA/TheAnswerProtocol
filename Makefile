@@ -1,52 +1,58 @@
 COMPILER = c++
 
-FLAGS = -Wextra -Werror -Wall -fsanitize=address,undefined
+FLAGS = -std=c++20 -Wextra -Werror -Wall -fsanitize=address,undefined
 
 DEBUG_FLAGS = $(FLAGS) -ggdb3 -O0
 
-SERVER_FILES =
+SERVER_SRC = server/server.cpp server/client_loop.cpp
 
-GUI_FILES =
+GUI_FILES = gui/gui.cpp
 
-CLI_FILES =
-
-
+CLI_FILES = cli/cli.cpp
 
 
-server:
+SERVER_BIN = bin/server
+GUI_BIN = bin/gui
+CLI_BIN = bin/cli
+
+.PHONY: all server gui cli clean fclean re \
+		all-debug server-debug gui-debug cli-debug
+
+all: server gui cli
+
+server: $(SERVER_SRC)
 	@echo "Compiling server binary..."
-	$(COMPILER) $(FLAGS) $(SERVER_FILES)
+	$(COMPILER) $(FLAGS) $(SERVER_SRC) -o $(SERVER_BIN)
 
 gui:
 	@echo "Compiling gui client's binary..."
-	$(COMPILER) $(FLAGS) $(GUI_FILES)
+	$(COMPILER) $(FLAGS) $(GUI_SRC) -o $(GUI_BIN)
 
 
 cli:
 	@echo "Compiling cli client's binary..."
-	$(COMPILER) $(FLAGS) $(CLI_FILES)
+	$(COMPILER) $(FLAGS) $(CLI_SRC) -o $(CLI_BIN)
 
 
-all: server gui cli
-
-
-all-debug:
-	@echo "Compiling debug server binary..."
-	$(COMPILER) $(DEBUG_FLAGS) $(SERVER_FILES)
-	@echo "Compiling debug gui client's binary"
-	$(COMPILER) $(DEBUG_FLAGS) $(GUI_FILES)
-	@echo "Compiling debug cli client's binary..."
-	$(COMPILER) $(DEBUG_FLAGS) $(CLI_FILES)
-
+all-debug: server-debug gui-debug cli-debug
 
 server-debug:
 	@echo "Compiling debug server binary..."
-	$(COMPILER) $(DEBUG_FLAGS) $(SERVER_FILES)
+	$(COMPILER) $(DEBUG_FLAGS) $(SERVER_SRC) -o $(SERVER_BIN)
 
 gui-debug:
 	@echo "Compiling debug gui client's binary"
-	$(COMPILER) $(DEBUG_FLAGS) $(GUI_FILES)
+	$(COMPILER) $(DEBUG_FLAGS) $(GUI_SRC) -o $(GUI_BIN)
 
 cli-debug:
 	@echo "Compiling debug cli client's binary..."
-	$(COMPILER) $(DEBUG_FLAGS) $(CLI_FILES)
+	$(COMPILER) $(DEBUG_FLAGS) $(CLI_SRC) -o $(CLI_BIN)
+
+
+clean:
+	rm -rf $(SERVER_BIN) $(GUI_BIN) $(CLI_BIN)
+
+fclean: clean
+	rm *.o
+
+re: fclean all

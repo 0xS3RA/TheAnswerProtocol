@@ -45,7 +45,7 @@ public:
 
 
     ssize_t send(std::string_view data) const {
-        if (is_valid())
+        if (!is_valid())
             return -1;
         return ::send(fd_, data.data(), data.size(), 0);
     }

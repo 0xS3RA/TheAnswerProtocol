@@ -1,7 +1,7 @@
 #include "server.hpp"
+#include <thread>
 
-// 1 : Écris un petit serveur TCP monothread en C++ avec les fonctions POSIX
-// (sys/socket.h) qui accepte un client, lit une ligne, réponds et se ferme.
+// 1 : Parser le/les fichiers .yaml pour instancier l'instance world
 
 // 2 : Ajoute une boucle while(true) et std::thread pour gérer plusieurs clients
 // en même temps.
@@ -12,9 +12,9 @@
 
 
 int main() {
-    struct sockaddr_in addr = {0};
+    struct sockaddr_in addr = {};
     addr.sin_family = AF_INET;
-    addr.sin_port = htons(1337);
+    addr.sin_port = htons(1332);
     inet_pton(AF_INET, "127.0.0.1", &addr.sin_addr);
 
 
@@ -34,6 +34,7 @@ int main() {
 
     while (true) {
         socklen_t socklen = sizeof(addr);
+        std::cout << "Waiting for connection ..." << std::endl;
         Socket client_socket(accept(server_socket.get(), reinterpret_cast<struct sockaddr *>(&addr), &socklen));
         if (client_socket.get() < 0)
             return (perror("Accept error"), EXIT_FAILURE);
