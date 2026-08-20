@@ -48,7 +48,9 @@ public:
     ssize_t send(std::string_view data) const {
         if (!is_valid())
             return -1;
-        return ::send(fd_, data.data(), data.size(), 0);
+        std::string modified_data {data};
+        modified_data += "\n";
+        return ::send(fd_, modified_data.data(), modified_data.size(), 0);
     }
 
     ssize_t recv(char *buffer, size_t capacity) const {
@@ -57,24 +59,21 @@ public:
         return ::recv(fd_, buffer, capacity, 0);
     }
 
-    std::string *receive_line() {
-        std::string *result = new std::string {};
-        std::string client_response {};
+    std::string receive_line() {
+        std::string result = {};
+        char buffer[1024];
+
         while (true) {
-            client_response.resize(1024);
+            std::cout << "Waiting to receive data..." << std::endl;
             ssize_t bytes_received =
-                recv(client_response.data(), client_response.size() - 1);
-            if (bytes_received <= 0)
-                return NULL;
-            std::cout << bytes_received << std::endl;
-            if (client_response[client_response.size() - 1] != '\n') {
-                std::cout << "a: "<< client_response << std::endl;
-                result->append(client_response);
-                continue;
-            } else {
-                std::cout << "b: "<< client_response << std::endl;
-                result->append(client_response);
-                return (result);
+                recv(buffer, sizeof(buffer));
+            if (bytes_received <= 0) {
+                std::cout << "Client disconnected : " << get() << std::endl;
+                return "";
+            }
+            result.append(buffer, bytes_received);
+            if (result.find('\n') != std::string::npos){
+                return result;
             }
         }
     }

@@ -1,22 +1,17 @@
 #include "cli.hpp"
 
 void game_loop(Socket &server_socket) {
-    char server_response[1024];
     std::string client_response {};
-    memset(server_response, 0, 1024);
 
     while (true) {
-        memset(server_response, 0, 1024);
-        int bytes_received = recv(server_socket.get(), server_response, 1023, 0);
-        if (bytes_received <= 0) break;
-        if (strcmp(server_response, "endsig") == 0)
-            break;
+        auto server_response = server_socket.receive_line();
+        if (server_response == "") return;
+        if (server_response == "endsig") break;
 
         std::cout << server_response << std::endl;
 
         std::getline(std::cin, client_response);
-        send(server_socket.get(), client_response.c_str(),
-             client_response.length(), 0);
+        server_socket.send(client_response);
     }
 }
 

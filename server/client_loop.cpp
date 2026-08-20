@@ -22,13 +22,13 @@ void client_loop(Socket client_socket) {
 
    while (true) {
        auto message = client_socket.receive_line();
-       if (!message) return;
+       if (message == "") return;
 
        std::cout << message;
-       if (*message == ":help") {
+       if (message == ":help\n") {
            std::cout << " > Received help menu request from " << client_socket.get() << std::endl;
            client_socket.send(help_menu);
-       } else if (*message == ":quit") {
+       } else if (message == ":quit") {
            break;
        } else {
            std::cout << " > Received something from " << client_socket.get() << std::endl;

@@ -20,7 +20,6 @@ int accept_loop(struct sockaddr_in addr, Socket &server_socket) {
 
     while (true) {
         socklen_t socklen = sizeof(addr);
-        std::cout << "Waiting for connection ..." << std::endl;
         Socket client_socket(accept(server_socket.get(), reinterpret_cast<struct sockaddr *>(&addr), &socklen));
         if (client_socket.get() < 0)
             return (perror("Accept error"), EXIT_FAILURE);

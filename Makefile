@@ -38,7 +38,7 @@ all-debug: server-debug gui-debug cli-debug
 
 server-debug:
 	@echo "Compiling debug server binary..."
-	$(COMPILER) $(DEBUG_FLAGS) $(SERVER_SRC) -o $(SERVER_BIN)
+	$(COMPILER) $(DEBUG_FLAGS) $(SERVER_SRC) -o $(SERVER_BIN)_debug
 
 gui-debug:
 	@echo "Compiling debug gui client's binary"
