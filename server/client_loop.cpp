@@ -4,8 +4,6 @@
 #include <unistd.h>
 
 
-// 1. Créer un .receive_line dans le wrapper Socket pour le protocole réseau.
-//    Il faut
 
 void client_loop(Socket client_socket) {
    std::cout << "Connected to someone !" << std::endl;

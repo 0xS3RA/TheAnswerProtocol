@@ -14,7 +14,6 @@
 // 4 : Réécris le serveur avec Asio pour découvrir le réseau asynchrone moderne.
 
 
-
 int accept_loop(struct sockaddr_in addr, Socket &server_socket) {
     std::vector<std::jthread> thread_vector {};
 
