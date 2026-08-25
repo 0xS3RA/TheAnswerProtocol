@@ -7,7 +7,6 @@
 #include <utility>
 #include <iostream>
 
-
 class Socket {
 private:
     int fd_ = -1;
@@ -78,4 +77,11 @@ public:
         }
     }
 
+    bool receive_command(Command &command) {
+        std::string full_line {receive_line()};
+
+        if (full_line == "") return false;
+
+        // Implement Command class
+    }
 };

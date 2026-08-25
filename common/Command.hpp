@@ -5,25 +5,37 @@
 // make class InteractionCommand
 
 class Command {
-private:
+    private:
 
+    public:
+        virtual void test() const {
+            std::cout << "generic test" << std::endl;
+        }
 
-public:
-
+        virtual ~Command() = default;
 };
 
-class MessageCommand {
-private:
 
 
-public:
+class MessageCommand : public Command {
+    private:
 
+
+    public:
+        void test() const override {
+            std::cout << "Message test" << std::endl;
+        }
 };
 
-class InteractionCommand {
-private:
 
 
-public:
 
+class InteractionCommand : public Command {
+    private:
+
+
+    public:
+        void test() const override {
+            std::cout << "Interaction test" << std::endl;
+        }
 };
