@@ -7,9 +7,14 @@
 #include <utility>
 #include <iostream>
 
+#include "Command.hpp"
+#include "World.hpp"
+// #include "Change.hpp"
+
 class Socket {
 private:
     int fd_ = -1;
+
 
 public:
     explicit Socket(int fd = -1) : fd_{fd} {}
@@ -81,7 +86,14 @@ public:
         std::string full_line {receive_line()};
 
         if (full_line == "") return false;
+        // Command format ;
+        // INTERACTION:ACCEPTQUEST:234
+        commandType type = Command::get_command_type(full_line);
+        if (type == Interaction) {
 
-        // Implement Command class
+            InteractionCommand command =
+        }
+
+
     }
 };

@@ -6,6 +6,40 @@
 #include <unordered_map>
 
 
+enum commandType {
+  Interaction,
+  Attack,
+  Message,
+  Invalid
+};
+
+enum PlayerState {
+  inCombat,
+  chilling,
+  dead
+};
+
+enum InteractionType {
+  move,
+  pickUp,
+  drop,
+  open,
+  speak,
+  attack,
+  trade,
+  acceptQuest
+};
+
+enum CombatAction {
+  lightAttack,
+  strongAttack,
+  concentrate,
+  flee,
+  halfDefend,
+  fullDefend,
+  counter,
+  none
+};
 
 enum Direction {
     north,
@@ -58,6 +92,7 @@ public:
 
 class Location {
 private:
+    uint64_t id;
     std::string name;
     std::string description;
     std::vector<Exit> exits;
@@ -92,6 +127,7 @@ public:
 
 class Npc {
 private:
+    uint64_t id;
     std::string type;
     std::string name;
     std::string description;
@@ -119,6 +155,7 @@ private:
     std::string name;
     uint64_t hp;
     std::vector<Item> inventory;
+    PlayerState state;
 
 public:
 
