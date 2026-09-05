@@ -1,0 +1,108 @@
+# The available items are declared and put inside a list of items
+items:
+  ale:
+    name: "Frothy Ale"
+    description: "A refreshing drink that restores energy."
+    obtainable: true
+    effects: ["energy_buff:1"]
+    usage: "self"
+  healPotion:
+    name: "healing elixir"
+    description: "A crazy good beverage that makes u feel better"
+    obtainable: true
+    effects: ["heal:100"]
+    usage: "self"
+  guardKey:
+    name: "Guard's key"
+    description: "The well kept guard key needed to enter the closed cave"
+    obtainable: true
+    effects: ["key:0"]
+    usage: "world"
+
+
+# The available npcs are declared and put inside a list of npcs
+npcs:
+  guard:
+    name: "Village Guard"
+    description: "A stern-looking guard watching over the square."
+    dialogue: ["Stay safe, traveler.", "The roads can be dangerous."]
+    hp: 50
+    inventory: ["guardkey:1", "ale:1"]
+    temperament: "defensive"
+    money: 50
+  merchant:
+    name: "Shop Keeper"
+    description: "A friendly merchant eager to trade."
+    dialogue: ["Welcome to my shop!", "What can I get for you today?"]
+    hp: 15
+    inventory: ["healPotion:5:25"] # name:quantity:price
+    temperament: "defensive"
+    money: 0
+  bartender:
+    name: "Barman Joe"
+    description: "A charismatic barman wanting you to get wasted"
+    dialogue: ["Hello young alcoholic!", "What can I get for you today?"]
+    hp: 15
+    inventory: ["ale:10"]
+    temperament: "defensive"
+    money: 0
+  goblin:
+    name: "Cave Goblin"
+    description: "A ugly and dangerous little goblin"
+    hp: 30
+    temperament: "aggressive"
+    money: 50
+
+
+# Set up the whole world, and for each npcs or items, create a new one with a unique id
+# (We can have multiple heal potions, but with uniques ids)
+#
+world:
+  locations:
+    start:
+      name: "Village Square"
+      description: "A bustling square with cobblestone paths."
+      exits:
+        north: "main_avenue"
+    main_avenue:
+      name: "Main Avenue"
+      description: "The place you need to go through to go anywhere"
+      exits:
+      - direction: "east"
+        location_name: "tavern"
+        is_locked: false
+      - direction: west
+        location_name : "shop"
+        is_locked: false
+      - direction: north
+        location_name: "locked_cave"
+        is_locked: true
+        unlock_item: guardKey
+      spawns:
+      - npc_type: "guard"
+        count: 1
+    tavern:
+      name: "The Prancing Pony"
+      description: "A cozy tavern filled with warmth and laughter."
+      exits:
+        west: "start"
+      items: ["ale"]
+      spawns:
+      - npc_type: "bartender"
+        count: 1
+    shop:
+      name: "General Store"
+      description: "Shelves lined with various goods and supplies."
+      exits:
+        east: "start"
+      spawns:
+      - npc_type: "merchant"
+        count: 1
+    locked_cave:
+      name: "Locked Cave"
+      description: "A cave locked by the king, they say it's dangerous inside"
+      exits:
+        south: "main_avenue"
+      spawns:
+      - npc_type: "goblin"
+        count: 2

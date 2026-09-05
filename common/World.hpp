@@ -6,7 +6,14 @@
 #include <unordered_map>
 
 
-enum commandType {
+enum RcvStatus {
+  Disconnected,
+  WouldBlock,
+  ParseError,
+  Ok
+};
+
+enum CommandType {
   Interaction,
   Attack,
   Message,
@@ -48,15 +55,25 @@ enum Direction {
     south
 };
 
-enum Effect_Type {
-    heal,
-    damage
+enum EffectType {
+  heal,
+  damage,
+  energyBuff,
+  energyDebuff,
+  key
 };
 
 enum NpcTemperament {
     passive,
     defensive,
     aggresive
+};
+
+enum Usage {
+  self,
+  other,
+  hybrid,
+  world
 };
 
 
@@ -67,42 +84,12 @@ class Spawn;
 class Location;
 
 
-class Item {
+class Effect {
 private:
-    std::string displayName;
-    std::string fullName;
-    std::string description;
-    bool isObtainable;
-    std::vector<Effect> effects;
+    EffectType type;
+    int amount;
 
 public:
-
-};
-
-class Exit {
-private:
-    Direction direction;
-    Location *location;
-    bool isLocked;
-    Item unlockItem;
-
-public:
-
-};
-
-class Location {
-private:
-    uint64_t id;
-    std::string name;
-    std::string description;
-    std::vector<Exit> exits;
-    std::vector<Spawn> spawns;
-    std::vector<Item> items;
-
-public:
-    explicit Location(std::string _name, std::string _desc) : name{_name}, description{_desc} {};
-
-    ~Location() {}
 
 };
 
@@ -115,6 +102,49 @@ private:
 public:
 
 };
+
+
+class Item {
+private:
+    uint64_t id;
+    std::string displayName;
+    std::string fullName;
+    std::string description;
+    bool isObtainable;
+    std::vector<Effect> effects;
+    Usage usage;
+
+public:
+
+};
+
+class Exit {
+private:
+    Direction direction;
+    uint64_t locationId;
+    bool isLocked;
+    uint64_t unlockItemId;
+
+public:
+
+};
+
+class Location {
+private:
+    uint64_t id;
+    std::string name;
+    std::string description;
+    std::vector<Exit> exits;
+    std::vector<Spawn> spawns;
+    std::vector<uint64_t> itemsIds;
+
+public:
+    explicit Location(std::string _name, std::string _desc) : name{_name}, description{_desc} {};
+
+    ~Location() {}
+
+};
+
 
 class NpcStats {
 private:
@@ -140,21 +170,13 @@ public:
 
 };
 
-class Effect {
-private:
-    Effect_Type type;
-    int amount;
-
-public:
-
-};
 
 class Player {
 private:
     uint64_t id;
     std::string name;
     uint64_t hp;
-    std::vector<Item> inventory;
+    std::vector<uint64_t> inventory;
     PlayerState state;
 
 public:
@@ -163,6 +185,7 @@ public:
 
 class World {
 private:
+    std::vector<Item> items;
     std::vector<Npc> npcs;
     std::vector<Location> locations;
     Location *startLocation;

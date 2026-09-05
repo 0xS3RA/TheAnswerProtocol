@@ -7,9 +7,19 @@
 
 
 class Change {
-
-private:
-
 public:
 
 };
+
+
+
+class WorldChange : public Change {
+private:
+
+
+
+};
+
+class PlayerChange : public Change {};
+
+class PlayerMessage : public Change {};

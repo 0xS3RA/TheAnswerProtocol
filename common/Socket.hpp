@@ -3,13 +3,15 @@
 #include <string>
 #include <string_view>
 #include <sys/socket.h>
+#include <sys/types.h>
 #include <unistd.h>
 #include <utility>
 #include <iostream>
+#include <variant>
+#include <optional>
 
-#include "Command.hpp"
-#include "World.hpp"
-// #include "Change.hpp"
+#include "template.pb.h"
+
 
 class Socket {
 private:
@@ -49,51 +51,63 @@ public:
     int get() const { return fd_; }
 
 
-    ssize_t send(std::string_view data) const {
+    bool send(const google::protobuf::Message &msg) const {
         if (!is_valid())
-            return -1;
-        std::string modified_data {data};
-        modified_data += "\n";
-        return ::send(fd_, modified_data.data(), modified_data.size(), 0);
+            return false;
+        std::string serialized_data;
+
+        if (!msg.SerializeToString(&serialized_data))
+            return false;
+
+        uint32_t data_size = static_cast<uint32_t>(serialized_data.size()); // Envoyer la taille du message avant le message au lieu de mettre un '\n'
+
+        ssize_t sent_size = ::send(fd_, &data_size, sizeof(data_size), 0);
+        if (sent_size != sizeof(data_size))
+            return false;
+
+        ssize_t sent_data = ::send(fd_, serialized_data.data(), serialized_data.size(), 0);
+        return sent_data == static_cast<ssize_t>(serialized_data.size());
     }
 
-    ssize_t recv(char *buffer, size_t capacity) const {
-        if (!is_valid())
-            return -1;
-        return ::recv(fd_, buffer, capacity, 0);
-    }
+    bool read_all(char *destination, size_t size) const {
 
-    std::string receive_line() {
-        std::string result = {};
-        char buffer[1024];
-
-        while (true) {
-            std::cout << "Waiting to receive data..." << std::endl;
-            ssize_t bytes_received =
-                recv(buffer, sizeof(buffer));
-            if (bytes_received <= 0) {
-                std::cout << "Client disconnected : " << get() << std::endl;
-                return "";
-            }
-            result.append(buffer, bytes_received);
-            if (result.find('\n') != std::string::npos){
-                return result;
-            }
+        size_t total_read = 0;
+        while (total_read < size) {
+            ssize_t bytes_read =
+              ::recv(fd_, destination + total_read, size - total_read, 0);
+            if (bytes_read <= 0)
+                return false;
+            total_read += bytes_read;
         }
+        return true;
     }
 
-    bool receive_command(Command &command) {
-        std::string full_line {receive_line()};
+    template <typename T>
+    std::optional<T> receive_message(game::RcvStatus &status) {
+      if (!is_valid()) {
+          status = game::RcvStatus::DISCONNECTED;
+          return std::nullopt;
+      }
+      uint32_t data_size = 0;
+      if (!read_all(reinterpret_cast<char *>(&data_size), sizeof(data_size))) {
+          status = game::RcvStatus::DISCONNECTED;
+          return std::nullopt;
+      }
 
-        if (full_line == "") return false;
-        // Command format ;
-        // INTERACTION:ACCEPTQUEST:234
-        commandType type = Command::get_command_type(full_line);
-        if (type == Interaction) {
+      std::string buffer;
+      buffer.resize(data_size);
 
-            InteractionCommand command =
-        }
+      if (!read_all(&buffer[0], data_size)) {
+          status = game::RcvStatus::DISCONNECTED;
+          return std::nullopt;
+      }
 
-
+      T msg;
+      if (!msg.ParseFromString(buffer)) {
+          status = game::RcvStatus::PARSE_ERROR;
+          return std::nullopt;
+      }
+      status = game::RcvStatus::OK;
+      return msg;
     }
 };
