@@ -619,30 +619,6 @@ gui/gui.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gui.dir/build.make CMakeFiles/gui.dir/gui/gui.cpp.s
 .PHONY : gui/gui.cpp.s
 
-server/client_loop.o: server/client_loop.cpp.o
-.PHONY : server/client_loop.o
-
-# target to build an object file
-server/client_loop.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server/client_loop.cpp.o
-.PHONY : server/client_loop.cpp.o
-
-server/client_loop.i: server/client_loop.cpp.i
-.PHONY : server/client_loop.i
-
-# target to preprocess a source file
-server/client_loop.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server/client_loop.cpp.i
-.PHONY : server/client_loop.cpp.i
-
-server/client_loop.s: server/client_loop.cpp.s
-.PHONY : server/client_loop.s
-
-# target to generate assembly for a file
-server/client_loop.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server/client_loop.cpp.s
-.PHONY : server/client_loop.cpp.s
-
 server/server.o: server/server.cpp.o
 .PHONY : server/server.o
 
@@ -746,9 +722,6 @@ help:
 	@echo "... gui/gui.o"
 	@echo "... gui/gui.i"
 	@echo "... gui/gui.s"
-	@echo "... server/client_loop.o"
-	@echo "... server/client_loop.i"
-	@echo "... server/client_loop.s"
 	@echo "... server/server.o"
 	@echo "... server/server.i"
 	@echo "... server/server.s"

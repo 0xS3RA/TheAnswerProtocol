@@ -94,24 +94,10 @@ CMakeFiles/server.dir/server/server.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/server.dir/server/server.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bernardo/Documents/42/M5/TheAnswerProtocol/server/server.cpp -o CMakeFiles/server.dir/server/server.cpp.s
 
-CMakeFiles/server.dir/server/client_loop.cpp.o: CMakeFiles/server.dir/flags.make
-CMakeFiles/server.dir/server/client_loop.cpp.o: /home/bernardo/Documents/42/M5/TheAnswerProtocol/server/client_loop.cpp
-CMakeFiles/server.dir/server/client_loop.cpp.o: CMakeFiles/server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/server.dir/server/client_loop.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/server.dir/server/client_loop.cpp.o -MF CMakeFiles/server.dir/server/client_loop.cpp.o.d -o CMakeFiles/server.dir/server/client_loop.cpp.o -c /home/bernardo/Documents/42/M5/TheAnswerProtocol/server/client_loop.cpp
-
-CMakeFiles/server.dir/server/client_loop.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/server.dir/server/client_loop.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bernardo/Documents/42/M5/TheAnswerProtocol/server/client_loop.cpp > CMakeFiles/server.dir/server/client_loop.cpp.i
-
-CMakeFiles/server.dir/server/client_loop.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/server.dir/server/client_loop.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bernardo/Documents/42/M5/TheAnswerProtocol/server/client_loop.cpp -o CMakeFiles/server.dir/server/client_loop.cpp.s
-
 CMakeFiles/server.dir/template.pb.cc.o: CMakeFiles/server.dir/flags.make
 CMakeFiles/server.dir/template.pb.cc.o: template.pb.cc
 CMakeFiles/server.dir/template.pb.cc.o: CMakeFiles/server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/server.dir/template.pb.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/server.dir/template.pb.cc.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/server.dir/template.pb.cc.o -MF CMakeFiles/server.dir/template.pb.cc.o.d -o CMakeFiles/server.dir/template.pb.cc.o -c /home/bernardo/Documents/42/M5/TheAnswerProtocol/build/template.pb.cc
 
 CMakeFiles/server.dir/template.pb.cc.i: cmake_force
@@ -125,21 +111,63 @@ CMakeFiles/server.dir/template.pb.cc.s: cmake_force
 # Object files for target server
 server_OBJECTS = \
 "CMakeFiles/server.dir/server/server.cpp.o" \
-"CMakeFiles/server.dir/server/client_loop.cpp.o" \
 "CMakeFiles/server.dir/template.pb.cc.o"
 
 # External object files for target server
 server_EXTERNAL_OBJECTS =
 
 bin/server: CMakeFiles/server.dir/server/server.cpp.o
-bin/server: CMakeFiles/server.dir/server/client_loop.cpp.o
 bin/server: CMakeFiles/server.dir/template.pb.cc.o
 bin/server: CMakeFiles/server.dir/build.make
 bin/server: CMakeFiles/server.dir/compiler_depend.ts
 bin/server: /usr/lib/libprotobuf.so
+bin/server: /usr/lib/libabsl_log_internal_check_op.so.2608.0.0
 bin/server: vendor/yaml-cpp/libyaml-cpp.a
+bin/server: /usr/lib/libabsl_leak_check.so.2608.0.0
+bin/server: /usr/lib/libabsl_log_internal_message.so.2608.0.0
+bin/server: /usr/lib/libabsl_log_internal_nullguard.so.2608.0.0
+bin/server: /usr/lib/libabsl_examine_stack.so.2608.0.0
+bin/server: /usr/lib/libabsl_log_internal_format.so.2608.0.0
+bin/server: /usr/lib/libabsl_str_format_internal.so.2608.0.0
+bin/server: /usr/lib/libabsl_log_internal_structured_proto.so.2608.0.0
+bin/server: /usr/lib/libabsl_log_internal_log_sink_set.so.2608.0.0
+bin/server: /usr/lib/libabsl_log_internal_globals.so.2608.0.0
+bin/server: /usr/lib/libabsl_log_globals.so.2608.0.0
+bin/server: /usr/lib/libabsl_hash.so.2608.0.0
+bin/server: /usr/lib/libabsl_city.so.2608.0.0
+bin/server: /usr/lib/libabsl_vlog_config_internal.so.2608.0.0
+bin/server: /usr/lib/libabsl_log_internal_fnmatch.so.2608.0.0
+bin/server: /usr/lib/libabsl_synchronization.so.2608.0.0
+bin/server: /usr/lib/libabsl_stacktrace.so.2608.0.0
+bin/server: /usr/lib/libabsl_symbolize.so.2608.0.0
+bin/server: /usr/lib/libabsl_debugging_internal.so.2608.0.0
+bin/server: /usr/lib/libabsl_demangle_internal.so.2608.0.0
+bin/server: /usr/lib/libabsl_demangle_rust.so.2608.0.0
+bin/server: /usr/lib/libabsl_decode_rust_punycode.so.2608.0.0
+bin/server: /usr/lib/libabsl_utf8_for_code_point.so.2608.0.0
+bin/server: /usr/lib/libabsl_graphcycles_internal.so.2608.0.0
+bin/server: /usr/lib/libabsl_malloc_internal.so.2608.0.0
+bin/server: /usr/lib/libabsl_kernel_timeout_internal.so.2608.0.0
+bin/server: /usr/lib/libabsl_tracing_internal.so.2608.0.0
+bin/server: /usr/lib/libabsl_log_sink.so.2608.0.0
+bin/server: /usr/lib/libabsl_log_entry.so.2608.0.0
+bin/server: /usr/lib/libabsl_log_internal_proto.so.2608.0.0
+bin/server: /usr/lib/libabsl_strerror.so.2608.0.0
+bin/server: /usr/lib/libabsl_time.so.2608.0.0
+bin/server: /usr/lib/libabsl_civil_time.so.2608.0.0
+bin/server: /usr/lib/libabsl_time_zone.so.2608.0.0
+bin/server: /usr/lib/libabsl_strings.so.2608.0.0
+bin/server: /usr/lib/libabsl_strings_internal.so.2608.0.0
+bin/server: /usr/lib/libabsl_hardening.so.2608.0.0
+bin/server: /usr/lib/libabsl_int128.so.2608.0.0
+bin/server: /usr/lib/libabsl_base.so.2608.0.0
+bin/server: /usr/lib/libabsl_spinlock_wait.so.2608.0.0
+bin/server: /usr/lib/libabsl_source_location.so.2608.0.0
+bin/server: /usr/lib/libabsl_throw_delegate.so.2608.0.0
+bin/server: /usr/lib/libabsl_raw_logging_internal.so.2608.0.0
+bin/server: /usr/lib/libabsl_log_severity.so.2608.0.0
 bin/server: CMakeFiles/server.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable bin/server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable bin/server"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/server.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

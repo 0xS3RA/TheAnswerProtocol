@@ -20,7 +20,6 @@ events:
     names:
       - "uname"
     candidate_directories:
-      - "/home/bernardo/.local/share/mise/installs/opencode/latest/"
       - "/home/bernardo/.local/bin/"
       - "/home/bernardo/Android/Sdk/build-tools/34.0.0/"
       - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin/"
@@ -39,15 +38,15 @@ events:
       - "/home/bernardo/go/bin/"
       - "/home/bernardo/go/bin/cointop/"
       - "/home/bernardo/.config/emacs/bin/"
-      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/node_modules/.bin/"
+      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/node_modules/.bin/"
       - "/home/bernardo/.local/share/mise/installs/codex/latest/bin/"
       - "/home/bernardo/.local/share/mise/installs/node/25.2.1/bin/"
+      - "/home/bernardo/.local/share/mise/installs/opencode/latest/"
       - "/home/bernardo/.local/share/mise/installs/python/latest/bin/"
       - "/home/bernardo/.local/share/mise/installs/zig/0.16.0/bin/"
       - "/home/bernardo/.local/share/mise/installs/zls/latest/"
       - "/bin/"
     searched_directories:
-      - "/home/bernardo/.local/share/mise/installs/opencode/latest/uname"
       - "/home/bernardo/.local/bin/uname"
       - "/home/bernardo/Android/Sdk/build-tools/34.0.0/uname"
       - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin/uname"
@@ -60,12 +59,14 @@ events:
     found: "/usr/bin/uname"
     search_context:
       ENV{PATH}:
-        - "/home/bernardo/.local/share/mise/installs/opencode/latest"
         - "/home/bernardo/.local/bin"
         - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
         - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
         - "/home/bernardo/.config/composer/vendor/bin"
         - "/home/bernardo/.local/bin"
+        - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
+        - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
+        - "/home/bernardo/.config/composer/vendor/bin"
         - "/usr/share/omarchy/bin"
         - "/home/bernardo/.local/share/mise/shims"
         - "/home/bernardo/.cargo/bin"
@@ -80,12 +81,9 @@ events:
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
-        - "/home/bernardo/.cargo/bin"
-        - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
-        - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
-        - "/home/bernardo/.config/composer/vendor/bin"
         - "/home/bernardo/go/bin"
         - "/home/bernardo/go/bin/cointop"
+        - "/home/bernardo/.cargo/bin"
         - "/home/bernardo/.config/emacs/bin"
         - "./node_modules/.bin"
         - "/home/bernardo/go/bin"
@@ -95,6 +93,7 @@ events:
         - "./node_modules/.bin"
         - "/home/bernardo/.local/share/mise/installs/codex/latest/bin"
         - "/home/bernardo/.local/share/mise/installs/node/25.2.1/bin"
+        - "/home/bernardo/.local/share/mise/installs/opencode/latest"
         - "/home/bernardo/.local/share/mise/installs/python/latest/bin"
         - "/home/bernardo/.local/share/mise/installs/zig/0.16.0/bin"
         - "/home/bernardo/.local/share/mise/installs/zls/latest"
@@ -126,7 +125,6 @@ events:
       - "make"
       - "smake"
     candidate_directories:
-      - "/home/bernardo/.local/share/mise/installs/opencode/latest/"
       - "/home/bernardo/.local/bin/"
       - "/home/bernardo/Android/Sdk/build-tools/34.0.0/"
       - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin/"
@@ -145,14 +143,14 @@ events:
       - "/home/bernardo/go/bin/"
       - "/home/bernardo/go/bin/cointop/"
       - "/home/bernardo/.config/emacs/bin/"
-      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/node_modules/.bin/"
+      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/node_modules/.bin/"
       - "/home/bernardo/.local/share/mise/installs/codex/latest/bin/"
       - "/home/bernardo/.local/share/mise/installs/node/25.2.1/bin/"
+      - "/home/bernardo/.local/share/mise/installs/opencode/latest/"
       - "/home/bernardo/.local/share/mise/installs/python/latest/bin/"
       - "/home/bernardo/.local/share/mise/installs/zig/0.16.0/bin/"
       - "/home/bernardo/.local/share/mise/installs/zls/latest/"
     searched_directories:
-      - "/home/bernardo/.local/share/mise/installs/opencode/latest/gmake"
       - "/home/bernardo/.local/bin/gmake"
       - "/home/bernardo/Android/Sdk/build-tools/34.0.0/gmake"
       - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin/gmake"
@@ -171,13 +169,13 @@ events:
       - "/home/bernardo/go/bin/gmake"
       - "/home/bernardo/go/bin/cointop/gmake"
       - "/home/bernardo/.config/emacs/bin/gmake"
-      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/node_modules/.bin/gmake"
+      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/node_modules/.bin/gmake"
       - "/home/bernardo/.local/share/mise/installs/codex/latest/bin/gmake"
       - "/home/bernardo/.local/share/mise/installs/node/25.2.1/bin/gmake"
+      - "/home/bernardo/.local/share/mise/installs/opencode/latest/gmake"
       - "/home/bernardo/.local/share/mise/installs/python/latest/bin/gmake"
       - "/home/bernardo/.local/share/mise/installs/zig/0.16.0/bin/gmake"
       - "/home/bernardo/.local/share/mise/installs/zls/latest/gmake"
-      - "/home/bernardo/.local/share/mise/installs/opencode/latest/make"
       - "/home/bernardo/.local/bin/make"
       - "/home/bernardo/Android/Sdk/build-tools/34.0.0/make"
       - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin/make"
@@ -190,12 +188,14 @@ events:
     found: "/usr/bin/make"
     search_context:
       ENV{PATH}:
-        - "/home/bernardo/.local/share/mise/installs/opencode/latest"
         - "/home/bernardo/.local/bin"
         - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
         - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
         - "/home/bernardo/.config/composer/vendor/bin"
         - "/home/bernardo/.local/bin"
+        - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
+        - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
+        - "/home/bernardo/.config/composer/vendor/bin"
         - "/usr/share/omarchy/bin"
         - "/home/bernardo/.local/share/mise/shims"
         - "/home/bernardo/.cargo/bin"
@@ -210,12 +210,9 @@ events:
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
-        - "/home/bernardo/.cargo/bin"
-        - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
-        - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
-        - "/home/bernardo/.config/composer/vendor/bin"
         - "/home/bernardo/go/bin"
         - "/home/bernardo/go/bin/cointop"
+        - "/home/bernardo/.cargo/bin"
         - "/home/bernardo/.config/emacs/bin"
         - "./node_modules/.bin"
         - "/home/bernardo/go/bin"
@@ -225,6 +222,7 @@ events:
         - "./node_modules/.bin"
         - "/home/bernardo/.local/share/mise/installs/codex/latest/bin"
         - "/home/bernardo/.local/share/mise/installs/node/25.2.1/bin"
+        - "/home/bernardo/.local/share/mise/installs/opencode/latest"
         - "/home/bernardo/.local/share/mise/installs/python/latest/bin"
         - "/home/bernardo/.local/share/mise/installs/zig/0.16.0/bin"
         - "/home/bernardo/.local/share/mise/installs/zls/latest"
@@ -257,7 +255,6 @@ events:
       - "icx"
       - "clang++"
     candidate_directories:
-      - "/home/bernardo/.local/share/mise/installs/opencode/latest/"
       - "/home/bernardo/.local/bin/"
       - "/home/bernardo/Android/Sdk/build-tools/34.0.0/"
       - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin/"
@@ -276,14 +273,14 @@ events:
       - "/home/bernardo/go/bin/"
       - "/home/bernardo/go/bin/cointop/"
       - "/home/bernardo/.config/emacs/bin/"
-      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/node_modules/.bin/"
+      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/node_modules/.bin/"
       - "/home/bernardo/.local/share/mise/installs/codex/latest/bin/"
       - "/home/bernardo/.local/share/mise/installs/node/25.2.1/bin/"
+      - "/home/bernardo/.local/share/mise/installs/opencode/latest/"
       - "/home/bernardo/.local/share/mise/installs/python/latest/bin/"
       - "/home/bernardo/.local/share/mise/installs/zig/0.16.0/bin/"
       - "/home/bernardo/.local/share/mise/installs/zls/latest/"
     searched_directories:
-      - "/home/bernardo/.local/share/mise/installs/opencode/latest/c++"
       - "/home/bernardo/.local/bin/c++"
       - "/home/bernardo/Android/Sdk/build-tools/34.0.0/c++"
       - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin/c++"
@@ -296,12 +293,14 @@ events:
     found: "/usr/bin/c++"
     search_context:
       ENV{PATH}:
-        - "/home/bernardo/.local/share/mise/installs/opencode/latest"
         - "/home/bernardo/.local/bin"
         - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
         - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
         - "/home/bernardo/.config/composer/vendor/bin"
         - "/home/bernardo/.local/bin"
+        - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
+        - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
+        - "/home/bernardo/.config/composer/vendor/bin"
         - "/usr/share/omarchy/bin"
         - "/home/bernardo/.local/share/mise/shims"
         - "/home/bernardo/.cargo/bin"
@@ -316,12 +315,9 @@ events:
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
-        - "/home/bernardo/.cargo/bin"
-        - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
-        - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
-        - "/home/bernardo/.config/composer/vendor/bin"
         - "/home/bernardo/go/bin"
         - "/home/bernardo/go/bin/cointop"
+        - "/home/bernardo/.cargo/bin"
         - "/home/bernardo/.config/emacs/bin"
         - "./node_modules/.bin"
         - "/home/bernardo/go/bin"
@@ -331,6 +327,7 @@ events:
         - "./node_modules/.bin"
         - "/home/bernardo/.local/share/mise/installs/codex/latest/bin"
         - "/home/bernardo/.local/share/mise/installs/node/25.2.1/bin"
+        - "/home/bernardo/.local/share/mise/installs/opencode/latest"
         - "/home/bernardo/.local/share/mise/installs/python/latest/bin"
         - "/home/bernardo/.local/share/mise/installs/zig/0.16.0/bin"
         - "/home/bernardo/.local/share/mise/installs/zls/latest"
@@ -361,12 +358,14 @@ events:
     found: "/usr/share/cmake/Modules/CMakeCXXCompilerId.cpp.in"
     search_context:
       ENV{PATH}:
-        - "/home/bernardo/.local/share/mise/installs/opencode/latest"
         - "/home/bernardo/.local/bin"
         - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
         - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
         - "/home/bernardo/.config/composer/vendor/bin"
         - "/home/bernardo/.local/bin"
+        - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
+        - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
+        - "/home/bernardo/.config/composer/vendor/bin"
         - "/usr/share/omarchy/bin"
         - "/home/bernardo/.local/share/mise/shims"
         - "/home/bernardo/.cargo/bin"
@@ -381,12 +380,9 @@ events:
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
-        - "/home/bernardo/.cargo/bin"
-        - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
-        - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
-        - "/home/bernardo/.config/composer/vendor/bin"
         - "/home/bernardo/go/bin"
         - "/home/bernardo/go/bin/cointop"
+        - "/home/bernardo/.cargo/bin"
         - "/home/bernardo/.config/emacs/bin"
         - "./node_modules/.bin"
         - "/home/bernardo/go/bin"
@@ -396,6 +392,7 @@ events:
         - "./node_modules/.bin"
         - "/home/bernardo/.local/share/mise/installs/codex/latest/bin"
         - "/home/bernardo/.local/share/mise/installs/node/25.2.1/bin"
+        - "/home/bernardo/.local/share/mise/installs/opencode/latest"
         - "/home/bernardo/.local/share/mise/installs/python/latest/bin"
         - "/home/bernardo/.local/share/mise/installs/zig/0.16.0/bin"
         - "/home/bernardo/.local/share/mise/installs/zls/latest"
@@ -442,7 +439,6 @@ events:
       - "ar"
     candidate_directories:
       - "/usr/bin/"
-      - "/home/bernardo/.local/share/mise/installs/opencode/latest/"
       - "/home/bernardo/.local/bin/"
       - "/home/bernardo/Android/Sdk/build-tools/34.0.0/"
       - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin/"
@@ -460,21 +456,24 @@ events:
       - "/home/bernardo/go/bin/"
       - "/home/bernardo/go/bin/cointop/"
       - "/home/bernardo/.config/emacs/bin/"
-      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/node_modules/.bin/"
+      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/node_modules/.bin/"
       - "/home/bernardo/.local/share/mise/installs/codex/latest/bin/"
       - "/home/bernardo/.local/share/mise/installs/node/25.2.1/bin/"
+      - "/home/bernardo/.local/share/mise/installs/opencode/latest/"
       - "/home/bernardo/.local/share/mise/installs/python/latest/bin/"
       - "/home/bernardo/.local/share/mise/installs/zig/0.16.0/bin/"
       - "/home/bernardo/.local/share/mise/installs/zls/latest/"
     found: "/usr/bin/ar"
     search_context:
       ENV{PATH}:
-        - "/home/bernardo/.local/share/mise/installs/opencode/latest"
         - "/home/bernardo/.local/bin"
         - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
         - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
         - "/home/bernardo/.config/composer/vendor/bin"
         - "/home/bernardo/.local/bin"
+        - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
+        - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
+        - "/home/bernardo/.config/composer/vendor/bin"
         - "/usr/share/omarchy/bin"
         - "/home/bernardo/.local/share/mise/shims"
         - "/home/bernardo/.cargo/bin"
@@ -489,12 +488,9 @@ events:
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
-        - "/home/bernardo/.cargo/bin"
-        - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
-        - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
-        - "/home/bernardo/.config/composer/vendor/bin"
         - "/home/bernardo/go/bin"
         - "/home/bernardo/go/bin/cointop"
+        - "/home/bernardo/.cargo/bin"
         - "/home/bernardo/.config/emacs/bin"
         - "./node_modules/.bin"
         - "/home/bernardo/go/bin"
@@ -504,6 +500,7 @@ events:
         - "./node_modules/.bin"
         - "/home/bernardo/.local/share/mise/installs/codex/latest/bin"
         - "/home/bernardo/.local/share/mise/installs/node/25.2.1/bin"
+        - "/home/bernardo/.local/share/mise/installs/opencode/latest"
         - "/home/bernardo/.local/share/mise/installs/python/latest/bin"
         - "/home/bernardo/.local/share/mise/installs/zig/0.16.0/bin"
         - "/home/bernardo/.local/share/mise/installs/zls/latest"
@@ -528,7 +525,6 @@ events:
       - "ranlib"
     candidate_directories:
       - "/usr/bin/"
-      - "/home/bernardo/.local/share/mise/installs/opencode/latest/"
       - "/home/bernardo/.local/bin/"
       - "/home/bernardo/Android/Sdk/build-tools/34.0.0/"
       - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin/"
@@ -546,21 +542,24 @@ events:
       - "/home/bernardo/go/bin/"
       - "/home/bernardo/go/bin/cointop/"
       - "/home/bernardo/.config/emacs/bin/"
-      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/node_modules/.bin/"
+      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/node_modules/.bin/"
       - "/home/bernardo/.local/share/mise/installs/codex/latest/bin/"
       - "/home/bernardo/.local/share/mise/installs/node/25.2.1/bin/"
+      - "/home/bernardo/.local/share/mise/installs/opencode/latest/"
       - "/home/bernardo/.local/share/mise/installs/python/latest/bin/"
       - "/home/bernardo/.local/share/mise/installs/zig/0.16.0/bin/"
       - "/home/bernardo/.local/share/mise/installs/zls/latest/"
     found: "/usr/bin/ranlib"
     search_context:
       ENV{PATH}:
-        - "/home/bernardo/.local/share/mise/installs/opencode/latest"
         - "/home/bernardo/.local/bin"
         - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
         - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
         - "/home/bernardo/.config/composer/vendor/bin"
         - "/home/bernardo/.local/bin"
+        - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
+        - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
+        - "/home/bernardo/.config/composer/vendor/bin"
         - "/usr/share/omarchy/bin"
         - "/home/bernardo/.local/share/mise/shims"
         - "/home/bernardo/.cargo/bin"
@@ -575,12 +574,9 @@ events:
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
-        - "/home/bernardo/.cargo/bin"
-        - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
-        - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
-        - "/home/bernardo/.config/composer/vendor/bin"
         - "/home/bernardo/go/bin"
         - "/home/bernardo/go/bin/cointop"
+        - "/home/bernardo/.cargo/bin"
         - "/home/bernardo/.config/emacs/bin"
         - "./node_modules/.bin"
         - "/home/bernardo/go/bin"
@@ -590,6 +586,7 @@ events:
         - "./node_modules/.bin"
         - "/home/bernardo/.local/share/mise/installs/codex/latest/bin"
         - "/home/bernardo/.local/share/mise/installs/node/25.2.1/bin"
+        - "/home/bernardo/.local/share/mise/installs/opencode/latest"
         - "/home/bernardo/.local/share/mise/installs/python/latest/bin"
         - "/home/bernardo/.local/share/mise/installs/zig/0.16.0/bin"
         - "/home/bernardo/.local/share/mise/installs/zls/latest"
@@ -614,7 +611,6 @@ events:
       - "strip"
     candidate_directories:
       - "/usr/bin/"
-      - "/home/bernardo/.local/share/mise/installs/opencode/latest/"
       - "/home/bernardo/.local/bin/"
       - "/home/bernardo/Android/Sdk/build-tools/34.0.0/"
       - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin/"
@@ -632,21 +628,24 @@ events:
       - "/home/bernardo/go/bin/"
       - "/home/bernardo/go/bin/cointop/"
       - "/home/bernardo/.config/emacs/bin/"
-      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/node_modules/.bin/"
+      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/node_modules/.bin/"
       - "/home/bernardo/.local/share/mise/installs/codex/latest/bin/"
       - "/home/bernardo/.local/share/mise/installs/node/25.2.1/bin/"
+      - "/home/bernardo/.local/share/mise/installs/opencode/latest/"
       - "/home/bernardo/.local/share/mise/installs/python/latest/bin/"
       - "/home/bernardo/.local/share/mise/installs/zig/0.16.0/bin/"
       - "/home/bernardo/.local/share/mise/installs/zls/latest/"
     found: "/usr/bin/strip"
     search_context:
       ENV{PATH}:
-        - "/home/bernardo/.local/share/mise/installs/opencode/latest"
         - "/home/bernardo/.local/bin"
         - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
         - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
         - "/home/bernardo/.config/composer/vendor/bin"
         - "/home/bernardo/.local/bin"
+        - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
+        - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
+        - "/home/bernardo/.config/composer/vendor/bin"
         - "/usr/share/omarchy/bin"
         - "/home/bernardo/.local/share/mise/shims"
         - "/home/bernardo/.cargo/bin"
@@ -661,12 +660,9 @@ events:
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
-        - "/home/bernardo/.cargo/bin"
-        - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
-        - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
-        - "/home/bernardo/.config/composer/vendor/bin"
         - "/home/bernardo/go/bin"
         - "/home/bernardo/go/bin/cointop"
+        - "/home/bernardo/.cargo/bin"
         - "/home/bernardo/.config/emacs/bin"
         - "./node_modules/.bin"
         - "/home/bernardo/go/bin"
@@ -676,6 +672,7 @@ events:
         - "./node_modules/.bin"
         - "/home/bernardo/.local/share/mise/installs/codex/latest/bin"
         - "/home/bernardo/.local/share/mise/installs/node/25.2.1/bin"
+        - "/home/bernardo/.local/share/mise/installs/opencode/latest"
         - "/home/bernardo/.local/share/mise/installs/python/latest/bin"
         - "/home/bernardo/.local/share/mise/installs/zig/0.16.0/bin"
         - "/home/bernardo/.local/share/mise/installs/zls/latest"
@@ -700,7 +697,6 @@ events:
       - "ld"
     candidate_directories:
       - "/usr/bin/"
-      - "/home/bernardo/.local/share/mise/installs/opencode/latest/"
       - "/home/bernardo/.local/bin/"
       - "/home/bernardo/Android/Sdk/build-tools/34.0.0/"
       - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin/"
@@ -718,21 +714,24 @@ events:
       - "/home/bernardo/go/bin/"
       - "/home/bernardo/go/bin/cointop/"
       - "/home/bernardo/.config/emacs/bin/"
-      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/node_modules/.bin/"
+      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/node_modules/.bin/"
       - "/home/bernardo/.local/share/mise/installs/codex/latest/bin/"
       - "/home/bernardo/.local/share/mise/installs/node/25.2.1/bin/"
+      - "/home/bernardo/.local/share/mise/installs/opencode/latest/"
       - "/home/bernardo/.local/share/mise/installs/python/latest/bin/"
       - "/home/bernardo/.local/share/mise/installs/zig/0.16.0/bin/"
       - "/home/bernardo/.local/share/mise/installs/zls/latest/"
     found: "/usr/bin/ld"
     search_context:
       ENV{PATH}:
-        - "/home/bernardo/.local/share/mise/installs/opencode/latest"
         - "/home/bernardo/.local/bin"
         - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
         - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
         - "/home/bernardo/.config/composer/vendor/bin"
         - "/home/bernardo/.local/bin"
+        - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
+        - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
+        - "/home/bernardo/.config/composer/vendor/bin"
         - "/usr/share/omarchy/bin"
         - "/home/bernardo/.local/share/mise/shims"
         - "/home/bernardo/.cargo/bin"
@@ -747,12 +746,9 @@ events:
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
-        - "/home/bernardo/.cargo/bin"
-        - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
-        - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
-        - "/home/bernardo/.config/composer/vendor/bin"
         - "/home/bernardo/go/bin"
         - "/home/bernardo/go/bin/cointop"
+        - "/home/bernardo/.cargo/bin"
         - "/home/bernardo/.config/emacs/bin"
         - "./node_modules/.bin"
         - "/home/bernardo/go/bin"
@@ -762,6 +758,7 @@ events:
         - "./node_modules/.bin"
         - "/home/bernardo/.local/share/mise/installs/codex/latest/bin"
         - "/home/bernardo/.local/share/mise/installs/node/25.2.1/bin"
+        - "/home/bernardo/.local/share/mise/installs/opencode/latest"
         - "/home/bernardo/.local/share/mise/installs/python/latest/bin"
         - "/home/bernardo/.local/share/mise/installs/zig/0.16.0/bin"
         - "/home/bernardo/.local/share/mise/installs/zls/latest"
@@ -786,7 +783,6 @@ events:
       - "nm"
     candidate_directories:
       - "/usr/bin/"
-      - "/home/bernardo/.local/share/mise/installs/opencode/latest/"
       - "/home/bernardo/.local/bin/"
       - "/home/bernardo/Android/Sdk/build-tools/34.0.0/"
       - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin/"
@@ -804,21 +800,24 @@ events:
       - "/home/bernardo/go/bin/"
       - "/home/bernardo/go/bin/cointop/"
       - "/home/bernardo/.config/emacs/bin/"
-      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/node_modules/.bin/"
+      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/node_modules/.bin/"
       - "/home/bernardo/.local/share/mise/installs/codex/latest/bin/"
       - "/home/bernardo/.local/share/mise/installs/node/25.2.1/bin/"
+      - "/home/bernardo/.local/share/mise/installs/opencode/latest/"
       - "/home/bernardo/.local/share/mise/installs/python/latest/bin/"
       - "/home/bernardo/.local/share/mise/installs/zig/0.16.0/bin/"
       - "/home/bernardo/.local/share/mise/installs/zls/latest/"
     found: "/usr/bin/nm"
     search_context:
       ENV{PATH}:
-        - "/home/bernardo/.local/share/mise/installs/opencode/latest"
         - "/home/bernardo/.local/bin"
         - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
         - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
         - "/home/bernardo/.config/composer/vendor/bin"
         - "/home/bernardo/.local/bin"
+        - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
+        - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
+        - "/home/bernardo/.config/composer/vendor/bin"
         - "/usr/share/omarchy/bin"
         - "/home/bernardo/.local/share/mise/shims"
         - "/home/bernardo/.cargo/bin"
@@ -833,12 +832,9 @@ events:
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
-        - "/home/bernardo/.cargo/bin"
-        - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
-        - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
-        - "/home/bernardo/.config/composer/vendor/bin"
         - "/home/bernardo/go/bin"
         - "/home/bernardo/go/bin/cointop"
+        - "/home/bernardo/.cargo/bin"
         - "/home/bernardo/.config/emacs/bin"
         - "./node_modules/.bin"
         - "/home/bernardo/go/bin"
@@ -848,6 +844,7 @@ events:
         - "./node_modules/.bin"
         - "/home/bernardo/.local/share/mise/installs/codex/latest/bin"
         - "/home/bernardo/.local/share/mise/installs/node/25.2.1/bin"
+        - "/home/bernardo/.local/share/mise/installs/opencode/latest"
         - "/home/bernardo/.local/share/mise/installs/python/latest/bin"
         - "/home/bernardo/.local/share/mise/installs/zig/0.16.0/bin"
         - "/home/bernardo/.local/share/mise/installs/zls/latest"
@@ -872,7 +869,6 @@ events:
       - "objdump"
     candidate_directories:
       - "/usr/bin/"
-      - "/home/bernardo/.local/share/mise/installs/opencode/latest/"
       - "/home/bernardo/.local/bin/"
       - "/home/bernardo/Android/Sdk/build-tools/34.0.0/"
       - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin/"
@@ -890,21 +886,24 @@ events:
       - "/home/bernardo/go/bin/"
       - "/home/bernardo/go/bin/cointop/"
       - "/home/bernardo/.config/emacs/bin/"
-      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/node_modules/.bin/"
+      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/node_modules/.bin/"
       - "/home/bernardo/.local/share/mise/installs/codex/latest/bin/"
       - "/home/bernardo/.local/share/mise/installs/node/25.2.1/bin/"
+      - "/home/bernardo/.local/share/mise/installs/opencode/latest/"
       - "/home/bernardo/.local/share/mise/installs/python/latest/bin/"
       - "/home/bernardo/.local/share/mise/installs/zig/0.16.0/bin/"
       - "/home/bernardo/.local/share/mise/installs/zls/latest/"
     found: "/usr/bin/objdump"
     search_context:
       ENV{PATH}:
-        - "/home/bernardo/.local/share/mise/installs/opencode/latest"
         - "/home/bernardo/.local/bin"
         - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
         - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
         - "/home/bernardo/.config/composer/vendor/bin"
         - "/home/bernardo/.local/bin"
+        - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
+        - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
+        - "/home/bernardo/.config/composer/vendor/bin"
         - "/usr/share/omarchy/bin"
         - "/home/bernardo/.local/share/mise/shims"
         - "/home/bernardo/.cargo/bin"
@@ -919,12 +918,9 @@ events:
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
-        - "/home/bernardo/.cargo/bin"
-        - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
-        - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
-        - "/home/bernardo/.config/composer/vendor/bin"
         - "/home/bernardo/go/bin"
         - "/home/bernardo/go/bin/cointop"
+        - "/home/bernardo/.cargo/bin"
         - "/home/bernardo/.config/emacs/bin"
         - "./node_modules/.bin"
         - "/home/bernardo/go/bin"
@@ -934,6 +930,7 @@ events:
         - "./node_modules/.bin"
         - "/home/bernardo/.local/share/mise/installs/codex/latest/bin"
         - "/home/bernardo/.local/share/mise/installs/node/25.2.1/bin"
+        - "/home/bernardo/.local/share/mise/installs/opencode/latest"
         - "/home/bernardo/.local/share/mise/installs/python/latest/bin"
         - "/home/bernardo/.local/share/mise/installs/zig/0.16.0/bin"
         - "/home/bernardo/.local/share/mise/installs/zls/latest"
@@ -958,7 +955,6 @@ events:
       - "objcopy"
     candidate_directories:
       - "/usr/bin/"
-      - "/home/bernardo/.local/share/mise/installs/opencode/latest/"
       - "/home/bernardo/.local/bin/"
       - "/home/bernardo/Android/Sdk/build-tools/34.0.0/"
       - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin/"
@@ -976,21 +972,24 @@ events:
       - "/home/bernardo/go/bin/"
       - "/home/bernardo/go/bin/cointop/"
       - "/home/bernardo/.config/emacs/bin/"
-      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/node_modules/.bin/"
+      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/node_modules/.bin/"
       - "/home/bernardo/.local/share/mise/installs/codex/latest/bin/"
       - "/home/bernardo/.local/share/mise/installs/node/25.2.1/bin/"
+      - "/home/bernardo/.local/share/mise/installs/opencode/latest/"
       - "/home/bernardo/.local/share/mise/installs/python/latest/bin/"
       - "/home/bernardo/.local/share/mise/installs/zig/0.16.0/bin/"
       - "/home/bernardo/.local/share/mise/installs/zls/latest/"
     found: "/usr/bin/objcopy"
     search_context:
       ENV{PATH}:
-        - "/home/bernardo/.local/share/mise/installs/opencode/latest"
         - "/home/bernardo/.local/bin"
         - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
         - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
         - "/home/bernardo/.config/composer/vendor/bin"
         - "/home/bernardo/.local/bin"
+        - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
+        - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
+        - "/home/bernardo/.config/composer/vendor/bin"
         - "/usr/share/omarchy/bin"
         - "/home/bernardo/.local/share/mise/shims"
         - "/home/bernardo/.cargo/bin"
@@ -1005,12 +1004,9 @@ events:
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
-        - "/home/bernardo/.cargo/bin"
-        - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
-        - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
-        - "/home/bernardo/.config/composer/vendor/bin"
         - "/home/bernardo/go/bin"
         - "/home/bernardo/go/bin/cointop"
+        - "/home/bernardo/.cargo/bin"
         - "/home/bernardo/.config/emacs/bin"
         - "./node_modules/.bin"
         - "/home/bernardo/go/bin"
@@ -1020,6 +1016,7 @@ events:
         - "./node_modules/.bin"
         - "/home/bernardo/.local/share/mise/installs/codex/latest/bin"
         - "/home/bernardo/.local/share/mise/installs/node/25.2.1/bin"
+        - "/home/bernardo/.local/share/mise/installs/opencode/latest"
         - "/home/bernardo/.local/share/mise/installs/python/latest/bin"
         - "/home/bernardo/.local/share/mise/installs/zig/0.16.0/bin"
         - "/home/bernardo/.local/share/mise/installs/zls/latest"
@@ -1044,7 +1041,6 @@ events:
       - "readelf"
     candidate_directories:
       - "/usr/bin/"
-      - "/home/bernardo/.local/share/mise/installs/opencode/latest/"
       - "/home/bernardo/.local/bin/"
       - "/home/bernardo/Android/Sdk/build-tools/34.0.0/"
       - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin/"
@@ -1062,21 +1058,24 @@ events:
       - "/home/bernardo/go/bin/"
       - "/home/bernardo/go/bin/cointop/"
       - "/home/bernardo/.config/emacs/bin/"
-      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/node_modules/.bin/"
+      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/node_modules/.bin/"
       - "/home/bernardo/.local/share/mise/installs/codex/latest/bin/"
       - "/home/bernardo/.local/share/mise/installs/node/25.2.1/bin/"
+      - "/home/bernardo/.local/share/mise/installs/opencode/latest/"
       - "/home/bernardo/.local/share/mise/installs/python/latest/bin/"
       - "/home/bernardo/.local/share/mise/installs/zig/0.16.0/bin/"
       - "/home/bernardo/.local/share/mise/installs/zls/latest/"
     found: "/usr/bin/readelf"
     search_context:
       ENV{PATH}:
-        - "/home/bernardo/.local/share/mise/installs/opencode/latest"
         - "/home/bernardo/.local/bin"
         - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
         - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
         - "/home/bernardo/.config/composer/vendor/bin"
         - "/home/bernardo/.local/bin"
+        - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
+        - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
+        - "/home/bernardo/.config/composer/vendor/bin"
         - "/usr/share/omarchy/bin"
         - "/home/bernardo/.local/share/mise/shims"
         - "/home/bernardo/.cargo/bin"
@@ -1091,12 +1090,9 @@ events:
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
-        - "/home/bernardo/.cargo/bin"
-        - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
-        - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
-        - "/home/bernardo/.config/composer/vendor/bin"
         - "/home/bernardo/go/bin"
         - "/home/bernardo/go/bin/cointop"
+        - "/home/bernardo/.cargo/bin"
         - "/home/bernardo/.config/emacs/bin"
         - "./node_modules/.bin"
         - "/home/bernardo/go/bin"
@@ -1106,6 +1102,7 @@ events:
         - "./node_modules/.bin"
         - "/home/bernardo/.local/share/mise/installs/codex/latest/bin"
         - "/home/bernardo/.local/share/mise/installs/node/25.2.1/bin"
+        - "/home/bernardo/.local/share/mise/installs/opencode/latest"
         - "/home/bernardo/.local/share/mise/installs/python/latest/bin"
         - "/home/bernardo/.local/share/mise/installs/zig/0.16.0/bin"
         - "/home/bernardo/.local/share/mise/installs/zls/latest"
@@ -1130,7 +1127,6 @@ events:
       - "dlltool"
     candidate_directories:
       - "/usr/bin/"
-      - "/home/bernardo/.local/share/mise/installs/opencode/latest/"
       - "/home/bernardo/.local/bin/"
       - "/home/bernardo/Android/Sdk/build-tools/34.0.0/"
       - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin/"
@@ -1148,15 +1144,15 @@ events:
       - "/home/bernardo/go/bin/"
       - "/home/bernardo/go/bin/cointop/"
       - "/home/bernardo/.config/emacs/bin/"
-      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/node_modules/.bin/"
+      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/node_modules/.bin/"
       - "/home/bernardo/.local/share/mise/installs/codex/latest/bin/"
       - "/home/bernardo/.local/share/mise/installs/node/25.2.1/bin/"
+      - "/home/bernardo/.local/share/mise/installs/opencode/latest/"
       - "/home/bernardo/.local/share/mise/installs/python/latest/bin/"
       - "/home/bernardo/.local/share/mise/installs/zig/0.16.0/bin/"
       - "/home/bernardo/.local/share/mise/installs/zls/latest/"
     searched_directories:
       - "/usr/bin/dlltool"
-      - "/home/bernardo/.local/share/mise/installs/opencode/latest/dlltool"
       - "/home/bernardo/.local/bin/dlltool"
       - "/home/bernardo/Android/Sdk/build-tools/34.0.0/dlltool"
       - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin/dlltool"
@@ -1174,21 +1170,24 @@ events:
       - "/home/bernardo/go/bin/dlltool"
       - "/home/bernardo/go/bin/cointop/dlltool"
       - "/home/bernardo/.config/emacs/bin/dlltool"
-      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/node_modules/.bin/dlltool"
+      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/node_modules/.bin/dlltool"
       - "/home/bernardo/.local/share/mise/installs/codex/latest/bin/dlltool"
       - "/home/bernardo/.local/share/mise/installs/node/25.2.1/bin/dlltool"
+      - "/home/bernardo/.local/share/mise/installs/opencode/latest/dlltool"
       - "/home/bernardo/.local/share/mise/installs/python/latest/bin/dlltool"
       - "/home/bernardo/.local/share/mise/installs/zig/0.16.0/bin/dlltool"
       - "/home/bernardo/.local/share/mise/installs/zls/latest/dlltool"
     found: false
     search_context:
       ENV{PATH}:
-        - "/home/bernardo/.local/share/mise/installs/opencode/latest"
         - "/home/bernardo/.local/bin"
         - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
         - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
         - "/home/bernardo/.config/composer/vendor/bin"
         - "/home/bernardo/.local/bin"
+        - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
+        - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
+        - "/home/bernardo/.config/composer/vendor/bin"
         - "/usr/share/omarchy/bin"
         - "/home/bernardo/.local/share/mise/shims"
         - "/home/bernardo/.cargo/bin"
@@ -1203,12 +1202,9 @@ events:
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
-        - "/home/bernardo/.cargo/bin"
-        - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
-        - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
-        - "/home/bernardo/.config/composer/vendor/bin"
         - "/home/bernardo/go/bin"
         - "/home/bernardo/go/bin/cointop"
+        - "/home/bernardo/.cargo/bin"
         - "/home/bernardo/.config/emacs/bin"
         - "./node_modules/.bin"
         - "/home/bernardo/go/bin"
@@ -1218,6 +1214,7 @@ events:
         - "./node_modules/.bin"
         - "/home/bernardo/.local/share/mise/installs/codex/latest/bin"
         - "/home/bernardo/.local/share/mise/installs/node/25.2.1/bin"
+        - "/home/bernardo/.local/share/mise/installs/opencode/latest"
         - "/home/bernardo/.local/share/mise/installs/python/latest/bin"
         - "/home/bernardo/.local/share/mise/installs/zig/0.16.0/bin"
         - "/home/bernardo/.local/share/mise/installs/zls/latest"
@@ -1242,7 +1239,6 @@ events:
       - "addr2line"
     candidate_directories:
       - "/usr/bin/"
-      - "/home/bernardo/.local/share/mise/installs/opencode/latest/"
       - "/home/bernardo/.local/bin/"
       - "/home/bernardo/Android/Sdk/build-tools/34.0.0/"
       - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin/"
@@ -1260,21 +1256,24 @@ events:
       - "/home/bernardo/go/bin/"
       - "/home/bernardo/go/bin/cointop/"
       - "/home/bernardo/.config/emacs/bin/"
-      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/node_modules/.bin/"
+      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/node_modules/.bin/"
       - "/home/bernardo/.local/share/mise/installs/codex/latest/bin/"
       - "/home/bernardo/.local/share/mise/installs/node/25.2.1/bin/"
+      - "/home/bernardo/.local/share/mise/installs/opencode/latest/"
       - "/home/bernardo/.local/share/mise/installs/python/latest/bin/"
       - "/home/bernardo/.local/share/mise/installs/zig/0.16.0/bin/"
       - "/home/bernardo/.local/share/mise/installs/zls/latest/"
     found: "/usr/bin/addr2line"
     search_context:
       ENV{PATH}:
-        - "/home/bernardo/.local/share/mise/installs/opencode/latest"
         - "/home/bernardo/.local/bin"
         - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
         - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
         - "/home/bernardo/.config/composer/vendor/bin"
         - "/home/bernardo/.local/bin"
+        - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
+        - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
+        - "/home/bernardo/.config/composer/vendor/bin"
         - "/usr/share/omarchy/bin"
         - "/home/bernardo/.local/share/mise/shims"
         - "/home/bernardo/.cargo/bin"
@@ -1289,12 +1288,9 @@ events:
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
-        - "/home/bernardo/.cargo/bin"
-        - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
-        - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
-        - "/home/bernardo/.config/composer/vendor/bin"
         - "/home/bernardo/go/bin"
         - "/home/bernardo/go/bin/cointop"
+        - "/home/bernardo/.cargo/bin"
         - "/home/bernardo/.config/emacs/bin"
         - "./node_modules/.bin"
         - "/home/bernardo/go/bin"
@@ -1304,6 +1300,7 @@ events:
         - "./node_modules/.bin"
         - "/home/bernardo/.local/share/mise/installs/codex/latest/bin"
         - "/home/bernardo/.local/share/mise/installs/node/25.2.1/bin"
+        - "/home/bernardo/.local/share/mise/installs/opencode/latest"
         - "/home/bernardo/.local/share/mise/installs/python/latest/bin"
         - "/home/bernardo/.local/share/mise/installs/zig/0.16.0/bin"
         - "/home/bernardo/.local/share/mise/installs/zls/latest"
@@ -1328,7 +1325,6 @@ events:
       - "tapi"
     candidate_directories:
       - "/usr/bin/"
-      - "/home/bernardo/.local/share/mise/installs/opencode/latest/"
       - "/home/bernardo/.local/bin/"
       - "/home/bernardo/Android/Sdk/build-tools/34.0.0/"
       - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin/"
@@ -1346,15 +1342,15 @@ events:
       - "/home/bernardo/go/bin/"
       - "/home/bernardo/go/bin/cointop/"
       - "/home/bernardo/.config/emacs/bin/"
-      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/node_modules/.bin/"
+      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/node_modules/.bin/"
       - "/home/bernardo/.local/share/mise/installs/codex/latest/bin/"
       - "/home/bernardo/.local/share/mise/installs/node/25.2.1/bin/"
+      - "/home/bernardo/.local/share/mise/installs/opencode/latest/"
       - "/home/bernardo/.local/share/mise/installs/python/latest/bin/"
       - "/home/bernardo/.local/share/mise/installs/zig/0.16.0/bin/"
       - "/home/bernardo/.local/share/mise/installs/zls/latest/"
     searched_directories:
       - "/usr/bin/tapi"
-      - "/home/bernardo/.local/share/mise/installs/opencode/latest/tapi"
       - "/home/bernardo/.local/bin/tapi"
       - "/home/bernardo/Android/Sdk/build-tools/34.0.0/tapi"
       - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin/tapi"
@@ -1372,21 +1368,24 @@ events:
       - "/home/bernardo/go/bin/tapi"
       - "/home/bernardo/go/bin/cointop/tapi"
       - "/home/bernardo/.config/emacs/bin/tapi"
-      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/node_modules/.bin/tapi"
+      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/node_modules/.bin/tapi"
       - "/home/bernardo/.local/share/mise/installs/codex/latest/bin/tapi"
       - "/home/bernardo/.local/share/mise/installs/node/25.2.1/bin/tapi"
+      - "/home/bernardo/.local/share/mise/installs/opencode/latest/tapi"
       - "/home/bernardo/.local/share/mise/installs/python/latest/bin/tapi"
       - "/home/bernardo/.local/share/mise/installs/zig/0.16.0/bin/tapi"
       - "/home/bernardo/.local/share/mise/installs/zls/latest/tapi"
     found: false
     search_context:
       ENV{PATH}:
-        - "/home/bernardo/.local/share/mise/installs/opencode/latest"
         - "/home/bernardo/.local/bin"
         - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
         - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
         - "/home/bernardo/.config/composer/vendor/bin"
         - "/home/bernardo/.local/bin"
+        - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
+        - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
+        - "/home/bernardo/.config/composer/vendor/bin"
         - "/usr/share/omarchy/bin"
         - "/home/bernardo/.local/share/mise/shims"
         - "/home/bernardo/.cargo/bin"
@@ -1401,12 +1400,9 @@ events:
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
-        - "/home/bernardo/.cargo/bin"
-        - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
-        - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
-        - "/home/bernardo/.config/composer/vendor/bin"
         - "/home/bernardo/go/bin"
         - "/home/bernardo/go/bin/cointop"
+        - "/home/bernardo/.cargo/bin"
         - "/home/bernardo/.config/emacs/bin"
         - "./node_modules/.bin"
         - "/home/bernardo/go/bin"
@@ -1416,6 +1412,7 @@ events:
         - "./node_modules/.bin"
         - "/home/bernardo/.local/share/mise/installs/codex/latest/bin"
         - "/home/bernardo/.local/share/mise/installs/node/25.2.1/bin"
+        - "/home/bernardo/.local/share/mise/installs/opencode/latest"
         - "/home/bernardo/.local/share/mise/installs/python/latest/bin"
         - "/home/bernardo/.local/share/mise/installs/zig/0.16.0/bin"
         - "/home/bernardo/.local/share/mise/installs/zls/latest"
@@ -1443,7 +1440,6 @@ events:
       - "gcc-ar"
     candidate_directories:
       - "/usr/bin/"
-      - "/home/bernardo/.local/share/mise/installs/opencode/latest/"
       - "/home/bernardo/.local/bin/"
       - "/home/bernardo/Android/Sdk/build-tools/34.0.0/"
       - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin/"
@@ -1461,15 +1457,15 @@ events:
       - "/home/bernardo/go/bin/"
       - "/home/bernardo/go/bin/cointop/"
       - "/home/bernardo/.config/emacs/bin/"
-      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/node_modules/.bin/"
+      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/node_modules/.bin/"
       - "/home/bernardo/.local/share/mise/installs/codex/latest/bin/"
       - "/home/bernardo/.local/share/mise/installs/node/25.2.1/bin/"
+      - "/home/bernardo/.local/share/mise/installs/opencode/latest/"
       - "/home/bernardo/.local/share/mise/installs/python/latest/bin/"
       - "/home/bernardo/.local/share/mise/installs/zig/0.16.0/bin/"
       - "/home/bernardo/.local/share/mise/installs/zls/latest/"
     searched_directories:
       - "/usr/bin/gcc-ar-16.2"
-      - "/home/bernardo/.local/share/mise/installs/opencode/latest/gcc-ar-16.2"
       - "/home/bernardo/.local/bin/gcc-ar-16.2"
       - "/home/bernardo/Android/Sdk/build-tools/34.0.0/gcc-ar-16.2"
       - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin/gcc-ar-16.2"
@@ -1487,14 +1483,14 @@ events:
       - "/home/bernardo/go/bin/gcc-ar-16.2"
       - "/home/bernardo/go/bin/cointop/gcc-ar-16.2"
       - "/home/bernardo/.config/emacs/bin/gcc-ar-16.2"
-      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/node_modules/.bin/gcc-ar-16.2"
+      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/node_modules/.bin/gcc-ar-16.2"
       - "/home/bernardo/.local/share/mise/installs/codex/latest/bin/gcc-ar-16.2"
       - "/home/bernardo/.local/share/mise/installs/node/25.2.1/bin/gcc-ar-16.2"
+      - "/home/bernardo/.local/share/mise/installs/opencode/latest/gcc-ar-16.2"
       - "/home/bernardo/.local/share/mise/installs/python/latest/bin/gcc-ar-16.2"
       - "/home/bernardo/.local/share/mise/installs/zig/0.16.0/bin/gcc-ar-16.2"
       - "/home/bernardo/.local/share/mise/installs/zls/latest/gcc-ar-16.2"
       - "/usr/bin/gcc-ar-16"
-      - "/home/bernardo/.local/share/mise/installs/opencode/latest/gcc-ar-16"
       - "/home/bernardo/.local/bin/gcc-ar-16"
       - "/home/bernardo/Android/Sdk/build-tools/34.0.0/gcc-ar-16"
       - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin/gcc-ar-16"
@@ -1512,14 +1508,14 @@ events:
       - "/home/bernardo/go/bin/gcc-ar-16"
       - "/home/bernardo/go/bin/cointop/gcc-ar-16"
       - "/home/bernardo/.config/emacs/bin/gcc-ar-16"
-      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/node_modules/.bin/gcc-ar-16"
+      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/node_modules/.bin/gcc-ar-16"
       - "/home/bernardo/.local/share/mise/installs/codex/latest/bin/gcc-ar-16"
       - "/home/bernardo/.local/share/mise/installs/node/25.2.1/bin/gcc-ar-16"
+      - "/home/bernardo/.local/share/mise/installs/opencode/latest/gcc-ar-16"
       - "/home/bernardo/.local/share/mise/installs/python/latest/bin/gcc-ar-16"
       - "/home/bernardo/.local/share/mise/installs/zig/0.16.0/bin/gcc-ar-16"
       - "/home/bernardo/.local/share/mise/installs/zls/latest/gcc-ar-16"
       - "/usr/bin/gcc-ar16"
-      - "/home/bernardo/.local/share/mise/installs/opencode/latest/gcc-ar16"
       - "/home/bernardo/.local/bin/gcc-ar16"
       - "/home/bernardo/Android/Sdk/build-tools/34.0.0/gcc-ar16"
       - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin/gcc-ar16"
@@ -1537,21 +1533,24 @@ events:
       - "/home/bernardo/go/bin/gcc-ar16"
       - "/home/bernardo/go/bin/cointop/gcc-ar16"
       - "/home/bernardo/.config/emacs/bin/gcc-ar16"
-      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/node_modules/.bin/gcc-ar16"
+      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/node_modules/.bin/gcc-ar16"
       - "/home/bernardo/.local/share/mise/installs/codex/latest/bin/gcc-ar16"
       - "/home/bernardo/.local/share/mise/installs/node/25.2.1/bin/gcc-ar16"
+      - "/home/bernardo/.local/share/mise/installs/opencode/latest/gcc-ar16"
       - "/home/bernardo/.local/share/mise/installs/python/latest/bin/gcc-ar16"
       - "/home/bernardo/.local/share/mise/installs/zig/0.16.0/bin/gcc-ar16"
       - "/home/bernardo/.local/share/mise/installs/zls/latest/gcc-ar16"
     found: "/usr/bin/gcc-ar"
     search_context:
       ENV{PATH}:
-        - "/home/bernardo/.local/share/mise/installs/opencode/latest"
         - "/home/bernardo/.local/bin"
         - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
         - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
         - "/home/bernardo/.config/composer/vendor/bin"
         - "/home/bernardo/.local/bin"
+        - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
+        - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
+        - "/home/bernardo/.config/composer/vendor/bin"
         - "/usr/share/omarchy/bin"
         - "/home/bernardo/.local/share/mise/shims"
         - "/home/bernardo/.cargo/bin"
@@ -1566,12 +1565,9 @@ events:
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
-        - "/home/bernardo/.cargo/bin"
-        - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
-        - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
-        - "/home/bernardo/.config/composer/vendor/bin"
         - "/home/bernardo/go/bin"
         - "/home/bernardo/go/bin/cointop"
+        - "/home/bernardo/.cargo/bin"
         - "/home/bernardo/.config/emacs/bin"
         - "./node_modules/.bin"
         - "/home/bernardo/go/bin"
@@ -1581,6 +1577,7 @@ events:
         - "./node_modules/.bin"
         - "/home/bernardo/.local/share/mise/installs/codex/latest/bin"
         - "/home/bernardo/.local/share/mise/installs/node/25.2.1/bin"
+        - "/home/bernardo/.local/share/mise/installs/opencode/latest"
         - "/home/bernardo/.local/share/mise/installs/python/latest/bin"
         - "/home/bernardo/.local/share/mise/installs/zig/0.16.0/bin"
         - "/home/bernardo/.local/share/mise/installs/zls/latest"
@@ -1608,7 +1605,6 @@ events:
       - "gcc-ranlib"
     candidate_directories:
       - "/usr/bin/"
-      - "/home/bernardo/.local/share/mise/installs/opencode/latest/"
       - "/home/bernardo/.local/bin/"
       - "/home/bernardo/Android/Sdk/build-tools/34.0.0/"
       - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin/"
@@ -1626,15 +1622,15 @@ events:
       - "/home/bernardo/go/bin/"
       - "/home/bernardo/go/bin/cointop/"
       - "/home/bernardo/.config/emacs/bin/"
-      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/node_modules/.bin/"
+      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/node_modules/.bin/"
       - "/home/bernardo/.local/share/mise/installs/codex/latest/bin/"
       - "/home/bernardo/.local/share/mise/installs/node/25.2.1/bin/"
+      - "/home/bernardo/.local/share/mise/installs/opencode/latest/"
       - "/home/bernardo/.local/share/mise/installs/python/latest/bin/"
       - "/home/bernardo/.local/share/mise/installs/zig/0.16.0/bin/"
       - "/home/bernardo/.local/share/mise/installs/zls/latest/"
     searched_directories:
       - "/usr/bin/gcc-ranlib-16.2"
-      - "/home/bernardo/.local/share/mise/installs/opencode/latest/gcc-ranlib-16.2"
       - "/home/bernardo/.local/bin/gcc-ranlib-16.2"
       - "/home/bernardo/Android/Sdk/build-tools/34.0.0/gcc-ranlib-16.2"
       - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin/gcc-ranlib-16.2"
@@ -1652,14 +1648,14 @@ events:
       - "/home/bernardo/go/bin/gcc-ranlib-16.2"
       - "/home/bernardo/go/bin/cointop/gcc-ranlib-16.2"
       - "/home/bernardo/.config/emacs/bin/gcc-ranlib-16.2"
-      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/node_modules/.bin/gcc-ranlib-16.2"
+      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/node_modules/.bin/gcc-ranlib-16.2"
       - "/home/bernardo/.local/share/mise/installs/codex/latest/bin/gcc-ranlib-16.2"
       - "/home/bernardo/.local/share/mise/installs/node/25.2.1/bin/gcc-ranlib-16.2"
+      - "/home/bernardo/.local/share/mise/installs/opencode/latest/gcc-ranlib-16.2"
       - "/home/bernardo/.local/share/mise/installs/python/latest/bin/gcc-ranlib-16.2"
       - "/home/bernardo/.local/share/mise/installs/zig/0.16.0/bin/gcc-ranlib-16.2"
       - "/home/bernardo/.local/share/mise/installs/zls/latest/gcc-ranlib-16.2"
       - "/usr/bin/gcc-ranlib-16"
-      - "/home/bernardo/.local/share/mise/installs/opencode/latest/gcc-ranlib-16"
       - "/home/bernardo/.local/bin/gcc-ranlib-16"
       - "/home/bernardo/Android/Sdk/build-tools/34.0.0/gcc-ranlib-16"
       - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin/gcc-ranlib-16"
@@ -1677,14 +1673,14 @@ events:
       - "/home/bernardo/go/bin/gcc-ranlib-16"
       - "/home/bernardo/go/bin/cointop/gcc-ranlib-16"
       - "/home/bernardo/.config/emacs/bin/gcc-ranlib-16"
-      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/node_modules/.bin/gcc-ranlib-16"
+      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/node_modules/.bin/gcc-ranlib-16"
       - "/home/bernardo/.local/share/mise/installs/codex/latest/bin/gcc-ranlib-16"
       - "/home/bernardo/.local/share/mise/installs/node/25.2.1/bin/gcc-ranlib-16"
+      - "/home/bernardo/.local/share/mise/installs/opencode/latest/gcc-ranlib-16"
       - "/home/bernardo/.local/share/mise/installs/python/latest/bin/gcc-ranlib-16"
       - "/home/bernardo/.local/share/mise/installs/zig/0.16.0/bin/gcc-ranlib-16"
       - "/home/bernardo/.local/share/mise/installs/zls/latest/gcc-ranlib-16"
       - "/usr/bin/gcc-ranlib16"
-      - "/home/bernardo/.local/share/mise/installs/opencode/latest/gcc-ranlib16"
       - "/home/bernardo/.local/bin/gcc-ranlib16"
       - "/home/bernardo/Android/Sdk/build-tools/34.0.0/gcc-ranlib16"
       - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin/gcc-ranlib16"
@@ -1702,21 +1698,24 @@ events:
       - "/home/bernardo/go/bin/gcc-ranlib16"
       - "/home/bernardo/go/bin/cointop/gcc-ranlib16"
       - "/home/bernardo/.config/emacs/bin/gcc-ranlib16"
-      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/node_modules/.bin/gcc-ranlib16"
+      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/node_modules/.bin/gcc-ranlib16"
       - "/home/bernardo/.local/share/mise/installs/codex/latest/bin/gcc-ranlib16"
       - "/home/bernardo/.local/share/mise/installs/node/25.2.1/bin/gcc-ranlib16"
+      - "/home/bernardo/.local/share/mise/installs/opencode/latest/gcc-ranlib16"
       - "/home/bernardo/.local/share/mise/installs/python/latest/bin/gcc-ranlib16"
       - "/home/bernardo/.local/share/mise/installs/zig/0.16.0/bin/gcc-ranlib16"
       - "/home/bernardo/.local/share/mise/installs/zls/latest/gcc-ranlib16"
     found: "/usr/bin/gcc-ranlib"
     search_context:
       ENV{PATH}:
-        - "/home/bernardo/.local/share/mise/installs/opencode/latest"
         - "/home/bernardo/.local/bin"
         - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
         - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
         - "/home/bernardo/.config/composer/vendor/bin"
         - "/home/bernardo/.local/bin"
+        - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
+        - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
+        - "/home/bernardo/.config/composer/vendor/bin"
         - "/usr/share/omarchy/bin"
         - "/home/bernardo/.local/share/mise/shims"
         - "/home/bernardo/.cargo/bin"
@@ -1731,12 +1730,9 @@ events:
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
-        - "/home/bernardo/.cargo/bin"
-        - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
-        - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
-        - "/home/bernardo/.config/composer/vendor/bin"
         - "/home/bernardo/go/bin"
         - "/home/bernardo/go/bin/cointop"
+        - "/home/bernardo/.cargo/bin"
         - "/home/bernardo/.config/emacs/bin"
         - "./node_modules/.bin"
         - "/home/bernardo/go/bin"
@@ -1746,6 +1742,7 @@ events:
         - "./node_modules/.bin"
         - "/home/bernardo/.local/share/mise/installs/codex/latest/bin"
         - "/home/bernardo/.local/share/mise/installs/node/25.2.1/bin"
+        - "/home/bernardo/.local/share/mise/installs/opencode/latest"
         - "/home/bernardo/.local/share/mise/installs/python/latest/bin"
         - "/home/bernardo/.local/share/mise/installs/zig/0.16.0/bin"
         - "/home/bernardo/.local/share/mise/installs/zls/latest"
@@ -1758,8 +1755,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/CMakeFiles/CMakeScratch/TryCompile-LpCqfd"
-      binary: "/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/CMakeFiles/CMakeScratch/TryCompile-LpCqfd"
+      source: "/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/CMakeFiles/CMakeScratch/TryCompile-kfgmzl"
+      binary: "/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/CMakeFiles/CMakeScratch/TryCompile-kfgmzl"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -1770,13 +1767,13 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: false
       stdout: |
-        Change Dir: '/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/CMakeFiles/CMakeScratch/TryCompile-LpCqfd'
+        Change Dir: '/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/CMakeFiles/CMakeScratch/TryCompile-kfgmzl'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_231dd/fast
-        /usr/bin/make  -f CMakeFiles/cmTC_231dd.dir/build.make CMakeFiles/cmTC_231dd.dir/build
-        make[1]: Entering directory '/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/CMakeFiles/CMakeScratch/TryCompile-LpCqfd'
-        Building CXX object CMakeFiles/cmTC_231dd.dir/CMakeCXXCompilerABI.cpp.o
-        /usr/bin/c++   -v -o CMakeFiles/cmTC_231dd.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_53847/fast
+        /usr/bin/make  -f CMakeFiles/cmTC_53847.dir/build.make CMakeFiles/cmTC_53847.dir/build
+        make[1]: Entering directory '/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/CMakeFiles/CMakeScratch/TryCompile-kfgmzl'
+        Building CXX object CMakeFiles/cmTC_53847.dir/CMakeCXXCompilerABI.cpp.o
+        /usr/bin/c++   -v -o CMakeFiles/cmTC_53847.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp
         Using built-in specs.
         COLLECT_GCC=/usr/bin/c++
         Target: x86_64-pc-linux-gnu
@@ -1784,8 +1781,8 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib zstd
         gcc version 16.2.1 20260810 (GCC) 
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_231dd.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_231dd.dir/'
-         /usr/lib/gcc/x86_64-pc-linux-gnu/16/cc1plus -quiet -v -D_GNU_SOURCE /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_231dd.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o /tmp/ccTpFre5.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_53847.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_53847.dir/'
+         /usr/lib/gcc/x86_64-pc-linux-gnu/16/cc1plus -quiet -v -D_GNU_SOURCE /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_53847.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o /tmp/ccKtSsT6.s
         GNU C++20 (GCC) version 16.2.1 20260810 (x86_64-pc-linux-gnu)
         	compiled by GNU C version 16.2.1 20260810, GMP version 6.3.0, MPFR version 4.2.2, MPC version 1.4.1, isl version isl-0.28-GMP
         
@@ -1802,14 +1799,14 @@ events:
          /usr/include
         End of search list.
         Compiler executable checksum: 4e9ac8b201f4ca740be09d0c7a39f82f
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_231dd.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_231dd.dir/'
-         as -v --64 -o CMakeFiles/cmTC_231dd.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccTpFre5.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_53847.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_53847.dir/'
+         as -v --64 -o CMakeFiles/cmTC_53847.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccKtSsT6.s
         GNU assembler version 2.47 (x86_64-pc-linux-gnu) using BFD version (GNU Binutils) 2.47
         COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/
         LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_231dd.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_231dd.dir/CMakeCXXCompilerABI.cpp.'
-        Linking CXX executable cmTC_231dd
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_231dd.dir/link.txt --verbose=1
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_53847.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_53847.dir/CMakeCXXCompilerABI.cpp.'
+        Linking CXX executable cmTC_53847
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_53847.dir/link.txt --verbose=1
         Using built-in specs.
         COLLECT_GCC=/usr/bin/c++
         COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper
@@ -1820,14 +1817,14 @@ events:
         gcc version 16.2.1 20260810 (GCC) 
         COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/
         LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_231dd' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_231dd.'
-         /usr/lib/gcc/x86_64-pc-linux-gnu/16/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccMLHSXo.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_231dd /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_231dd.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -latomic_asneeded -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_53847' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_53847.'
+         /usr/lib/gcc/x86_64-pc-linux-gnu/16/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper -plugin-opt=-fresolution=/tmp/cc0m2kWD.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_53847 /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_53847.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -latomic_asneeded -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o
         collect2 version 16.2.1 20260810
-        /usr/bin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccMLHSXo.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_231dd /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_231dd.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -latomic_asneeded -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o
+        /usr/bin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper -plugin-opt=-fresolution=/tmp/cc0m2kWD.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_53847 /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_53847.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -latomic_asneeded -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o
         GNU ld (GNU Binutils) 2.47
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_231dd' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_231dd.'
-        /usr/bin/c++  -v -Wl,-v CMakeFiles/cmTC_231dd.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_231dd
-        make[1]: Leaving directory '/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/CMakeFiles/CMakeScratch/TryCompile-LpCqfd'
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_53847' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_53847.'
+        /usr/bin/c++  -v -Wl,-v CMakeFiles/cmTC_53847.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_53847
+        make[1]: Leaving directory '/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/CMakeFiles/CMakeScratch/TryCompile-kfgmzl'
         
       exitCode: 0
   -
@@ -1866,13 +1863,13 @@ events:
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|wild|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|wild))("|,| |$)]
-        ignore line: [Change Dir: '/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/CMakeFiles/CMakeScratch/TryCompile-LpCqfd']
+        ignore line: [Change Dir: '/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/CMakeFiles/CMakeScratch/TryCompile-kfgmzl']
         ignore line: []
-        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_231dd/fast]
-        ignore line: [/usr/bin/make  -f CMakeFiles/cmTC_231dd.dir/build.make CMakeFiles/cmTC_231dd.dir/build]
-        ignore line: [make[1]: Entering directory '/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/CMakeFiles/CMakeScratch/TryCompile-LpCqfd']
-        ignore line: [Building CXX object CMakeFiles/cmTC_231dd.dir/CMakeCXXCompilerABI.cpp.o]
-        ignore line: [/usr/bin/c++   -v -o CMakeFiles/cmTC_231dd.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_53847/fast]
+        ignore line: [/usr/bin/make  -f CMakeFiles/cmTC_53847.dir/build.make CMakeFiles/cmTC_53847.dir/build]
+        ignore line: [make[1]: Entering directory '/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/CMakeFiles/CMakeScratch/TryCompile-kfgmzl']
+        ignore line: [Building CXX object CMakeFiles/cmTC_53847.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [/usr/bin/c++   -v -o CMakeFiles/cmTC_53847.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/usr/bin/c++]
         ignore line: [Target: x86_64-pc-linux-gnu]
@@ -1880,8 +1877,8 @@ events:
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib zstd]
         ignore line: [gcc version 16.2.1 20260810 (GCC) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_231dd.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_231dd.dir/']
-        ignore line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/16/cc1plus -quiet -v -D_GNU_SOURCE /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_231dd.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o /tmp/ccTpFre5.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_53847.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_53847.dir/']
+        ignore line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/16/cc1plus -quiet -v -D_GNU_SOURCE /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_53847.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o /tmp/ccKtSsT6.s]
         ignore line: [GNU C++20 (GCC) version 16.2.1 20260810 (x86_64-pc-linux-gnu)]
         ignore line: [	compiled by GNU C version 16.2.1 20260810  GMP version 6.3.0  MPFR version 4.2.2  MPC version 1.4.1  isl version isl-0.28-GMP]
         ignore line: []
@@ -1898,14 +1895,14 @@ events:
         ignore line: [ /usr/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: 4e9ac8b201f4ca740be09d0c7a39f82f]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_231dd.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_231dd.dir/']
-        ignore line: [ as -v --64 -o CMakeFiles/cmTC_231dd.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccTpFre5.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_53847.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_53847.dir/']
+        ignore line: [ as -v --64 -o CMakeFiles/cmTC_53847.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccKtSsT6.s]
         ignore line: [GNU assembler version 2.47 (x86_64-pc-linux-gnu) using BFD version (GNU Binutils) 2.47]
         ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/]
         ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_231dd.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_231dd.dir/CMakeCXXCompilerABI.cpp.']
-        ignore line: [Linking CXX executable cmTC_231dd]
-        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_231dd.dir/link.txt --verbose=1]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_53847.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_53847.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [Linking CXX executable cmTC_53847]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_53847.dir/link.txt --verbose=1]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/usr/bin/c++]
         ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper]
@@ -1916,13 +1913,13 @@ events:
         ignore line: [gcc version 16.2.1 20260810 (GCC) ]
         ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/]
         ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/16/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_231dd' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_231dd.']
-        link line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/16/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccMLHSXo.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_231dd /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_231dd.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -latomic_asneeded -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_53847' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_53847.']
+        link line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/16/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper -plugin-opt=-fresolution=/tmp/cc0m2kWD.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_53847 /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_53847.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -latomic_asneeded -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o]
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/16/collect2] ==> ignore
           arg [-plugin] ==> ignore
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/16/liblto_plugin.so] ==> ignore
           arg [-plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper] ==> ignore
-          arg [-plugin-opt=-fresolution=/tmp/ccMLHSXo.res] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/cc0m2kWD.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [-plugin-opt=-pass-through=-latomic_asneeded] ==> ignore
@@ -1938,7 +1935,7 @@ events:
           arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
           arg [-pie] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_231dd] ==> ignore
+          arg [cmTC_53847] ==> ignore
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o]
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o]
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o]
@@ -1950,7 +1947,7 @@ events:
           arg [-L/lib] ==> dir [/lib]
           arg [-L/usr/lib] ==> dir [/usr/lib]
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_231dd.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [CMakeFiles/cmTC_53847.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
           arg [-lstdc++] ==> lib [stdc++]
           arg [-lm] ==> lib [m]
           arg [-lgcc_s] ==> lib [gcc_s]
@@ -1962,9 +1959,9 @@ events:
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o]
           arg [/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o] ==> obj [/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o]
         ignore line: [collect2 version 16.2.1 20260810]
-        link line: [/usr/bin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccMLHSXo.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_231dd /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_231dd.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -latomic_asneeded -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o] ==> linker [/usr/bin/ld]
-        link line: [/usr/bin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccMLHSXo.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_231dd /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_231dd.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -latomic_asneeded -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o] ==> linker architecture flags [-m;elf]
-        ignore line: [/usr/bin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccMLHSXo.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_231dd /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_231dd.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -latomic_asneeded -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o]
+        link line: [/usr/bin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper -plugin-opt=-fresolution=/tmp/cc0m2kWD.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_53847 /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_53847.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -latomic_asneeded -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o] ==> linker [/usr/bin/ld]
+        link line: [/usr/bin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper -plugin-opt=-fresolution=/tmp/cc0m2kWD.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_53847 /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_53847.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -latomic_asneeded -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o] ==> linker architecture flags [-m;elf]
+        ignore line: [/usr/bin/ld -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/16/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/16/lto-wrapper -plugin-opt=-fresolution=/tmp/cc0m2kWD.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_53847 /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/16 -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_53847.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -latomic_asneeded -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crtn.o]
         linker tool for 'CXX': /usr/bin/ld -m;elf
         collapse obj [/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/Scrt1.o] ==> [/usr/lib/Scrt1.o]
         collapse obj [/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o] ==> [/usr/lib/crti.o]
@@ -2000,10 +1997,10 @@ events:
       - "/usr/share/cmake/Modules/FindThreads.cmake:162 (check_cxx_source_compiles)"
       - "/usr/share/cmake/Modules/FindThreads.cmake:226 (_threads_check_libc)"
       - "/usr/share/cmake/Modules/FindProtobuf.cmake:927 (find_package)"
-      - "CMakeLists.txt:16 (find_package)"
+      - "CMakeLists.txt:18 (find_package)"
     directories:
-      source: "/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/CMakeFiles/CMakeScratch/TryCompile-5ksLxt"
-      binary: "/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/CMakeFiles/CMakeScratch/TryCompile-5ksLxt"
+      source: "/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/CMakeFiles/CMakeScratch/TryCompile-mD5H01"
+      binary: "/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/CMakeFiles/CMakeScratch/TryCompile-mD5H01"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -2013,17 +2010,17 @@ events:
       variable: "CMAKE_HAVE_LIBC_PTHREAD"
       cached: true
       stdout: |
-        Change Dir: '/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/CMakeFiles/CMakeScratch/TryCompile-5ksLxt'
+        Change Dir: '/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/CMakeFiles/CMakeScratch/TryCompile-mD5H01'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_84ee6/fast
-        /usr/bin/make  -f CMakeFiles/cmTC_84ee6.dir/build.make CMakeFiles/cmTC_84ee6.dir/build
-        make[1]: Entering directory '/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/CMakeFiles/CMakeScratch/TryCompile-5ksLxt'
-        Building CXX object CMakeFiles/cmTC_84ee6.dir/src.cxx.o
-        /usr/bin/c++ -DCMAKE_HAVE_LIBC_PTHREAD  -std=gnu++20 -o CMakeFiles/cmTC_84ee6.dir/src.cxx.o -c /home/bernardo/Documents/42/M5/TheAnswerProtocol/build/CMakeFiles/CMakeScratch/TryCompile-5ksLxt/src.cxx
-        Linking CXX executable cmTC_84ee6
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_84ee6.dir/link.txt --verbose=1
-        /usr/bin/c++ CMakeFiles/cmTC_84ee6.dir/src.cxx.o -o cmTC_84ee6
-        make[1]: Leaving directory '/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/CMakeFiles/CMakeScratch/TryCompile-5ksLxt'
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_d52e2/fast
+        /usr/bin/make  -f CMakeFiles/cmTC_d52e2.dir/build.make CMakeFiles/cmTC_d52e2.dir/build
+        make[1]: Entering directory '/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/CMakeFiles/CMakeScratch/TryCompile-mD5H01'
+        Building CXX object CMakeFiles/cmTC_d52e2.dir/src.cxx.o
+        /usr/bin/c++ -DCMAKE_HAVE_LIBC_PTHREAD  -std=gnu++20 -o CMakeFiles/cmTC_d52e2.dir/src.cxx.o -c /home/bernardo/Documents/42/M5/TheAnswerProtocol/build/CMakeFiles/CMakeScratch/TryCompile-mD5H01/src.cxx
+        Linking CXX executable cmTC_d52e2
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d52e2.dir/link.txt --verbose=1
+        /usr/bin/c++ CMakeFiles/cmTC_d52e2.dir/src.cxx.o -o cmTC_d52e2
+        make[1]: Leaving directory '/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/CMakeFiles/CMakeScratch/TryCompile-mD5H01'
         
       exitCode: 0
   -
@@ -2031,7 +2028,7 @@ events:
     backtrace:
       - "/usr/share/cmake/Modules/FindProtobuf.cmake:882 (find_library)"
       - "/usr/share/cmake/Modules/FindProtobuf.cmake:931 (_protobuf_find_libraries)"
-      - "CMakeLists.txt:16 (find_package)"
+      - "CMakeLists.txt:18 (find_package)"
     mode: "library"
     variable: "Protobuf_LIBRARY_RELEASE"
     description: "Path to a library."
@@ -2046,7 +2043,6 @@ events:
     names:
       - "protobuf"
     candidate_directories:
-      - "/home/bernardo/.local/share/mise/installs/opencode/latest/"
       - "/home/bernardo/.local/bin/"
       - "/home/bernardo/Android/Sdk/build-tools/34.0.0/"
       - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin/"
@@ -2065,9 +2061,10 @@ events:
       - "/home/bernardo/go/bin/"
       - "/home/bernardo/go/bin/cointop/"
       - "/home/bernardo/.config/emacs/bin/"
-      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/node_modules/.bin/"
+      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/node_modules/.bin/"
       - "/home/bernardo/.local/share/mise/installs/codex/latest/bin/"
       - "/home/bernardo/.local/share/mise/installs/node/25.2.1/bin/"
+      - "/home/bernardo/.local/share/mise/installs/opencode/latest/"
       - "/home/bernardo/.local/share/mise/installs/python/latest/bin/"
       - "/home/bernardo/.local/share/mise/installs/zig/0.16.0/bin/"
       - "/home/bernardo/.local/share/mise/installs/zls/latest/"
@@ -2085,7 +2082,6 @@ events:
       - "/usr/lib/X11/"
       - "/vsprojects/x64/Release/"
     searched_directories:
-      - "/home/bernardo/.local/share/mise/installs/opencode/latest/"
       - "/home/bernardo/.local/bin/"
       - "/home/bernardo/Android/Sdk/build-tools/34.0.0/"
       - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin/"
@@ -2104,9 +2100,10 @@ events:
       - "/home/bernardo/go/bin/"
       - "/home/bernardo/go/bin/cointop/"
       - "/home/bernardo/.config/emacs/bin/"
-      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/node_modules/.bin/"
+      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/node_modules/.bin/"
       - "/home/bernardo/.local/share/mise/installs/codex/latest/bin/"
       - "/home/bernardo/.local/share/mise/installs/node/25.2.1/bin/"
+      - "/home/bernardo/.local/share/mise/installs/opencode/latest/"
       - "/home/bernardo/.local/share/mise/installs/python/latest/bin/"
       - "/home/bernardo/.local/share/mise/installs/zig/0.16.0/bin/"
       - "/home/bernardo/.local/share/mise/installs/zls/latest/"
@@ -2115,12 +2112,14 @@ events:
     found: "/usr/lib/libprotobuf.so"
     search_context:
       ENV{PATH}:
-        - "/home/bernardo/.local/share/mise/installs/opencode/latest"
         - "/home/bernardo/.local/bin"
         - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
         - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
         - "/home/bernardo/.config/composer/vendor/bin"
         - "/home/bernardo/.local/bin"
+        - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
+        - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
+        - "/home/bernardo/.config/composer/vendor/bin"
         - "/usr/share/omarchy/bin"
         - "/home/bernardo/.local/share/mise/shims"
         - "/home/bernardo/.cargo/bin"
@@ -2135,12 +2134,9 @@ events:
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
-        - "/home/bernardo/.cargo/bin"
-        - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
-        - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
-        - "/home/bernardo/.config/composer/vendor/bin"
         - "/home/bernardo/go/bin"
         - "/home/bernardo/go/bin/cointop"
+        - "/home/bernardo/.cargo/bin"
         - "/home/bernardo/.config/emacs/bin"
         - "./node_modules/.bin"
         - "/home/bernardo/go/bin"
@@ -2150,6 +2146,7 @@ events:
         - "./node_modules/.bin"
         - "/home/bernardo/.local/share/mise/installs/codex/latest/bin"
         - "/home/bernardo/.local/share/mise/installs/node/25.2.1/bin"
+        - "/home/bernardo/.local/share/mise/installs/opencode/latest"
         - "/home/bernardo/.local/share/mise/installs/python/latest/bin"
         - "/home/bernardo/.local/share/mise/installs/zig/0.16.0/bin"
         - "/home/bernardo/.local/share/mise/installs/zls/latest"
@@ -2170,7 +2167,7 @@ events:
     backtrace:
       - "/usr/share/cmake/Modules/FindProtobuf.cmake:888 (find_library)"
       - "/usr/share/cmake/Modules/FindProtobuf.cmake:931 (_protobuf_find_libraries)"
-      - "CMakeLists.txt:16 (find_package)"
+      - "CMakeLists.txt:18 (find_package)"
     mode: "library"
     variable: "Protobuf_LIBRARY_DEBUG"
     description: "Path to a library."
@@ -2186,7 +2183,6 @@ events:
       - "protobufd"
       - "protobuf"
     candidate_directories:
-      - "/home/bernardo/.local/share/mise/installs/opencode/latest/"
       - "/home/bernardo/.local/bin/"
       - "/home/bernardo/Android/Sdk/build-tools/34.0.0/"
       - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin/"
@@ -2205,9 +2201,10 @@ events:
       - "/home/bernardo/go/bin/"
       - "/home/bernardo/go/bin/cointop/"
       - "/home/bernardo/.config/emacs/bin/"
-      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/node_modules/.bin/"
+      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/node_modules/.bin/"
       - "/home/bernardo/.local/share/mise/installs/codex/latest/bin/"
       - "/home/bernardo/.local/share/mise/installs/node/25.2.1/bin/"
+      - "/home/bernardo/.local/share/mise/installs/opencode/latest/"
       - "/home/bernardo/.local/share/mise/installs/python/latest/bin/"
       - "/home/bernardo/.local/share/mise/installs/zig/0.16.0/bin/"
       - "/home/bernardo/.local/share/mise/installs/zls/latest/"
@@ -2225,8 +2222,6 @@ events:
       - "/usr/lib/X11/"
       - "/vsprojects/x64/Debug/"
     searched_directories:
-      - "/home/bernardo/.local/share/mise/installs/opencode/latest/"
-      - "/home/bernardo/.local/share/mise/installs/opencode/latest/"
       - "/home/bernardo/.local/bin/"
       - "/home/bernardo/.local/bin/"
       - "/home/bernardo/Android/Sdk/build-tools/34.0.0/"
@@ -2263,12 +2258,14 @@ events:
       - "/home/bernardo/go/bin/cointop/"
       - "/home/bernardo/.config/emacs/bin/"
       - "/home/bernardo/.config/emacs/bin/"
-      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/node_modules/.bin/"
-      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/node_modules/.bin/"
+      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/node_modules/.bin/"
+      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/node_modules/.bin/"
       - "/home/bernardo/.local/share/mise/installs/codex/latest/bin/"
       - "/home/bernardo/.local/share/mise/installs/codex/latest/bin/"
       - "/home/bernardo/.local/share/mise/installs/node/25.2.1/bin/"
       - "/home/bernardo/.local/share/mise/installs/node/25.2.1/bin/"
+      - "/home/bernardo/.local/share/mise/installs/opencode/latest/"
+      - "/home/bernardo/.local/share/mise/installs/opencode/latest/"
       - "/home/bernardo/.local/share/mise/installs/python/latest/bin/"
       - "/home/bernardo/.local/share/mise/installs/python/latest/bin/"
       - "/home/bernardo/.local/share/mise/installs/zig/0.16.0/bin/"
@@ -2283,12 +2280,14 @@ events:
     found: "/usr/lib/libprotobuf.so"
     search_context:
       ENV{PATH}:
-        - "/home/bernardo/.local/share/mise/installs/opencode/latest"
         - "/home/bernardo/.local/bin"
         - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
         - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
         - "/home/bernardo/.config/composer/vendor/bin"
         - "/home/bernardo/.local/bin"
+        - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
+        - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
+        - "/home/bernardo/.config/composer/vendor/bin"
         - "/usr/share/omarchy/bin"
         - "/home/bernardo/.local/share/mise/shims"
         - "/home/bernardo/.cargo/bin"
@@ -2303,12 +2302,9 @@ events:
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
-        - "/home/bernardo/.cargo/bin"
-        - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
-        - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
-        - "/home/bernardo/.config/composer/vendor/bin"
         - "/home/bernardo/go/bin"
         - "/home/bernardo/go/bin/cointop"
+        - "/home/bernardo/.cargo/bin"
         - "/home/bernardo/.config/emacs/bin"
         - "./node_modules/.bin"
         - "/home/bernardo/go/bin"
@@ -2318,6 +2314,7 @@ events:
         - "./node_modules/.bin"
         - "/home/bernardo/.local/share/mise/installs/codex/latest/bin"
         - "/home/bernardo/.local/share/mise/installs/node/25.2.1/bin"
+        - "/home/bernardo/.local/share/mise/installs/opencode/latest"
         - "/home/bernardo/.local/share/mise/installs/python/latest/bin"
         - "/home/bernardo/.local/share/mise/installs/zig/0.16.0/bin"
         - "/home/bernardo/.local/share/mise/installs/zls/latest"
@@ -2338,7 +2335,7 @@ events:
     backtrace:
       - "/usr/share/cmake/Modules/FindProtobuf.cmake:882 (find_library)"
       - "/usr/share/cmake/Modules/FindProtobuf.cmake:934 (_protobuf_find_libraries)"
-      - "CMakeLists.txt:16 (find_package)"
+      - "CMakeLists.txt:18 (find_package)"
     mode: "library"
     variable: "Protobuf_LITE_LIBRARY_RELEASE"
     description: "Path to a library."
@@ -2353,7 +2350,6 @@ events:
     names:
       - "protobuf-lite"
     candidate_directories:
-      - "/home/bernardo/.local/share/mise/installs/opencode/latest/"
       - "/home/bernardo/.local/bin/"
       - "/home/bernardo/Android/Sdk/build-tools/34.0.0/"
       - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin/"
@@ -2372,9 +2368,10 @@ events:
       - "/home/bernardo/go/bin/"
       - "/home/bernardo/go/bin/cointop/"
       - "/home/bernardo/.config/emacs/bin/"
-      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/node_modules/.bin/"
+      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/node_modules/.bin/"
       - "/home/bernardo/.local/share/mise/installs/codex/latest/bin/"
       - "/home/bernardo/.local/share/mise/installs/node/25.2.1/bin/"
+      - "/home/bernardo/.local/share/mise/installs/opencode/latest/"
       - "/home/bernardo/.local/share/mise/installs/python/latest/bin/"
       - "/home/bernardo/.local/share/mise/installs/zig/0.16.0/bin/"
       - "/home/bernardo/.local/share/mise/installs/zls/latest/"
@@ -2392,7 +2389,6 @@ events:
       - "/usr/lib/X11/"
       - "/vsprojects/x64/Release/"
     searched_directories:
-      - "/home/bernardo/.local/share/mise/installs/opencode/latest/"
       - "/home/bernardo/.local/bin/"
       - "/home/bernardo/Android/Sdk/build-tools/34.0.0/"
       - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin/"
@@ -2411,9 +2407,10 @@ events:
       - "/home/bernardo/go/bin/"
       - "/home/bernardo/go/bin/cointop/"
       - "/home/bernardo/.config/emacs/bin/"
-      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/node_modules/.bin/"
+      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/node_modules/.bin/"
       - "/home/bernardo/.local/share/mise/installs/codex/latest/bin/"
       - "/home/bernardo/.local/share/mise/installs/node/25.2.1/bin/"
+      - "/home/bernardo/.local/share/mise/installs/opencode/latest/"
       - "/home/bernardo/.local/share/mise/installs/python/latest/bin/"
       - "/home/bernardo/.local/share/mise/installs/zig/0.16.0/bin/"
       - "/home/bernardo/.local/share/mise/installs/zls/latest/"
@@ -2422,12 +2419,14 @@ events:
     found: "/usr/lib/libprotobuf-lite.so"
     search_context:
       ENV{PATH}:
-        - "/home/bernardo/.local/share/mise/installs/opencode/latest"
         - "/home/bernardo/.local/bin"
         - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
         - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
         - "/home/bernardo/.config/composer/vendor/bin"
         - "/home/bernardo/.local/bin"
+        - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
+        - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
+        - "/home/bernardo/.config/composer/vendor/bin"
         - "/usr/share/omarchy/bin"
         - "/home/bernardo/.local/share/mise/shims"
         - "/home/bernardo/.cargo/bin"
@@ -2442,12 +2441,9 @@ events:
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
-        - "/home/bernardo/.cargo/bin"
-        - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
-        - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
-        - "/home/bernardo/.config/composer/vendor/bin"
         - "/home/bernardo/go/bin"
         - "/home/bernardo/go/bin/cointop"
+        - "/home/bernardo/.cargo/bin"
         - "/home/bernardo/.config/emacs/bin"
         - "./node_modules/.bin"
         - "/home/bernardo/go/bin"
@@ -2457,6 +2453,7 @@ events:
         - "./node_modules/.bin"
         - "/home/bernardo/.local/share/mise/installs/codex/latest/bin"
         - "/home/bernardo/.local/share/mise/installs/node/25.2.1/bin"
+        - "/home/bernardo/.local/share/mise/installs/opencode/latest"
         - "/home/bernardo/.local/share/mise/installs/python/latest/bin"
         - "/home/bernardo/.local/share/mise/installs/zig/0.16.0/bin"
         - "/home/bernardo/.local/share/mise/installs/zls/latest"
@@ -2477,7 +2474,7 @@ events:
     backtrace:
       - "/usr/share/cmake/Modules/FindProtobuf.cmake:888 (find_library)"
       - "/usr/share/cmake/Modules/FindProtobuf.cmake:934 (_protobuf_find_libraries)"
-      - "CMakeLists.txt:16 (find_package)"
+      - "CMakeLists.txt:18 (find_package)"
     mode: "library"
     variable: "Protobuf_LITE_LIBRARY_DEBUG"
     description: "Path to a library."
@@ -2493,7 +2490,6 @@ events:
       - "protobuf-lited"
       - "protobuf-lite"
     candidate_directories:
-      - "/home/bernardo/.local/share/mise/installs/opencode/latest/"
       - "/home/bernardo/.local/bin/"
       - "/home/bernardo/Android/Sdk/build-tools/34.0.0/"
       - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin/"
@@ -2512,9 +2508,10 @@ events:
       - "/home/bernardo/go/bin/"
       - "/home/bernardo/go/bin/cointop/"
       - "/home/bernardo/.config/emacs/bin/"
-      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/node_modules/.bin/"
+      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/node_modules/.bin/"
       - "/home/bernardo/.local/share/mise/installs/codex/latest/bin/"
       - "/home/bernardo/.local/share/mise/installs/node/25.2.1/bin/"
+      - "/home/bernardo/.local/share/mise/installs/opencode/latest/"
       - "/home/bernardo/.local/share/mise/installs/python/latest/bin/"
       - "/home/bernardo/.local/share/mise/installs/zig/0.16.0/bin/"
       - "/home/bernardo/.local/share/mise/installs/zls/latest/"
@@ -2532,8 +2529,6 @@ events:
       - "/usr/lib/X11/"
       - "/vsprojects/x64/Debug/"
     searched_directories:
-      - "/home/bernardo/.local/share/mise/installs/opencode/latest/"
-      - "/home/bernardo/.local/share/mise/installs/opencode/latest/"
       - "/home/bernardo/.local/bin/"
       - "/home/bernardo/.local/bin/"
       - "/home/bernardo/Android/Sdk/build-tools/34.0.0/"
@@ -2570,12 +2565,14 @@ events:
       - "/home/bernardo/go/bin/cointop/"
       - "/home/bernardo/.config/emacs/bin/"
       - "/home/bernardo/.config/emacs/bin/"
-      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/node_modules/.bin/"
-      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/node_modules/.bin/"
+      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/node_modules/.bin/"
+      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/node_modules/.bin/"
       - "/home/bernardo/.local/share/mise/installs/codex/latest/bin/"
       - "/home/bernardo/.local/share/mise/installs/codex/latest/bin/"
       - "/home/bernardo/.local/share/mise/installs/node/25.2.1/bin/"
       - "/home/bernardo/.local/share/mise/installs/node/25.2.1/bin/"
+      - "/home/bernardo/.local/share/mise/installs/opencode/latest/"
+      - "/home/bernardo/.local/share/mise/installs/opencode/latest/"
       - "/home/bernardo/.local/share/mise/installs/python/latest/bin/"
       - "/home/bernardo/.local/share/mise/installs/python/latest/bin/"
       - "/home/bernardo/.local/share/mise/installs/zig/0.16.0/bin/"
@@ -2590,12 +2587,14 @@ events:
     found: "/usr/lib/libprotobuf-lite.so"
     search_context:
       ENV{PATH}:
-        - "/home/bernardo/.local/share/mise/installs/opencode/latest"
         - "/home/bernardo/.local/bin"
         - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
         - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
         - "/home/bernardo/.config/composer/vendor/bin"
         - "/home/bernardo/.local/bin"
+        - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
+        - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
+        - "/home/bernardo/.config/composer/vendor/bin"
         - "/usr/share/omarchy/bin"
         - "/home/bernardo/.local/share/mise/shims"
         - "/home/bernardo/.cargo/bin"
@@ -2610,12 +2609,9 @@ events:
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
-        - "/home/bernardo/.cargo/bin"
-        - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
-        - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
-        - "/home/bernardo/.config/composer/vendor/bin"
         - "/home/bernardo/go/bin"
         - "/home/bernardo/go/bin/cointop"
+        - "/home/bernardo/.cargo/bin"
         - "/home/bernardo/.config/emacs/bin"
         - "./node_modules/.bin"
         - "/home/bernardo/go/bin"
@@ -2625,6 +2621,7 @@ events:
         - "./node_modules/.bin"
         - "/home/bernardo/.local/share/mise/installs/codex/latest/bin"
         - "/home/bernardo/.local/share/mise/installs/node/25.2.1/bin"
+        - "/home/bernardo/.local/share/mise/installs/opencode/latest"
         - "/home/bernardo/.local/share/mise/installs/python/latest/bin"
         - "/home/bernardo/.local/share/mise/installs/zig/0.16.0/bin"
         - "/home/bernardo/.local/share/mise/installs/zls/latest"
@@ -2645,7 +2642,7 @@ events:
     backtrace:
       - "/usr/share/cmake/Modules/FindProtobuf.cmake:882 (find_library)"
       - "/usr/share/cmake/Modules/FindProtobuf.cmake:937 (_protobuf_find_libraries)"
-      - "CMakeLists.txt:16 (find_package)"
+      - "CMakeLists.txt:18 (find_package)"
     mode: "library"
     variable: "Protobuf_PROTOC_LIBRARY_RELEASE"
     description: "Path to a library."
@@ -2660,7 +2657,6 @@ events:
     names:
       - "protoc"
     candidate_directories:
-      - "/home/bernardo/.local/share/mise/installs/opencode/latest/"
       - "/home/bernardo/.local/bin/"
       - "/home/bernardo/Android/Sdk/build-tools/34.0.0/"
       - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin/"
@@ -2679,9 +2675,10 @@ events:
       - "/home/bernardo/go/bin/"
       - "/home/bernardo/go/bin/cointop/"
       - "/home/bernardo/.config/emacs/bin/"
-      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/node_modules/.bin/"
+      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/node_modules/.bin/"
       - "/home/bernardo/.local/share/mise/installs/codex/latest/bin/"
       - "/home/bernardo/.local/share/mise/installs/node/25.2.1/bin/"
+      - "/home/bernardo/.local/share/mise/installs/opencode/latest/"
       - "/home/bernardo/.local/share/mise/installs/python/latest/bin/"
       - "/home/bernardo/.local/share/mise/installs/zig/0.16.0/bin/"
       - "/home/bernardo/.local/share/mise/installs/zls/latest/"
@@ -2699,7 +2696,6 @@ events:
       - "/usr/lib/X11/"
       - "/vsprojects/x64/Release/"
     searched_directories:
-      - "/home/bernardo/.local/share/mise/installs/opencode/latest/"
       - "/home/bernardo/.local/bin/"
       - "/home/bernardo/Android/Sdk/build-tools/34.0.0/"
       - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin/"
@@ -2718,9 +2714,10 @@ events:
       - "/home/bernardo/go/bin/"
       - "/home/bernardo/go/bin/cointop/"
       - "/home/bernardo/.config/emacs/bin/"
-      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/node_modules/.bin/"
+      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/node_modules/.bin/"
       - "/home/bernardo/.local/share/mise/installs/codex/latest/bin/"
       - "/home/bernardo/.local/share/mise/installs/node/25.2.1/bin/"
+      - "/home/bernardo/.local/share/mise/installs/opencode/latest/"
       - "/home/bernardo/.local/share/mise/installs/python/latest/bin/"
       - "/home/bernardo/.local/share/mise/installs/zig/0.16.0/bin/"
       - "/home/bernardo/.local/share/mise/installs/zls/latest/"
@@ -2729,12 +2726,14 @@ events:
     found: "/usr/lib/libprotoc.so"
     search_context:
       ENV{PATH}:
-        - "/home/bernardo/.local/share/mise/installs/opencode/latest"
         - "/home/bernardo/.local/bin"
         - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
         - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
         - "/home/bernardo/.config/composer/vendor/bin"
         - "/home/bernardo/.local/bin"
+        - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
+        - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
+        - "/home/bernardo/.config/composer/vendor/bin"
         - "/usr/share/omarchy/bin"
         - "/home/bernardo/.local/share/mise/shims"
         - "/home/bernardo/.cargo/bin"
@@ -2749,12 +2748,9 @@ events:
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
-        - "/home/bernardo/.cargo/bin"
-        - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
-        - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
-        - "/home/bernardo/.config/composer/vendor/bin"
         - "/home/bernardo/go/bin"
         - "/home/bernardo/go/bin/cointop"
+        - "/home/bernardo/.cargo/bin"
         - "/home/bernardo/.config/emacs/bin"
         - "./node_modules/.bin"
         - "/home/bernardo/go/bin"
@@ -2764,6 +2760,7 @@ events:
         - "./node_modules/.bin"
         - "/home/bernardo/.local/share/mise/installs/codex/latest/bin"
         - "/home/bernardo/.local/share/mise/installs/node/25.2.1/bin"
+        - "/home/bernardo/.local/share/mise/installs/opencode/latest"
         - "/home/bernardo/.local/share/mise/installs/python/latest/bin"
         - "/home/bernardo/.local/share/mise/installs/zig/0.16.0/bin"
         - "/home/bernardo/.local/share/mise/installs/zls/latest"
@@ -2784,7 +2781,7 @@ events:
     backtrace:
       - "/usr/share/cmake/Modules/FindProtobuf.cmake:888 (find_library)"
       - "/usr/share/cmake/Modules/FindProtobuf.cmake:937 (_protobuf_find_libraries)"
-      - "CMakeLists.txt:16 (find_package)"
+      - "CMakeLists.txt:18 (find_package)"
     mode: "library"
     variable: "Protobuf_PROTOC_LIBRARY_DEBUG"
     description: "Path to a library."
@@ -2800,7 +2797,6 @@ events:
       - "protocd"
       - "protoc"
     candidate_directories:
-      - "/home/bernardo/.local/share/mise/installs/opencode/latest/"
       - "/home/bernardo/.local/bin/"
       - "/home/bernardo/Android/Sdk/build-tools/34.0.0/"
       - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin/"
@@ -2819,9 +2815,10 @@ events:
       - "/home/bernardo/go/bin/"
       - "/home/bernardo/go/bin/cointop/"
       - "/home/bernardo/.config/emacs/bin/"
-      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/node_modules/.bin/"
+      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/node_modules/.bin/"
       - "/home/bernardo/.local/share/mise/installs/codex/latest/bin/"
       - "/home/bernardo/.local/share/mise/installs/node/25.2.1/bin/"
+      - "/home/bernardo/.local/share/mise/installs/opencode/latest/"
       - "/home/bernardo/.local/share/mise/installs/python/latest/bin/"
       - "/home/bernardo/.local/share/mise/installs/zig/0.16.0/bin/"
       - "/home/bernardo/.local/share/mise/installs/zls/latest/"
@@ -2839,8 +2836,6 @@ events:
       - "/usr/lib/X11/"
       - "/vsprojects/x64/Debug/"
     searched_directories:
-      - "/home/bernardo/.local/share/mise/installs/opencode/latest/"
-      - "/home/bernardo/.local/share/mise/installs/opencode/latest/"
       - "/home/bernardo/.local/bin/"
       - "/home/bernardo/.local/bin/"
       - "/home/bernardo/Android/Sdk/build-tools/34.0.0/"
@@ -2877,12 +2872,14 @@ events:
       - "/home/bernardo/go/bin/cointop/"
       - "/home/bernardo/.config/emacs/bin/"
       - "/home/bernardo/.config/emacs/bin/"
-      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/node_modules/.bin/"
-      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/node_modules/.bin/"
+      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/node_modules/.bin/"
+      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/node_modules/.bin/"
       - "/home/bernardo/.local/share/mise/installs/codex/latest/bin/"
       - "/home/bernardo/.local/share/mise/installs/codex/latest/bin/"
       - "/home/bernardo/.local/share/mise/installs/node/25.2.1/bin/"
       - "/home/bernardo/.local/share/mise/installs/node/25.2.1/bin/"
+      - "/home/bernardo/.local/share/mise/installs/opencode/latest/"
+      - "/home/bernardo/.local/share/mise/installs/opencode/latest/"
       - "/home/bernardo/.local/share/mise/installs/python/latest/bin/"
       - "/home/bernardo/.local/share/mise/installs/python/latest/bin/"
       - "/home/bernardo/.local/share/mise/installs/zig/0.16.0/bin/"
@@ -2897,12 +2894,14 @@ events:
     found: "/usr/lib/libprotoc.so"
     search_context:
       ENV{PATH}:
-        - "/home/bernardo/.local/share/mise/installs/opencode/latest"
         - "/home/bernardo/.local/bin"
         - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
         - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
         - "/home/bernardo/.config/composer/vendor/bin"
         - "/home/bernardo/.local/bin"
+        - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
+        - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
+        - "/home/bernardo/.config/composer/vendor/bin"
         - "/usr/share/omarchy/bin"
         - "/home/bernardo/.local/share/mise/shims"
         - "/home/bernardo/.cargo/bin"
@@ -2917,12 +2916,9 @@ events:
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
-        - "/home/bernardo/.cargo/bin"
-        - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
-        - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
-        - "/home/bernardo/.config/composer/vendor/bin"
         - "/home/bernardo/go/bin"
         - "/home/bernardo/go/bin/cointop"
+        - "/home/bernardo/.cargo/bin"
         - "/home/bernardo/.config/emacs/bin"
         - "./node_modules/.bin"
         - "/home/bernardo/go/bin"
@@ -2932,6 +2928,7 @@ events:
         - "./node_modules/.bin"
         - "/home/bernardo/.local/share/mise/installs/codex/latest/bin"
         - "/home/bernardo/.local/share/mise/installs/node/25.2.1/bin"
+        - "/home/bernardo/.local/share/mise/installs/opencode/latest"
         - "/home/bernardo/.local/share/mise/installs/python/latest/bin"
         - "/home/bernardo/.local/share/mise/installs/zig/0.16.0/bin"
         - "/home/bernardo/.local/share/mise/installs/zls/latest"
@@ -2951,7 +2948,7 @@ events:
     kind: "find-v1"
     backtrace:
       - "/usr/share/cmake/Modules/FindProtobuf.cmake:945 (find_path)"
-      - "CMakeLists.txt:16 (find_package)"
+      - "CMakeLists.txt:18 (find_package)"
     mode: "path"
     variable: "Protobuf_INCLUDE_DIR"
     description: "Path to a file."
@@ -2966,7 +2963,6 @@ events:
     names:
       - "google/protobuf/service.h"
     candidate_directories:
-      - "/home/bernardo/.local/share/mise/installs/opencode/latest/"
       - "/home/bernardo/.local/bin/"
       - "/home/bernardo/Android/Sdk/build-tools/34.0.0/"
       - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin/"
@@ -2985,9 +2981,10 @@ events:
       - "/home/bernardo/go/bin/"
       - "/home/bernardo/go/bin/cointop/"
       - "/home/bernardo/.config/emacs/bin/"
-      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/node_modules/.bin/"
+      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/node_modules/.bin/"
       - "/home/bernardo/.local/share/mise/installs/codex/latest/bin/"
       - "/home/bernardo/.local/share/mise/installs/node/25.2.1/bin/"
+      - "/home/bernardo/.local/share/mise/installs/opencode/latest/"
       - "/home/bernardo/.local/share/mise/installs/python/latest/bin/"
       - "/home/bernardo/.local/share/mise/installs/zig/0.16.0/bin/"
       - "/home/bernardo/.local/share/mise/installs/zls/latest/"
@@ -3005,7 +3002,6 @@ events:
       - "/usr/include/X11/"
       - "/src/"
     searched_directories:
-      - "/home/bernardo/.local/share/mise/installs/opencode/latest/google/protobuf/service.h"
       - "/home/bernardo/.local/bin/google/protobuf/service.h"
       - "/home/bernardo/Android/Sdk/build-tools/34.0.0/google/protobuf/service.h"
       - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin/google/protobuf/service.h"
@@ -3024,9 +3020,10 @@ events:
       - "/home/bernardo/go/bin/google/protobuf/service.h"
       - "/home/bernardo/go/bin/cointop/google/protobuf/service.h"
       - "/home/bernardo/.config/emacs/bin/google/protobuf/service.h"
-      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/node_modules/.bin/google/protobuf/service.h"
+      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/node_modules/.bin/google/protobuf/service.h"
       - "/home/bernardo/.local/share/mise/installs/codex/latest/bin/google/protobuf/service.h"
       - "/home/bernardo/.local/share/mise/installs/node/25.2.1/bin/google/protobuf/service.h"
+      - "/home/bernardo/.local/share/mise/installs/opencode/latest/google/protobuf/service.h"
       - "/home/bernardo/.local/share/mise/installs/python/latest/bin/google/protobuf/service.h"
       - "/home/bernardo/.local/share/mise/installs/zig/0.16.0/bin/google/protobuf/service.h"
       - "/home/bernardo/.local/share/mise/installs/zls/latest/google/protobuf/service.h"
@@ -3035,12 +3032,14 @@ events:
     found: "/usr/include/"
     search_context:
       ENV{PATH}:
-        - "/home/bernardo/.local/share/mise/installs/opencode/latest"
         - "/home/bernardo/.local/bin"
         - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
         - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
         - "/home/bernardo/.config/composer/vendor/bin"
         - "/home/bernardo/.local/bin"
+        - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
+        - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
+        - "/home/bernardo/.config/composer/vendor/bin"
         - "/usr/share/omarchy/bin"
         - "/home/bernardo/.local/share/mise/shims"
         - "/home/bernardo/.cargo/bin"
@@ -3055,12 +3054,9 @@ events:
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
-        - "/home/bernardo/.cargo/bin"
-        - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
-        - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
-        - "/home/bernardo/.config/composer/vendor/bin"
         - "/home/bernardo/go/bin"
         - "/home/bernardo/go/bin/cointop"
+        - "/home/bernardo/.cargo/bin"
         - "/home/bernardo/.config/emacs/bin"
         - "./node_modules/.bin"
         - "/home/bernardo/go/bin"
@@ -3070,6 +3066,7 @@ events:
         - "./node_modules/.bin"
         - "/home/bernardo/.local/share/mise/installs/codex/latest/bin"
         - "/home/bernardo/.local/share/mise/installs/node/25.2.1/bin"
+        - "/home/bernardo/.local/share/mise/installs/opencode/latest"
         - "/home/bernardo/.local/share/mise/installs/python/latest/bin"
         - "/home/bernardo/.local/share/mise/installs/zig/0.16.0/bin"
         - "/home/bernardo/.local/share/mise/installs/zls/latest"
@@ -3089,7 +3086,7 @@ events:
     kind: "find-v1"
     backtrace:
       - "/usr/share/cmake/Modules/FindProtobuf.cmake:952 (find_program)"
-      - "CMakeLists.txt:16 (find_package)"
+      - "CMakeLists.txt:18 (find_package)"
     mode: "program"
     variable: "Protobuf_PROTOC_EXECUTABLE"
     description: "The Google Protocol Buffers Compiler"
@@ -3104,7 +3101,6 @@ events:
     names:
       - "protoc"
     candidate_directories:
-      - "/home/bernardo/.local/share/mise/installs/opencode/latest/"
       - "/home/bernardo/.local/bin/"
       - "/home/bernardo/Android/Sdk/build-tools/34.0.0/"
       - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin/"
@@ -3123,9 +3119,10 @@ events:
       - "/home/bernardo/go/bin/"
       - "/home/bernardo/go/bin/cointop/"
       - "/home/bernardo/.config/emacs/bin/"
-      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/node_modules/.bin/"
+      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/node_modules/.bin/"
       - "/home/bernardo/.local/share/mise/installs/codex/latest/bin/"
       - "/home/bernardo/.local/share/mise/installs/node/25.2.1/bin/"
+      - "/home/bernardo/.local/share/mise/installs/opencode/latest/"
       - "/home/bernardo/.local/share/mise/installs/python/latest/bin/"
       - "/home/bernardo/.local/share/mise/installs/zig/0.16.0/bin/"
       - "/home/bernardo/.local/share/mise/installs/zls/latest/"
@@ -3149,7 +3146,6 @@ events:
       - "/vsprojects/x64/Release/"
       - "/vsprojects/x64/Debug/"
     searched_directories:
-      - "/home/bernardo/.local/share/mise/installs/opencode/latest/protoc"
       - "/home/bernardo/.local/bin/protoc"
       - "/home/bernardo/Android/Sdk/build-tools/34.0.0/protoc"
       - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin/protoc"
@@ -3162,12 +3158,14 @@ events:
     found: "/usr/bin/protoc"
     search_context:
       ENV{PATH}:
-        - "/home/bernardo/.local/share/mise/installs/opencode/latest"
         - "/home/bernardo/.local/bin"
         - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
         - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
         - "/home/bernardo/.config/composer/vendor/bin"
         - "/home/bernardo/.local/bin"
+        - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
+        - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
+        - "/home/bernardo/.config/composer/vendor/bin"
         - "/usr/share/omarchy/bin"
         - "/home/bernardo/.local/share/mise/shims"
         - "/home/bernardo/.cargo/bin"
@@ -3182,12 +3180,9 @@ events:
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
-        - "/home/bernardo/.cargo/bin"
-        - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
-        - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
-        - "/home/bernardo/.config/composer/vendor/bin"
         - "/home/bernardo/go/bin"
         - "/home/bernardo/go/bin/cointop"
+        - "/home/bernardo/.cargo/bin"
         - "/home/bernardo/.config/emacs/bin"
         - "./node_modules/.bin"
         - "/home/bernardo/go/bin"
@@ -3197,6 +3192,243 @@ events:
         - "./node_modules/.bin"
         - "/home/bernardo/.local/share/mise/installs/codex/latest/bin"
         - "/home/bernardo/.local/share/mise/installs/node/25.2.1/bin"
+        - "/home/bernardo/.local/share/mise/installs/opencode/latest"
+        - "/home/bernardo/.local/share/mise/installs/python/latest/bin"
+        - "/home/bernardo/.local/share/mise/installs/zig/0.16.0/bin"
+        - "/home/bernardo/.local/share/mise/installs/zls/latest"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/usr"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+  -
+    kind: "find_package-v1"
+    backtrace:
+      - "CMakeLists.txt:19 (find_package)"
+    name: "absl"
+    configs:
+      -
+        filename: "absl.cps"
+        kind: "cps"
+      -
+        filename: "abslConfig.cmake"
+        kind: "cmake"
+      -
+        filename: "absl-config.cmake"
+        kind: "cmake"
+    version_request:
+      exact: false
+    settings:
+      required: "required_explicit"
+      quiet: false
+      global: false
+      policy_scope: true
+      bypass_provider: false
+      names:
+        - "absl"
+      path_suffixes:
+        - ""
+      paths:
+        CMAKE_FIND_USE_CMAKE_PATH: true
+        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+        CMAKE_FIND_USE_INSTALL_PREFIX: true
+        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
+        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
+        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
+        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
+    candidates:
+      -
+        path: "/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/CMakeFiles/pkgRedirects/abslConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/CMakeFiles/pkgRedirects/absl-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/CMakeFiles/pkgRedirects/lib/cps/absl.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/CMakeFiles/pkgRedirects/share/cps/absl.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/bernardo/.local/abslConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/bernardo/.local/absl-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/bernardo/.local/lib/cps/absl.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/bernardo/.local/share/cps/absl.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/bernardo/Android/Sdk/build-tools/34.0.0/abslConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/bernardo/Android/Sdk/build-tools/34.0.0/absl-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/bernardo/Android/Sdk/build-tools/34.0.0/lib/cps/absl.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/bernardo/Android/Sdk/build-tools/34.0.0/share/cps/absl.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/bernardo/Android/Sdk/cmdline-tools/latest/abslConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/bernardo/Android/Sdk/cmdline-tools/latest/absl-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/bernardo/Android/Sdk/cmdline-tools/latest/lib/cps/absl.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/bernardo/Android/Sdk/cmdline-tools/latest/share/cps/absl.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/usr/share/omarchy/abslConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/share/omarchy/absl-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/share/omarchy/lib/cps/absl.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/usr/share/omarchy/share/cps/absl.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/bernardo/.local/share/mise/shims/abslConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/bernardo/.local/share/mise/shims/absl-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/bernardo/.local/share/mise/shims/lib/cps/absl.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/bernardo/.local/share/mise/shims/share/cps/absl.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/bernardo/.cargo/abslConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/bernardo/.cargo/absl-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/bernardo/.cargo/lib/cps/absl.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/bernardo/.cargo/share/cps/absl.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/usr/local/abslConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/local/absl-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/local/lib/cps/absl.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/usr/local/share/cps/absl.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/usr/abslConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/absl-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/cps/absl.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/usr/share/cps/absl.cps"
+        mode: "cps"
+        reason: "no_exist"
+    found:
+      path: "/usr/lib/cmake/absl/abslConfig.cmake"
+      mode: "config"
+      version: "20260817"
+    search_context:
+      ENV{PATH}:
+        - "/home/bernardo/.local/bin"
+        - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
+        - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
+        - "/home/bernardo/.config/composer/vendor/bin"
+        - "/home/bernardo/.local/bin"
+        - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
+        - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
+        - "/home/bernardo/.config/composer/vendor/bin"
+        - "/usr/share/omarchy/bin"
+        - "/home/bernardo/.local/share/mise/shims"
+        - "/home/bernardo/.cargo/bin"
+        - "/home/bernardo/.local/share/../bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/home/bernardo/.local/share/mise/shims"
+        - "/home/bernardo/.local/bin"
+        - "/opt/cuda/bin"
+        - "/usr/lib/jvm/default/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
+        - "/home/bernardo/go/bin"
+        - "/home/bernardo/go/bin/cointop"
+        - "/home/bernardo/.cargo/bin"
+        - "/home/bernardo/.config/emacs/bin"
+        - "./node_modules/.bin"
+        - "/home/bernardo/go/bin"
+        - "/home/bernardo/go/bin/cointop"
+        - "/home/bernardo/.cargo/bin"
+        - "/home/bernardo/.config/emacs/bin"
+        - "./node_modules/.bin"
+        - "/home/bernardo/.local/share/mise/installs/codex/latest/bin"
+        - "/home/bernardo/.local/share/mise/installs/node/25.2.1/bin"
+        - "/home/bernardo/.local/share/mise/installs/opencode/latest"
         - "/home/bernardo/.local/share/mise/installs/python/latest/bin"
         - "/home/bernardo/.local/share/mise/installs/zig/0.16.0/bin"
         - "/home/bernardo/.local/share/mise/installs/zls/latest"
@@ -3229,7 +3461,6 @@ events:
     names:
       - "git"
     candidate_directories:
-      - "/home/bernardo/.local/share/mise/installs/opencode/latest/"
       - "/home/bernardo/.local/bin/"
       - "/home/bernardo/Android/Sdk/build-tools/34.0.0/"
       - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin/"
@@ -3248,9 +3479,10 @@ events:
       - "/home/bernardo/go/bin/"
       - "/home/bernardo/go/bin/cointop/"
       - "/home/bernardo/.config/emacs/bin/"
-      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/node_modules/.bin/"
+      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/node_modules/.bin/"
       - "/home/bernardo/.local/share/mise/installs/codex/latest/bin/"
       - "/home/bernardo/.local/share/mise/installs/node/25.2.1/bin/"
+      - "/home/bernardo/.local/share/mise/installs/opencode/latest/"
       - "/home/bernardo/.local/share/mise/installs/python/latest/bin/"
       - "/home/bernardo/.local/share/mise/installs/zig/0.16.0/bin/"
       - "/home/bernardo/.local/share/mise/installs/zls/latest/"
@@ -3272,7 +3504,6 @@ events:
       - "/opt/sbin/"
       - "/opt/"
     searched_directories:
-      - "/home/bernardo/.local/share/mise/installs/opencode/latest/git"
       - "/home/bernardo/.local/bin/git"
       - "/home/bernardo/Android/Sdk/build-tools/34.0.0/git"
       - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin/git"
@@ -3285,12 +3516,14 @@ events:
     found: "/usr/bin/git"
     search_context:
       ENV{PATH}:
-        - "/home/bernardo/.local/share/mise/installs/opencode/latest"
         - "/home/bernardo/.local/bin"
         - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
         - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
         - "/home/bernardo/.config/composer/vendor/bin"
         - "/home/bernardo/.local/bin"
+        - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
+        - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
+        - "/home/bernardo/.config/composer/vendor/bin"
         - "/usr/share/omarchy/bin"
         - "/home/bernardo/.local/share/mise/shims"
         - "/home/bernardo/.cargo/bin"
@@ -3305,12 +3538,9 @@ events:
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
-        - "/home/bernardo/.cargo/bin"
-        - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
-        - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
-        - "/home/bernardo/.config/composer/vendor/bin"
         - "/home/bernardo/go/bin"
         - "/home/bernardo/go/bin/cointop"
+        - "/home/bernardo/.cargo/bin"
         - "/home/bernardo/.config/emacs/bin"
         - "./node_modules/.bin"
         - "/home/bernardo/go/bin"
@@ -3320,6 +3550,7 @@ events:
         - "./node_modules/.bin"
         - "/home/bernardo/.local/share/mise/installs/codex/latest/bin"
         - "/home/bernardo/.local/share/mise/installs/node/25.2.1/bin"
+        - "/home/bernardo/.local/share/mise/installs/opencode/latest"
         - "/home/bernardo/.local/share/mise/installs/python/latest/bin"
         - "/home/bernardo/.local/share/mise/installs/zig/0.16.0/bin"
         - "/home/bernardo/.local/share/mise/installs/zls/latest"
@@ -3357,7 +3588,6 @@ events:
       - "cuda-memcheck"
       - "compute-sanitizer"
     candidate_directories:
-      - "/home/bernardo/.local/share/mise/installs/opencode/latest/"
       - "/home/bernardo/.local/bin/"
       - "/home/bernardo/Android/Sdk/build-tools/34.0.0/"
       - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin/"
@@ -3376,9 +3606,10 @@ events:
       - "/home/bernardo/go/bin/"
       - "/home/bernardo/go/bin/cointop/"
       - "/home/bernardo/.config/emacs/bin/"
-      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/node_modules/.bin/"
+      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/node_modules/.bin/"
       - "/home/bernardo/.local/share/mise/installs/codex/latest/bin/"
       - "/home/bernardo/.local/share/mise/installs/node/25.2.1/bin/"
+      - "/home/bernardo/.local/share/mise/installs/opencode/latest/"
       - "/home/bernardo/.local/share/mise/installs/python/latest/bin/"
       - "/home/bernardo/.local/share/mise/installs/zig/0.16.0/bin/"
       - "/home/bernardo/.local/share/mise/installs/zls/latest/"
@@ -3400,7 +3631,6 @@ events:
       - "/opt/sbin/"
       - "/opt/"
     searched_directories:
-      - "/home/bernardo/.local/share/mise/installs/opencode/latest/purify"
       - "/home/bernardo/.local/bin/purify"
       - "/home/bernardo/Android/Sdk/build-tools/34.0.0/purify"
       - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin/purify"
@@ -3419,9 +3649,10 @@ events:
       - "/home/bernardo/go/bin/purify"
       - "/home/bernardo/go/bin/cointop/purify"
       - "/home/bernardo/.config/emacs/bin/purify"
-      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/node_modules/.bin/purify"
+      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/node_modules/.bin/purify"
       - "/home/bernardo/.local/share/mise/installs/codex/latest/bin/purify"
       - "/home/bernardo/.local/share/mise/installs/node/25.2.1/bin/purify"
+      - "/home/bernardo/.local/share/mise/installs/opencode/latest/purify"
       - "/home/bernardo/.local/share/mise/installs/python/latest/bin/purify"
       - "/home/bernardo/.local/share/mise/installs/zig/0.16.0/bin/purify"
       - "/home/bernardo/.local/share/mise/installs/zls/latest/purify"
@@ -3442,7 +3673,6 @@ events:
       - "/opt/bin/purify"
       - "/opt/sbin/purify"
       - "/opt/purify"
-      - "/home/bernardo/.local/share/mise/installs/opencode/latest/valgrind"
       - "/home/bernardo/.local/bin/valgrind"
       - "/home/bernardo/Android/Sdk/build-tools/34.0.0/valgrind"
       - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin/valgrind"
@@ -3455,12 +3685,14 @@ events:
     found: "/usr/bin/valgrind"
     search_context:
       ENV{PATH}:
-        - "/home/bernardo/.local/share/mise/installs/opencode/latest"
         - "/home/bernardo/.local/bin"
         - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
         - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
         - "/home/bernardo/.config/composer/vendor/bin"
         - "/home/bernardo/.local/bin"
+        - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
+        - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
+        - "/home/bernardo/.config/composer/vendor/bin"
         - "/usr/share/omarchy/bin"
         - "/home/bernardo/.local/share/mise/shims"
         - "/home/bernardo/.cargo/bin"
@@ -3475,12 +3707,9 @@ events:
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
-        - "/home/bernardo/.cargo/bin"
-        - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
-        - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
-        - "/home/bernardo/.config/composer/vendor/bin"
         - "/home/bernardo/go/bin"
         - "/home/bernardo/go/bin/cointop"
+        - "/home/bernardo/.cargo/bin"
         - "/home/bernardo/.config/emacs/bin"
         - "./node_modules/.bin"
         - "/home/bernardo/go/bin"
@@ -3490,6 +3719,7 @@ events:
         - "./node_modules/.bin"
         - "/home/bernardo/.local/share/mise/installs/codex/latest/bin"
         - "/home/bernardo/.local/share/mise/installs/node/25.2.1/bin"
+        - "/home/bernardo/.local/share/mise/installs/opencode/latest"
         - "/home/bernardo/.local/share/mise/installs/python/latest/bin"
         - "/home/bernardo/.local/share/mise/installs/zig/0.16.0/bin"
         - "/home/bernardo/.local/share/mise/installs/zls/latest"
@@ -3522,7 +3752,6 @@ events:
     names:
       - "gcov"
     candidate_directories:
-      - "/home/bernardo/.local/share/mise/installs/opencode/latest/"
       - "/home/bernardo/.local/bin/"
       - "/home/bernardo/Android/Sdk/build-tools/34.0.0/"
       - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin/"
@@ -3541,9 +3770,10 @@ events:
       - "/home/bernardo/go/bin/"
       - "/home/bernardo/go/bin/cointop/"
       - "/home/bernardo/.config/emacs/bin/"
-      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/node_modules/.bin/"
+      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/node_modules/.bin/"
       - "/home/bernardo/.local/share/mise/installs/codex/latest/bin/"
       - "/home/bernardo/.local/share/mise/installs/node/25.2.1/bin/"
+      - "/home/bernardo/.local/share/mise/installs/opencode/latest/"
       - "/home/bernardo/.local/share/mise/installs/python/latest/bin/"
       - "/home/bernardo/.local/share/mise/installs/zig/0.16.0/bin/"
       - "/home/bernardo/.local/share/mise/installs/zls/latest/"
@@ -3565,7 +3795,6 @@ events:
       - "/opt/sbin/"
       - "/opt/"
     searched_directories:
-      - "/home/bernardo/.local/share/mise/installs/opencode/latest/gcov"
       - "/home/bernardo/.local/bin/gcov"
       - "/home/bernardo/Android/Sdk/build-tools/34.0.0/gcov"
       - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin/gcov"
@@ -3578,11 +3807,154 @@ events:
     found: "/usr/bin/gcov"
     search_context:
       ENV{PATH}:
-        - "/home/bernardo/.local/share/mise/installs/opencode/latest"
         - "/home/bernardo/.local/bin"
         - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
         - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
         - "/home/bernardo/.config/composer/vendor/bin"
+        - "/home/bernardo/.local/bin"
+        - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
+        - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
+        - "/home/bernardo/.config/composer/vendor/bin"
+        - "/usr/share/omarchy/bin"
+        - "/home/bernardo/.local/share/mise/shims"
+        - "/home/bernardo/.cargo/bin"
+        - "/home/bernardo/.local/share/../bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/home/bernardo/.local/share/mise/shims"
+        - "/home/bernardo/.local/bin"
+        - "/opt/cuda/bin"
+        - "/usr/lib/jvm/default/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
+        - "/home/bernardo/go/bin"
+        - "/home/bernardo/go/bin/cointop"
+        - "/home/bernardo/.cargo/bin"
+        - "/home/bernardo/.config/emacs/bin"
+        - "./node_modules/.bin"
+        - "/home/bernardo/go/bin"
+        - "/home/bernardo/go/bin/cointop"
+        - "/home/bernardo/.cargo/bin"
+        - "/home/bernardo/.config/emacs/bin"
+        - "./node_modules/.bin"
+        - "/home/bernardo/.local/share/mise/installs/codex/latest/bin"
+        - "/home/bernardo/.local/share/mise/installs/node/25.2.1/bin"
+        - "/home/bernardo/.local/share/mise/installs/opencode/latest"
+        - "/home/bernardo/.local/share/mise/installs/python/latest/bin"
+        - "/home/bernardo/.local/share/mise/installs/zig/0.16.0/bin"
+        - "/home/bernardo/.local/share/mise/installs/zls/latest"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/usr"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+...
+
+---
+events:
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/FindPkgConfig.cmake:517 (find_program)"
+      - "CMakeLists.txt:20 (find_package)"
+    mode: "program"
+    variable: "PKG_CONFIG_EXECUTABLE"
+    description: "pkg-config executable"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "pkg-config"
+      - "pkgconf"
+    candidate_directories:
+      - "/home/bernardo/.local/share/mise/installs/codex/latest/bin/"
+      - "/home/bernardo/.local/share/mise/installs/node/25.2.1/bin/"
+      - "/home/bernardo/.local/share/mise/installs/opencode/latest/"
+      - "/home/bernardo/.local/share/mise/installs/python/latest/bin/"
+      - "/home/bernardo/.local/share/mise/installs/zig/0.16.0/bin/"
+      - "/home/bernardo/.local/share/mise/installs/zls/latest/"
+      - "/home/bernardo/.local/bin/"
+      - "/usr/share/omarchy/bin/"
+      - "/home/bernardo/.local/share/mise/shims/"
+      - "/home/bernardo/.cargo/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/bin/"
+      - "/usr/bin/"
+      - "/opt/cuda/bin/"
+      - "/usr/lib/jvm/default/bin/"
+      - "/usr/bin/site_perl/"
+      - "/usr/bin/vendor_perl/"
+      - "/usr/bin/core_perl/"
+      - "/home/bernardo/Android/Sdk/build-tools/34.0.0/"
+      - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin/"
+      - "/home/bernardo/.config/composer/vendor/bin/"
+      - "/home/bernardo/go/bin/"
+      - "/home/bernardo/go/bin/cointop/"
+      - "/home/bernardo/.config/emacs/bin/"
+      - "/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/node_modules/.bin/"
+      - "/usr/local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/"
+      - "/usr/bin/"
+      - "/usr/sbin/"
+      - "/usr/"
+      - "/bin/"
+      - "/sbin/"
+      - "/usr/X11R6/bin/"
+      - "/usr/X11R6/sbin/"
+      - "/usr/X11R6/"
+      - "/usr/pkg/bin/"
+      - "/usr/pkg/sbin/"
+      - "/usr/pkg/"
+      - "/opt/bin/"
+      - "/opt/sbin/"
+      - "/opt/"
+    searched_directories:
+      - "/home/bernardo/.local/share/mise/installs/codex/latest/bin/pkg-config"
+      - "/home/bernardo/.local/share/mise/installs/codex/latest/bin/pkgconf"
+      - "/home/bernardo/.local/share/mise/installs/node/25.2.1/bin/pkg-config"
+      - "/home/bernardo/.local/share/mise/installs/node/25.2.1/bin/pkgconf"
+      - "/home/bernardo/.local/share/mise/installs/opencode/latest/pkg-config"
+      - "/home/bernardo/.local/share/mise/installs/opencode/latest/pkgconf"
+      - "/home/bernardo/.local/share/mise/installs/python/latest/bin/pkg-config"
+      - "/home/bernardo/.local/share/mise/installs/python/latest/bin/pkgconf"
+      - "/home/bernardo/.local/share/mise/installs/zig/0.16.0/bin/pkg-config"
+      - "/home/bernardo/.local/share/mise/installs/zig/0.16.0/bin/pkgconf"
+      - "/home/bernardo/.local/share/mise/installs/zls/latest/pkg-config"
+      - "/home/bernardo/.local/share/mise/installs/zls/latest/pkgconf"
+      - "/home/bernardo/.local/bin/pkg-config"
+      - "/home/bernardo/.local/bin/pkgconf"
+      - "/usr/share/omarchy/bin/pkg-config"
+      - "/usr/share/omarchy/bin/pkgconf"
+      - "/home/bernardo/.local/share/mise/shims/pkg-config"
+      - "/home/bernardo/.local/share/mise/shims/pkgconf"
+      - "/home/bernardo/.cargo/bin/pkg-config"
+      - "/home/bernardo/.cargo/bin/pkgconf"
+      - "/usr/local/sbin/pkg-config"
+      - "/usr/local/sbin/pkgconf"
+      - "/usr/local/bin/pkg-config"
+      - "/usr/local/bin/pkgconf"
+    found: "/usr/bin/pkg-config"
+    search_context:
+      ENV{PATH}:
+        - "/home/bernardo/.local/share/mise/installs/codex/latest/bin"
+        - "/home/bernardo/.local/share/mise/installs/node/25.2.1/bin"
+        - "/home/bernardo/.local/share/mise/installs/opencode/latest"
+        - "/home/bernardo/.local/share/mise/installs/python/latest/bin"
+        - "/home/bernardo/.local/share/mise/installs/zig/0.16.0/bin"
+        - "/home/bernardo/.local/share/mise/installs/zls/latest"
         - "/home/bernardo/.local/bin"
         - "/usr/share/omarchy/bin"
         - "/home/bernardo/.local/share/mise/shims"
@@ -3606,16 +3978,6 @@ events:
         - "/home/bernardo/go/bin/cointop"
         - "/home/bernardo/.config/emacs/bin"
         - "./node_modules/.bin"
-        - "/home/bernardo/go/bin"
-        - "/home/bernardo/go/bin/cointop"
-        - "/home/bernardo/.cargo/bin"
-        - "/home/bernardo/.config/emacs/bin"
-        - "./node_modules/.bin"
-        - "/home/bernardo/.local/share/mise/installs/codex/latest/bin"
-        - "/home/bernardo/.local/share/mise/installs/node/25.2.1/bin"
-        - "/home/bernardo/.local/share/mise/installs/python/latest/bin"
-        - "/home/bernardo/.local/share/mise/installs/zig/0.16.0/bin"
-        - "/home/bernardo/.local/share/mise/installs/zls/latest"
       CMAKE_INSTALL_PREFIX: "/usr/local"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "/usr/local"
@@ -3626,4 +3988,138 @@ events:
         - "/usr/X11R6"
         - "/usr/pkg"
         - "/opt"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/FindPkgConfig.cmake:761 (find_library)"
+      - "/usr/share/cmake/Modules/FindPkgConfig.cmake:811 (_pkg_find_libs)"
+      - "/usr/share/cmake/Modules/FindPkgConfig.cmake:1149 (_pkg_recalculate)"
+      - "/usr/share/cmake/Modules/FindPkgConfig.cmake:1166 (_pkg_check_modules_internal)"
+      - "CMakeLists.txt:22 (pkg_check_modules)"
+    mode: "library"
+    variable: "pkgcfg_lib_NOTCURSES_notcurses"
+    description: "Path to a library."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "notcurses"
+    candidate_directories:
+      - "/usr/local/lib/"
+    found: "/usr/local/lib/libnotcurses.so"
+    search_context:
+      ENV{PATH}:
+        - "/home/bernardo/.local/share/mise/installs/codex/latest/bin"
+        - "/home/bernardo/.local/share/mise/installs/node/25.2.1/bin"
+        - "/home/bernardo/.local/share/mise/installs/opencode/latest"
+        - "/home/bernardo/.local/share/mise/installs/python/latest/bin"
+        - "/home/bernardo/.local/share/mise/installs/zig/0.16.0/bin"
+        - "/home/bernardo/.local/share/mise/installs/zls/latest"
+        - "/home/bernardo/.local/bin"
+        - "/usr/share/omarchy/bin"
+        - "/home/bernardo/.local/share/mise/shims"
+        - "/home/bernardo/.cargo/bin"
+        - "/home/bernardo/.local/share/../bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/home/bernardo/.local/share/mise/shims"
+        - "/home/bernardo/.local/bin"
+        - "/opt/cuda/bin"
+        - "/usr/lib/jvm/default/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
+        - "/home/bernardo/.cargo/bin"
+        - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
+        - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
+        - "/home/bernardo/.config/composer/vendor/bin"
+        - "/home/bernardo/go/bin"
+        - "/home/bernardo/go/bin/cointop"
+        - "/home/bernardo/.config/emacs/bin"
+        - "./node_modules/.bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/usr"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/usr/lib/X11"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/FindPkgConfig.cmake:761 (find_library)"
+      - "/usr/share/cmake/Modules/FindPkgConfig.cmake:811 (_pkg_find_libs)"
+      - "/usr/share/cmake/Modules/FindPkgConfig.cmake:1149 (_pkg_recalculate)"
+      - "/usr/share/cmake/Modules/FindPkgConfig.cmake:1166 (_pkg_check_modules_internal)"
+      - "CMakeLists.txt:22 (pkg_check_modules)"
+    mode: "library"
+    variable: "pkgcfg_lib_NOTCURSES_notcurses-core"
+    description: "Path to a library."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "notcurses-core"
+    candidate_directories:
+      - "/usr/local/lib/"
+    found: "/usr/local/lib/libnotcurses-core.so"
+    search_context:
+      ENV{PATH}:
+        - "/home/bernardo/.local/share/mise/installs/codex/latest/bin"
+        - "/home/bernardo/.local/share/mise/installs/node/25.2.1/bin"
+        - "/home/bernardo/.local/share/mise/installs/opencode/latest"
+        - "/home/bernardo/.local/share/mise/installs/python/latest/bin"
+        - "/home/bernardo/.local/share/mise/installs/zig/0.16.0/bin"
+        - "/home/bernardo/.local/share/mise/installs/zls/latest"
+        - "/home/bernardo/.local/bin"
+        - "/usr/share/omarchy/bin"
+        - "/home/bernardo/.local/share/mise/shims"
+        - "/home/bernardo/.cargo/bin"
+        - "/home/bernardo/.local/share/../bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/home/bernardo/.local/share/mise/shims"
+        - "/home/bernardo/.local/bin"
+        - "/opt/cuda/bin"
+        - "/usr/lib/jvm/default/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
+        - "/home/bernardo/.cargo/bin"
+        - "/home/bernardo/Android/Sdk/build-tools/34.0.0"
+        - "/home/bernardo/Android/Sdk/cmdline-tools/latest/bin"
+        - "/home/bernardo/.config/composer/vendor/bin"
+        - "/home/bernardo/go/bin"
+        - "/home/bernardo/go/bin/cointop"
+        - "/home/bernardo/.config/emacs/bin"
+        - "./node_modules/.bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/usr"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/usr/lib/X11"
 ...

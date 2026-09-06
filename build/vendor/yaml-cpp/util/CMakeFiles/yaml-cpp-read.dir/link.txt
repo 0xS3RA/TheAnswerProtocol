@@ -1,1 +1,1 @@
-/usr/bin/c++ -fsanitize=address,undefined -Wl,--dependency-file=CMakeFiles/yaml-cpp-read.dir/link.d "CMakeFiles/yaml-cpp-read.dir/read.cpp.o" -o read  ../libyaml-cpp.a
+/usr/bin/c++ -Wl,--dependency-file=CMakeFiles/yaml-cpp-read.dir/link.d "CMakeFiles/yaml-cpp-read.dir/read.cpp.o" -o read  ../libyaml-cpp.a

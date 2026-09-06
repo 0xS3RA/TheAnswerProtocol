@@ -16,6 +16,10 @@ endif()
 
 # Dépendances protobuf et yaml-cpp
 find_package(Protobuf REQUIRED)
+find_package(absl REQUIRED)
+find_package(PkgConfig REQUIRED)
+
+pkg_check_modules(NOTCURSES REQUIRED IMPORTED_TARGET notcurses)
 
 add_subdirectory(vendor/yaml-cpp EXCLUDE_FROM_ALL)
 
@@ -34,22 +38,32 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
 add_executable(server
   server/server.cpp
-  server/client_loop.cpp
   ${PROTO_SRCS}
   ${PROTO_HDRS}
 )
-target_link_libraries(server PRIVATE protobuf::libprotobuf yaml-cpp)
+target_link_libraries(server PRIVATE
+  protobuf::libprotobuf
+  absl::log_internal_check_op
+  yaml-cpp
+)
 
 add_executable(gui
   gui/gui.cpp
   ${PROTO_SRCS}
   ${PROTO_HDRS}
 )
-target_link_libraries(gui PRIVATE protobuf::libprotobuf)
+target_link_libraries(gui PRIVATE
+  protobuf::libprotobuf
+  absl::log_internal_check_op
+)
 
 add_executable(cli
   cli/cli.cpp
   ${PROTO_SRCS}
   ${PROTO_HDRS}
 )
-target_link_libraries(cli PRIVATE protobuf::libprotobuf)
+target_link_libraries(cli PRIVATE
+  protobuf::libprotobuf
+  absl::log_internal_check_op
+  PkgConfig::NOTCURSES
+)

@@ -8,7 +8,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/bernardo/Documents/42/M5/TheAnswerProtocol/server/client_loop.cpp" "CMakeFiles/server.dir/server/client_loop.cpp.o" "gcc" "CMakeFiles/server.dir/server/client_loop.cpp.o.d"
   "/home/bernardo/Documents/42/M5/TheAnswerProtocol/server/server.cpp" "CMakeFiles/server.dir/server/server.cpp.o" "gcc" "CMakeFiles/server.dir/server/server.cpp.o.d"
   "/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/template.pb.cc" "CMakeFiles/server.dir/template.pb.cc.o" "gcc" "CMakeFiles/server.dir/template.pb.cc.o.d"
   "" "bin/server" "gcc" "CMakeFiles/server.dir/link.d"

@@ -6,5 +6,5 @@ CXX_DEFINES = -DYAML_CPP_STATIC_DEFINE
 
 CXX_INCLUDES = -I/home/bernardo/Documents/42/M5/TheAnswerProtocol/vendor/yaml-cpp/include
 
-CXX_FLAGS = -std=gnu++20 -Wall -Wextra -Werror -ggdb3 -O0 -fsanitize=address,undefined
+CXX_FLAGS = -std=gnu++20 -Wall -Wextra -Werror
 

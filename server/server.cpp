@@ -490,13 +490,12 @@ void server_loop(ThreadSafeQueue<Socket>& pending_connections, game::World& worl
                 switch (command.delta_type_case()) {
                 // HANDLE INTERACTION COMMAND
                 case game::CommandDelta::kInteractionCommand: {
-                    const auto& cmd = command.interaction_command();
-                    if (runner->is_running() &&)
-                        break;
+                    // const auto& cmd = command.interaction_command();
+                    break;
                 }
                 // HANDLE ATTACK COMMAND
                 case game::CommandDelta::kAttackCommand: {
-                    const auto& cmd = command.attack_command();
+                    // const auto& cmd = command.attack_command();
                     break;
                 }
                 // HANDLE MESSAGE COMMAND

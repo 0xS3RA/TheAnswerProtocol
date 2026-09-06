@@ -27,7 +27,7 @@ npcs:
     description: "A stern-looking guard watching over the square."
     dialogue: ["Stay safe, traveler.", "The roads can be dangerous."]
     hp: 50
-    inventory: ["guardkey:1", "ale:1"]
+    inventory: ["guardKey:1", "ale:1"]
     temperament: "defensive"
     money: 50
   merchant:

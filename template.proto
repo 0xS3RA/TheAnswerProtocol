@@ -155,7 +155,7 @@ message WorldDelta
 {
     oneof delta_type
     { // 'oneof' est l'équivalent Protobuf de std::variant
-        PlayerInventoryChanged player_inventory_changed = 1;
+        PlayerInventoryChanged player_inventory_changed = 1; //
         NpcInventoryChanged npc_inventory_changed = 2;
         PlayerHpChanged player_hp_changed = 3;
         NpcHpChanged npc_hp_changed = 4;

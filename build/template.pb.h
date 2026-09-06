@@ -69,12 +69,12 @@ enum EffectType : int;
 extern const uint32_t EffectType_internal_data_[];
 enum InteractionType : int;
 extern const uint32_t InteractionType_internal_data_[];
-enum NpcTemperament : int;
-extern const uint32_t NpcTemperament_internal_data_[];
 enum PlayerState : int;
 extern const uint32_t PlayerState_internal_data_[];
 enum RcvStatus : int;
 extern const uint32_t RcvStatus_internal_data_[];
+enum Temperament : int;
+extern const uint32_t Temperament_internal_data_[];
 enum Usage : int;
 extern const uint32_t Usage_internal_data_[];
 class AttackCommand;
@@ -157,6 +157,14 @@ extern const ::google::protobuf::internal::ClassDataFull MessageCommand_class_da
 #else
 extern const MessageCommandGlobalsTypeInternal MessageCommand_globals_;
 #endif  // PROTOBUF_MESSAGE_GLOBALS
+class MessageReceived;
+struct MessageReceivedGlobalsTypeInternal;
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+extern MessageReceivedGlobalsTypeInternal MessageReceived_globals_;
+extern const ::google::protobuf::internal::ClassDataFull MessageReceived_class_data_;
+#else
+extern const MessageReceivedGlobalsTypeInternal MessageReceived_globals_;
+#endif  // PROTOBUF_MESSAGE_GLOBALS
 class Npc;
 struct NpcGlobalsTypeInternal;
 #ifndef PROTOBUF_MESSAGE_GLOBALS
@@ -188,6 +196,14 @@ extern NpcMovedGlobalsTypeInternal NpcMoved_globals_;
 extern const ::google::protobuf::internal::ClassDataFull NpcMoved_class_data_;
 #else
 extern const NpcMovedGlobalsTypeInternal NpcMoved_globals_;
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+class Npc_InventoryEntry_DoNotUse;
+struct Npc_InventoryEntry_DoNotUseGlobalsTypeInternal;
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+extern Npc_InventoryEntry_DoNotUseGlobalsTypeInternal Npc_InventoryEntry_DoNotUse_globals_;
+extern const ::google::protobuf::internal::ClassDataFull Npc_InventoryEntry_DoNotUse_class_data_;
+#else
+extern const Npc_InventoryEntry_DoNotUseGlobalsTypeInternal Npc_InventoryEntry_DoNotUse_globals_;
 #endif  // PROTOBUF_MESSAGE_GLOBALS
 class Npc_TradeInventoryEntry_DoNotUse;
 struct Npc_TradeInventoryEntry_DoNotUseGlobalsTypeInternal;
@@ -261,6 +277,14 @@ extern const ::google::protobuf::internal::ClassDataFull Spawn_class_data_;
 #else
 extern const SpawnGlobalsTypeInternal Spawn_globals_;
 #endif  // PROTOBUF_MESSAGE_GLOBALS
+class UnauthorizedCommand;
+struct UnauthorizedCommandGlobalsTypeInternal;
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+extern UnauthorizedCommandGlobalsTypeInternal UnauthorizedCommand_globals_;
+extern const ::google::protobuf::internal::ClassDataFull UnauthorizedCommand_class_data_;
+#else
+extern const UnauthorizedCommandGlobalsTypeInternal UnauthorizedCommand_globals_;
+#endif  // PROTOBUF_MESSAGE_GLOBALS
 class World;
 struct WorldGlobalsTypeInternal;
 #ifndef PROTOBUF_MESSAGE_GLOBALS
@@ -304,14 +328,14 @@ template <>
 internal::EnumTraitsT<::game::InteractionType_internal_data_>
     internal::EnumTraitsImpl::value<::game::InteractionType>;
 template <>
-internal::EnumTraitsT<::game::NpcTemperament_internal_data_>
-    internal::EnumTraitsImpl::value<::game::NpcTemperament>;
-template <>
 internal::EnumTraitsT<::game::PlayerState_internal_data_>
     internal::EnumTraitsImpl::value<::game::PlayerState>;
 template <>
 internal::EnumTraitsT<::game::RcvStatus_internal_data_>
     internal::EnumTraitsImpl::value<::game::RcvStatus>;
+template <>
+internal::EnumTraitsT<::game::Temperament_internal_data_>
+    internal::EnumTraitsImpl::value<::game::Temperament>;
 template <>
 internal::EnumTraitsT<::game::Usage_internal_data_>
     internal::EnumTraitsImpl::value<::game::Usage>;
@@ -622,45 +646,45 @@ template <>
   return ::google::protobuf::internal::ParseNamedEnum<EffectType>(EffectType_descriptor(), name,
                                            value);
 }
-enum NpcTemperament : int {
+enum Temperament : int {
   PASSIVE = 0,
   DEFENSIVE = 1,
   AGGRESIVE = 2,
-  NpcTemperament_INT_MIN_SENTINEL_DO_NOT_USE_ =
+  Temperament_INT_MIN_SENTINEL_DO_NOT_USE_ =
       ::std::numeric_limits<::int32_t>::min(),
-  NpcTemperament_INT_MAX_SENTINEL_DO_NOT_USE_ =
+  Temperament_INT_MAX_SENTINEL_DO_NOT_USE_ =
       ::std::numeric_limits<::int32_t>::max(),
 };
 
-extern const uint32_t NpcTemperament_internal_data_[];
-inline constexpr NpcTemperament NpcTemperament_MIN =
-    static_cast<NpcTemperament>(0);
-inline constexpr NpcTemperament NpcTemperament_MAX =
-    static_cast<NpcTemperament>(2);
-[[nodiscard]] inline bool NpcTemperament_IsValid(int value) {
+extern const uint32_t Temperament_internal_data_[];
+inline constexpr Temperament Temperament_MIN =
+    static_cast<Temperament>(0);
+inline constexpr Temperament Temperament_MAX =
+    static_cast<Temperament>(2);
+[[nodiscard]] inline bool Temperament_IsValid(int value) {
   return 0 <= value && value <= 2;
 }
-inline constexpr int NpcTemperament_ARRAYSIZE = 2 + 1;
+inline constexpr int Temperament_ARRAYSIZE = 2 + 1;
 [[nodiscard]] const ::google::protobuf::EnumDescriptor* PROTOBUF_NONNULL
-NpcTemperament_descriptor();
-[[nodiscard]] inline auto ProtobufInternalGetEnumDescriptor(NpcTemperament) {
-  return NpcTemperament_descriptor();
+Temperament_descriptor();
+[[nodiscard]] inline auto ProtobufInternalGetEnumDescriptor(Temperament) {
+  return Temperament_descriptor();
 }
 template <typename T>
-[[nodiscard]] const ::std::string& NpcTemperament_Name(T value) {
-  static_assert(::std::is_same<T, NpcTemperament>::value ||
+[[nodiscard]] const ::std::string& Temperament_Name(T value) {
+  static_assert(::std::is_same<T, Temperament>::value ||
                     ::std::is_integral<T>::value,
-                "Incorrect type passed to NpcTemperament_Name().");
-  return NpcTemperament_Name(static_cast<NpcTemperament>(value));
+                "Incorrect type passed to Temperament_Name().");
+  return Temperament_Name(static_cast<Temperament>(value));
 }
 template <>
-[[nodiscard]] inline const ::std::string& NpcTemperament_Name(NpcTemperament value) {
-  return ::google::protobuf::internal::NameOfDenseEnum<NpcTemperament_descriptor, 0, 2>(
+[[nodiscard]] inline const ::std::string& Temperament_Name(Temperament value) {
+  return ::google::protobuf::internal::NameOfDenseEnum<Temperament_descriptor, 0, 2>(
       static_cast<int>(value));
 }
-[[nodiscard]] inline bool NpcTemperament_Parse(
-    ::absl::string_view name, NpcTemperament* PROTOBUF_NONNULL value) {
-  return ::google::protobuf::internal::ParseNamedEnum<NpcTemperament>(NpcTemperament_descriptor(), name,
+[[nodiscard]] inline bool Temperament_Parse(
+    ::absl::string_view name, Temperament* PROTOBUF_NONNULL value) {
+  return ::google::protobuf::internal::ParseNamedEnum<Temperament>(Temperament_descriptor(), name,
                                            value);
 }
 enum Usage : int {
@@ -759,6 +783,212 @@ class PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED World_PlayersEntry_DoNotUse final
       const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
       ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
   static constexpr auto InternalNewImpl_();
+};
+// -------------------------------------------------------------------
+
+class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED UnauthorizedCommand final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:game.UnauthorizedCommand) */ {
+ public:
+  inline UnauthorizedCommand() : UnauthorizedCommand(nullptr) {}
+  ~UnauthorizedCommand() PROTOBUF_FINAL;
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+  void operator delete(UnauthorizedCommand* PROTOBUF_NONNULL msg, ::std::destroying_delete_t) {
+    SharedDtor(*msg);
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(UnauthorizedCommand));
+  }
+#endif
+
+  template <typename = void>
+  explicit constexpr UnauthorizedCommand(::google::protobuf::internal::ConstantInitialized,
+                           const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+                               class_data);
+
+  inline UnauthorizedCommand(const UnauthorizedCommand& from) : UnauthorizedCommand(nullptr, from) {}
+  inline UnauthorizedCommand(UnauthorizedCommand&& from) noexcept : UnauthorizedCommand(nullptr, ::std::move(from)) {}
+  inline UnauthorizedCommand& operator=(const UnauthorizedCommand& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline UnauthorizedCommand& operator=(UnauthorizedCommand&& from) noexcept {
+    if (this == &from) return *this;
+    if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  [[nodiscard]] inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  [[nodiscard]] inline ::google::protobuf::UnknownFieldSet* PROTOBUF_NONNULL
+  mutable_unknown_fields() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL descriptor() {
+    return GetDescriptor();
+  }
+  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL
+  GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  [[nodiscard]] static const ::google::protobuf::Reflection* PROTOBUF_NONNULL GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  [[nodiscard]] static const UnauthorizedCommand& default_instance() {
+    return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<UnauthorizedCommand>(&UnauthorizedCommand_globals_);
+  }
+  static constexpr int kIndexInFileMessages = 13;
+  friend void swap(UnauthorizedCommand& a, UnauthorizedCommand& b) { a.Swap(&b); }
+  inline void Swap(UnauthorizedCommand* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(UnauthorizedCommand* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  [[nodiscard]] UnauthorizedCommand* PROTOBUF_NONNULL
+  New(::google::protobuf::Arena* PROTOBUF_NULLABLE arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<UnauthorizedCommand>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const UnauthorizedCommand& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom(const UnauthorizedCommand& from) { UnauthorizedCommand::MergeImpl(*this, from); }
+
+  private:
+  static void MergeImpl(::google::protobuf::MessageLite& to_msg,
+                        const ::google::protobuf::MessageLite& from_msg);
+
+  public:
+  [[nodiscard]] bool IsInitialized() const {
+    return true;
+  }
+  ABSL_ATTRIBUTE_REINITIALIZES void Clear() PROTOBUF_FINAL;
+  #if defined(PROTOBUF_CUSTOM_VTABLE)
+  private:
+  [[nodiscard]] static ::size_t ByteSizeLong(const ::google::protobuf::MessageLite& msg);
+  [[nodiscard]] static ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      const ::google::protobuf::MessageLite& msg, ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream);
+
+  public:
+  [[nodiscard]] ::size_t ByteSizeLong() const { return ByteSizeLong(*this); }
+  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
+    return _InternalSerialize(*this, target, stream);
+  }
+  #else   // PROTOBUF_CUSTOM_VTABLE
+  [[nodiscard]] ::size_t ByteSizeLong() const final;
+  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const final;
+  #endif  // PROTOBUF_CUSTOM_VTABLE
+  [[nodiscard]] int GetCachedSize() const {
+    return _impl_._cached_size_.Get();
+  }
+
+  private:
+  void SharedCtor(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static void SharedDtor(MessageLite& self);
+  void InternalSwap(UnauthorizedCommand* PROTOBUF_NONNULL other);
+ private:
+  template <typename T>
+  friend ::absl::string_view(::google::protobuf::internal::GetAnyMessageName)();
+  static ::absl::string_view FullMessageName() { return "game.UnauthorizedCommand"; }
+
+  explicit UnauthorizedCommand(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  UnauthorizedCommand(::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const UnauthorizedCommand& from);
+  UnauthorizedCommand(
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, UnauthorizedCommand&& from) noexcept
+      : UnauthorizedCommand(arena) {
+    *this = ::std::move(from);
+  }
+  const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL GetClassData() const PROTOBUF_FINAL;
+  static void* PROTOBUF_NONNULL PlacementNew_(
+      const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static constexpr auto InternalNewImpl_();
+
+ public:
+  static constexpr auto InternalGenerateClassData_(
+      const MessageLite& prototype,
+      const ::google::protobuf::internal::TcParseTableBase* PROTOBUF_NULLABLE tc_table = nullptr);
+
+  [[nodiscard]] ::google::protobuf::Metadata GetMetadata() const;
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+  enum : int {
+    kResponseFieldNumber = 1,
+  };
+  // string response = 1;
+  void clear_response() ;
+  [[nodiscard]] const ::std::string& response() const;
+  template <typename Arg_ = const ::std::string&, typename... Args_>
+  void set_response(Arg_&& arg, Args_... args);
+  ::std::string* PROTOBUF_NONNULL mutable_response();
+  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_response();
+  void set_allocated_response(::std::string* PROTOBUF_NULLABLE value);
+
+  private:
+  const ::std::string& _internal_response() const;
+  PROTOBUF_ALWAYS_INLINE void _internal_set_response(const ::std::string& value);
+  ::std::string* PROTOBUF_NONNULL _internal_mutable_response();
+
+  public:
+  // @@protoc_insertion_point(class_scope:game.UnauthorizedCommand)
+ private:
+  class _Internal;
+  using ParseTableT_ =
+      ::google::protobuf::internal::TcParseTable<0, 1,
+                          0, 41,
+                          2>;
+  static constexpr ParseTableT_ InternalGenerateParseTable_(
+      const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL class_data);
+  friend class ::google::protobuf::internal::TcParser;
+  #ifndef PROTOBUF_MESSAGE_GLOBALS
+  static const ParseTableT_ _table_;
+  #endif
+
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  friend ::google::protobuf::internal::PrivateAccess;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+    inline explicit constexpr Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                                    ::google::protobuf::internal::ConstantInitialized) noexcept;
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
+        const UnauthorizedCommand& from_msg);
+    ::google::protobuf::internal::HasBits<1> _has_bits_;
+    ::google::protobuf::internal::CachedSize _cached_size_;
+    ::google::protobuf::internal::ArenaStringPtr response_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_template_2eproto;
 };
 // -------------------------------------------------------------------
 
@@ -1036,7 +1266,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED PlayerStateChanged final : public :
   [[nodiscard]] static const PlayerStateChanged& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<PlayerStateChanged>(&PlayerStateChanged_globals_);
   }
-  static constexpr int kIndexInFileMessages = 20;
+  static constexpr int kIndexInFileMessages = 23;
   friend void swap(PlayerStateChanged& a, PlayerStateChanged& b) { a.Swap(&b); }
   inline void Swap(PlayerStateChanged* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -1249,7 +1479,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED PlayerMoved final : public ::google
   [[nodiscard]] static const PlayerMoved& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<PlayerMoved>(&PlayerMoved_globals_);
   }
-  static constexpr int kIndexInFileMessages = 17;
+  static constexpr int kIndexInFileMessages = 20;
   friend void swap(PlayerMoved& a, PlayerMoved& b) { a.Swap(&b); }
   inline void Swap(PlayerMoved* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -1462,7 +1692,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED PlayerInventoryChanged final : publ
   [[nodiscard]] static const PlayerInventoryChanged& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<PlayerInventoryChanged>(&PlayerInventoryChanged_globals_);
   }
-  static constexpr int kIndexInFileMessages = 13;
+  static constexpr int kIndexInFileMessages = 16;
   friend void swap(PlayerInventoryChanged& a, PlayerInventoryChanged& b) { a.Swap(&b); }
   inline void Swap(PlayerInventoryChanged* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -1687,7 +1917,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED PlayerHpChanged final : public ::go
   [[nodiscard]] static const PlayerHpChanged& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<PlayerHpChanged>(&PlayerHpChanged_globals_);
   }
-  static constexpr int kIndexInFileMessages = 15;
+  static constexpr int kIndexInFileMessages = 18;
   friend void swap(PlayerHpChanged& a, PlayerHpChanged& b) { a.Swap(&b); }
   inline void Swap(PlayerHpChanged* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -1900,7 +2130,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED PlayerDisconnected final : public :
   [[nodiscard]] static const PlayerDisconnected& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<PlayerDisconnected>(&PlayerDisconnected_globals_);
   }
-  static constexpr int kIndexInFileMessages = 12;
+  static constexpr int kIndexInFileMessages = 15;
   friend void swap(PlayerDisconnected& a, PlayerDisconnected& b) { a.Swap(&b); }
   inline void Swap(PlayerDisconnected* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -2101,7 +2331,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED PlayerConnected final : public ::go
   [[nodiscard]] static const PlayerConnected& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<PlayerConnected>(&PlayerConnected_globals_);
   }
-  static constexpr int kIndexInFileMessages = 11;
+  static constexpr int kIndexInFileMessages = 14;
   friend void swap(PlayerConnected& a, PlayerConnected& b) { a.Swap(&b); }
   inline void Swap(PlayerConnected* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -2319,7 +2549,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED Player final : public ::google::pro
   [[nodiscard]] static const Player& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<Player>(&Player_globals_);
   }
-  static constexpr int kIndexInFileMessages = 7;
+  static constexpr int kIndexInFileMessages = 8;
   friend void swap(Player& a, Player& b) { a.Swap(&b); }
   inline void Swap(Player* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -2596,7 +2826,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED NpcMoved final : public ::google::p
   [[nodiscard]] static const NpcMoved& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<NpcMoved>(&NpcMoved_globals_);
   }
-  static constexpr int kIndexInFileMessages = 18;
+  static constexpr int kIndexInFileMessages = 21;
   friend void swap(NpcMoved& a, NpcMoved& b) { a.Swap(&b); }
   inline void Swap(NpcMoved* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -2809,7 +3039,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED NpcInventoryChanged final : public 
   [[nodiscard]] static const NpcInventoryChanged& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<NpcInventoryChanged>(&NpcInventoryChanged_globals_);
   }
-  static constexpr int kIndexInFileMessages = 14;
+  static constexpr int kIndexInFileMessages = 17;
   friend void swap(NpcInventoryChanged& a, NpcInventoryChanged& b) { a.Swap(&b); }
   inline void Swap(NpcInventoryChanged* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -3034,7 +3264,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED NpcHpChanged final : public ::googl
   [[nodiscard]] static const NpcHpChanged& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<NpcHpChanged>(&NpcHpChanged_globals_);
   }
-  static constexpr int kIndexInFileMessages = 16;
+  static constexpr int kIndexInFileMessages = 19;
   friend void swap(NpcHpChanged& a, NpcHpChanged& b) { a.Swap(&b); }
   inline void Swap(NpcHpChanged* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -3240,6 +3470,273 @@ class PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED Npc_TradeInventoryEntry_DoNotUse fin
 };
 // -------------------------------------------------------------------
 
+class PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED Npc_InventoryEntry_DoNotUse final
+    : public ::google::protobuf::internal::MapEntry<::uint64_t, ::uint64_t,
+                             ::google::protobuf::internal::WireFormatLite::TYPE_UINT64,
+                             ::google::protobuf::internal::WireFormatLite::TYPE_UINT64> {
+ public:
+  using SuperType =
+      ::google::protobuf::internal::MapEntry<::uint64_t, ::uint64_t,
+                      ::google::protobuf::internal::WireFormatLite::TYPE_UINT64,
+                      ::google::protobuf::internal::WireFormatLite::TYPE_UINT64>;
+  Npc_InventoryEntry_DoNotUse();
+  template <typename = void>
+  explicit constexpr Npc_InventoryEntry_DoNotUse(::google::protobuf::internal::ConstantInitialized,
+                           const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+                               class_data);
+  explicit Npc_InventoryEntry_DoNotUse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static constexpr const void* PROTOBUF_NONNULL internal_message_globals() {
+    return &Npc_InventoryEntry_DoNotUse_globals_;
+  }
+
+
+  static constexpr auto InternalGenerateClassData_(
+      const ::google::protobuf::MessageLite& prototype,
+      const ::google::protobuf::internal::TcParseTableBase* PROTOBUF_NULLABLE tc_table = nullptr);
+
+ private:
+  friend class ::google::protobuf::MessageLite;
+  friend struct ::TableStruct_template_2eproto;
+  friend ::google::protobuf::internal::PrivateAccess;
+  friend Npc_InventoryEntry_DoNotUseGlobalsTypeInternal;
+
+  using ParseTableT_ =
+      ::google::protobuf::internal::TcParseTable<1, 2,
+                          0, 0,
+                          2>;
+  static constexpr ParseTableT_ InternalGenerateParseTable_(
+      const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL class_data);
+  friend class ::google::protobuf::internal::TcParser;
+  #ifndef PROTOBUF_MESSAGE_GLOBALS
+  static const ParseTableT_ _table_;
+  #endif
+
+  const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL GetClassData() const PROTOBUF_FINAL;
+  static void* PROTOBUF_NONNULL PlacementNew_(
+      const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static constexpr auto InternalNewImpl_();
+};
+// -------------------------------------------------------------------
+
+class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED MessageReceived final : public ::google::protobuf::Message
+/* @@protoc_insertion_point(class_definition:game.MessageReceived) */ {
+ public:
+  inline MessageReceived() : MessageReceived(nullptr) {}
+  ~MessageReceived() PROTOBUF_FINAL;
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+  void operator delete(MessageReceived* PROTOBUF_NONNULL msg, ::std::destroying_delete_t) {
+    SharedDtor(*msg);
+    ::google::protobuf::internal::SizedDelete(msg, sizeof(MessageReceived));
+  }
+#endif
+
+  template <typename = void>
+  explicit constexpr MessageReceived(::google::protobuf::internal::ConstantInitialized,
+                           const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+                               class_data);
+
+  inline MessageReceived(const MessageReceived& from) : MessageReceived(nullptr, from) {}
+  inline MessageReceived(MessageReceived&& from) noexcept : MessageReceived(nullptr, ::std::move(from)) {}
+  inline MessageReceived& operator=(const MessageReceived& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline MessageReceived& operator=(MessageReceived&& from) noexcept {
+    if (this == &from) return *this;
+    if (::google::protobuf::internal::CanMoveWithInternalSwap(GetArena(), from.GetArena())) {
+      InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  [[nodiscard]] inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const
+      ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance);
+  }
+  [[nodiscard]] inline ::google::protobuf::UnknownFieldSet* PROTOBUF_NONNULL
+  mutable_unknown_fields() ABSL_ATTRIBUTE_LIFETIME_BOUND {
+    return _internal_metadata_.mutable_unknown_fields<::google::protobuf::UnknownFieldSet>();
+  }
+
+  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL descriptor() {
+    return GetDescriptor();
+  }
+  [[nodiscard]] static const ::google::protobuf::Descriptor* PROTOBUF_NONNULL
+  GetDescriptor() {
+    return default_instance().GetMetadata().descriptor;
+  }
+  [[nodiscard]] static const ::google::protobuf::Reflection* PROTOBUF_NONNULL GetReflection() {
+    return default_instance().GetMetadata().reflection;
+  }
+  [[nodiscard]] static const MessageReceived& default_instance() {
+    return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<MessageReceived>(&MessageReceived_globals_);
+  }
+  static constexpr int kIndexInFileMessages = 12;
+  friend void swap(MessageReceived& a, MessageReceived& b) { a.Swap(&b); }
+  inline void Swap(MessageReceived* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    if (::google::protobuf::internal::CanUseInternalSwap(GetArena(), other->GetArena())) {
+      InternalSwap(other);
+    } else {
+      ::google::protobuf::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(MessageReceived* PROTOBUF_NONNULL other) {
+    if (other == this) return;
+    ABSL_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  [[nodiscard]] MessageReceived* PROTOBUF_NONNULL
+  New(::google::protobuf::Arena* PROTOBUF_NULLABLE arena = nullptr) const {
+    return ::google::protobuf::Message::DefaultConstruct<MessageReceived>(arena);
+  }
+  using ::google::protobuf::Message::CopyFrom;
+  void CopyFrom(const MessageReceived& from);
+  using ::google::protobuf::Message::MergeFrom;
+  void MergeFrom(const MessageReceived& from) { MessageReceived::MergeImpl(*this, from); }
+
+  private:
+  static void MergeImpl(::google::protobuf::MessageLite& to_msg,
+                        const ::google::protobuf::MessageLite& from_msg);
+
+  public:
+  [[nodiscard]] bool IsInitialized() const {
+    return true;
+  }
+  ABSL_ATTRIBUTE_REINITIALIZES void Clear() PROTOBUF_FINAL;
+  #if defined(PROTOBUF_CUSTOM_VTABLE)
+  private:
+  [[nodiscard]] static ::size_t ByteSizeLong(const ::google::protobuf::MessageLite& msg);
+  [[nodiscard]] static ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      const ::google::protobuf::MessageLite& msg, ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream);
+
+  public:
+  [[nodiscard]] ::size_t ByteSizeLong() const { return ByteSizeLong(*this); }
+  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
+    return _InternalSerialize(*this, target, stream);
+  }
+  #else   // PROTOBUF_CUSTOM_VTABLE
+  [[nodiscard]] ::size_t ByteSizeLong() const final;
+  [[nodiscard]] ::uint8_t* PROTOBUF_NONNULL _InternalSerialize(
+      ::uint8_t* PROTOBUF_NONNULL target,
+      ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const final;
+  #endif  // PROTOBUF_CUSTOM_VTABLE
+  [[nodiscard]] int GetCachedSize() const {
+    return _impl_._cached_size_.Get();
+  }
+
+  private:
+  void SharedCtor(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static void SharedDtor(MessageLite& self);
+  void InternalSwap(MessageReceived* PROTOBUF_NONNULL other);
+ private:
+  template <typename T>
+  friend ::absl::string_view(::google::protobuf::internal::GetAnyMessageName)();
+  static ::absl::string_view FullMessageName() { return "game.MessageReceived"; }
+
+  explicit MessageReceived(::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  MessageReceived(::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const MessageReceived& from);
+  MessageReceived(
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, MessageReceived&& from) noexcept
+      : MessageReceived(arena) {
+    *this = ::std::move(from);
+  }
+  const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL GetClassData() const PROTOBUF_FINAL;
+  static void* PROTOBUF_NONNULL PlacementNew_(
+      const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
+      ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+  static constexpr auto InternalNewImpl_();
+
+ public:
+  static constexpr auto InternalGenerateClassData_(
+      const MessageLite& prototype,
+      const ::google::protobuf::internal::TcParseTableBase* PROTOBUF_NULLABLE tc_table = nullptr);
+
+  [[nodiscard]] ::google::protobuf::Metadata GetMetadata() const;
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+  enum : int {
+    kMessageFieldNumber = 2,
+    kPlayerIdFieldNumber = 1,
+  };
+  // string message = 2;
+  void clear_message() ;
+  [[nodiscard]] const ::std::string& message() const;
+  template <typename Arg_ = const ::std::string&, typename... Args_>
+  void set_message(Arg_&& arg, Args_... args);
+  ::std::string* PROTOBUF_NONNULL mutable_message();
+  [[nodiscard]] ::std::string* PROTOBUF_NULLABLE release_message();
+  void set_allocated_message(::std::string* PROTOBUF_NULLABLE value);
+
+  private:
+  const ::std::string& _internal_message() const;
+  PROTOBUF_ALWAYS_INLINE void _internal_set_message(const ::std::string& value);
+  ::std::string* PROTOBUF_NONNULL _internal_mutable_message();
+
+  public:
+  // uint64 player_id = 1;
+  void clear_player_id() ;
+  [[nodiscard]] ::uint64_t player_id() const;
+  void set_player_id(::uint64_t value);
+
+  private:
+  ::uint64_t _internal_player_id() const;
+  void _internal_set_player_id(::uint64_t value);
+
+  public:
+  // @@protoc_insertion_point(class_scope:game.MessageReceived)
+ private:
+  class _Internal;
+  using ParseTableT_ =
+      ::google::protobuf::internal::TcParseTable<1, 2,
+                          0, 36,
+                          2>;
+  static constexpr ParseTableT_ InternalGenerateParseTable_(
+      const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL class_data);
+  friend class ::google::protobuf::internal::TcParser;
+  #ifndef PROTOBUF_MESSAGE_GLOBALS
+  static const ParseTableT_ _table_;
+  #endif
+
+  friend class ::google::protobuf::MessageLite;
+  friend class ::google::protobuf::Arena;
+  friend ::google::protobuf::internal::PrivateAccess;
+  template <typename T>
+  friend class ::google::protobuf::Arena::InternalHelper;
+  using InternalArenaConstructable_ = void;
+  using DestructorSkippable_ = void;
+  struct Impl_ {
+    inline explicit constexpr Impl_(::google::protobuf::internal::InternalVisibility visibility,
+                                    ::google::protobuf::internal::ConstantInitialized) noexcept;
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena);
+    inline explicit Impl_(
+        ::google::protobuf::internal::InternalVisibility visibility,
+        ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
+        const MessageReceived& from_msg);
+    ::google::protobuf::internal::HasBits<1> _has_bits_;
+    ::google::protobuf::internal::CachedSize _cached_size_;
+    ::google::protobuf::internal::ArenaStringPtr message_;
+    ::uint64_t player_id_;
+    PROTOBUF_TSAN_DECLARE_MEMBER
+  };
+  union { Impl_ _impl_; };
+  friend struct ::TableStruct_template_2eproto;
+};
+// -------------------------------------------------------------------
+
 class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED MessageCommand final : public ::google::protobuf::Message
 /* @@protoc_insertion_point(class_definition:game.MessageCommand) */ {
  public:
@@ -3296,7 +3793,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED MessageCommand final : public ::goo
   [[nodiscard]] static const MessageCommand& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<MessageCommand>(&MessageCommand_globals_);
   }
-  static constexpr int kIndexInFileMessages = 25;
+  static constexpr int kIndexInFileMessages = 28;
   friend void swap(MessageCommand& a, MessageCommand& b) { a.Swap(&b); }
   inline void Swap(MessageCommand* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -3502,7 +3999,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED InteractionCommand final : public :
   [[nodiscard]] static const InteractionCommand& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<InteractionCommand>(&InteractionCommand_globals_);
   }
-  static constexpr int kIndexInFileMessages = 23;
+  static constexpr int kIndexInFileMessages = 26;
   friend void swap(InteractionCommand& a, InteractionCommand& b) { a.Swap(&b); }
   inline void Swap(InteractionCommand* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -4165,7 +4662,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED DoorUnlock final : public ::google:
   [[nodiscard]] static const DoorUnlock& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<DoorUnlock>(&DoorUnlock_globals_);
   }
-  static constexpr int kIndexInFileMessages = 19;
+  static constexpr int kIndexInFileMessages = 22;
   friend void swap(DoorUnlock& a, DoorUnlock& b) { a.Swap(&b); }
   inline void Swap(DoorUnlock* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -4378,7 +4875,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED AttackCommand final : public ::goog
   [[nodiscard]] static const AttackCommand& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<AttackCommand>(&AttackCommand_globals_);
   }
-  static constexpr int kIndexInFileMessages = 24;
+  static constexpr int kIndexInFileMessages = 27;
   friend void swap(AttackCommand& a, AttackCommand& b) { a.Swap(&b); }
   inline void Swap(AttackCommand* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -4579,7 +5076,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED Npc final : public ::google::protob
   [[nodiscard]] static const Npc& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<Npc>(&Npc_globals_);
   }
-  static constexpr int kIndexInFileMessages = 6;
+  static constexpr int kIndexInFileMessages = 7;
   friend void swap(Npc& a, Npc& b) { a.Swap(&b); }
   inline void Swap(Npc* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -4677,9 +5174,10 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED Npc final : public ::google::protob
     kDescriptionFieldNumber = 4,
     kIdFieldNumber = 1,
     kCanTradeFieldNumber = 6,
-    kHpFieldNumber = 8,
-    kTemperamentFieldNumber = 9,
-    kTradeInventoryFieldNumber = 7,
+    kHpFieldNumber = 9,
+    kTemperamentFieldNumber = 10,
+    kInventoryFieldNumber = 7,
+    kTradeInventoryFieldNumber = 8,
   };
   // repeated string dialogues = 5;
   [[nodiscard]] int dialogues_size()
@@ -4773,7 +5271,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED Npc final : public ::google::protob
   void _internal_set_can_trade(bool value);
 
   public:
-  // uint32 hp = 8;
+  // uint32 hp = 9;
   void clear_hp() ;
   [[nodiscard]] ::uint32_t hp() const;
   void set_hp(::uint32_t value);
@@ -4783,17 +5281,33 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED Npc final : public ::google::protob
   void _internal_set_hp(::uint32_t value);
 
   public:
-  // .game.NpcTemperament temperament = 9;
+  // .game.Temperament temperament = 10;
   void clear_temperament() ;
-  [[nodiscard]] ::game::NpcTemperament temperament() const;
-  void set_temperament(::game::NpcTemperament value);
+  [[nodiscard]] ::game::Temperament temperament() const;
+  void set_temperament(::game::Temperament value);
 
   private:
-  ::game::NpcTemperament _internal_temperament() const;
-  void _internal_set_temperament(::game::NpcTemperament value);
+  ::game::Temperament _internal_temperament() const;
+  void _internal_set_temperament(::game::Temperament value);
 
   public:
-  // map<uint64, uint64> trade_inventory = 7;
+  // map<uint64, uint64> inventory = 7;
+  [[nodiscard]] int inventory_size()
+      const;
+  private:
+  int _internal_inventory_size() const;
+
+  public:
+  void clear_inventory() ;
+  [[nodiscard]] const ::google::protobuf::Map<::uint64_t, ::uint64_t>& inventory() const;
+  [[nodiscard]] ::google::protobuf::Map<::uint64_t, ::uint64_t>* PROTOBUF_NONNULL mutable_inventory();
+
+  private:
+  const ::google::protobuf::Map<::uint64_t, ::uint64_t>& _internal_inventory() const;
+  ::google::protobuf::Map<::uint64_t, ::uint64_t>* PROTOBUF_NONNULL _internal_mutable_inventory();
+
+  public:
+  // map<uint64, uint64> trade_inventory = 8;
   [[nodiscard]] int trade_inventory_size()
       const;
   private:
@@ -4813,8 +5327,8 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED Npc final : public ::google::protob
  private:
   class _Internal;
   using ParseTableT_ =
-      ::google::protobuf::internal::TcParseTable<4, 9,
-                          1, 53,
+      ::google::protobuf::internal::TcParseTable<4, 10,
+                          2, 53,
                           2>;
   static constexpr ParseTableT_ InternalGenerateParseTable_(
       const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL class_data);
@@ -4850,6 +5364,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED Npc final : public ::google::protob
     bool can_trade_;
     ::uint32_t hp_;
     int temperament_;
+    ::google::protobuf::internal::MapField<Npc_InventoryEntry_DoNotUse, ::uint64_t, ::uint64_t> inventory_;
     ::google::protobuf::internal::MapField<Npc_TradeInventoryEntry_DoNotUse, ::uint64_t, ::uint64_t> trade_inventory_;
     PROTOBUF_TSAN_DECLARE_MEMBER
   };
@@ -5523,7 +6038,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED CommandDelta final : public ::googl
     kMessageCommand = 3,
     DELTA_TYPE_NOT_SET = 0,
   };
-  static constexpr int kIndexInFileMessages = 22;
+  static constexpr int kIndexInFileMessages = 25;
   friend void swap(CommandDelta& a, CommandDelta& b) { a.Swap(&b); }
   inline void Swap(CommandDelta* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -5789,7 +6304,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED World final : public ::google::prot
   [[nodiscard]] static const World& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<World>(&World_globals_);
   }
-  static constexpr int kIndexInFileMessages = 9;
+  static constexpr int kIndexInFileMessages = 10;
   friend void swap(World& a, World& b) { a.Swap(&b); }
   inline void Swap(World* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -6077,7 +6592,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED InitWorld final : public ::google::
   [[nodiscard]] static const InitWorld& default_instance() {
     return *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<InitWorld>(&InitWorld_globals_);
   }
-  static constexpr int kIndexInFileMessages = 21;
+  static constexpr int kIndexInFileMessages = 24;
   friend void swap(InitWorld& a, InitWorld& b) { a.Swap(&b); }
   inline void Swap(InitWorld* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -6356,12 +6871,14 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED WorldDelta final : public ::google:
     kNpcMoved = 6,
     kDoorUnlock = 7,
     kPlayerStateChanged = 8,
-    kWorldInitiation = 9,
-    kPlayerConnected = 10,
-    kPlayerDisconnected = 11,
+    kMessageReceived = 9,
+    kWorldInitiation = 10,
+    kPlayerConnected = 11,
+    kPlayerDisconnected = 12,
+    kUnauthorizedCommand = 13,
     DELTA_TYPE_NOT_SET = 0,
   };
-  static constexpr int kIndexInFileMessages = 10;
+  static constexpr int kIndexInFileMessages = 11;
   friend void swap(WorldDelta& a, WorldDelta& b) { a.Swap(&b); }
   inline void Swap(WorldDelta* PROTOBUF_NONNULL other) {
     if (other == this) return;
@@ -6461,9 +6978,11 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED WorldDelta final : public ::google:
     kNpcMovedFieldNumber = 6,
     kDoorUnlockFieldNumber = 7,
     kPlayerStateChangedFieldNumber = 8,
-    kWorldInitiationFieldNumber = 9,
-    kPlayerConnectedFieldNumber = 10,
-    kPlayerDisconnectedFieldNumber = 11,
+    kMessageReceivedFieldNumber = 9,
+    kWorldInitiationFieldNumber = 10,
+    kPlayerConnectedFieldNumber = 11,
+    kPlayerDisconnectedFieldNumber = 12,
+    kUnauthorizedCommandFieldNumber = 13,
   };
   // .game.PlayerInventoryChanged player_inventory_changed = 1;
   [[nodiscard]] bool has_player_inventory_changed()
@@ -6625,7 +7144,27 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED WorldDelta final : public ::google:
   ::game::PlayerStateChanged* PROTOBUF_NONNULL _internal_mutable_player_state_changed();
 
   public:
-  // .game.InitWorld world_initiation = 9;
+  // .game.MessageReceived message_received = 9;
+  [[nodiscard]] bool has_message_received()
+      const;
+  private:
+  bool _internal_has_message_received() const;
+
+  public:
+  void clear_message_received() ;
+  [[nodiscard]] const ::game::MessageReceived& message_received() const;
+  [[nodiscard]] ::game::MessageReceived* PROTOBUF_NULLABLE release_message_received();
+  ::game::MessageReceived* PROTOBUF_NONNULL mutable_message_received();
+  void set_allocated_message_received(::game::MessageReceived* PROTOBUF_NULLABLE value);
+  void unsafe_arena_set_allocated_message_received(::game::MessageReceived* PROTOBUF_NULLABLE value);
+  ::game::MessageReceived* PROTOBUF_NULLABLE unsafe_arena_release_message_received();
+
+  private:
+  const ::game::MessageReceived& _internal_message_received() const;
+  ::game::MessageReceived* PROTOBUF_NONNULL _internal_mutable_message_received();
+
+  public:
+  // .game.InitWorld world_initiation = 10;
   [[nodiscard]] bool has_world_initiation()
       const;
   private:
@@ -6645,7 +7184,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED WorldDelta final : public ::google:
   ::game::InitWorld* PROTOBUF_NONNULL _internal_mutable_world_initiation();
 
   public:
-  // .game.PlayerConnected player_connected = 10;
+  // .game.PlayerConnected player_connected = 11;
   [[nodiscard]] bool has_player_connected()
       const;
   private:
@@ -6665,7 +7204,7 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED WorldDelta final : public ::google:
   ::game::PlayerConnected* PROTOBUF_NONNULL _internal_mutable_player_connected();
 
   public:
-  // .game.PlayerDisconnected player_disconnected = 11;
+  // .game.PlayerDisconnected player_disconnected = 12;
   [[nodiscard]] bool has_player_disconnected()
       const;
   private:
@@ -6685,6 +7224,26 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED WorldDelta final : public ::google:
   ::game::PlayerDisconnected* PROTOBUF_NONNULL _internal_mutable_player_disconnected();
 
   public:
+  // .game.UnauthorizedCommand unauthorized_command = 13;
+  [[nodiscard]] bool has_unauthorized_command()
+      const;
+  private:
+  bool _internal_has_unauthorized_command() const;
+
+  public:
+  void clear_unauthorized_command() ;
+  [[nodiscard]] const ::game::UnauthorizedCommand& unauthorized_command() const;
+  [[nodiscard]] ::game::UnauthorizedCommand* PROTOBUF_NULLABLE release_unauthorized_command();
+  ::game::UnauthorizedCommand* PROTOBUF_NONNULL mutable_unauthorized_command();
+  void set_allocated_unauthorized_command(::game::UnauthorizedCommand* PROTOBUF_NULLABLE value);
+  void unsafe_arena_set_allocated_unauthorized_command(::game::UnauthorizedCommand* PROTOBUF_NULLABLE value);
+  ::game::UnauthorizedCommand* PROTOBUF_NULLABLE unsafe_arena_release_unauthorized_command();
+
+  private:
+  const ::game::UnauthorizedCommand& _internal_unauthorized_command() const;
+  ::game::UnauthorizedCommand* PROTOBUF_NONNULL _internal_mutable_unauthorized_command();
+
+  public:
   void clear_delta_type();
   DeltaTypeCase delta_type_case() const;
   // @@protoc_insertion_point(class_scope:game.WorldDelta)
@@ -6698,14 +7257,16 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED WorldDelta final : public ::google:
   void set_has_npc_moved();
   void set_has_door_unlock();
   void set_has_player_state_changed();
+  void set_has_message_received();
   void set_has_world_initiation();
   void set_has_player_connected();
   void set_has_player_disconnected();
+  void set_has_unauthorized_command();
   [[nodiscard]] inline bool has_delta_type() const;
   inline void clear_has_delta_type();
   using ParseTableT_ =
-      ::google::protobuf::internal::TcParseTable<0, 11,
-                          11, 0,
+      ::google::protobuf::internal::TcParseTable<0, 13,
+                          13, 0,
                           2>;
   static constexpr ParseTableT_ InternalGenerateParseTable_(
       const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL class_data);
@@ -6742,9 +7303,11 @@ class  PROTOBUF_FUTURE_ADD_EARLY_WARN_UNUSED WorldDelta final : public ::google:
       ::google::protobuf::Message* PROTOBUF_NULLABLE npc_moved_;
       ::google::protobuf::Message* PROTOBUF_NULLABLE door_unlock_;
       ::google::protobuf::Message* PROTOBUF_NULLABLE player_state_changed_;
+      ::google::protobuf::Message* PROTOBUF_NULLABLE message_received_;
       ::google::protobuf::Message* PROTOBUF_NULLABLE world_initiation_;
       ::google::protobuf::Message* PROTOBUF_NULLABLE player_connected_;
       ::google::protobuf::Message* PROTOBUF_NULLABLE player_disconnected_;
+      ::google::protobuf::Message* PROTOBUF_NULLABLE unauthorized_command_;
     } delta_type_;
     ::google::protobuf::internal::CachedSize _cached_size_;
     ::uint32_t _oneof_case_[1];
@@ -7654,6 +8217,8 @@ Location::_internal_mutable_item_ids() {
 
 // -------------------------------------------------------------------
 
+// -------------------------------------------------------------------
+
 // Npc
 
 // uint64 id = 1;
@@ -7968,7 +8533,38 @@ inline void Npc::_internal_set_can_trade(bool value) {
   _impl_.can_trade_ = value;
 }
 
-// map<uint64, uint64> trade_inventory = 7;
+// map<uint64, uint64> inventory = 7;
+inline int Npc::_internal_inventory_size() const {
+  return _internal_inventory().size();
+}
+inline int Npc::inventory_size() const {
+  return _internal_inventory_size();
+}
+inline void Npc::clear_inventory() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.inventory_.Clear();
+  ClearHasBit(_impl_._has_bits_[0], 0x00000100U);
+}
+inline const ::google::protobuf::Map<::uint64_t, ::uint64_t>& Npc::_internal_inventory() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.inventory_.GetMap();
+}
+inline const ::google::protobuf::Map<::uint64_t, ::uint64_t>& Npc::inventory() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_map:game.Npc.inventory)
+  return _internal_inventory();
+}
+inline ::google::protobuf::Map<::uint64_t, ::uint64_t>* PROTOBUF_NONNULL Npc::_internal_mutable_inventory() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.inventory_.MutableMap();
+}
+inline ::google::protobuf::Map<::uint64_t, ::uint64_t>* PROTOBUF_NONNULL Npc::mutable_inventory()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  SetHasBit(_impl_._has_bits_[0], 0x00000100U);
+  // @@protoc_insertion_point(field_mutable_map:game.Npc.inventory)
+  return _internal_mutable_inventory();
+}
+
+// map<uint64, uint64> trade_inventory = 8;
 inline int Npc::_internal_trade_inventory_size() const {
   return _internal_trade_inventory().size();
 }
@@ -7978,7 +8574,7 @@ inline int Npc::trade_inventory_size() const {
 inline void Npc::clear_trade_inventory() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.trade_inventory_.Clear();
-  ClearHasBit(_impl_._has_bits_[0], 0x00000100U);
+  ClearHasBit(_impl_._has_bits_[0], 0x00000200U);
 }
 inline const ::google::protobuf::Map<::uint64_t, ::uint64_t>& Npc::_internal_trade_inventory() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
@@ -7994,12 +8590,12 @@ inline ::google::protobuf::Map<::uint64_t, ::uint64_t>* PROTOBUF_NONNULL Npc::_i
 }
 inline ::google::protobuf::Map<::uint64_t, ::uint64_t>* PROTOBUF_NONNULL Npc::mutable_trade_inventory()
     ABSL_ATTRIBUTE_LIFETIME_BOUND {
-  SetHasBit(_impl_._has_bits_[0], 0x00000100U);
+  SetHasBit(_impl_._has_bits_[0], 0x00000200U);
   // @@protoc_insertion_point(field_mutable_map:game.Npc.trade_inventory)
   return _internal_mutable_trade_inventory();
 }
 
-// uint32 hp = 8;
+// uint32 hp = 9;
 inline void Npc::clear_hp() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.hp_ = 0u;
@@ -8023,26 +8619,26 @@ inline void Npc::_internal_set_hp(::uint32_t value) {
   _impl_.hp_ = value;
 }
 
-// .game.NpcTemperament temperament = 9;
+// .game.Temperament temperament = 10;
 inline void Npc::clear_temperament() {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.temperament_ = 0;
   ClearHasBit(_impl_._has_bits_[0], 0x00000080U);
 }
-inline ::game::NpcTemperament Npc::temperament() const {
+inline ::game::Temperament Npc::temperament() const {
   // @@protoc_insertion_point(field_get:game.Npc.temperament)
   return _internal_temperament();
 }
-inline void Npc::set_temperament(::game::NpcTemperament value) {
+inline void Npc::set_temperament(::game::Temperament value) {
   _internal_set_temperament(value);
   SetHasBit(_impl_._has_bits_[0], 0x00000080U);
   // @@protoc_insertion_point(field_set:game.Npc.temperament)
 }
-inline ::game::NpcTemperament Npc::_internal_temperament() const {
+inline ::game::Temperament Npc::_internal_temperament() const {
   ::google::protobuf::internal::TSanRead(&_impl_);
-  return static_cast<::game::NpcTemperament>(_impl_.temperament_);
+  return static_cast<::game::Temperament>(_impl_.temperament_);
 }
-inline void Npc::_internal_set_temperament(::game::NpcTemperament value) {
+inline void Npc::_internal_set_temperament(::game::Temperament value) {
   ::google::protobuf::internal::TSanWrite(&_impl_);
   _impl_.temperament_ = value;
 }
@@ -9148,7 +9744,89 @@ inline ::game::PlayerStateChanged* PROTOBUF_NONNULL WorldDelta::mutable_player_s
   return _msg;
 }
 
-// .game.InitWorld world_initiation = 9;
+// .game.MessageReceived message_received = 9;
+inline bool WorldDelta::has_message_received() const {
+  return delta_type_case() == kMessageReceived;
+}
+inline bool WorldDelta::_internal_has_message_received() const {
+  return delta_type_case() == kMessageReceived;
+}
+inline void WorldDelta::set_has_message_received() {
+  _impl_._oneof_case_[0] = kMessageReceived;
+}
+inline void WorldDelta::clear_message_received() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (delta_type_case() == kMessageReceived) {
+    if (GetArena() == nullptr) {
+      delete _impl_.delta_type_.message_received_;
+    } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+      ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.delta_type_.message_received_);
+    }
+    clear_has_delta_type();
+  }
+}
+inline ::game::MessageReceived* PROTOBUF_NULLABLE WorldDelta::release_message_received() {
+  // @@protoc_insertion_point(field_release:game.WorldDelta.message_received)
+  if (delta_type_case() == kMessageReceived) {
+    clear_has_delta_type();
+    auto* temp = reinterpret_cast<::game::MessageReceived*>(_impl_.delta_type_.message_received_);
+    if (GetArena() != nullptr) {
+      temp = ::google::protobuf::internal::DuplicateIfNonNull(temp);
+    }
+    _impl_.delta_type_.message_received_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline const ::game::MessageReceived& WorldDelta::_internal_message_received() const {
+  return delta_type_case() == kMessageReceived ? static_cast<const ::game::MessageReceived&>(*reinterpret_cast<::game::MessageReceived*>(_impl_.delta_type_.message_received_))
+                     : *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<::game::MessageReceived>(&::game::MessageReceived_globals_);
+}
+inline const ::game::MessageReceived& WorldDelta::message_received() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:game.WorldDelta.message_received)
+  return _internal_message_received();
+}
+inline ::game::MessageReceived* PROTOBUF_NULLABLE WorldDelta::unsafe_arena_release_message_received() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:game.WorldDelta.message_received)
+  if (delta_type_case() == kMessageReceived) {
+    clear_has_delta_type();
+    auto* temp = reinterpret_cast<::game::MessageReceived*>(_impl_.delta_type_.message_received_);
+    _impl_.delta_type_.message_received_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline void WorldDelta::unsafe_arena_set_allocated_message_received(
+    ::game::MessageReceived* PROTOBUF_NULLABLE value) {
+  // We rely on the oneof clear method to free the earlier contents
+  // of this oneof. We can directly use the pointer we're given to
+  // set the new value.
+  clear_delta_type();
+  if (value) {
+    set_has_message_received();
+    _impl_.delta_type_.message_received_ = reinterpret_cast<::google::protobuf::Message*>(value);
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:game.WorldDelta.message_received)
+}
+inline ::game::MessageReceived* PROTOBUF_NONNULL WorldDelta::_internal_mutable_message_received() {
+  if (delta_type_case() != kMessageReceived) {
+    clear_delta_type();
+    set_has_message_received();
+    _impl_.delta_type_.message_received_ = reinterpret_cast<::google::protobuf::Message*>(
+        ::google::protobuf::Message::DefaultConstruct<::game::MessageReceived>(GetArena()));
+  }
+  return reinterpret_cast<::game::MessageReceived*>(_impl_.delta_type_.message_received_);
+}
+inline ::game::MessageReceived* PROTOBUF_NONNULL WorldDelta::mutable_message_received()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  ::game::MessageReceived* _msg = _internal_mutable_message_received();
+  // @@protoc_insertion_point(field_mutable:game.WorldDelta.message_received)
+  return _msg;
+}
+
+// .game.InitWorld world_initiation = 10;
 inline bool WorldDelta::has_world_initiation() const {
   return delta_type_case() == kWorldInitiation;
 }
@@ -9230,7 +9908,7 @@ inline ::game::InitWorld* PROTOBUF_NONNULL WorldDelta::mutable_world_initiation(
   return _msg;
 }
 
-// .game.PlayerConnected player_connected = 10;
+// .game.PlayerConnected player_connected = 11;
 inline bool WorldDelta::has_player_connected() const {
   return delta_type_case() == kPlayerConnected;
 }
@@ -9312,7 +9990,7 @@ inline ::game::PlayerConnected* PROTOBUF_NONNULL WorldDelta::mutable_player_conn
   return _msg;
 }
 
-// .game.PlayerDisconnected player_disconnected = 11;
+// .game.PlayerDisconnected player_disconnected = 12;
 inline bool WorldDelta::has_player_disconnected() const {
   return delta_type_case() == kPlayerDisconnected;
 }
@@ -9394,6 +10072,88 @@ inline ::game::PlayerDisconnected* PROTOBUF_NONNULL WorldDelta::mutable_player_d
   return _msg;
 }
 
+// .game.UnauthorizedCommand unauthorized_command = 13;
+inline bool WorldDelta::has_unauthorized_command() const {
+  return delta_type_case() == kUnauthorizedCommand;
+}
+inline bool WorldDelta::_internal_has_unauthorized_command() const {
+  return delta_type_case() == kUnauthorizedCommand;
+}
+inline void WorldDelta::set_has_unauthorized_command() {
+  _impl_._oneof_case_[0] = kUnauthorizedCommand;
+}
+inline void WorldDelta::clear_unauthorized_command() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (delta_type_case() == kUnauthorizedCommand) {
+    if (GetArena() == nullptr) {
+      delete _impl_.delta_type_.unauthorized_command_;
+    } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+      ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.delta_type_.unauthorized_command_);
+    }
+    clear_has_delta_type();
+  }
+}
+inline ::game::UnauthorizedCommand* PROTOBUF_NULLABLE WorldDelta::release_unauthorized_command() {
+  // @@protoc_insertion_point(field_release:game.WorldDelta.unauthorized_command)
+  if (delta_type_case() == kUnauthorizedCommand) {
+    clear_has_delta_type();
+    auto* temp = reinterpret_cast<::game::UnauthorizedCommand*>(_impl_.delta_type_.unauthorized_command_);
+    if (GetArena() != nullptr) {
+      temp = ::google::protobuf::internal::DuplicateIfNonNull(temp);
+    }
+    _impl_.delta_type_.unauthorized_command_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline const ::game::UnauthorizedCommand& WorldDelta::_internal_unauthorized_command() const {
+  return delta_type_case() == kUnauthorizedCommand ? static_cast<const ::game::UnauthorizedCommand&>(*reinterpret_cast<::game::UnauthorizedCommand*>(_impl_.delta_type_.unauthorized_command_))
+                     : *::google::protobuf::internal::MessageGlobalsBase::ToDefaultInstance<::game::UnauthorizedCommand>(&::game::UnauthorizedCommand_globals_);
+}
+inline const ::game::UnauthorizedCommand& WorldDelta::unauthorized_command() const ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:game.WorldDelta.unauthorized_command)
+  return _internal_unauthorized_command();
+}
+inline ::game::UnauthorizedCommand* PROTOBUF_NULLABLE WorldDelta::unsafe_arena_release_unauthorized_command() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:game.WorldDelta.unauthorized_command)
+  if (delta_type_case() == kUnauthorizedCommand) {
+    clear_has_delta_type();
+    auto* temp = reinterpret_cast<::game::UnauthorizedCommand*>(_impl_.delta_type_.unauthorized_command_);
+    _impl_.delta_type_.unauthorized_command_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline void WorldDelta::unsafe_arena_set_allocated_unauthorized_command(
+    ::game::UnauthorizedCommand* PROTOBUF_NULLABLE value) {
+  // We rely on the oneof clear method to free the earlier contents
+  // of this oneof. We can directly use the pointer we're given to
+  // set the new value.
+  clear_delta_type();
+  if (value) {
+    set_has_unauthorized_command();
+    _impl_.delta_type_.unauthorized_command_ = reinterpret_cast<::google::protobuf::Message*>(value);
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:game.WorldDelta.unauthorized_command)
+}
+inline ::game::UnauthorizedCommand* PROTOBUF_NONNULL WorldDelta::_internal_mutable_unauthorized_command() {
+  if (delta_type_case() != kUnauthorizedCommand) {
+    clear_delta_type();
+    set_has_unauthorized_command();
+    _impl_.delta_type_.unauthorized_command_ = reinterpret_cast<::google::protobuf::Message*>(
+        ::google::protobuf::Message::DefaultConstruct<::game::UnauthorizedCommand>(GetArena()));
+  }
+  return reinterpret_cast<::game::UnauthorizedCommand*>(_impl_.delta_type_.unauthorized_command_);
+}
+inline ::game::UnauthorizedCommand* PROTOBUF_NONNULL WorldDelta::mutable_unauthorized_command()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  ::game::UnauthorizedCommand* _msg = _internal_mutable_unauthorized_command();
+  // @@protoc_insertion_point(field_mutable:game.WorldDelta.unauthorized_command)
+  return _msg;
+}
+
 inline bool WorldDelta::has_delta_type() const {
   return delta_type_case() != DELTA_TYPE_NOT_SET;
 }
@@ -9403,6 +10163,166 @@ inline void WorldDelta::clear_has_delta_type() {
 inline WorldDelta::DeltaTypeCase WorldDelta::delta_type_case() const {
   return WorldDelta::DeltaTypeCase(_impl_._oneof_case_[0]);
 }
+// -------------------------------------------------------------------
+
+// MessageReceived
+
+// uint64 player_id = 1;
+inline void MessageReceived::clear_player_id() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.player_id_ = ::uint64_t{0u};
+  ClearHasBit(_impl_._has_bits_[0], 0x00000002U);
+}
+inline ::uint64_t MessageReceived::player_id() const {
+  // @@protoc_insertion_point(field_get:game.MessageReceived.player_id)
+  return _internal_player_id();
+}
+inline void MessageReceived::set_player_id(::uint64_t value) {
+  _internal_set_player_id(value);
+  SetHasBit(_impl_._has_bits_[0], 0x00000002U);
+  // @@protoc_insertion_point(field_set:game.MessageReceived.player_id)
+}
+inline ::uint64_t MessageReceived::_internal_player_id() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.player_id_;
+}
+inline void MessageReceived::_internal_set_player_id(::uint64_t value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.player_id_ = value;
+}
+
+// string message = 2;
+inline void MessageReceived::clear_message() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.message_.ClearToEmpty();
+  ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+}
+inline const ::std::string& MessageReceived::message() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:game.MessageReceived.message)
+  return _internal_message();
+}
+template <typename Arg_, typename... Args_>
+PROTOBUF_ALWAYS_INLINE void MessageReceived::set_message(Arg_&& arg, Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  _impl_.message_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:game.MessageReceived.message)
+}
+inline ::std::string* PROTOBUF_NONNULL MessageReceived::mutable_message()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  ::std::string* _s = _internal_mutable_message();
+  // @@protoc_insertion_point(field_mutable:game.MessageReceived.message)
+  return _s;
+}
+inline const ::std::string& MessageReceived::_internal_message() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.message_.Get();
+}
+inline void MessageReceived::_internal_set_message(const ::std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.message_.Set(value, GetArena());
+}
+inline ::std::string* PROTOBUF_NONNULL MessageReceived::_internal_mutable_message() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.message_.Mutable( GetArena());
+}
+inline ::std::string* PROTOBUF_NULLABLE MessageReceived::release_message() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:game.MessageReceived.message)
+  if (!CheckHasBit(_impl_._has_bits_[0], 0x00000001U)) {
+    return nullptr;
+  }
+  ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+  auto* released = _impl_.message_.Release();
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString()) {
+    _impl_.message_.Set("", GetArena());
+  }
+  return released;
+}
+inline void MessageReceived::set_allocated_message(::std::string* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (value != nullptr) {
+    SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+  }
+  _impl_.message_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.message_.IsDefault()) {
+    _impl_.message_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:game.MessageReceived.message)
+}
+
+// -------------------------------------------------------------------
+
+// UnauthorizedCommand
+
+// string response = 1;
+inline void UnauthorizedCommand::clear_response() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.response_.ClearToEmpty();
+  ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+}
+inline const ::std::string& UnauthorizedCommand::response() const
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  // @@protoc_insertion_point(field_get:game.UnauthorizedCommand.response)
+  return _internal_response();
+}
+template <typename Arg_, typename... Args_>
+PROTOBUF_ALWAYS_INLINE void UnauthorizedCommand::set_response(Arg_&& arg, Args_... args) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  _impl_.response_.Set(static_cast<Arg_&&>(arg), args..., GetArena());
+  // @@protoc_insertion_point(field_set:game.UnauthorizedCommand.response)
+}
+inline ::std::string* PROTOBUF_NONNULL UnauthorizedCommand::mutable_response()
+    ABSL_ATTRIBUTE_LIFETIME_BOUND {
+  SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  ::std::string* _s = _internal_mutable_response();
+  // @@protoc_insertion_point(field_mutable:game.UnauthorizedCommand.response)
+  return _s;
+}
+inline const ::std::string& UnauthorizedCommand::_internal_response() const {
+  ::google::protobuf::internal::TSanRead(&_impl_);
+  return _impl_.response_.Get();
+}
+inline void UnauthorizedCommand::_internal_set_response(const ::std::string& value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  _impl_.response_.Set(value, GetArena());
+}
+inline ::std::string* PROTOBUF_NONNULL UnauthorizedCommand::_internal_mutable_response() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  return _impl_.response_.Mutable( GetArena());
+}
+inline ::std::string* PROTOBUF_NULLABLE UnauthorizedCommand::release_response() {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  // @@protoc_insertion_point(field_release:game.UnauthorizedCommand.response)
+  if (!CheckHasBit(_impl_._has_bits_[0], 0x00000001U)) {
+    return nullptr;
+  }
+  ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+  auto* released = _impl_.response_.Release();
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString()) {
+    _impl_.response_.Set("", GetArena());
+  }
+  return released;
+}
+inline void UnauthorizedCommand::set_allocated_response(::std::string* PROTOBUF_NULLABLE value) {
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  if (value != nullptr) {
+    SetHasBit(_impl_._has_bits_[0], 0x00000001U);
+  } else {
+    ClearHasBit(_impl_._has_bits_[0], 0x00000001U);
+  }
+  _impl_.response_.SetAllocated(value, GetArena());
+  if (::google::protobuf::internal::DebugHardenForceCopyDefaultString() && _impl_.response_.IsDefault()) {
+    _impl_.response_.Set("", GetArena());
+  }
+  // @@protoc_insertion_point(field_set_allocated:game.UnauthorizedCommand.response)
+}
+
 // -------------------------------------------------------------------
 
 // PlayerConnected
@@ -10641,10 +11561,10 @@ inline const EnumDescriptor* PROTOBUF_NONNULL GetEnumDescriptor<::game::EffectTy
   return ::game::EffectType_descriptor();
 }
 template <>
-struct is_proto_enum<::game::NpcTemperament> : std::true_type {};
+struct is_proto_enum<::game::Temperament> : std::true_type {};
 template <>
-inline const EnumDescriptor* PROTOBUF_NONNULL GetEnumDescriptor<::game::NpcTemperament>() {
-  return ::game::NpcTemperament_descriptor();
+inline const EnumDescriptor* PROTOBUF_NONNULL GetEnumDescriptor<::game::Temperament>() {
+  return ::game::Temperament_descriptor();
 }
 template <>
 struct is_proto_enum<::game::Usage> : std::true_type {};

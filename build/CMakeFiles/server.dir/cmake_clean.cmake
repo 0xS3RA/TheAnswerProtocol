@@ -1,7 +1,5 @@
 file(REMOVE_RECURSE
   "CMakeFiles/server.dir/link.d"
-  "CMakeFiles/server.dir/server/client_loop.cpp.o"
-  "CMakeFiles/server.dir/server/client_loop.cpp.o.d"
   "CMakeFiles/server.dir/server/server.cpp.o"
   "CMakeFiles/server.dir/server/server.cpp.o.d"
   "CMakeFiles/server.dir/template.pb.cc.o"
