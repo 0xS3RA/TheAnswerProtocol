@@ -47,9 +47,15 @@ PROTOBUF_CONSTINIT ::google::protobuf::internal::ReflectionData
         {&::_pbi::kDescriptorMethods, &::descriptor_table_template_2eproto, /* tracker*/ nullptr,},
         // ::game::Player
         {&::_pbi::kDescriptorMethods, &::descriptor_table_template_2eproto, /* tracker*/ nullptr,},
-        // ::game::World_PlayersEntry_DoNotUse
+        // ::game::World_PlayersLocationsEntry_DoNotUse
         {&::_pbi::kDescriptorMethods, &::descriptor_table_template_2eproto, /* tracker*/ nullptr,},
         // ::game::World
+        {&::_pbi::kDescriptorMethods, &::descriptor_table_template_2eproto, /* tracker*/ nullptr,},
+        // ::game::ClientWorld_PlayersEntry_DoNotUse
+        {&::_pbi::kDescriptorMethods, &::descriptor_table_template_2eproto, /* tracker*/ nullptr,},
+        // ::game::ClientWorld_PlayersLocationsEntry_DoNotUse
+        {&::_pbi::kDescriptorMethods, &::descriptor_table_template_2eproto, /* tracker*/ nullptr,},
+        // ::game::ClientWorld
         {&::_pbi::kDescriptorMethods, &::descriptor_table_template_2eproto, /* tracker*/ nullptr,},
         // ::game::WorldDelta
         {&::_pbi::kDescriptorMethods, &::descriptor_table_template_2eproto, /* tracker*/ nullptr,},
@@ -77,6 +83,10 @@ PROTOBUF_CONSTINIT ::google::protobuf::internal::ReflectionData
         {&::_pbi::kDescriptorMethods, &::descriptor_table_template_2eproto, /* tracker*/ nullptr,},
         // ::game::PlayerStateChanged
         {&::_pbi::kDescriptorMethods, &::descriptor_table_template_2eproto, /* tracker*/ nullptr,},
+        // ::game::InitWorld_PlayersEntry_DoNotUse
+        {&::_pbi::kDescriptorMethods, &::descriptor_table_template_2eproto, /* tracker*/ nullptr,},
+        // ::game::InitWorld_PlayersLocationsEntry_DoNotUse
+        {&::_pbi::kDescriptorMethods, &::descriptor_table_template_2eproto, /* tracker*/ nullptr,},
         // ::game::InitWorld
         {&::_pbi::kDescriptorMethods, &::descriptor_table_template_2eproto, /* tracker*/ nullptr,},
         // ::game::CommandDelta
@@ -87,14 +97,16 @@ PROTOBUF_CONSTINIT ::google::protobuf::internal::ReflectionData
         {&::_pbi::kDescriptorMethods, &::descriptor_table_template_2eproto, /* tracker*/ nullptr,},
         // ::game::MessageCommand
         {&::_pbi::kDescriptorMethods, &::descriptor_table_template_2eproto, /* tracker*/ nullptr,},
+        // ::game::NameSetCommand
+        {&::_pbi::kDescriptorMethods, &::descriptor_table_template_2eproto, /* tracker*/ nullptr,},
 };
 }  // namespace
 #endif
 namespace game {
-constexpr World_PlayersEntry_DoNotUse::ParseTableT_ World_PlayersEntry_DoNotUse::InternalGenerateParseTable_(const ::_pbi::ClassData* class_data) {
+constexpr World_PlayersLocationsEntry_DoNotUse::ParseTableT_ World_PlayersLocationsEntry_DoNotUse::InternalGenerateParseTable_(const ::_pbi::ClassData* class_data) {
   return ParseTableT_{
     {
-      PROTOBUF_FIELD_OFFSET(World_PlayersEntry_DoNotUse, _impl_._has_bits_),
+      PROTOBUF_FIELD_OFFSET(World_PlayersLocationsEntry_DoNotUse, _impl_._has_bits_),
       0, // no _extensions_
       2, 8,  // max_field_number, fast_idx_mask
       offsetof(ParseTableT_, field_lookup_table),
@@ -107,24 +119,24 @@ constexpr World_PlayersEntry_DoNotUse::ParseTableT_ World_PlayersEntry_DoNotUse:
       nullptr,  // post_loop_handler
       ::_pbi::TcParser::DiscardEverythingFallback,  // fallback
       #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
-      ::_pbi::TcParser::GetTable<::game::World_PlayersEntry_DoNotUse>(),  // to_prefetch
+      ::_pbi::TcParser::GetTable<::game::World_PlayersLocationsEntry_DoNotUse>(),  // to_prefetch
       #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
     }, {{
       // uint64 value = 2;
-      {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(World_PlayersEntry_DoNotUse, _impl_.value_), 1>(),
+      {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(World_PlayersLocationsEntry_DoNotUse, _impl_.value_), 1>(),
        {16, 1, 0,
-        PROTOBUF_FIELD_OFFSET(World_PlayersEntry_DoNotUse, _impl_.value_)}},
+        PROTOBUF_FIELD_OFFSET(World_PlayersLocationsEntry_DoNotUse, _impl_.value_)}},
       // uint64 key = 1;
-      {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(World_PlayersEntry_DoNotUse, _impl_.key_), 0>(),
+      {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(World_PlayersLocationsEntry_DoNotUse, _impl_.key_), 0>(),
        {8, 0, 0,
-        PROTOBUF_FIELD_OFFSET(World_PlayersEntry_DoNotUse, _impl_.key_)}},
+        PROTOBUF_FIELD_OFFSET(World_PlayersLocationsEntry_DoNotUse, _impl_.key_)}},
     }}, {{
       65535, 65535
     }}, {{
       // uint64 key = 1;
-      {PROTOBUF_FIELD_OFFSET(World_PlayersEntry_DoNotUse, _impl_.key_), _Internal::kHasBitsOffset + 0, 0, (0 | ::_fl::kFcOptional | ::_fl::kUInt64)},
+      {PROTOBUF_FIELD_OFFSET(World_PlayersLocationsEntry_DoNotUse, _impl_.key_), _Internal::kHasBitsOffset + 0, 0, (0 | ::_fl::kFcOptional | ::_fl::kUInt64)},
       // uint64 value = 2;
-      {PROTOBUF_FIELD_OFFSET(World_PlayersEntry_DoNotUse, _impl_.value_), _Internal::kHasBitsOffset + 1, 0, (0 | ::_fl::kFcOptional | ::_fl::kUInt64)},
+      {PROTOBUF_FIELD_OFFSET(World_PlayersLocationsEntry_DoNotUse, _impl_.value_), _Internal::kHasBitsOffset + 1, 0, (0 | ::_fl::kFcOptional | ::_fl::kUInt64)},
     }},
     // no aux_entries
     {{
@@ -133,23 +145,23 @@ constexpr World_PlayersEntry_DoNotUse::ParseTableT_ World_PlayersEntry_DoNotUse:
 }
 
 template <typename>
-constexpr World_PlayersEntry_DoNotUse::World_PlayersEntry_DoNotUse(::_pbi::ConstantInitialized,
+constexpr World_PlayersLocationsEntry_DoNotUse::World_PlayersLocationsEntry_DoNotUse(::_pbi::ConstantInitialized,
                        const ::_pbi::ClassData* PROTOBUF_NONNULL class_data)
-    : World_PlayersEntry_DoNotUse::MapEntry(
+    : World_PlayersLocationsEntry_DoNotUse::MapEntry(
 #if defined(PROTOBUF_CUSTOM_VTABLE)
           class_data
 #endif  // PROTOBUF_CUSTOM_VTABLE
       ) {
 }
-inline void* PROTOBUF_NONNULL World_PlayersEntry_DoNotUse::PlacementNew_(
+inline void* PROTOBUF_NONNULL World_PlayersLocationsEntry_DoNotUse::PlacementNew_(
     const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
     ::google::protobuf::Arena* PROTOBUF_NULLABLE arena) {
-  return ::new (mem) World_PlayersEntry_DoNotUse(arena);
+  return ::new (mem) World_PlayersLocationsEntry_DoNotUse(arena);
 }
-constexpr auto World_PlayersEntry_DoNotUse::InternalNewImpl_() {
-  return ::google::protobuf::internal::MessageCreator::ZeroInit(sizeof(World_PlayersEntry_DoNotUse), alignof(World_PlayersEntry_DoNotUse));
+constexpr auto World_PlayersLocationsEntry_DoNotUse::InternalNewImpl_() {
+  return ::google::protobuf::internal::MessageCreator::ZeroInit(sizeof(World_PlayersLocationsEntry_DoNotUse), alignof(World_PlayersLocationsEntry_DoNotUse));
 }
-constexpr auto World_PlayersEntry_DoNotUse::InternalGenerateClassData_(
+constexpr auto World_PlayersLocationsEntry_DoNotUse::InternalGenerateClassData_(
     const MessageLite& prototype,
     const ::google::protobuf::internal::TcParseTableBase* tc_table) {
   return ::google::protobuf::internal::ClassDataFull{
@@ -161,15 +173,15 @@ constexpr auto World_PlayersEntry_DoNotUse::InternalGenerateClassData_(
           tc_table,
 #endif
           nullptr,  // IsInitialized
-          &World_PlayersEntry_DoNotUse::MergeImpl,
-          ::google::protobuf::Message::GetNewImpl<World_PlayersEntry_DoNotUse>(),
+          &World_PlayersLocationsEntry_DoNotUse::MergeImpl,
+          ::google::protobuf::Message::GetNewImpl<World_PlayersLocationsEntry_DoNotUse>(),
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-          &World_PlayersEntry_DoNotUse::SharedDtor,
-          static_cast<void (::google::protobuf::MessageLite::*)()>(&World_PlayersEntry_DoNotUse::ClearImpl),
+          &World_PlayersLocationsEntry_DoNotUse::SharedDtor,
+          static_cast<void (::google::protobuf::MessageLite::*)()>(&World_PlayersLocationsEntry_DoNotUse::ClearImpl),
               ::google::protobuf::Message::ByteSizeLongImpl, ::google::protobuf::Message::_InternalSerializeImpl
               ,
 #endif  // PROTOBUF_CUSTOM_VTABLE
-          PROTOBUF_FIELD_OFFSET(World_PlayersEntry_DoNotUse, _impl_._cached_size_),
+          PROTOBUF_FIELD_OFFSET(World_PlayersLocationsEntry_DoNotUse, _impl_._cached_size_),
           false,
       },
 #ifdef PROTOBUF_MESSAGE_GLOBALS
@@ -181,45 +193,45 @@ constexpr auto World_PlayersEntry_DoNotUse::InternalGenerateClassData_(
 #endif  // PROTOBUF_MESSAGE_GLOBALS
   };
 }
-struct World_PlayersEntry_DoNotUseGlobalsTypeInternal : ::_pbi::MessageGlobalsBase {
-  constexpr World_PlayersEntry_DoNotUseGlobalsTypeInternal()
+struct World_PlayersLocationsEntry_DoNotUseGlobalsTypeInternal : ::_pbi::MessageGlobalsBase {
+  constexpr World_PlayersLocationsEntry_DoNotUseGlobalsTypeInternal()
       :
 #ifndef PROTOBUF_MESSAGE_GLOBALS
         _default(::_pbi::ConstantInitialized{},
-                 World_PlayersEntry_DoNotUse_class_data_.base())
+                 World_PlayersLocationsEntry_DoNotUse_class_data_.base())
 #else   // !PROTOBUF_MESSAGE_GLOBALS
-        MessageGlobalsBase(World_PlayersEntry_DoNotUse::InternalGenerateClassData_(
-            _default, &World_PlayersEntry_DoNotUse_globals_._table.header)),
+        MessageGlobalsBase(World_PlayersLocationsEntry_DoNotUse::InternalGenerateClassData_(
+            _default, &World_PlayersLocationsEntry_DoNotUse_globals_._table.header)),
         _default(::_pbi::ConstantInitialized{}, GetClassData()),
-        _table(::_pbi::PrivateAccess::GenerateParseTable<World_PlayersEntry_DoNotUse>(
+        _table(::_pbi::PrivateAccess::GenerateParseTable<World_PlayersLocationsEntry_DoNotUse>(
             GetClassData()))
 #endif  // PROTOBUF_MESSAGE_GLOBALS
   {
   }
-  ~World_PlayersEntry_DoNotUseGlobalsTypeInternal() {}
+  ~World_PlayersLocationsEntry_DoNotUseGlobalsTypeInternal() {}
   union {
-    alignas(::_pbi::kMaxMessageAlignment) World_PlayersEntry_DoNotUse _default;
+    alignas(::_pbi::kMaxMessageAlignment) World_PlayersLocationsEntry_DoNotUse _default;
   };
 #ifdef PROTOBUF_MESSAGE_GLOBALS
-  decltype(::_pbi::PrivateAccess::GenerateParseTable<World_PlayersEntry_DoNotUse>(
+  decltype(::_pbi::PrivateAccess::GenerateParseTable<World_PlayersLocationsEntry_DoNotUse>(
       ::std::declval<const ::_pbi::ClassData*>())) _table;
 #endif
 };
 #ifdef PROTOBUF_MESSAGE_GLOBALS
-static_assert(PROTOBUF_FIELD_OFFSET(World_PlayersEntry_DoNotUseGlobalsTypeInternal, _default) ==
+static_assert(PROTOBUF_FIELD_OFFSET(World_PlayersLocationsEntry_DoNotUseGlobalsTypeInternal, _default) ==
               ::_pbi::MessageGlobalsBase::OffsetToDefault());
 #endif  // PROTOBUF_MESSAGE_GLOBALS
 
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 PROTOBUF_MESSAGE_GLOBALS_CONST World_PlayersEntry_DoNotUseGlobalsTypeInternal World_PlayersEntry_DoNotUse_globals_
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 PROTOBUF_MESSAGE_GLOBALS_CONST World_PlayersLocationsEntry_DoNotUseGlobalsTypeInternal World_PlayersLocationsEntry_DoNotUse_globals_
         PROTOBUF_MESSAGE_GLOBALS_SECTION(.data.rel.ro);
 #if defined(PROTOBUF_CUSTOM_VTABLE)
 namespace {
-const ::_pbi::ClassData* World_PlayersEntry_DoNotUse_get_class_data() {
+const ::_pbi::ClassData* World_PlayersLocationsEntry_DoNotUse_get_class_data() {
 #ifdef PROTOBUF_MESSAGE_GLOBALS
-  return World_PlayersEntry_DoNotUse_globals_.GetClassData();
+  return World_PlayersLocationsEntry_DoNotUse_globals_.GetClassData();
 #else
-  return World_PlayersEntry_DoNotUse_class_data_.base();
+  return World_PlayersLocationsEntry_DoNotUse_class_data_.base();
 #endif  // PROTOBUF_MESSAGE_GLOBALS
 }
 }  // namespace
@@ -319,7 +331,7 @@ constexpr auto UnauthorizedCommand::InternalGenerateClassData_(
           false,
       },
 #ifdef PROTOBUF_MESSAGE_GLOBALS
-      &file_reflection_data[13],
+      &file_reflection_data[16],
 #else   // !PROTOBUF_MESSAGE_GLOBALS
       &::_pbi::kDescriptorMethods,
       &descriptor_table_template_2eproto,
@@ -620,7 +632,7 @@ constexpr auto PlayerStateChanged::InternalGenerateClassData_(
           false,
       },
 #ifdef PROTOBUF_MESSAGE_GLOBALS
-      &file_reflection_data[23],
+      &file_reflection_data[26],
 #else   // !PROTOBUF_MESSAGE_GLOBALS
       &::_pbi::kDescriptorMethods,
       &descriptor_table_template_2eproto,
@@ -768,7 +780,7 @@ constexpr auto PlayerMoved::InternalGenerateClassData_(
           false,
       },
 #ifdef PROTOBUF_MESSAGE_GLOBALS
-      &file_reflection_data[20],
+      &file_reflection_data[23],
 #else   // !PROTOBUF_MESSAGE_GLOBALS
       &::_pbi::kDescriptorMethods,
       &descriptor_table_template_2eproto,
@@ -924,7 +936,7 @@ constexpr auto PlayerInventoryChanged::InternalGenerateClassData_(
           false,
       },
 #ifdef PROTOBUF_MESSAGE_GLOBALS
-      &file_reflection_data[16],
+      &file_reflection_data[19],
 #else   // !PROTOBUF_MESSAGE_GLOBALS
       &::_pbi::kDescriptorMethods,
       &descriptor_table_template_2eproto,
@@ -1072,7 +1084,7 @@ constexpr auto PlayerHpChanged::InternalGenerateClassData_(
           false,
       },
 #ifdef PROTOBUF_MESSAGE_GLOBALS
-      &file_reflection_data[18],
+      &file_reflection_data[21],
 #else   // !PROTOBUF_MESSAGE_GLOBALS
       &::_pbi::kDescriptorMethods,
       &descriptor_table_template_2eproto,
@@ -1213,7 +1225,7 @@ constexpr auto PlayerDisconnected::InternalGenerateClassData_(
           false,
       },
 #ifdef PROTOBUF_MESSAGE_GLOBALS
-      &file_reflection_data[15],
+      &file_reflection_data[18],
 #else   // !PROTOBUF_MESSAGE_GLOBALS
       &::_pbi::kDescriptorMethods,
       &descriptor_table_template_2eproto,
@@ -1366,7 +1378,7 @@ constexpr auto PlayerConnected::InternalGenerateClassData_(
           false,
       },
 #ifdef PROTOBUF_MESSAGE_GLOBALS
-      &file_reflection_data[14],
+      &file_reflection_data[17],
 #else   // !PROTOBUF_MESSAGE_GLOBALS
       &::_pbi::kDescriptorMethods,
       &descriptor_table_template_2eproto,
@@ -1702,7 +1714,7 @@ constexpr auto NpcMoved::InternalGenerateClassData_(
           false,
       },
 #ifdef PROTOBUF_MESSAGE_GLOBALS
-      &file_reflection_data[21],
+      &file_reflection_data[24],
 #else   // !PROTOBUF_MESSAGE_GLOBALS
       &::_pbi::kDescriptorMethods,
       &descriptor_table_template_2eproto,
@@ -1858,7 +1870,7 @@ constexpr auto NpcInventoryChanged::InternalGenerateClassData_(
           false,
       },
 #ifdef PROTOBUF_MESSAGE_GLOBALS
-      &file_reflection_data[17],
+      &file_reflection_data[20],
 #else   // !PROTOBUF_MESSAGE_GLOBALS
       &::_pbi::kDescriptorMethods,
       &descriptor_table_template_2eproto,
@@ -2006,7 +2018,7 @@ constexpr auto NpcHpChanged::InternalGenerateClassData_(
           false,
       },
 #ifdef PROTOBUF_MESSAGE_GLOBALS
-      &file_reflection_data[19],
+      &file_reflection_data[22],
 #else   // !PROTOBUF_MESSAGE_GLOBALS
       &::_pbi::kDescriptorMethods,
       &descriptor_table_template_2eproto,
@@ -2323,6 +2335,152 @@ const ::_pbi::ClassData* Npc_InventoryEntry_DoNotUse_get_class_data() {
 }
 }  // namespace
 #endif  // PROTOBUF_CUSTOM_VTABLE
+class NameSetCommand::_Internal {
+ public:
+  using HasBits = decltype(::std::declval<NameSetCommand>()._impl_._has_bits_);
+  static constexpr ::int32_t kHasBitsOffset =
+      8 * PROTOBUF_FIELD_OFFSET(NameSetCommand, _impl_._has_bits_);
+};
+
+constexpr NameSetCommand::ParseTableT_ NameSetCommand::InternalGenerateParseTable_(const ::_pbi::ClassData* class_data) {
+  return ParseTableT_{
+    {
+      PROTOBUF_FIELD_OFFSET(NameSetCommand, _impl_._has_bits_),
+      0, // no _extensions_
+      1, 0,  // max_field_number, fast_idx_mask
+      offsetof(ParseTableT_, field_lookup_table),
+      4294967294,  // skipmap
+      offsetof(ParseTableT_, field_entries),
+      1,  // num_field_entries
+      0,  // num_aux_entries
+      offsetof(ParseTableT_, field_names),  // no aux_entries
+      class_data,
+      nullptr,  // post_loop_handler
+      ::_pbi::TcParser::GenericFallback,  // fallback
+      #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
+      ::_pbi::TcParser::GetTable<::game::NameSetCommand>(),  // to_prefetch
+      #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
+    }, {{
+      // string name = 1;
+      {::_pbi::TcParser::FastUS1,
+       {10, 0, 0,
+        PROTOBUF_FIELD_OFFSET(NameSetCommand, _impl_.name_)}},
+    }}, {{
+      65535, 65535
+    }}, {{
+      // string name = 1;
+      {PROTOBUF_FIELD_OFFSET(NameSetCommand, _impl_.name_), _Internal::kHasBitsOffset + 0, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+    }},
+    // no aux_entries
+    {{
+      "\23\4\0\0\0\0\0\0"
+      "game.NameSetCommand"
+      "name"
+    }},
+  };
+}
+
+
+inline constexpr NameSetCommand::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    ::_pbi::ConstantInitialized) noexcept
+      : _cached_size_{0},
+        name_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()) {}
+
+template <typename>
+constexpr NameSetCommand::NameSetCommand(::_pbi::ConstantInitialized,
+                       const ::_pbi::ClassData* PROTOBUF_NONNULL class_data)
+    : ::google::protobuf::Message(
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+          class_data
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          ),
+      _impl_(internal_visibility(), ::_pbi::ConstantInitialized()) {
+}
+inline void* PROTOBUF_NONNULL NameSetCommand::PlacementNew_(
+    const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
+    ::google::protobuf::Arena* PROTOBUF_NULLABLE arena) {
+  return ::new (mem) NameSetCommand(arena);
+}
+constexpr auto NameSetCommand::InternalNewImpl_() {
+  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(NameSetCommand), alignof(NameSetCommand));
+}
+constexpr auto NameSetCommand::InternalGenerateClassData_(
+    const MessageLite& prototype,
+    const ::google::protobuf::internal::TcParseTableBase* tc_table) {
+  return ::google::protobuf::internal::ClassDataFull{
+      ::google::protobuf::internal::ClassData{
+          &prototype,
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+          &_table_.header,
+#else
+          tc_table,
+#endif
+          nullptr,  // IsInitialized
+          &NameSetCommand::MergeImpl,
+          ::google::protobuf::Message::GetNewImpl<NameSetCommand>(),
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+          &NameSetCommand::SharedDtor,
+          ::google::protobuf::Message::GetClearImpl<NameSetCommand>(), &NameSetCommand::ByteSizeLong,
+              &NameSetCommand::_InternalSerialize,
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          PROTOBUF_FIELD_OFFSET(NameSetCommand, _impl_._cached_size_),
+          false,
+      },
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+      &file_reflection_data[34],
+#else   // !PROTOBUF_MESSAGE_GLOBALS
+      &::_pbi::kDescriptorMethods,
+      &descriptor_table_template_2eproto,
+      nullptr,  // tracker
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+  };
+}
+struct NameSetCommandGlobalsTypeInternal : ::_pbi::MessageGlobalsBase {
+  constexpr NameSetCommandGlobalsTypeInternal()
+      :
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+        _default(::_pbi::ConstantInitialized{},
+                 NameSetCommand_class_data_.base())
+#else   // !PROTOBUF_MESSAGE_GLOBALS
+        MessageGlobalsBase(NameSetCommand::InternalGenerateClassData_(
+            _default, &NameSetCommand_globals_._table.header)),
+        _default(::_pbi::ConstantInitialized{}, GetClassData()),
+        _table(::_pbi::PrivateAccess::GenerateParseTable<NameSetCommand>(
+            GetClassData()))
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+  {
+  }
+  ~NameSetCommandGlobalsTypeInternal() {}
+  union {
+    alignas(::_pbi::kMaxMessageAlignment) NameSetCommand _default;
+  };
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+  decltype(::_pbi::PrivateAccess::GenerateParseTable<NameSetCommand>(
+      ::std::declval<const ::_pbi::ClassData*>())) _table;
+#endif
+};
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+static_assert(PROTOBUF_FIELD_OFFSET(NameSetCommandGlobalsTypeInternal, _default) ==
+              ::_pbi::MessageGlobalsBase::OffsetToDefault());
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 PROTOBUF_MESSAGE_GLOBALS_CONST NameSetCommandGlobalsTypeInternal NameSetCommand_globals_
+        PROTOBUF_MESSAGE_GLOBALS_SECTION(.data.rel.ro);
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+namespace {
+const ::_pbi::ClassData* NameSetCommand_get_class_data() {
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+  return NameSetCommand_globals_.GetClassData();
+#else
+  return NameSetCommand_class_data_.base();
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+}
+}  // namespace
+#endif  // PROTOBUF_CUSTOM_VTABLE
 class MessageReceived::_Internal {
  public:
   using HasBits = decltype(::std::declval<MessageReceived>()._impl_._has_bits_);
@@ -2425,7 +2583,7 @@ constexpr auto MessageReceived::InternalGenerateClassData_(
           false,
       },
 #ifdef PROTOBUF_MESSAGE_GLOBALS
-      &file_reflection_data[12],
+      &file_reflection_data[15],
 #else   // !PROTOBUF_MESSAGE_GLOBALS
       &::_pbi::kDescriptorMethods,
       &descriptor_table_template_2eproto,
@@ -2571,7 +2729,7 @@ constexpr auto MessageCommand::InternalGenerateClassData_(
           false,
       },
 #ifdef PROTOBUF_MESSAGE_GLOBALS
-      &file_reflection_data[28],
+      &file_reflection_data[33],
 #else   // !PROTOBUF_MESSAGE_GLOBALS
       &::_pbi::kDescriptorMethods,
       &descriptor_table_template_2eproto,
@@ -2719,7 +2877,7 @@ constexpr auto InteractionCommand::InternalGenerateClassData_(
           false,
       },
 #ifdef PROTOBUF_MESSAGE_GLOBALS
-      &file_reflection_data[26],
+      &file_reflection_data[31],
 #else   // !PROTOBUF_MESSAGE_GLOBALS
       &::_pbi::kDescriptorMethods,
       &descriptor_table_template_2eproto,
@@ -2766,6 +2924,275 @@ const ::_pbi::ClassData* InteractionCommand_get_class_data() {
   return InteractionCommand_globals_.GetClassData();
 #else
   return InteractionCommand_class_data_.base();
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+}
+}  // namespace
+#endif  // PROTOBUF_CUSTOM_VTABLE
+constexpr InitWorld_PlayersLocationsEntry_DoNotUse::ParseTableT_ InitWorld_PlayersLocationsEntry_DoNotUse::InternalGenerateParseTable_(const ::_pbi::ClassData* class_data) {
+  return ParseTableT_{
+    {
+      PROTOBUF_FIELD_OFFSET(InitWorld_PlayersLocationsEntry_DoNotUse, _impl_._has_bits_),
+      0, // no _extensions_
+      2, 8,  // max_field_number, fast_idx_mask
+      offsetof(ParseTableT_, field_lookup_table),
+      4294967292,  // skipmap
+      offsetof(ParseTableT_, field_entries),
+      2,  // num_field_entries
+      0,  // num_aux_entries
+      offsetof(ParseTableT_, field_names),  // no aux_entries
+      class_data,
+      nullptr,  // post_loop_handler
+      ::_pbi::TcParser::DiscardEverythingFallback,  // fallback
+      #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
+      ::_pbi::TcParser::GetTable<::game::InitWorld_PlayersLocationsEntry_DoNotUse>(),  // to_prefetch
+      #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
+    }, {{
+      // uint64 value = 2;
+      {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(InitWorld_PlayersLocationsEntry_DoNotUse, _impl_.value_), 1>(),
+       {16, 1, 0,
+        PROTOBUF_FIELD_OFFSET(InitWorld_PlayersLocationsEntry_DoNotUse, _impl_.value_)}},
+      // uint64 key = 1;
+      {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(InitWorld_PlayersLocationsEntry_DoNotUse, _impl_.key_), 0>(),
+       {8, 0, 0,
+        PROTOBUF_FIELD_OFFSET(InitWorld_PlayersLocationsEntry_DoNotUse, _impl_.key_)}},
+    }}, {{
+      65535, 65535
+    }}, {{
+      // uint64 key = 1;
+      {PROTOBUF_FIELD_OFFSET(InitWorld_PlayersLocationsEntry_DoNotUse, _impl_.key_), _Internal::kHasBitsOffset + 0, 0, (0 | ::_fl::kFcOptional | ::_fl::kUInt64)},
+      // uint64 value = 2;
+      {PROTOBUF_FIELD_OFFSET(InitWorld_PlayersLocationsEntry_DoNotUse, _impl_.value_), _Internal::kHasBitsOffset + 1, 0, (0 | ::_fl::kFcOptional | ::_fl::kUInt64)},
+    }},
+    // no aux_entries
+    {{
+    }},
+  };
+}
+
+template <typename>
+constexpr InitWorld_PlayersLocationsEntry_DoNotUse::InitWorld_PlayersLocationsEntry_DoNotUse(::_pbi::ConstantInitialized,
+                       const ::_pbi::ClassData* PROTOBUF_NONNULL class_data)
+    : InitWorld_PlayersLocationsEntry_DoNotUse::MapEntry(
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+          class_data
+#endif  // PROTOBUF_CUSTOM_VTABLE
+      ) {
+}
+inline void* PROTOBUF_NONNULL InitWorld_PlayersLocationsEntry_DoNotUse::PlacementNew_(
+    const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
+    ::google::protobuf::Arena* PROTOBUF_NULLABLE arena) {
+  return ::new (mem) InitWorld_PlayersLocationsEntry_DoNotUse(arena);
+}
+constexpr auto InitWorld_PlayersLocationsEntry_DoNotUse::InternalNewImpl_() {
+  return ::google::protobuf::internal::MessageCreator::ZeroInit(sizeof(InitWorld_PlayersLocationsEntry_DoNotUse), alignof(InitWorld_PlayersLocationsEntry_DoNotUse));
+}
+constexpr auto InitWorld_PlayersLocationsEntry_DoNotUse::InternalGenerateClassData_(
+    const MessageLite& prototype,
+    const ::google::protobuf::internal::TcParseTableBase* tc_table) {
+  return ::google::protobuf::internal::ClassDataFull{
+      ::google::protobuf::internal::ClassData{
+          &prototype,
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+          &_table_.header,
+#else
+          tc_table,
+#endif
+          nullptr,  // IsInitialized
+          &InitWorld_PlayersLocationsEntry_DoNotUse::MergeImpl,
+          ::google::protobuf::Message::GetNewImpl<InitWorld_PlayersLocationsEntry_DoNotUse>(),
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+          &InitWorld_PlayersLocationsEntry_DoNotUse::SharedDtor,
+          static_cast<void (::google::protobuf::MessageLite::*)()>(&InitWorld_PlayersLocationsEntry_DoNotUse::ClearImpl),
+              ::google::protobuf::Message::ByteSizeLongImpl, ::google::protobuf::Message::_InternalSerializeImpl
+              ,
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          PROTOBUF_FIELD_OFFSET(InitWorld_PlayersLocationsEntry_DoNotUse, _impl_._cached_size_),
+          false,
+      },
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+      &file_reflection_data[28],
+#else   // !PROTOBUF_MESSAGE_GLOBALS
+      &::_pbi::kDescriptorMethods,
+      &descriptor_table_template_2eproto,
+      nullptr,  // tracker
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+  };
+}
+struct InitWorld_PlayersLocationsEntry_DoNotUseGlobalsTypeInternal : ::_pbi::MessageGlobalsBase {
+  constexpr InitWorld_PlayersLocationsEntry_DoNotUseGlobalsTypeInternal()
+      :
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+        _default(::_pbi::ConstantInitialized{},
+                 InitWorld_PlayersLocationsEntry_DoNotUse_class_data_.base())
+#else   // !PROTOBUF_MESSAGE_GLOBALS
+        MessageGlobalsBase(InitWorld_PlayersLocationsEntry_DoNotUse::InternalGenerateClassData_(
+            _default, &InitWorld_PlayersLocationsEntry_DoNotUse_globals_._table.header)),
+        _default(::_pbi::ConstantInitialized{}, GetClassData()),
+        _table(::_pbi::PrivateAccess::GenerateParseTable<InitWorld_PlayersLocationsEntry_DoNotUse>(
+            GetClassData()))
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+  {
+  }
+  ~InitWorld_PlayersLocationsEntry_DoNotUseGlobalsTypeInternal() {}
+  union {
+    alignas(::_pbi::kMaxMessageAlignment) InitWorld_PlayersLocationsEntry_DoNotUse _default;
+  };
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+  decltype(::_pbi::PrivateAccess::GenerateParseTable<InitWorld_PlayersLocationsEntry_DoNotUse>(
+      ::std::declval<const ::_pbi::ClassData*>())) _table;
+#endif
+};
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+static_assert(PROTOBUF_FIELD_OFFSET(InitWorld_PlayersLocationsEntry_DoNotUseGlobalsTypeInternal, _default) ==
+              ::_pbi::MessageGlobalsBase::OffsetToDefault());
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 PROTOBUF_MESSAGE_GLOBALS_CONST InitWorld_PlayersLocationsEntry_DoNotUseGlobalsTypeInternal InitWorld_PlayersLocationsEntry_DoNotUse_globals_
+        PROTOBUF_MESSAGE_GLOBALS_SECTION(.data.rel.ro);
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+namespace {
+const ::_pbi::ClassData* InitWorld_PlayersLocationsEntry_DoNotUse_get_class_data() {
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+  return InitWorld_PlayersLocationsEntry_DoNotUse_globals_.GetClassData();
+#else
+  return InitWorld_PlayersLocationsEntry_DoNotUse_class_data_.base();
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+}
+}  // namespace
+#endif  // PROTOBUF_CUSTOM_VTABLE
+constexpr InitWorld_PlayersEntry_DoNotUse::ParseTableT_ InitWorld_PlayersEntry_DoNotUse::InternalGenerateParseTable_(const ::_pbi::ClassData* class_data) {
+  return ParseTableT_{
+    {
+      PROTOBUF_FIELD_OFFSET(InitWorld_PlayersEntry_DoNotUse, _impl_._has_bits_),
+      0, // no _extensions_
+      2, 8,  // max_field_number, fast_idx_mask
+      offsetof(ParseTableT_, field_lookup_table),
+      4294967292,  // skipmap
+      offsetof(ParseTableT_, field_entries),
+      2,  // num_field_entries
+      0,  // num_aux_entries
+      offsetof(ParseTableT_, field_names),  // no aux_entries
+      class_data,
+      nullptr,  // post_loop_handler
+      ::_pbi::TcParser::DiscardEverythingFallback,  // fallback
+      #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
+      ::_pbi::TcParser::GetTable<::game::InitWorld_PlayersEntry_DoNotUse>(),  // to_prefetch
+      #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
+    }, {{
+      // string value = 2;
+      {::_pbi::TcParser::FastUS1,
+       {18, 0, 0,
+        PROTOBUF_FIELD_OFFSET(InitWorld_PlayersEntry_DoNotUse, _impl_.value_)}},
+      // uint64 key = 1;
+      {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(InitWorld_PlayersEntry_DoNotUse, _impl_.key_), 1>(),
+       {8, 1, 0,
+        PROTOBUF_FIELD_OFFSET(InitWorld_PlayersEntry_DoNotUse, _impl_.key_)}},
+    }}, {{
+      65535, 65535
+    }}, {{
+      // uint64 key = 1;
+      {PROTOBUF_FIELD_OFFSET(InitWorld_PlayersEntry_DoNotUse, _impl_.key_), _Internal::kHasBitsOffset + 1, 0, (0 | ::_fl::kFcOptional | ::_fl::kUInt64)},
+      // string value = 2;
+      {PROTOBUF_FIELD_OFFSET(InitWorld_PlayersEntry_DoNotUse, _impl_.value_), _Internal::kHasBitsOffset + 0, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+    }},
+    // no aux_entries
+    {{
+      "\33\0\5\0\0\0\0\0"
+      "game.InitWorld.PlayersEntry"
+      "value"
+    }},
+  };
+}
+
+template <typename>
+constexpr InitWorld_PlayersEntry_DoNotUse::InitWorld_PlayersEntry_DoNotUse(::_pbi::ConstantInitialized,
+                       const ::_pbi::ClassData* PROTOBUF_NONNULL class_data)
+    : InitWorld_PlayersEntry_DoNotUse::MapEntry(
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+          class_data
+#endif  // PROTOBUF_CUSTOM_VTABLE
+      ) {
+}
+inline void* PROTOBUF_NONNULL InitWorld_PlayersEntry_DoNotUse::PlacementNew_(
+    const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
+    ::google::protobuf::Arena* PROTOBUF_NULLABLE arena) {
+  return ::new (mem) InitWorld_PlayersEntry_DoNotUse(arena);
+}
+constexpr auto InitWorld_PlayersEntry_DoNotUse::InternalNewImpl_() {
+  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(InitWorld_PlayersEntry_DoNotUse), alignof(InitWorld_PlayersEntry_DoNotUse));
+}
+constexpr auto InitWorld_PlayersEntry_DoNotUse::InternalGenerateClassData_(
+    const MessageLite& prototype,
+    const ::google::protobuf::internal::TcParseTableBase* tc_table) {
+  return ::google::protobuf::internal::ClassDataFull{
+      ::google::protobuf::internal::ClassData{
+          &prototype,
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+          &_table_.header,
+#else
+          tc_table,
+#endif
+          nullptr,  // IsInitialized
+          &InitWorld_PlayersEntry_DoNotUse::MergeImpl,
+          ::google::protobuf::Message::GetNewImpl<InitWorld_PlayersEntry_DoNotUse>(),
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+          &InitWorld_PlayersEntry_DoNotUse::SharedDtor,
+          static_cast<void (::google::protobuf::MessageLite::*)()>(&InitWorld_PlayersEntry_DoNotUse::ClearImpl),
+              ::google::protobuf::Message::ByteSizeLongImpl, ::google::protobuf::Message::_InternalSerializeImpl
+              ,
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          PROTOBUF_FIELD_OFFSET(InitWorld_PlayersEntry_DoNotUse, _impl_._cached_size_),
+          false,
+      },
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+      &file_reflection_data[27],
+#else   // !PROTOBUF_MESSAGE_GLOBALS
+      &::_pbi::kDescriptorMethods,
+      &descriptor_table_template_2eproto,
+      nullptr,  // tracker
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+  };
+}
+struct InitWorld_PlayersEntry_DoNotUseGlobalsTypeInternal : ::_pbi::MessageGlobalsBase {
+  constexpr InitWorld_PlayersEntry_DoNotUseGlobalsTypeInternal()
+      :
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+        _default(::_pbi::ConstantInitialized{},
+                 InitWorld_PlayersEntry_DoNotUse_class_data_.base())
+#else   // !PROTOBUF_MESSAGE_GLOBALS
+        MessageGlobalsBase(InitWorld_PlayersEntry_DoNotUse::InternalGenerateClassData_(
+            _default, &InitWorld_PlayersEntry_DoNotUse_globals_._table.header)),
+        _default(::_pbi::ConstantInitialized{}, GetClassData()),
+        _table(::_pbi::PrivateAccess::GenerateParseTable<InitWorld_PlayersEntry_DoNotUse>(
+            GetClassData()))
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+  {
+  }
+  ~InitWorld_PlayersEntry_DoNotUseGlobalsTypeInternal() {}
+  union {
+    alignas(::_pbi::kMaxMessageAlignment) InitWorld_PlayersEntry_DoNotUse _default;
+  };
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+  decltype(::_pbi::PrivateAccess::GenerateParseTable<InitWorld_PlayersEntry_DoNotUse>(
+      ::std::declval<const ::_pbi::ClassData*>())) _table;
+#endif
+};
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+static_assert(PROTOBUF_FIELD_OFFSET(InitWorld_PlayersEntry_DoNotUseGlobalsTypeInternal, _default) ==
+              ::_pbi::MessageGlobalsBase::OffsetToDefault());
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 PROTOBUF_MESSAGE_GLOBALS_CONST InitWorld_PlayersEntry_DoNotUseGlobalsTypeInternal InitWorld_PlayersEntry_DoNotUse_globals_
+        PROTOBUF_MESSAGE_GLOBALS_SECTION(.data.rel.ro);
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+namespace {
+const ::_pbi::ClassData* InitWorld_PlayersEntry_DoNotUse_get_class_data() {
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+  return InitWorld_PlayersEntry_DoNotUse_globals_.GetClassData();
+#else
+  return InitWorld_PlayersEntry_DoNotUse_class_data_.base();
 #endif  // PROTOBUF_MESSAGE_GLOBALS
 }
 }  // namespace
@@ -3177,7 +3604,7 @@ constexpr auto DoorUnlock::InternalGenerateClassData_(
           false,
       },
 #ifdef PROTOBUF_MESSAGE_GLOBALS
-      &file_reflection_data[22],
+      &file_reflection_data[25],
 #else   // !PROTOBUF_MESSAGE_GLOBALS
       &::_pbi::kDescriptorMethods,
       &descriptor_table_template_2eproto,
@@ -3224,6 +3651,275 @@ const ::_pbi::ClassData* DoorUnlock_get_class_data() {
   return DoorUnlock_globals_.GetClassData();
 #else
   return DoorUnlock_class_data_.base();
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+}
+}  // namespace
+#endif  // PROTOBUF_CUSTOM_VTABLE
+constexpr ClientWorld_PlayersLocationsEntry_DoNotUse::ParseTableT_ ClientWorld_PlayersLocationsEntry_DoNotUse::InternalGenerateParseTable_(const ::_pbi::ClassData* class_data) {
+  return ParseTableT_{
+    {
+      PROTOBUF_FIELD_OFFSET(ClientWorld_PlayersLocationsEntry_DoNotUse, _impl_._has_bits_),
+      0, // no _extensions_
+      2, 8,  // max_field_number, fast_idx_mask
+      offsetof(ParseTableT_, field_lookup_table),
+      4294967292,  // skipmap
+      offsetof(ParseTableT_, field_entries),
+      2,  // num_field_entries
+      0,  // num_aux_entries
+      offsetof(ParseTableT_, field_names),  // no aux_entries
+      class_data,
+      nullptr,  // post_loop_handler
+      ::_pbi::TcParser::DiscardEverythingFallback,  // fallback
+      #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
+      ::_pbi::TcParser::GetTable<::game::ClientWorld_PlayersLocationsEntry_DoNotUse>(),  // to_prefetch
+      #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
+    }, {{
+      // uint64 value = 2;
+      {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(ClientWorld_PlayersLocationsEntry_DoNotUse, _impl_.value_), 1>(),
+       {16, 1, 0,
+        PROTOBUF_FIELD_OFFSET(ClientWorld_PlayersLocationsEntry_DoNotUse, _impl_.value_)}},
+      // uint64 key = 1;
+      {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(ClientWorld_PlayersLocationsEntry_DoNotUse, _impl_.key_), 0>(),
+       {8, 0, 0,
+        PROTOBUF_FIELD_OFFSET(ClientWorld_PlayersLocationsEntry_DoNotUse, _impl_.key_)}},
+    }}, {{
+      65535, 65535
+    }}, {{
+      // uint64 key = 1;
+      {PROTOBUF_FIELD_OFFSET(ClientWorld_PlayersLocationsEntry_DoNotUse, _impl_.key_), _Internal::kHasBitsOffset + 0, 0, (0 | ::_fl::kFcOptional | ::_fl::kUInt64)},
+      // uint64 value = 2;
+      {PROTOBUF_FIELD_OFFSET(ClientWorld_PlayersLocationsEntry_DoNotUse, _impl_.value_), _Internal::kHasBitsOffset + 1, 0, (0 | ::_fl::kFcOptional | ::_fl::kUInt64)},
+    }},
+    // no aux_entries
+    {{
+    }},
+  };
+}
+
+template <typename>
+constexpr ClientWorld_PlayersLocationsEntry_DoNotUse::ClientWorld_PlayersLocationsEntry_DoNotUse(::_pbi::ConstantInitialized,
+                       const ::_pbi::ClassData* PROTOBUF_NONNULL class_data)
+    : ClientWorld_PlayersLocationsEntry_DoNotUse::MapEntry(
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+          class_data
+#endif  // PROTOBUF_CUSTOM_VTABLE
+      ) {
+}
+inline void* PROTOBUF_NONNULL ClientWorld_PlayersLocationsEntry_DoNotUse::PlacementNew_(
+    const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
+    ::google::protobuf::Arena* PROTOBUF_NULLABLE arena) {
+  return ::new (mem) ClientWorld_PlayersLocationsEntry_DoNotUse(arena);
+}
+constexpr auto ClientWorld_PlayersLocationsEntry_DoNotUse::InternalNewImpl_() {
+  return ::google::protobuf::internal::MessageCreator::ZeroInit(sizeof(ClientWorld_PlayersLocationsEntry_DoNotUse), alignof(ClientWorld_PlayersLocationsEntry_DoNotUse));
+}
+constexpr auto ClientWorld_PlayersLocationsEntry_DoNotUse::InternalGenerateClassData_(
+    const MessageLite& prototype,
+    const ::google::protobuf::internal::TcParseTableBase* tc_table) {
+  return ::google::protobuf::internal::ClassDataFull{
+      ::google::protobuf::internal::ClassData{
+          &prototype,
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+          &_table_.header,
+#else
+          tc_table,
+#endif
+          nullptr,  // IsInitialized
+          &ClientWorld_PlayersLocationsEntry_DoNotUse::MergeImpl,
+          ::google::protobuf::Message::GetNewImpl<ClientWorld_PlayersLocationsEntry_DoNotUse>(),
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+          &ClientWorld_PlayersLocationsEntry_DoNotUse::SharedDtor,
+          static_cast<void (::google::protobuf::MessageLite::*)()>(&ClientWorld_PlayersLocationsEntry_DoNotUse::ClearImpl),
+              ::google::protobuf::Message::ByteSizeLongImpl, ::google::protobuf::Message::_InternalSerializeImpl
+              ,
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          PROTOBUF_FIELD_OFFSET(ClientWorld_PlayersLocationsEntry_DoNotUse, _impl_._cached_size_),
+          false,
+      },
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+      &file_reflection_data[12],
+#else   // !PROTOBUF_MESSAGE_GLOBALS
+      &::_pbi::kDescriptorMethods,
+      &descriptor_table_template_2eproto,
+      nullptr,  // tracker
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+  };
+}
+struct ClientWorld_PlayersLocationsEntry_DoNotUseGlobalsTypeInternal : ::_pbi::MessageGlobalsBase {
+  constexpr ClientWorld_PlayersLocationsEntry_DoNotUseGlobalsTypeInternal()
+      :
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+        _default(::_pbi::ConstantInitialized{},
+                 ClientWorld_PlayersLocationsEntry_DoNotUse_class_data_.base())
+#else   // !PROTOBUF_MESSAGE_GLOBALS
+        MessageGlobalsBase(ClientWorld_PlayersLocationsEntry_DoNotUse::InternalGenerateClassData_(
+            _default, &ClientWorld_PlayersLocationsEntry_DoNotUse_globals_._table.header)),
+        _default(::_pbi::ConstantInitialized{}, GetClassData()),
+        _table(::_pbi::PrivateAccess::GenerateParseTable<ClientWorld_PlayersLocationsEntry_DoNotUse>(
+            GetClassData()))
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+  {
+  }
+  ~ClientWorld_PlayersLocationsEntry_DoNotUseGlobalsTypeInternal() {}
+  union {
+    alignas(::_pbi::kMaxMessageAlignment) ClientWorld_PlayersLocationsEntry_DoNotUse _default;
+  };
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+  decltype(::_pbi::PrivateAccess::GenerateParseTable<ClientWorld_PlayersLocationsEntry_DoNotUse>(
+      ::std::declval<const ::_pbi::ClassData*>())) _table;
+#endif
+};
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+static_assert(PROTOBUF_FIELD_OFFSET(ClientWorld_PlayersLocationsEntry_DoNotUseGlobalsTypeInternal, _default) ==
+              ::_pbi::MessageGlobalsBase::OffsetToDefault());
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 PROTOBUF_MESSAGE_GLOBALS_CONST ClientWorld_PlayersLocationsEntry_DoNotUseGlobalsTypeInternal ClientWorld_PlayersLocationsEntry_DoNotUse_globals_
+        PROTOBUF_MESSAGE_GLOBALS_SECTION(.data.rel.ro);
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+namespace {
+const ::_pbi::ClassData* ClientWorld_PlayersLocationsEntry_DoNotUse_get_class_data() {
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+  return ClientWorld_PlayersLocationsEntry_DoNotUse_globals_.GetClassData();
+#else
+  return ClientWorld_PlayersLocationsEntry_DoNotUse_class_data_.base();
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+}
+}  // namespace
+#endif  // PROTOBUF_CUSTOM_VTABLE
+constexpr ClientWorld_PlayersEntry_DoNotUse::ParseTableT_ ClientWorld_PlayersEntry_DoNotUse::InternalGenerateParseTable_(const ::_pbi::ClassData* class_data) {
+  return ParseTableT_{
+    {
+      PROTOBUF_FIELD_OFFSET(ClientWorld_PlayersEntry_DoNotUse, _impl_._has_bits_),
+      0, // no _extensions_
+      2, 8,  // max_field_number, fast_idx_mask
+      offsetof(ParseTableT_, field_lookup_table),
+      4294967292,  // skipmap
+      offsetof(ParseTableT_, field_entries),
+      2,  // num_field_entries
+      0,  // num_aux_entries
+      offsetof(ParseTableT_, field_names),  // no aux_entries
+      class_data,
+      nullptr,  // post_loop_handler
+      ::_pbi::TcParser::DiscardEverythingFallback,  // fallback
+      #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
+      ::_pbi::TcParser::GetTable<::game::ClientWorld_PlayersEntry_DoNotUse>(),  // to_prefetch
+      #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
+    }, {{
+      // string value = 2;
+      {::_pbi::TcParser::FastUS1,
+       {18, 0, 0,
+        PROTOBUF_FIELD_OFFSET(ClientWorld_PlayersEntry_DoNotUse, _impl_.value_)}},
+      // uint64 key = 1;
+      {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(ClientWorld_PlayersEntry_DoNotUse, _impl_.key_), 1>(),
+       {8, 1, 0,
+        PROTOBUF_FIELD_OFFSET(ClientWorld_PlayersEntry_DoNotUse, _impl_.key_)}},
+    }}, {{
+      65535, 65535
+    }}, {{
+      // uint64 key = 1;
+      {PROTOBUF_FIELD_OFFSET(ClientWorld_PlayersEntry_DoNotUse, _impl_.key_), _Internal::kHasBitsOffset + 1, 0, (0 | ::_fl::kFcOptional | ::_fl::kUInt64)},
+      // string value = 2;
+      {PROTOBUF_FIELD_OFFSET(ClientWorld_PlayersEntry_DoNotUse, _impl_.value_), _Internal::kHasBitsOffset + 0, 0, (0 | ::_fl::kFcOptional | ::_fl::kUtf8String | ::_fl::kRepAString)},
+    }},
+    // no aux_entries
+    {{
+      "\35\0\5\0\0\0\0\0"
+      "game.ClientWorld.PlayersEntry"
+      "value"
+    }},
+  };
+}
+
+template <typename>
+constexpr ClientWorld_PlayersEntry_DoNotUse::ClientWorld_PlayersEntry_DoNotUse(::_pbi::ConstantInitialized,
+                       const ::_pbi::ClassData* PROTOBUF_NONNULL class_data)
+    : ClientWorld_PlayersEntry_DoNotUse::MapEntry(
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+          class_data
+#endif  // PROTOBUF_CUSTOM_VTABLE
+      ) {
+}
+inline void* PROTOBUF_NONNULL ClientWorld_PlayersEntry_DoNotUse::PlacementNew_(
+    const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
+    ::google::protobuf::Arena* PROTOBUF_NULLABLE arena) {
+  return ::new (mem) ClientWorld_PlayersEntry_DoNotUse(arena);
+}
+constexpr auto ClientWorld_PlayersEntry_DoNotUse::InternalNewImpl_() {
+  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(ClientWorld_PlayersEntry_DoNotUse), alignof(ClientWorld_PlayersEntry_DoNotUse));
+}
+constexpr auto ClientWorld_PlayersEntry_DoNotUse::InternalGenerateClassData_(
+    const MessageLite& prototype,
+    const ::google::protobuf::internal::TcParseTableBase* tc_table) {
+  return ::google::protobuf::internal::ClassDataFull{
+      ::google::protobuf::internal::ClassData{
+          &prototype,
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+          &_table_.header,
+#else
+          tc_table,
+#endif
+          nullptr,  // IsInitialized
+          &ClientWorld_PlayersEntry_DoNotUse::MergeImpl,
+          ::google::protobuf::Message::GetNewImpl<ClientWorld_PlayersEntry_DoNotUse>(),
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+          &ClientWorld_PlayersEntry_DoNotUse::SharedDtor,
+          static_cast<void (::google::protobuf::MessageLite::*)()>(&ClientWorld_PlayersEntry_DoNotUse::ClearImpl),
+              ::google::protobuf::Message::ByteSizeLongImpl, ::google::protobuf::Message::_InternalSerializeImpl
+              ,
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          PROTOBUF_FIELD_OFFSET(ClientWorld_PlayersEntry_DoNotUse, _impl_._cached_size_),
+          false,
+      },
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+      &file_reflection_data[11],
+#else   // !PROTOBUF_MESSAGE_GLOBALS
+      &::_pbi::kDescriptorMethods,
+      &descriptor_table_template_2eproto,
+      nullptr,  // tracker
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+  };
+}
+struct ClientWorld_PlayersEntry_DoNotUseGlobalsTypeInternal : ::_pbi::MessageGlobalsBase {
+  constexpr ClientWorld_PlayersEntry_DoNotUseGlobalsTypeInternal()
+      :
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+        _default(::_pbi::ConstantInitialized{},
+                 ClientWorld_PlayersEntry_DoNotUse_class_data_.base())
+#else   // !PROTOBUF_MESSAGE_GLOBALS
+        MessageGlobalsBase(ClientWorld_PlayersEntry_DoNotUse::InternalGenerateClassData_(
+            _default, &ClientWorld_PlayersEntry_DoNotUse_globals_._table.header)),
+        _default(::_pbi::ConstantInitialized{}, GetClassData()),
+        _table(::_pbi::PrivateAccess::GenerateParseTable<ClientWorld_PlayersEntry_DoNotUse>(
+            GetClassData()))
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+  {
+  }
+  ~ClientWorld_PlayersEntry_DoNotUseGlobalsTypeInternal() {}
+  union {
+    alignas(::_pbi::kMaxMessageAlignment) ClientWorld_PlayersEntry_DoNotUse _default;
+  };
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+  decltype(::_pbi::PrivateAccess::GenerateParseTable<ClientWorld_PlayersEntry_DoNotUse>(
+      ::std::declval<const ::_pbi::ClassData*>())) _table;
+#endif
+};
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+static_assert(PROTOBUF_FIELD_OFFSET(ClientWorld_PlayersEntry_DoNotUseGlobalsTypeInternal, _default) ==
+              ::_pbi::MessageGlobalsBase::OffsetToDefault());
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 PROTOBUF_MESSAGE_GLOBALS_CONST ClientWorld_PlayersEntry_DoNotUseGlobalsTypeInternal ClientWorld_PlayersEntry_DoNotUse_globals_
+        PROTOBUF_MESSAGE_GLOBALS_SECTION(.data.rel.ro);
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+namespace {
+const ::_pbi::ClassData* ClientWorld_PlayersEntry_DoNotUse_get_class_data() {
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+  return ClientWorld_PlayersEntry_DoNotUse_globals_.GetClassData();
+#else
+  return ClientWorld_PlayersEntry_DoNotUse_class_data_.base();
 #endif  // PROTOBUF_MESSAGE_GLOBALS
 }
 }  // namespace
@@ -3318,7 +4014,7 @@ constexpr auto AttackCommand::InternalGenerateClassData_(
           false,
       },
 #ifdef PROTOBUF_MESSAGE_GLOBALS
-      &file_reflection_data[27],
+      &file_reflection_data[32],
 #else   // !PROTOBUF_MESSAGE_GLOBALS
       &::_pbi::kDescriptorMethods,
       &descriptor_table_template_2eproto,
@@ -4029,12 +4725,12 @@ constexpr CommandDelta::ParseTableT_ CommandDelta::InternalGenerateParseTable_(c
       PROTOBUF_FIELD_OFFSET(CommandDelta,
                             _impl_._cached_size_),  // no hasbits
       0, // no _extensions_
-      3, 0,  // max_field_number, fast_idx_mask
+      4, 0,  // max_field_number, fast_idx_mask
       offsetof(ParseTableT_, field_lookup_table),
-      4294967288,  // skipmap
+      4294967280,  // skipmap
       offsetof(ParseTableT_, field_entries),
-      3,  // num_field_entries
-      3,  // num_aux_entries
+      4,  // num_field_entries
+      4,  // num_aux_entries
       offsetof(ParseTableT_, aux_entries),
       class_data,
       nullptr,  // post_loop_handler
@@ -4053,6 +4749,8 @@ constexpr CommandDelta::ParseTableT_ CommandDelta::InternalGenerateParseTable_(c
       {PROTOBUF_FIELD_OFFSET(CommandDelta, _impl_.delta_type_.attack_command_), _Internal::kOneofCaseOffset + 0, 1, (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
       // .game.MessageCommand message_command = 3;
       {PROTOBUF_FIELD_OFFSET(CommandDelta, _impl_.delta_type_.message_command_), _Internal::kOneofCaseOffset + 0, 2, (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
+      // .game.NameSetCommand name_set_command = 4;
+      {PROTOBUF_FIELD_OFFSET(CommandDelta, _impl_.delta_type_.name_set_command_), _Internal::kOneofCaseOffset + 0, 3, (0 | ::_fl::kFcOneof | ::_fl::kMessage | ::_fl::kTvTable)},
     }},
     {{
         #ifndef PROTOBUF_MESSAGE_GLOBALS
@@ -4069,6 +4767,11 @@ constexpr CommandDelta::ParseTableT_ CommandDelta::InternalGenerateParseTable_(c
         {::_pbi::TcParser::GetTable<::game::MessageCommand>()},
         #else
         {::_pbi::FieldAuxMessageGlobals(), &::game::MessageCommand_globals_},
+        #endif
+        #ifndef PROTOBUF_MESSAGE_GLOBALS
+        {::_pbi::TcParser::GetTable<::game::NameSetCommand>()},
+        #else
+        {::_pbi::FieldAuxMessageGlobals(), &::game::NameSetCommand_globals_},
         #endif
     }},
     {{
@@ -4125,7 +4828,7 @@ constexpr auto CommandDelta::InternalGenerateClassData_(
           false,
       },
 #ifdef PROTOBUF_MESSAGE_GLOBALS
-      &file_reflection_data[25],
+      &file_reflection_data[30],
 #else   // !PROTOBUF_MESSAGE_GLOBALS
       &::_pbi::kDescriptorMethods,
       &descriptor_table_template_2eproto,
@@ -4188,12 +4891,12 @@ constexpr World::ParseTableT_ World::InternalGenerateParseTable_(const ::_pbi::C
     {
       PROTOBUF_FIELD_OFFSET(World, _impl_._has_bits_),
       0, // no _extensions_
-      5, 24,  // max_field_number, fast_idx_mask
+      6, 56,  // max_field_number, fast_idx_mask
       offsetof(ParseTableT_, field_lookup_table),
-      4294967264,  // skipmap
+      4294967232,  // skipmap
       offsetof(ParseTableT_, field_entries),
-      5,  // num_field_entries
-      4,  // num_aux_entries
+      6,  // num_field_entries
+      5,  // num_aux_entries
       offsetof(ParseTableT_, aux_entries),
       class_data,
       nullptr,  // post_loop_handler
@@ -4202,10 +4905,7 @@ constexpr World::ParseTableT_ World::InternalGenerateParseTable_(const ::_pbi::C
       ::_pbi::TcParser::GetTable<::game::World>(),  // to_prefetch
       #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
     }, {{
-      // uint64 start_location_id = 4;
-      {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(World, _impl_.start_location_id_), 3>(),
-       {32, 3, 0,
-        PROTOBUF_FIELD_OFFSET(World, _impl_.start_location_id_)}},
+      {::_pbi::TcParser::MiniParse, {}},
       // repeated .game.Item items = 1;
       {::_pbi::TcParser::FastMtR1,
        {10, 0, 0,
@@ -4218,6 +4918,16 @@ constexpr World::ParseTableT_ World::InternalGenerateParseTable_(const ::_pbi::C
       {::_pbi::TcParser::FastMtR1,
        {26, 2, 2,
         PROTOBUF_FIELD_OFFSET(World, _impl_.locations_)}},
+      // uint64 start_location_id = 4;
+      {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(World, _impl_.start_location_id_), 4>(),
+       {32, 4, 0,
+        PROTOBUF_FIELD_OFFSET(World, _impl_.start_location_id_)}},
+      // repeated .game.Player players = 5;
+      {::_pbi::TcParser::FastMtR1,
+       {42, 3, 3,
+        PROTOBUF_FIELD_OFFSET(World, _impl_.players_)}},
+      {::_pbi::TcParser::MiniParse, {}},
+      {::_pbi::TcParser::MiniParse, {}},
     }}, {{
       65535, 65535
     }}, {{
@@ -4228,9 +4938,11 @@ constexpr World::ParseTableT_ World::InternalGenerateParseTable_(const ::_pbi::C
       // repeated .game.Location locations = 3;
       {PROTOBUF_FIELD_OFFSET(World, _impl_.locations_), _Internal::kHasBitsOffset + 2, 2, (0 | ::_fl::kFcRepeated | ::_fl::kMessage | ::_fl::kTvTable)},
       // uint64 start_location_id = 4;
-      {PROTOBUF_FIELD_OFFSET(World, _impl_.start_location_id_), _Internal::kHasBitsOffset + 3, 0, (0 | ::_fl::kFcOptional | ::_fl::kUInt64)},
-      // map<uint64, uint64> players = 5;
-      {PROTOBUF_FIELD_OFFSET(World, _impl_.players_), _Internal::kHasBitsOffset + 4, 3, (0 | ::_fl::kFcRepeated | ::_fl::kMap)},
+      {PROTOBUF_FIELD_OFFSET(World, _impl_.start_location_id_), _Internal::kHasBitsOffset + 4, 0, (0 | ::_fl::kFcOptional | ::_fl::kUInt64)},
+      // repeated .game.Player players = 5;
+      {PROTOBUF_FIELD_OFFSET(World, _impl_.players_), _Internal::kHasBitsOffset + 3, 3, (0 | ::_fl::kFcRepeated | ::_fl::kMessage | ::_fl::kTvTable)},
+      // map<uint64, uint64> players_locations = 6;
+      {PROTOBUF_FIELD_OFFSET(World, _impl_.players_locations_), _Internal::kHasBitsOffset + 5, 4, (0 | ::_fl::kFcRepeated | ::_fl::kMap)},
     }},
     {{
         #ifndef PROTOBUF_MESSAGE_GLOBALS
@@ -4247,6 +4959,11 @@ constexpr World::ParseTableT_ World::InternalGenerateParseTable_(const ::_pbi::C
         {::_pbi::TcParser::GetTable<::game::Location>()},
         #else
         {::_pbi::FieldAuxMessageGlobals(), &::game::Location_globals_},
+        #endif
+        #ifndef PROTOBUF_MESSAGE_GLOBALS
+        {::_pbi::TcParser::GetTable<::game::Player>()},
+        #else
+        {::_pbi::FieldAuxMessageGlobals(), &::game::Player_globals_},
         #endif
         {::_pbi::TcParser::GetMapAuxInfo(
             0, 0, 4, 4, 0)},
@@ -4276,10 +4993,15 @@ inline constexpr World::Impl_::Impl_(
             PROTOBUF_FIELD_OFFSET(::game::World, _impl_.locations_)>()
          }
         ,
-        start_location_id_{::uint64_t{0u}},
         players_ { visibility, ::_pbi::InternalMetadataOffset::Build<
             ::game::World,
             PROTOBUF_FIELD_OFFSET(::game::World, _impl_.players_)>()
+         }
+        ,
+        start_location_id_{::uint64_t{0u}},
+        players_locations_ { visibility, ::_pbi::InternalMetadataOffset::Build<
+            ::game::World,
+            PROTOBUF_FIELD_OFFSET(::game::World, _impl_.players_locations_)>()
          }
      {}
 
@@ -4387,12 +5109,12 @@ constexpr InitWorld::ParseTableT_ InitWorld::InternalGenerateParseTable_(const :
     {
       PROTOBUF_FIELD_OFFSET(InitWorld, _impl_._has_bits_),
       0, // no _extensions_
-      4, 24,  // max_field_number, fast_idx_mask
+      7, 56,  // max_field_number, fast_idx_mask
       offsetof(ParseTableT_, field_lookup_table),
-      4294967280,  // skipmap
+      4294967168,  // skipmap
       offsetof(ParseTableT_, field_entries),
-      4,  // num_field_entries
-      3,  // num_aux_entries
+      7,  // num_field_entries
+      6,  // num_aux_entries
       offsetof(ParseTableT_, aux_entries),
       class_data,
       nullptr,  // post_loop_handler
@@ -4401,10 +5123,7 @@ constexpr InitWorld::ParseTableT_ InitWorld::InternalGenerateParseTable_(const :
       ::_pbi::TcParser::GetTable<::game::InitWorld>(),  // to_prefetch
       #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
     }, {{
-      // uint64 start_location_id = 4;
-      {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(InitWorld, _impl_.start_location_id_), 3>(),
-       {32, 3, 0,
-        PROTOBUF_FIELD_OFFSET(InitWorld, _impl_.start_location_id_)}},
+      {::_pbi::TcParser::MiniParse, {}},
       // repeated .game.Item items = 1;
       {::_pbi::TcParser::FastMtR1,
        {10, 0, 0,
@@ -4417,6 +5136,16 @@ constexpr InitWorld::ParseTableT_ InitWorld::InternalGenerateParseTable_(const :
       {::_pbi::TcParser::FastMtR1,
        {26, 2, 2,
         PROTOBUF_FIELD_OFFSET(InitWorld, _impl_.locations_)}},
+      // uint64 start_location_id = 4;
+      {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(InitWorld, _impl_.start_location_id_), 4>(),
+       {32, 4, 0,
+        PROTOBUF_FIELD_OFFSET(InitWorld, _impl_.start_location_id_)}},
+      {::_pbi::TcParser::MiniParse, {}},
+      {::_pbi::TcParser::MiniParse, {}},
+      // .game.Player you = 7;
+      {::_pbi::TcParser::FastMtS1,
+       {58, 3, 3,
+        PROTOBUF_FIELD_OFFSET(InitWorld, _impl_.you_)}},
     }}, {{
       65535, 65535
     }}, {{
@@ -4427,7 +5156,13 @@ constexpr InitWorld::ParseTableT_ InitWorld::InternalGenerateParseTable_(const :
       // repeated .game.Location locations = 3;
       {PROTOBUF_FIELD_OFFSET(InitWorld, _impl_.locations_), _Internal::kHasBitsOffset + 2, 2, (0 | ::_fl::kFcRepeated | ::_fl::kMessage | ::_fl::kTvTable)},
       // uint64 start_location_id = 4;
-      {PROTOBUF_FIELD_OFFSET(InitWorld, _impl_.start_location_id_), _Internal::kHasBitsOffset + 3, 0, (0 | ::_fl::kFcOptional | ::_fl::kUInt64)},
+      {PROTOBUF_FIELD_OFFSET(InitWorld, _impl_.start_location_id_), _Internal::kHasBitsOffset + 4, 0, (0 | ::_fl::kFcOptional | ::_fl::kUInt64)},
+      // map<uint64, string> players = 5;
+      {PROTOBUF_FIELD_OFFSET(InitWorld, _impl_.players_), _Internal::kHasBitsOffset + 5, 4, (0 | ::_fl::kFcRepeated | ::_fl::kMap)},
+      // map<uint64, uint64> players_locations = 6;
+      {PROTOBUF_FIELD_OFFSET(InitWorld, _impl_.players_locations_), _Internal::kHasBitsOffset + 6, 5, (0 | ::_fl::kFcRepeated | ::_fl::kMap)},
+      // .game.Player you = 7;
+      {PROTOBUF_FIELD_OFFSET(InitWorld, _impl_.you_), _Internal::kHasBitsOffset + 3, 3, (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
     }},
     {{
         #ifndef PROTOBUF_MESSAGE_GLOBALS
@@ -4445,8 +5180,20 @@ constexpr InitWorld::ParseTableT_ InitWorld::InternalGenerateParseTable_(const :
         #else
         {::_pbi::FieldAuxMessageGlobals(), &::game::Location_globals_},
         #endif
+        #ifndef PROTOBUF_MESSAGE_GLOBALS
+        {::_pbi::TcParser::GetTable<::game::Player>()},
+        #else
+        {::_pbi::FieldAuxMessageGlobals(), &::game::Player_globals_},
+        #endif
+        {::_pbi::TcParser::GetMapAuxInfo(
+            1, 0, 4, 9, 0)},
+        {::_pbi::TcParser::GetMapAuxInfo(
+            0, 0, 4, 4, 0)},
     }},
     {{
+      "\16\0\0\0\0\7\0\0"
+      "game.InitWorld"
+      "players"
     }},
   };
 }
@@ -4471,7 +5218,18 @@ inline constexpr InitWorld::Impl_::Impl_(
             PROTOBUF_FIELD_OFFSET(::game::InitWorld, _impl_.locations_)>()
          }
         ,
-        start_location_id_{::uint64_t{0u}} {}
+        you_{nullptr},
+        start_location_id_{::uint64_t{0u}},
+        players_ { visibility, ::_pbi::InternalMetadataOffset::Build<
+            ::game::InitWorld,
+            PROTOBUF_FIELD_OFFSET(::game::InitWorld, _impl_.players_)>()
+         }
+        ,
+        players_locations_ { visibility, ::_pbi::InternalMetadataOffset::Build<
+            ::game::InitWorld,
+            PROTOBUF_FIELD_OFFSET(::game::InitWorld, _impl_.players_locations_)>()
+         }
+     {}
 
 template <typename>
 constexpr InitWorld::InitWorld(::_pbi::ConstantInitialized,
@@ -4514,7 +5272,7 @@ constexpr auto InitWorld::InternalGenerateClassData_(
           false,
       },
 #ifdef PROTOBUF_MESSAGE_GLOBALS
-      &file_reflection_data[24],
+      &file_reflection_data[29],
 #else   // !PROTOBUF_MESSAGE_GLOBALS
       &::_pbi::kDescriptorMethods,
       &descriptor_table_template_2eproto,
@@ -4561,6 +5319,232 @@ const ::_pbi::ClassData* InitWorld_get_class_data() {
   return InitWorld_globals_.GetClassData();
 #else
   return InitWorld_class_data_.base();
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+}
+}  // namespace
+#endif  // PROTOBUF_CUSTOM_VTABLE
+class ClientWorld::_Internal {
+ public:
+  using HasBits = decltype(::std::declval<ClientWorld>()._impl_._has_bits_);
+  static constexpr ::int32_t kHasBitsOffset =
+      8 * PROTOBUF_FIELD_OFFSET(ClientWorld, _impl_._has_bits_);
+};
+
+constexpr ClientWorld::ParseTableT_ ClientWorld::InternalGenerateParseTable_(const ::_pbi::ClassData* class_data) {
+  return ParseTableT_{
+    {
+      PROTOBUF_FIELD_OFFSET(ClientWorld, _impl_._has_bits_),
+      0, // no _extensions_
+      7, 56,  // max_field_number, fast_idx_mask
+      offsetof(ParseTableT_, field_lookup_table),
+      4294967168,  // skipmap
+      offsetof(ParseTableT_, field_entries),
+      7,  // num_field_entries
+      6,  // num_aux_entries
+      offsetof(ParseTableT_, aux_entries),
+      class_data,
+      nullptr,  // post_loop_handler
+      ::_pbi::TcParser::GenericFallback,  // fallback
+      #ifdef PROTOBUF_PREFETCH_PARSE_TABLE
+      ::_pbi::TcParser::GetTable<::game::ClientWorld>(),  // to_prefetch
+      #endif  // PROTOBUF_PREFETCH_PARSE_TABLE
+    }, {{
+      {::_pbi::TcParser::MiniParse, {}},
+      // repeated .game.Item items = 1;
+      {::_pbi::TcParser::FastMtR1,
+       {10, 0, 0,
+        PROTOBUF_FIELD_OFFSET(ClientWorld, _impl_.items_)}},
+      // repeated .game.Npc npcs = 2;
+      {::_pbi::TcParser::FastMtR1,
+       {18, 1, 1,
+        PROTOBUF_FIELD_OFFSET(ClientWorld, _impl_.npcs_)}},
+      // repeated .game.Location locations = 3;
+      {::_pbi::TcParser::FastMtR1,
+       {26, 2, 2,
+        PROTOBUF_FIELD_OFFSET(ClientWorld, _impl_.locations_)}},
+      // uint64 start_location_id = 4;
+      {::_pbi::TcParser::SingularVarintNoZag1<::uint64_t, offsetof(ClientWorld, _impl_.start_location_id_), 4>(),
+       {32, 4, 0,
+        PROTOBUF_FIELD_OFFSET(ClientWorld, _impl_.start_location_id_)}},
+      {::_pbi::TcParser::MiniParse, {}},
+      {::_pbi::TcParser::MiniParse, {}},
+      // .game.Player myself = 7;
+      {::_pbi::TcParser::FastMtS1,
+       {58, 3, 3,
+        PROTOBUF_FIELD_OFFSET(ClientWorld, _impl_.myself_)}},
+    }}, {{
+      65535, 65535
+    }}, {{
+      // repeated .game.Item items = 1;
+      {PROTOBUF_FIELD_OFFSET(ClientWorld, _impl_.items_), _Internal::kHasBitsOffset + 0, 0, (0 | ::_fl::kFcRepeated | ::_fl::kMessage | ::_fl::kTvTable)},
+      // repeated .game.Npc npcs = 2;
+      {PROTOBUF_FIELD_OFFSET(ClientWorld, _impl_.npcs_), _Internal::kHasBitsOffset + 1, 1, (0 | ::_fl::kFcRepeated | ::_fl::kMessage | ::_fl::kTvTable)},
+      // repeated .game.Location locations = 3;
+      {PROTOBUF_FIELD_OFFSET(ClientWorld, _impl_.locations_), _Internal::kHasBitsOffset + 2, 2, (0 | ::_fl::kFcRepeated | ::_fl::kMessage | ::_fl::kTvTable)},
+      // uint64 start_location_id = 4;
+      {PROTOBUF_FIELD_OFFSET(ClientWorld, _impl_.start_location_id_), _Internal::kHasBitsOffset + 4, 0, (0 | ::_fl::kFcOptional | ::_fl::kUInt64)},
+      // map<uint64, string> players = 5;
+      {PROTOBUF_FIELD_OFFSET(ClientWorld, _impl_.players_), _Internal::kHasBitsOffset + 5, 4, (0 | ::_fl::kFcRepeated | ::_fl::kMap)},
+      // map<uint64, uint64> players_locations = 6;
+      {PROTOBUF_FIELD_OFFSET(ClientWorld, _impl_.players_locations_), _Internal::kHasBitsOffset + 6, 5, (0 | ::_fl::kFcRepeated | ::_fl::kMap)},
+      // .game.Player myself = 7;
+      {PROTOBUF_FIELD_OFFSET(ClientWorld, _impl_.myself_), _Internal::kHasBitsOffset + 3, 3, (0 | ::_fl::kFcOptional | ::_fl::kMessage | ::_fl::kTvTable)},
+    }},
+    {{
+        #ifndef PROTOBUF_MESSAGE_GLOBALS
+        {::_pbi::TcParser::GetTable<::game::Item>()},
+        #else
+        {::_pbi::FieldAuxMessageGlobals(), &::game::Item_globals_},
+        #endif
+        #ifndef PROTOBUF_MESSAGE_GLOBALS
+        {::_pbi::TcParser::GetTable<::game::Npc>()},
+        #else
+        {::_pbi::FieldAuxMessageGlobals(), &::game::Npc_globals_},
+        #endif
+        #ifndef PROTOBUF_MESSAGE_GLOBALS
+        {::_pbi::TcParser::GetTable<::game::Location>()},
+        #else
+        {::_pbi::FieldAuxMessageGlobals(), &::game::Location_globals_},
+        #endif
+        #ifndef PROTOBUF_MESSAGE_GLOBALS
+        {::_pbi::TcParser::GetTable<::game::Player>()},
+        #else
+        {::_pbi::FieldAuxMessageGlobals(), &::game::Player_globals_},
+        #endif
+        {::_pbi::TcParser::GetMapAuxInfo(
+            1, 0, 4, 9, 0)},
+        {::_pbi::TcParser::GetMapAuxInfo(
+            0, 0, 4, 4, 0)},
+    }},
+    {{
+      "\20\0\0\0\0\7\0\0"
+      "game.ClientWorld"
+      "players"
+    }},
+  };
+}
+
+
+inline constexpr ClientWorld::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    ::_pbi::ConstantInitialized) noexcept
+      : _cached_size_{0},
+        items_ { visibility, ::_pbi::InternalMetadataOffset::Build<
+            ::game::ClientWorld,
+            PROTOBUF_FIELD_OFFSET(::game::ClientWorld, _impl_.items_)>()
+         }
+        ,
+        npcs_ { visibility, ::_pbi::InternalMetadataOffset::Build<
+            ::game::ClientWorld,
+            PROTOBUF_FIELD_OFFSET(::game::ClientWorld, _impl_.npcs_)>()
+         }
+        ,
+        locations_ { visibility, ::_pbi::InternalMetadataOffset::Build<
+            ::game::ClientWorld,
+            PROTOBUF_FIELD_OFFSET(::game::ClientWorld, _impl_.locations_)>()
+         }
+        ,
+        myself_{nullptr},
+        start_location_id_{::uint64_t{0u}},
+        players_ { visibility, ::_pbi::InternalMetadataOffset::Build<
+            ::game::ClientWorld,
+            PROTOBUF_FIELD_OFFSET(::game::ClientWorld, _impl_.players_)>()
+         }
+        ,
+        players_locations_ { visibility, ::_pbi::InternalMetadataOffset::Build<
+            ::game::ClientWorld,
+            PROTOBUF_FIELD_OFFSET(::game::ClientWorld, _impl_.players_locations_)>()
+         }
+     {}
+
+template <typename>
+constexpr ClientWorld::ClientWorld(::_pbi::ConstantInitialized,
+                       const ::_pbi::ClassData* PROTOBUF_NONNULL class_data)
+    : ::google::protobuf::Message(
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+          class_data
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          ),
+      _impl_(internal_visibility(), ::_pbi::ConstantInitialized()) {
+}
+inline void* PROTOBUF_NONNULL ClientWorld::PlacementNew_(
+    const void* PROTOBUF_NONNULL, void* PROTOBUF_NONNULL mem,
+    ::google::protobuf::Arena* PROTOBUF_NULLABLE arena) {
+  return ::new (mem) ClientWorld(arena);
+}
+constexpr auto ClientWorld::InternalNewImpl_() {
+  return ::google::protobuf::internal::MessageCreator::CopyInit(sizeof(ClientWorld), alignof(ClientWorld));
+}
+constexpr auto ClientWorld::InternalGenerateClassData_(
+    const MessageLite& prototype,
+    const ::google::protobuf::internal::TcParseTableBase* tc_table) {
+  return ::google::protobuf::internal::ClassDataFull{
+      ::google::protobuf::internal::ClassData{
+          &prototype,
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+          &_table_.header,
+#else
+          tc_table,
+#endif
+          nullptr,  // IsInitialized
+          &ClientWorld::MergeImpl,
+          ::google::protobuf::Message::GetNewImpl<ClientWorld>(),
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+          &ClientWorld::SharedDtor,
+          ::google::protobuf::Message::GetClearImpl<ClientWorld>(), &ClientWorld::ByteSizeLong,
+              &ClientWorld::_InternalSerialize,
+#endif  // PROTOBUF_CUSTOM_VTABLE
+          PROTOBUF_FIELD_OFFSET(ClientWorld, _impl_._cached_size_),
+          false,
+      },
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+      &file_reflection_data[13],
+#else   // !PROTOBUF_MESSAGE_GLOBALS
+      &::_pbi::kDescriptorMethods,
+      &descriptor_table_template_2eproto,
+      nullptr,  // tracker
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+  };
+}
+struct ClientWorldGlobalsTypeInternal : ::_pbi::MessageGlobalsBase {
+  constexpr ClientWorldGlobalsTypeInternal()
+      :
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+        _default(::_pbi::ConstantInitialized{},
+                 ClientWorld_class_data_.base())
+#else   // !PROTOBUF_MESSAGE_GLOBALS
+        MessageGlobalsBase(ClientWorld::InternalGenerateClassData_(
+            _default, &ClientWorld_globals_._table.header)),
+        _default(::_pbi::ConstantInitialized{}, GetClassData()),
+        _table(::_pbi::PrivateAccess::GenerateParseTable<ClientWorld>(
+            GetClassData()))
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+  {
+  }
+  ~ClientWorldGlobalsTypeInternal() {}
+  union {
+    alignas(::_pbi::kMaxMessageAlignment) ClientWorld _default;
+  };
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+  decltype(::_pbi::PrivateAccess::GenerateParseTable<ClientWorld>(
+      ::std::declval<const ::_pbi::ClassData*>())) _table;
+#endif
+};
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+static_assert(PROTOBUF_FIELD_OFFSET(ClientWorldGlobalsTypeInternal, _default) ==
+              ::_pbi::MessageGlobalsBase::OffsetToDefault());
+#endif  // PROTOBUF_MESSAGE_GLOBALS
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 PROTOBUF_MESSAGE_GLOBALS_CONST ClientWorldGlobalsTypeInternal ClientWorld_globals_
+        PROTOBUF_MESSAGE_GLOBALS_SECTION(.data.rel.ro);
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+namespace {
+const ::_pbi::ClassData* ClientWorld_get_class_data() {
+#ifdef PROTOBUF_MESSAGE_GLOBALS
+  return ClientWorld_globals_.GetClassData();
+#else
+  return ClientWorld_class_data_.base();
 #endif  // PROTOBUF_MESSAGE_GLOBALS
 }
 }  // namespace
@@ -4743,7 +5727,7 @@ constexpr auto WorldDelta::InternalGenerateClassData_(
           false,
       },
 #ifdef PROTOBUF_MESSAGE_GLOBALS
-      &file_reflection_data[11],
+      &file_reflection_data[14],
 #else   // !PROTOBUF_MESSAGE_GLOBALS
       &::_pbi::kDescriptorMethods,
       &descriptor_table_template_2eproto,
@@ -4912,25 +5896,58 @@ const ::uint32_t
         4,
         5,
         0x081, // bitmap
-        PROTOBUF_FIELD_OFFSET(::game::World_PlayersEntry_DoNotUse, _impl_._has_bits_),
+        PROTOBUF_FIELD_OFFSET(::game::World_PlayersLocationsEntry_DoNotUse, _impl_._has_bits_),
         5, // hasbit index offset
-        PROTOBUF_FIELD_OFFSET(::game::World_PlayersEntry_DoNotUse, _impl_.key_),
-        PROTOBUF_FIELD_OFFSET(::game::World_PlayersEntry_DoNotUse, _impl_.value_),
+        PROTOBUF_FIELD_OFFSET(::game::World_PlayersLocationsEntry_DoNotUse, _impl_.key_),
+        PROTOBUF_FIELD_OFFSET(::game::World_PlayersLocationsEntry_DoNotUse, _impl_.value_),
         0,
         1,
         0x081, // bitmap
         PROTOBUF_FIELD_OFFSET(::game::World, _impl_._has_bits_),
-        8, // hasbit index offset
+        9, // hasbit index offset
         PROTOBUF_FIELD_OFFSET(::game::World, _impl_.items_),
         PROTOBUF_FIELD_OFFSET(::game::World, _impl_.npcs_),
         PROTOBUF_FIELD_OFFSET(::game::World, _impl_.locations_),
         PROTOBUF_FIELD_OFFSET(::game::World, _impl_.start_location_id_),
         PROTOBUF_FIELD_OFFSET(::game::World, _impl_.players_),
+        PROTOBUF_FIELD_OFFSET(::game::World, _impl_.players_locations_),
         0,
         1,
         2,
-        3,
         4,
+        3,
+        5,
+        0x081, // bitmap
+        PROTOBUF_FIELD_OFFSET(::game::ClientWorld_PlayersEntry_DoNotUse, _impl_._has_bits_),
+        5, // hasbit index offset
+        PROTOBUF_FIELD_OFFSET(::game::ClientWorld_PlayersEntry_DoNotUse, _impl_.key_),
+        PROTOBUF_FIELD_OFFSET(::game::ClientWorld_PlayersEntry_DoNotUse, _impl_.value_),
+        0,
+        1,
+        0x081, // bitmap
+        PROTOBUF_FIELD_OFFSET(::game::ClientWorld_PlayersLocationsEntry_DoNotUse, _impl_._has_bits_),
+        5, // hasbit index offset
+        PROTOBUF_FIELD_OFFSET(::game::ClientWorld_PlayersLocationsEntry_DoNotUse, _impl_.key_),
+        PROTOBUF_FIELD_OFFSET(::game::ClientWorld_PlayersLocationsEntry_DoNotUse, _impl_.value_),
+        0,
+        1,
+        0x081, // bitmap
+        PROTOBUF_FIELD_OFFSET(::game::ClientWorld, _impl_._has_bits_),
+        10, // hasbit index offset
+        PROTOBUF_FIELD_OFFSET(::game::ClientWorld, _impl_.items_),
+        PROTOBUF_FIELD_OFFSET(::game::ClientWorld, _impl_.npcs_),
+        PROTOBUF_FIELD_OFFSET(::game::ClientWorld, _impl_.locations_),
+        PROTOBUF_FIELD_OFFSET(::game::ClientWorld, _impl_.start_location_id_),
+        PROTOBUF_FIELD_OFFSET(::game::ClientWorld, _impl_.players_),
+        PROTOBUF_FIELD_OFFSET(::game::ClientWorld, _impl_.players_locations_),
+        PROTOBUF_FIELD_OFFSET(::game::ClientWorld, _impl_.myself_),
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        3,
         0x004, // bitmap
         PROTOBUF_FIELD_OFFSET(::game::WorldDelta, _impl_._oneof_case_[0]),
         PROTOBUF_FIELD_OFFSET(::game::WorldDelta, _impl_.delta_type_),
@@ -5032,18 +6049,39 @@ const ::uint32_t
         0,
         1,
         0x081, // bitmap
+        PROTOBUF_FIELD_OFFSET(::game::InitWorld_PlayersEntry_DoNotUse, _impl_._has_bits_),
+        5, // hasbit index offset
+        PROTOBUF_FIELD_OFFSET(::game::InitWorld_PlayersEntry_DoNotUse, _impl_.key_),
+        PROTOBUF_FIELD_OFFSET(::game::InitWorld_PlayersEntry_DoNotUse, _impl_.value_),
+        0,
+        1,
+        0x081, // bitmap
+        PROTOBUF_FIELD_OFFSET(::game::InitWorld_PlayersLocationsEntry_DoNotUse, _impl_._has_bits_),
+        5, // hasbit index offset
+        PROTOBUF_FIELD_OFFSET(::game::InitWorld_PlayersLocationsEntry_DoNotUse, _impl_.key_),
+        PROTOBUF_FIELD_OFFSET(::game::InitWorld_PlayersLocationsEntry_DoNotUse, _impl_.value_),
+        0,
+        1,
+        0x081, // bitmap
         PROTOBUF_FIELD_OFFSET(::game::InitWorld, _impl_._has_bits_),
-        7, // hasbit index offset
+        10, // hasbit index offset
         PROTOBUF_FIELD_OFFSET(::game::InitWorld, _impl_.items_),
         PROTOBUF_FIELD_OFFSET(::game::InitWorld, _impl_.npcs_),
         PROTOBUF_FIELD_OFFSET(::game::InitWorld, _impl_.locations_),
         PROTOBUF_FIELD_OFFSET(::game::InitWorld, _impl_.start_location_id_),
+        PROTOBUF_FIELD_OFFSET(::game::InitWorld, _impl_.players_),
+        PROTOBUF_FIELD_OFFSET(::game::InitWorld, _impl_.players_locations_),
+        PROTOBUF_FIELD_OFFSET(::game::InitWorld, _impl_.you_),
         0,
         1,
         2,
+        4,
+        5,
+        6,
         3,
         0x004, // bitmap
         PROTOBUF_FIELD_OFFSET(::game::CommandDelta, _impl_._oneof_case_[0]),
+        PROTOBUF_FIELD_OFFSET(::game::CommandDelta, _impl_.delta_type_),
         PROTOBUF_FIELD_OFFSET(::game::CommandDelta, _impl_.delta_type_),
         PROTOBUF_FIELD_OFFSET(::game::CommandDelta, _impl_.delta_type_),
         PROTOBUF_FIELD_OFFSET(::game::CommandDelta, _impl_.delta_type_),
@@ -5065,6 +6103,11 @@ const ::uint32_t
         4, // hasbit index offset
         PROTOBUF_FIELD_OFFSET(::game::MessageCommand, _impl_.message_),
         0,
+        0x081, // bitmap
+        PROTOBUF_FIELD_OFFSET(::game::NameSetCommand, _impl_._has_bits_),
+        4, // hasbit index offset
+        PROTOBUF_FIELD_OFFSET(::game::NameSetCommand, _impl_.name_),
+        0,
 };
 
 static const ::_pbi::MigrationSchema
@@ -5078,26 +6121,32 @@ static const ::_pbi::MigrationSchema
         {64, sizeof(::game::Npc_TradeInventoryEntry_DoNotUse)},
         {71, sizeof(::game::Npc)},
         {94, sizeof(::game::Player)},
-        {109, sizeof(::game::World_PlayersEntry_DoNotUse)},
+        {109, sizeof(::game::World_PlayersLocationsEntry_DoNotUse)},
         {116, sizeof(::game::World)},
-        {129, sizeof(::game::WorldDelta)},
-        {145, sizeof(::game::MessageReceived)},
-        {152, sizeof(::game::UnauthorizedCommand)},
-        {157, sizeof(::game::PlayerConnected)},
-        {164, sizeof(::game::PlayerDisconnected)},
-        {169, sizeof(::game::PlayerInventoryChanged)},
-        {178, sizeof(::game::NpcInventoryChanged)},
-        {187, sizeof(::game::PlayerHpChanged)},
-        {194, sizeof(::game::NpcHpChanged)},
-        {201, sizeof(::game::PlayerMoved)},
-        {208, sizeof(::game::NpcMoved)},
-        {215, sizeof(::game::DoorUnlock)},
-        {222, sizeof(::game::PlayerStateChanged)},
-        {229, sizeof(::game::InitWorld)},
-        {240, sizeof(::game::CommandDelta)},
-        {246, sizeof(::game::InteractionCommand)},
-        {253, sizeof(::game::AttackCommand)},
-        {258, sizeof(::game::MessageCommand)},
+        {131, sizeof(::game::ClientWorld_PlayersEntry_DoNotUse)},
+        {138, sizeof(::game::ClientWorld_PlayersLocationsEntry_DoNotUse)},
+        {145, sizeof(::game::ClientWorld)},
+        {162, sizeof(::game::WorldDelta)},
+        {178, sizeof(::game::MessageReceived)},
+        {185, sizeof(::game::UnauthorizedCommand)},
+        {190, sizeof(::game::PlayerConnected)},
+        {197, sizeof(::game::PlayerDisconnected)},
+        {202, sizeof(::game::PlayerInventoryChanged)},
+        {211, sizeof(::game::NpcInventoryChanged)},
+        {220, sizeof(::game::PlayerHpChanged)},
+        {227, sizeof(::game::NpcHpChanged)},
+        {234, sizeof(::game::PlayerMoved)},
+        {241, sizeof(::game::NpcMoved)},
+        {248, sizeof(::game::DoorUnlock)},
+        {255, sizeof(::game::PlayerStateChanged)},
+        {262, sizeof(::game::InitWorld_PlayersEntry_DoNotUse)},
+        {269, sizeof(::game::InitWorld_PlayersLocationsEntry_DoNotUse)},
+        {276, sizeof(::game::InitWorld)},
+        {293, sizeof(::game::CommandDelta)},
+        {300, sizeof(::game::InteractionCommand)},
+        {307, sizeof(::game::AttackCommand)},
+        {312, sizeof(::game::MessageCommand)},
+        {317, sizeof(::game::NameSetCommand)},
 };
 static const ::_pbi::MessageGlobalsBase* PROTOBUF_NONNULL const
     file_message_globals[] = {
@@ -5110,8 +6159,11 @@ static const ::_pbi::MessageGlobalsBase* PROTOBUF_NONNULL const
         &::game::Npc_TradeInventoryEntry_DoNotUse_globals_,
         &::game::Npc_globals_,
         &::game::Player_globals_,
-        &::game::World_PlayersEntry_DoNotUse_globals_,
+        &::game::World_PlayersLocationsEntry_DoNotUse_globals_,
         &::game::World_globals_,
+        &::game::ClientWorld_PlayersEntry_DoNotUse_globals_,
+        &::game::ClientWorld_PlayersLocationsEntry_DoNotUse_globals_,
+        &::game::ClientWorld_globals_,
         &::game::WorldDelta_globals_,
         &::game::MessageReceived_globals_,
         &::game::UnauthorizedCommand_globals_,
@@ -5125,11 +6177,14 @@ static const ::_pbi::MessageGlobalsBase* PROTOBUF_NONNULL const
         &::game::NpcMoved_globals_,
         &::game::DoorUnlock_globals_,
         &::game::PlayerStateChanged_globals_,
+        &::game::InitWorld_PlayersEntry_DoNotUse_globals_,
+        &::game::InitWorld_PlayersLocationsEntry_DoNotUse_globals_,
         &::game::InitWorld_globals_,
         &::game::CommandDelta_globals_,
         &::game::InteractionCommand_globals_,
         &::game::AttackCommand_globals_,
         &::game::MessageCommand_globals_,
+        &::game::NameSetCommand_globals_,
 };
 const char descriptor_table_protodef_template_2eproto[] ABSL_ATTRIBUTE_SECTION_VARIABLE(
     protodesc_cold) = {
@@ -5158,91 +6213,110 @@ const char descriptor_table_protodef_template_2eproto[] ABSL_ATTRIBUTE_SECTION_V
     "value\030\002 \001(\004:\0028\001\"y\n\006Player\022\n\n\002id\030\001 \001(\004\022\014\n"
     "\004name\030\002 \001(\t\022\n\n\002hp\030\003 \001(\r\022\021\n\tinventory\030\004 \003"
     "(\004\022 \n\005state\030\005 \001(\0162\021.game.PlayerState\022\024\n\014"
-    "money_amount\030\006 \001(\004\"\324\001\n\005World\022\031\n\005items\030\001 "
+    "money_amount\030\006 \001(\004\"\217\002\n\005World\022\031\n\005items\030\001 "
     "\003(\0132\n.game.Item\022\027\n\004npcs\030\002 \003(\0132\t.game.Npc"
     "\022!\n\tlocations\030\003 \003(\0132\016.game.Location\022\031\n\021s"
-    "tart_location_id\030\004 \001(\004\022)\n\007players\030\005 \003(\0132"
-    "\030.game.World.PlayersEntry\032.\n\014PlayersEntr"
-    "y\022\013\n\003key\030\001 \001(\004\022\r\n\005value\030\002 \001(\004:\0028\001\"\264\005\n\nWo"
-    "rldDelta\022@\n\030player_inventory_changed\030\001 \001"
-    "(\0132\034.game.PlayerInventoryChangedH\000\022:\n\025np"
-    "c_inventory_changed\030\002 \001(\0132\031.game.NpcInve"
-    "ntoryChangedH\000\0222\n\021player_hp_changed\030\003 \001("
-    "\0132\025.game.PlayerHpChangedH\000\022,\n\016npc_hp_cha"
-    "nged\030\004 \001(\0132\022.game.NpcHpChangedH\000\022)\n\014play"
-    "er_moved\030\005 \001(\0132\021.game.PlayerMovedH\000\022#\n\tn"
-    "pc_moved\030\006 \001(\0132\016.game.NpcMovedH\000\022\'\n\013door"
-    "_unlock\030\007 \001(\0132\020.game.DoorUnlockH\000\0228\n\024pla"
-    "yer_state_changed\030\010 \001(\0132\030.game.PlayerSta"
-    "teChangedH\000\0221\n\020message_received\030\t \001(\0132\025."
-    "game.MessageReceivedH\000\022+\n\020world_initiati"
-    "on\030\n \001(\0132\017.game.InitWorldH\000\0221\n\020player_co"
-    "nnected\030\013 \001(\0132\025.game.PlayerConnectedH\000\0227"
-    "\n\023player_disconnected\030\014 \001(\0132\030.game.Playe"
-    "rDisconnectedH\000\0229\n\024unauthorized_command\030"
-    "\r \001(\0132\031.game.UnauthorizedCommandH\000B\014\n\nde"
-    "lta_type\"5\n\017MessageReceived\022\021\n\tplayer_id"
-    "\030\001 \001(\004\022\017\n\007message\030\002 \001(\t\"\'\n\023UnauthorizedC"
-    "ommand\022\020\n\010response\030\001 \001(\t\"9\n\017PlayerConnec"
-    "ted\022\021\n\tplayer_id\030\001 \001(\004\022\023\n\013player_name\030\002 "
-    "\001(\t\"\'\n\022PlayerDisconnected\022\021\n\tplayer_id\030\001"
-    " \001(\004\"h\n\026PlayerInventoryChanged\022\021\n\tplayer"
-    "_id\030\001 \001(\004\022\017\n\007item_id\030\002 \001(\004\022*\n\013Interactio"
-    "n\030\003 \001(\0162\025.game.InteractionType\"b\n\023NpcInv"
-    "entoryChanged\022\016\n\006npc_id\030\001 \001(\004\022\017\n\007item_id"
-    "\030\002 \001(\004\022*\n\013Interaction\030\003 \001(\0162\025.game.Inter"
-    "actionType\"4\n\017PlayerHpChanged\022\021\n\tplayer_"
-    "id\030\001 \001(\004\022\016\n\006new_hp\030\002 \001(\r\".\n\014NpcHpChanged"
-    "\022\016\n\006npc_id\030\001 \001(\004\022\016\n\006new_hp\030\002 \001(\r\"9\n\013Play"
-    "erMoved\022\021\n\tplayer_id\030\001 \001(\004\022\027\n\017new_locati"
-    "on_id\030\002 \001(\004\"3\n\010NpcMoved\022\016\n\006npc_id\030\001 \001(\004\022"
-    "\027\n\017new_location_id\030\002 \001(\004\"0\n\nDoorUnlock\022\017"
-    "\n\007exit_id\030\001 \001(\004\022\021\n\tplayer_id\030\002 \001(\004\"M\n\022Pl"
-    "ayerStateChanged\022\021\n\tplayer_id\030\001 \001(\004\022$\n\tn"
-    "ew_state\030\002 \001(\0162\021.game.PlayerState\"}\n\tIni"
-    "tWorld\022\031\n\005items\030\001 \003(\0132\n.game.Item\022\027\n\004npc"
-    "s\030\002 \003(\0132\t.game.Npc\022!\n\tlocations\030\003 \003(\0132\016."
-    "game.Location\022\031\n\021start_location_id\030\004 \001(\004"
-    "\"\265\001\n\014CommandDelta\0227\n\023interaction_command"
-    "\030\001 \001(\0132\030.game.InteractionCommandH\000\022-\n\016at"
-    "tack_command\030\002 \001(\0132\023.game.AttackCommandH"
-    "\000\022/\n\017message_command\030\003 \001(\0132\024.game.Messag"
-    "eCommandH\000B\014\n\ndelta_type\"L\n\022InteractionC"
-    "ommand\022#\n\004type\030\001 \001(\0162\025.game.InteractionT"
-    "ype\022\021\n\ttarget_id\030\002 \001(\004\"3\n\rAttackCommand\022"
-    "\"\n\006action\030\001 \001(\0162\022.game.CombatAction\"!\n\016M"
-    "essageCommand\022\017\n\007message\030\001 \001(\t*F\n\tRcvSta"
-    "tus\022\020\n\014DISCONNECTED\020\000\022\016\n\nWOULDBLOCK\020\001\022\017\n"
-    "\013PARSE_ERROR\020\002\022\006\n\002OK\020\003*d\n\013CommandType\022\027\n"
-    "\023INTERACTION_COMMAND\020\000\022\022\n\016ATTACK_COMMAND"
-    "\020\001\022\023\n\017MESSAGE_COMMAND\020\002\022\023\n\017INVALID_COMMA"
-    "ND\020\003*p\n\017InteractionType\022\010\n\004MOVE\020\000\022\013\n\007PIC"
-    "K_UP\020\001\022\010\n\004DROP\020\002\022\010\n\004OPEN\020\003\022\t\n\005SPEAK\020\004\022\n\n"
-    "\006ATTACK\020\005\022\007\n\003USE\020\006\022\010\n\004SELL\020\007\022\010\n\004GIVE\020\010*4"
-    "\n\013PlayerState\022\014\n\010CHILLING\020\000\022\r\n\tIN_COMBAT"
-    "\020\001\022\010\n\004DEAD\020\002*\207\001\n\014CombatAction\022\020\n\014LIGHT_A"
-    "TTACK\020\000\022\021\n\rSTRONG_ATTACK\020\001\022\017\n\013CONCENTRAT"
-    "E\020\002\022\010\n\004FLEE\020\003\022\017\n\013HALF_DEFEND\020\004\022\017\n\013FULL_D"
-    "EFEND\020\005\022\013\n\007COUNTER\020\006\022\010\n\004NONE\020\007*5\n\tDirect"
-    "ion\022\t\n\005NORTH\020\000\022\010\n\004EAST\020\001\022\010\n\004WEST\020\002\022\t\n\005SO"
-    "UTH\020\003*O\n\nEffectType\022\010\n\004HEAL\020\000\022\n\n\006DAMAGE\020"
-    "\001\022\017\n\013ENERGY_BUFF\020\002\022\021\n\rENERGY_DEBUFF\020\003\022\007\n"
-    "\003KEY\020\004*8\n\013Temperament\022\013\n\007PASSIVE\020\000\022\r\n\tDE"
-    "FENSIVE\020\001\022\r\n\tAGGRESIVE\020\002*3\n\005Usage\022\010\n\004SEL"
-    "F\020\000\022\t\n\005OTHER\020\001\022\n\n\006HYBRID\020\002\022\t\n\005WORLD\020\003b\006p"
-    "roto3"
+    "tart_location_id\030\004 \001(\004\022\035\n\007players\030\005 \003(\0132"
+    "\014.game.Player\022<\n\021players_locations\030\006 \003(\013"
+    "2!.game.World.PlayersLocationsEntry\0327\n\025P"
+    "layersLocationsEntry\022\013\n\003key\030\001 \001(\004\022\r\n\005val"
+    "ue\030\002 \001(\004:\0028\001\"\373\002\n\013ClientWorld\022\031\n\005items\030\001 "
+    "\003(\0132\n.game.Item\022\027\n\004npcs\030\002 \003(\0132\t.game.Npc"
+    "\022!\n\tlocations\030\003 \003(\0132\016.game.Location\022\031\n\021s"
+    "tart_location_id\030\004 \001(\004\022/\n\007players\030\005 \003(\0132"
+    "\036.game.ClientWorld.PlayersEntry\022B\n\021playe"
+    "rs_locations\030\006 \003(\0132\'.game.ClientWorld.Pl"
+    "ayersLocationsEntry\022\034\n\006myself\030\007 \001(\0132\014.ga"
+    "me.Player\032.\n\014PlayersEntry\022\013\n\003key\030\001 \001(\004\022\r"
+    "\n\005value\030\002 \001(\t:\0028\001\0327\n\025PlayersLocationsEnt"
+    "ry\022\013\n\003key\030\001 \001(\004\022\r\n\005value\030\002 \001(\004:\0028\001\"\264\005\n\nW"
+    "orldDelta\022@\n\030player_inventory_changed\030\001 "
+    "\001(\0132\034.game.PlayerInventoryChangedH\000\022:\n\025n"
+    "pc_inventory_changed\030\002 \001(\0132\031.game.NpcInv"
+    "entoryChangedH\000\0222\n\021player_hp_changed\030\003 \001"
+    "(\0132\025.game.PlayerHpChangedH\000\022,\n\016npc_hp_ch"
+    "anged\030\004 \001(\0132\022.game.NpcHpChangedH\000\022)\n\014pla"
+    "yer_moved\030\005 \001(\0132\021.game.PlayerMovedH\000\022#\n\t"
+    "npc_moved\030\006 \001(\0132\016.game.NpcMovedH\000\022\'\n\013doo"
+    "r_unlock\030\007 \001(\0132\020.game.DoorUnlockH\000\0228\n\024pl"
+    "ayer_state_changed\030\010 \001(\0132\030.game.PlayerSt"
+    "ateChangedH\000\0221\n\020message_received\030\t \001(\0132\025"
+    ".game.MessageReceivedH\000\022+\n\020world_initiat"
+    "ion\030\n \001(\0132\017.game.InitWorldH\000\0221\n\020player_c"
+    "onnected\030\013 \001(\0132\025.game.PlayerConnectedH\000\022"
+    "7\n\023player_disconnected\030\014 \001(\0132\030.game.Play"
+    "erDisconnectedH\000\0229\n\024unauthorized_command"
+    "\030\r \001(\0132\031.game.UnauthorizedCommandH\000B\014\n\nd"
+    "elta_type\"5\n\017MessageReceived\022\021\n\tplayer_i"
+    "d\030\001 \001(\004\022\017\n\007message\030\002 \001(\t\"\'\n\023Unauthorized"
+    "Command\022\020\n\010response\030\001 \001(\t\"9\n\017PlayerConne"
+    "cted\022\021\n\tplayer_id\030\001 \001(\004\022\023\n\013player_name\030\002"
+    " \001(\t\"\'\n\022PlayerDisconnected\022\021\n\tplayer_id\030"
+    "\001 \001(\004\"h\n\026PlayerInventoryChanged\022\021\n\tplaye"
+    "r_id\030\001 \001(\004\022\017\n\007item_id\030\002 \001(\004\022*\n\013Interacti"
+    "on\030\003 \001(\0162\025.game.InteractionType\"b\n\023NpcIn"
+    "ventoryChanged\022\016\n\006npc_id\030\001 \001(\004\022\017\n\007item_i"
+    "d\030\002 \001(\004\022*\n\013Interaction\030\003 \001(\0162\025.game.Inte"
+    "ractionType\"4\n\017PlayerHpChanged\022\021\n\tplayer"
+    "_id\030\001 \001(\004\022\016\n\006new_hp\030\002 \001(\r\".\n\014NpcHpChange"
+    "d\022\016\n\006npc_id\030\001 \001(\004\022\016\n\006new_hp\030\002 \001(\r\"9\n\013Pla"
+    "yerMoved\022\021\n\tplayer_id\030\001 \001(\004\022\027\n\017new_locat"
+    "ion_id\030\002 \001(\004\"3\n\010NpcMoved\022\016\n\006npc_id\030\001 \001(\004"
+    "\022\027\n\017new_location_id\030\002 \001(\004\"0\n\nDoorUnlock\022"
+    "\017\n\007exit_id\030\001 \001(\004\022\021\n\tplayer_id\030\002 \001(\004\"M\n\022P"
+    "layerStateChanged\022\021\n\tplayer_id\030\001 \001(\004\022$\n\t"
+    "new_state\030\002 \001(\0162\021.game.PlayerState\"\362\002\n\tI"
+    "nitWorld\022\031\n\005items\030\001 \003(\0132\n.game.Item\022\027\n\004n"
+    "pcs\030\002 \003(\0132\t.game.Npc\022!\n\tlocations\030\003 \003(\0132"
+    "\016.game.Location\022\031\n\021start_location_id\030\004 \001"
+    "(\004\022-\n\007players\030\005 \003(\0132\034.game.InitWorld.Pla"
+    "yersEntry\022@\n\021players_locations\030\006 \003(\0132%.g"
+    "ame.InitWorld.PlayersLocationsEntry\022\031\n\003y"
+    "ou\030\007 \001(\0132\014.game.Player\032.\n\014PlayersEntry\022\013"
+    "\n\003key\030\001 \001(\004\022\r\n\005value\030\002 \001(\t:\0028\001\0327\n\025Player"
+    "sLocationsEntry\022\013\n\003key\030\001 \001(\004\022\r\n\005value\030\002 "
+    "\001(\004:\0028\001\"\347\001\n\014CommandDelta\0227\n\023interaction_"
+    "command\030\001 \001(\0132\030.game.InteractionCommandH"
+    "\000\022-\n\016attack_command\030\002 \001(\0132\023.game.AttackC"
+    "ommandH\000\022/\n\017message_command\030\003 \001(\0132\024.game"
+    ".MessageCommandH\000\0220\n\020name_set_command\030\004 "
+    "\001(\0132\024.game.NameSetCommandH\000B\014\n\ndelta_typ"
+    "e\"L\n\022InteractionCommand\022#\n\004type\030\001 \001(\0162\025."
+    "game.InteractionType\022\021\n\ttarget_id\030\002 \001(\004\""
+    "3\n\rAttackCommand\022\"\n\006action\030\001 \001(\0162\022.game."
+    "CombatAction\"!\n\016MessageCommand\022\017\n\007messag"
+    "e\030\001 \001(\t\"\036\n\016NameSetCommand\022\014\n\004name\030\001 \001(\t*"
+    "F\n\tRcvStatus\022\020\n\014DISCONNECTED\020\000\022\016\n\nWOULDB"
+    "LOCK\020\001\022\017\n\013PARSE_ERROR\020\002\022\006\n\002OK\020\003*d\n\013Comma"
+    "ndType\022\027\n\023INTERACTION_COMMAND\020\000\022\022\n\016ATTAC"
+    "K_COMMAND\020\001\022\023\n\017MESSAGE_COMMAND\020\002\022\023\n\017INVA"
+    "LID_COMMAND\020\003*p\n\017InteractionType\022\010\n\004MOVE"
+    "\020\000\022\013\n\007PICK_UP\020\001\022\010\n\004DROP\020\002\022\010\n\004OPEN\020\003\022\t\n\005S"
+    "PEAK\020\004\022\n\n\006ATTACK\020\005\022\007\n\003USE\020\006\022\010\n\004SELL\020\007\022\010\n"
+    "\004GIVE\020\010*4\n\013PlayerState\022\014\n\010CHILLING\020\000\022\r\n\t"
+    "IN_COMBAT\020\001\022\010\n\004DEAD\020\002*\207\001\n\014CombatAction\022\020"
+    "\n\014LIGHT_ATTACK\020\000\022\021\n\rSTRONG_ATTACK\020\001\022\017\n\013C"
+    "ONCENTRATE\020\002\022\010\n\004FLEE\020\003\022\017\n\013HALF_DEFEND\020\004\022"
+    "\017\n\013FULL_DEFEND\020\005\022\013\n\007COUNTER\020\006\022\010\n\004NONE\020\007*"
+    "5\n\tDirection\022\t\n\005NORTH\020\000\022\010\n\004EAST\020\001\022\010\n\004WES"
+    "T\020\002\022\t\n\005SOUTH\020\003*O\n\nEffectType\022\010\n\004HEAL\020\000\022\n"
+    "\n\006DAMAGE\020\001\022\017\n\013ENERGY_BUFF\020\002\022\021\n\rENERGY_DE"
+    "BUFF\020\003\022\007\n\003KEY\020\004*8\n\013Temperament\022\013\n\007PASSIV"
+    "E\020\000\022\r\n\tDEFENSIVE\020\001\022\r\n\tAGGRESIVE\020\002*3\n\005Usa"
+    "ge\022\010\n\004SELF\020\000\022\t\n\005OTHER\020\001\022\n\n\006HYBRID\020\002\022\t\n\005W"
+    "ORLD\020\003b\006proto3"
 };
 static ::absl::once_flag descriptor_table_template_2eproto_once;
 PROTOBUF_CONSTINIT const ::_pbi::DescriptorTable descriptor_table_template_2eproto = {
     false,
     false,
-    3885,
+    4654,
     descriptor_table_protodef_template_2eproto,
     "template.proto",
     &descriptor_table_template_2eproto_once,
     nullptr,
     0,
-    29,
+    35,
     schemas,
     file_message_globals,
     TableStruct_template_2eproto::offsets,
@@ -7852,40 +8926,40 @@ void Player::InternalSwap(Player* PROTOBUF_RESTRICT PROTOBUF_NONNULL other) {
 // ===================================================================
 
 #if defined(PROTOBUF_CUSTOM_VTABLE)
-World_PlayersEntry_DoNotUse::World_PlayersEntry_DoNotUse() : SuperType(World_PlayersEntry_DoNotUse_get_class_data()) {}
-World_PlayersEntry_DoNotUse::World_PlayersEntry_DoNotUse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
-    : SuperType(arena, World_PlayersEntry_DoNotUse_get_class_data()) {}
+World_PlayersLocationsEntry_DoNotUse::World_PlayersLocationsEntry_DoNotUse() : SuperType(World_PlayersLocationsEntry_DoNotUse_get_class_data()) {}
+World_PlayersLocationsEntry_DoNotUse::World_PlayersLocationsEntry_DoNotUse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
+    : SuperType(arena, World_PlayersLocationsEntry_DoNotUse_get_class_data()) {}
 #else   // PROTOBUF_CUSTOM_VTABLE
-World_PlayersEntry_DoNotUse::World_PlayersEntry_DoNotUse() : SuperType() {}
-World_PlayersEntry_DoNotUse::World_PlayersEntry_DoNotUse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena) : SuperType(arena) {}
+World_PlayersLocationsEntry_DoNotUse::World_PlayersLocationsEntry_DoNotUse() : SuperType() {}
+World_PlayersLocationsEntry_DoNotUse::World_PlayersLocationsEntry_DoNotUse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena) : SuperType(arena) {}
 #endif  // PROTOBUF_CUSTOM_VTABLE
 #ifndef PROTOBUF_MESSAGE_GLOBALS
 PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 const
-    ::google::protobuf::internal::ClassDataFull World_PlayersEntry_DoNotUse_class_data_ =
-        World_PlayersEntry_DoNotUse::InternalGenerateClassData_(World_PlayersEntry_DoNotUse_globals_._default);
+    ::google::protobuf::internal::ClassDataFull World_PlayersLocationsEntry_DoNotUse_class_data_ =
+        World_PlayersLocationsEntry_DoNotUse::InternalGenerateClassData_(World_PlayersLocationsEntry_DoNotUse_globals_._default);
 
 // including ~ all the vtables and everything they use become part
 // of the same ~ SCC.
 PROTOBUF_ATTRIBUTE_WEAK const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
-World_PlayersEntry_DoNotUse::GetClassData() const {
-  ::google::protobuf::internal::PrefetchToLocalCache(&World_PlayersEntry_DoNotUse_class_data_);
-  ::google::protobuf::internal::PrefetchToLocalCache(World_PlayersEntry_DoNotUse_class_data_.tc_table);
-  return World_PlayersEntry_DoNotUse_class_data_.base();
+World_PlayersLocationsEntry_DoNotUse::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&World_PlayersLocationsEntry_DoNotUse_class_data_);
+  ::google::protobuf::internal::PrefetchToLocalCache(World_PlayersLocationsEntry_DoNotUse_class_data_.tc_table);
+  return World_PlayersLocationsEntry_DoNotUse_class_data_.base();
 }
 #else
 PROTOBUF_ATTRIBUTE_WEAK const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
-World_PlayersEntry_DoNotUse::GetClassData() const {
-  ::google::protobuf::internal::PrefetchToLocalCache(&World_PlayersEntry_DoNotUse_globals_);
+World_PlayersLocationsEntry_DoNotUse::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&World_PlayersLocationsEntry_DoNotUse_globals_);
   ::google::protobuf::internal::PrefetchToLocalCache(
-      ::google::protobuf::internal::MessageGlobalsBase::ToParseTableBase(&World_PlayersEntry_DoNotUse_globals_));
-  return World_PlayersEntry_DoNotUse_globals_.GetClassData();
+      ::google::protobuf::internal::MessageGlobalsBase::ToParseTableBase(&World_PlayersLocationsEntry_DoNotUse_globals_));
+  return World_PlayersLocationsEntry_DoNotUse_globals_.GetClassData();
 }
 #endif  // !PROTOBUF_MESSAGE_GLOBALS
 #ifndef PROTOBUF_MESSAGE_GLOBALS
 PROTOBUF_CONSTINIT
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 const World_PlayersEntry_DoNotUse::ParseTableT_
-    World_PlayersEntry_DoNotUse::_table_ =
-        World_PlayersEntry_DoNotUse::InternalGenerateParseTable_(World_PlayersEntry_DoNotUse_class_data_.base());
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 const World_PlayersLocationsEntry_DoNotUse::ParseTableT_
+    World_PlayersLocationsEntry_DoNotUse::_table_ =
+        World_PlayersLocationsEntry_DoNotUse::InternalGenerateParseTable_(World_PlayersLocationsEntry_DoNotUse_class_data_.base());
 #endif  // !PROTOBUF_MESSAGE_GLOBALS
 // ===================================================================
 
@@ -7931,6 +9005,13 @@ PROTOBUF_NDEBUG_INLINE World::Impl_::Impl_(
               PROTOBUF_FIELD_OFFSET(::game::World, _impl_.players_)>()
           , from.players_
         }
+        ,
+        players_locations_ {
+          visibility, ::_pbi::InternalMetadataOffset::Build<
+              ::game::World,
+              PROTOBUF_FIELD_OFFSET(::game::World, _impl_.players_locations_)>()
+          , from.players_locations_
+        }
      {}
 
 World::World(
@@ -7973,6 +9054,11 @@ PROTOBUF_NDEBUG_INLINE World::Impl_::Impl_(
         players_ { visibility, ::_pbi::InternalMetadataOffset::Build<
             ::game::World,
             PROTOBUF_FIELD_OFFSET(::game::World, _impl_.players_)>()
+         }
+        ,
+        players_locations_ { visibility, ::_pbi::InternalMetadataOffset::Build<
+            ::game::World,
+            PROTOBUF_FIELD_OFFSET(::game::World, _impl_.players_locations_)>()
          }
      {}
 
@@ -8028,7 +9114,7 @@ PROTOBUF_NOINLINE void World::Clear() {
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  if (BatchCheckHasBit(cached_has_bits, 0x00000007U)) {
+  if (BatchCheckHasBit(cached_has_bits, 0x0000000fU)) {
     if (CheckHasBit(cached_has_bits, 0x00000001U)) {
       _impl_.items_.Clear();
     }
@@ -8038,11 +9124,14 @@ PROTOBUF_NOINLINE void World::Clear() {
     if (CheckHasBit(cached_has_bits, 0x00000004U)) {
       _impl_.locations_.Clear();
     }
-  }
-  if (BatchCheckHasBit(cached_has_bits, 0x00000018U)) {
-    _impl_.start_location_id_ = ::uint64_t{0u};
-    if (CheckHasBit(cached_has_bits, 0x00000010U)) {
+    if (CheckHasBit(cached_has_bits, 0x00000008U)) {
       _impl_.players_.Clear();
+    }
+  }
+  if (BatchCheckHasBit(cached_has_bits, 0x00000030U)) {
+    _impl_.start_location_id_ = ::uint64_t{0u};
+    if (CheckHasBit(cached_has_bits, 0x00000020U)) {
+      _impl_.players_locations_.Clear();
     }
   }
   _impl_._has_bits_.Clear();
@@ -8108,7 +9197,7 @@ PROTOBUF_NOINLINE void World::Clear() {
   }
 
   // uint64 start_location_id = 4;
-  if (CheckHasBit(cached_has_bits, 0x00000008U)) {
+  if (CheckHasBit(cached_has_bits, 0x00000010U)) {
     if (this_._internal_start_location_id() != 0) {
       target = stream->EnsureSpace(target);
       target = ::_pbi::WireFormatLite::WriteUInt64ToArray(
@@ -8116,24 +9205,37 @@ PROTOBUF_NOINLINE void World::Clear() {
     }
   }
 
-  // map<uint64, uint64> players = 5;
-  if (CheckHasBit(cached_has_bits, 0x00000010U)) {
-    if (!this_._internal_players().empty()) {
+  // repeated .game.Player players = 5;
+  if (CheckHasBit(cached_has_bits, 0x00000008U)) {
+    for (unsigned i = 0, n = static_cast<unsigned>(
+                             this_._internal_players_size());
+         i < n; i++) {
+      const auto& repfield = this_._internal_players().Get(i);
+      target =
+          ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+              5, repfield, repfield.GetCachedSize(),
+              target, stream);
+    }
+  }
+
+  // map<uint64, uint64> players_locations = 6;
+  if (CheckHasBit(cached_has_bits, 0x00000020U)) {
+    if (!this_._internal_players_locations().empty()) {
       using MapType = ::google::protobuf::Map<::uint64_t, ::uint64_t>;
       using WireHelper = _pbi::MapEntryFuncs<::uint64_t, ::uint64_t,
                                      _pbi::WireFormatLite::TYPE_UINT64,
                                      _pbi::WireFormatLite::TYPE_UINT64>;
-      const auto& field = this_._internal_players();
+      const auto& field = this_._internal_players_locations();
 
       if (stream->IsSerializationDeterministic() && field.size() > 1) {
         for (const auto& entry : ::google::protobuf::internal::MapSorterFlat<MapType>(field)) {
           target = WireHelper::InternalSerialize(
-              5, entry.first, entry.second, target, stream);
+              6, entry.first, entry.second, target, stream);
         }
       } else {
         for (const auto& entry : field) {
           target = WireHelper::InternalSerialize(
-              5, entry.first, entry.second, target, stream);
+              6, entry.first, entry.second, target, stream);
         }
       }
     }
@@ -8164,7 +9266,7 @@ PROTOBUF_NOINLINE void World::Clear() {
 
   ::_pbi::Prefetch5LinesFrom7Lines(&this_);
   cached_has_bits = this_._impl_._has_bits_[0];
-  if (BatchCheckHasBit(cached_has_bits, 0x0000001fU)) {
+  if (BatchCheckHasBit(cached_has_bits, 0x0000003fU)) {
     // repeated .game.Item items = 1;
     if (CheckHasBit(cached_has_bits, 0x00000001U)) {
       total_size += 1UL * this_._internal_items_size();
@@ -8186,18 +9288,25 @@ PROTOBUF_NOINLINE void World::Clear() {
         total_size += ::google::protobuf::internal::WireFormatLite::MessageSize(msg);
       }
     }
-    // uint64 start_location_id = 4;
+    // repeated .game.Player players = 5;
     if (CheckHasBit(cached_has_bits, 0x00000008U)) {
+      total_size += 1UL * this_._internal_players_size();
+      for (const auto& msg : this_._internal_players()) {
+        total_size += ::google::protobuf::internal::WireFormatLite::MessageSize(msg);
+      }
+    }
+    // uint64 start_location_id = 4;
+    if (CheckHasBit(cached_has_bits, 0x00000010U)) {
       if (this_._internal_start_location_id() != 0) {
         total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(
             this_._internal_start_location_id());
       }
     }
-    // map<uint64, uint64> players = 5;
-    if (CheckHasBit(cached_has_bits, 0x00000010U)) {
+    // map<uint64, uint64> players_locations = 6;
+    if (CheckHasBit(cached_has_bits, 0x00000020U)) {
       total_size +=
-          1 * ::google::protobuf::internal::FromIntSize(this_._internal_players_size());
-      for (const auto& entry : this_._internal_players()) {
+          1 * ::google::protobuf::internal::FromIntSize(this_._internal_players_locations_size());
+      for (const auto& entry : this_._internal_players_locations()) {
         total_size += _pbi::MapEntryFuncs<::uint64_t, ::uint64_t,
                                        _pbi::WireFormatLite::TYPE_UINT64,
                                        _pbi::WireFormatLite::TYPE_UINT64>::ByteSizeLong(entry.first, entry.second);
@@ -8222,7 +9331,7 @@ void World::MergeImpl(::google::protobuf::MessageLite& to_msg,
   (void)cached_has_bits;
 
   cached_has_bits = from._impl_._has_bits_[0];
-  if (BatchCheckHasBit(cached_has_bits, 0x0000001fU)) {
+  if (BatchCheckHasBit(cached_has_bits, 0x0000003fU)) {
     if (CheckHasBit(cached_has_bits, 0x00000001U)) {
       _this->_internal_mutable_items()->InternalMergeFromWithArena(
           ::google::protobuf::MessageLite::internal_visibility(), arena,
@@ -8239,12 +9348,17 @@ void World::MergeImpl(::google::protobuf::MessageLite& to_msg,
           from._internal_locations());
     }
     if (CheckHasBit(cached_has_bits, 0x00000008U)) {
+      _this->_internal_mutable_players()->InternalMergeFromWithArena(
+          ::google::protobuf::MessageLite::internal_visibility(), arena,
+          from._internal_players());
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000010U)) {
       if (from._internal_start_location_id() != 0) {
         _this->_impl_.start_location_id_ = from._impl_.start_location_id_;
       }
     }
-    if (CheckHasBit(cached_has_bits, 0x00000010U)) {
-      _this->_impl_.players_.MergeFrom(from._impl_.players_);
+    if (CheckHasBit(cached_has_bits, 0x00000020U)) {
+      _this->_impl_.players_locations_.MergeFrom(from._impl_.players_locations_);
     }
   }
   _this->_impl_._has_bits_[0] |= cached_has_bits;
@@ -8267,11 +9381,572 @@ void World::InternalSwap(World* PROTOBUF_RESTRICT PROTOBUF_NONNULL other) {
   _impl_.items_.InternalSwap(&other->_impl_.items_);
   _impl_.npcs_.InternalSwap(&other->_impl_.npcs_);
   _impl_.locations_.InternalSwap(&other->_impl_.locations_);
-  swap(_impl_.start_location_id_, other->_impl_.start_location_id_);
   _impl_.players_.InternalSwap(&other->_impl_.players_);
+  swap(_impl_.start_location_id_, other->_impl_.start_location_id_);
+  _impl_.players_locations_.InternalSwap(&other->_impl_.players_locations_);
 }
 
 ::google::protobuf::Metadata World::GetMetadata() const {
+  return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
+}
+// ===================================================================
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+ClientWorld_PlayersEntry_DoNotUse::ClientWorld_PlayersEntry_DoNotUse() : SuperType(ClientWorld_PlayersEntry_DoNotUse_get_class_data()) {}
+ClientWorld_PlayersEntry_DoNotUse::ClientWorld_PlayersEntry_DoNotUse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
+    : SuperType(arena, ClientWorld_PlayersEntry_DoNotUse_get_class_data()) {}
+#else   // PROTOBUF_CUSTOM_VTABLE
+ClientWorld_PlayersEntry_DoNotUse::ClientWorld_PlayersEntry_DoNotUse() : SuperType() {}
+ClientWorld_PlayersEntry_DoNotUse::ClientWorld_PlayersEntry_DoNotUse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena) : SuperType(arena) {}
+#endif  // PROTOBUF_CUSTOM_VTABLE
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 const
+    ::google::protobuf::internal::ClassDataFull ClientWorld_PlayersEntry_DoNotUse_class_data_ =
+        ClientWorld_PlayersEntry_DoNotUse::InternalGenerateClassData_(ClientWorld_PlayersEntry_DoNotUse_globals_._default);
+
+// including ~ all the vtables and everything they use become part
+// of the same ~ SCC.
+PROTOBUF_ATTRIBUTE_WEAK const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+ClientWorld_PlayersEntry_DoNotUse::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&ClientWorld_PlayersEntry_DoNotUse_class_data_);
+  ::google::protobuf::internal::PrefetchToLocalCache(ClientWorld_PlayersEntry_DoNotUse_class_data_.tc_table);
+  return ClientWorld_PlayersEntry_DoNotUse_class_data_.base();
+}
+#else
+PROTOBUF_ATTRIBUTE_WEAK const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+ClientWorld_PlayersEntry_DoNotUse::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&ClientWorld_PlayersEntry_DoNotUse_globals_);
+  ::google::protobuf::internal::PrefetchToLocalCache(
+      ::google::protobuf::internal::MessageGlobalsBase::ToParseTableBase(&ClientWorld_PlayersEntry_DoNotUse_globals_));
+  return ClientWorld_PlayersEntry_DoNotUse_globals_.GetClassData();
+}
+#endif  // !PROTOBUF_MESSAGE_GLOBALS
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_CONSTINIT
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 const ClientWorld_PlayersEntry_DoNotUse::ParseTableT_
+    ClientWorld_PlayersEntry_DoNotUse::_table_ =
+        ClientWorld_PlayersEntry_DoNotUse::InternalGenerateParseTable_(ClientWorld_PlayersEntry_DoNotUse_class_data_.base());
+#endif  // !PROTOBUF_MESSAGE_GLOBALS
+// ===================================================================
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+ClientWorld_PlayersLocationsEntry_DoNotUse::ClientWorld_PlayersLocationsEntry_DoNotUse() : SuperType(ClientWorld_PlayersLocationsEntry_DoNotUse_get_class_data()) {}
+ClientWorld_PlayersLocationsEntry_DoNotUse::ClientWorld_PlayersLocationsEntry_DoNotUse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
+    : SuperType(arena, ClientWorld_PlayersLocationsEntry_DoNotUse_get_class_data()) {}
+#else   // PROTOBUF_CUSTOM_VTABLE
+ClientWorld_PlayersLocationsEntry_DoNotUse::ClientWorld_PlayersLocationsEntry_DoNotUse() : SuperType() {}
+ClientWorld_PlayersLocationsEntry_DoNotUse::ClientWorld_PlayersLocationsEntry_DoNotUse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena) : SuperType(arena) {}
+#endif  // PROTOBUF_CUSTOM_VTABLE
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 const
+    ::google::protobuf::internal::ClassDataFull ClientWorld_PlayersLocationsEntry_DoNotUse_class_data_ =
+        ClientWorld_PlayersLocationsEntry_DoNotUse::InternalGenerateClassData_(ClientWorld_PlayersLocationsEntry_DoNotUse_globals_._default);
+
+// including ~ all the vtables and everything they use become part
+// of the same ~ SCC.
+PROTOBUF_ATTRIBUTE_WEAK const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+ClientWorld_PlayersLocationsEntry_DoNotUse::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&ClientWorld_PlayersLocationsEntry_DoNotUse_class_data_);
+  ::google::protobuf::internal::PrefetchToLocalCache(ClientWorld_PlayersLocationsEntry_DoNotUse_class_data_.tc_table);
+  return ClientWorld_PlayersLocationsEntry_DoNotUse_class_data_.base();
+}
+#else
+PROTOBUF_ATTRIBUTE_WEAK const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+ClientWorld_PlayersLocationsEntry_DoNotUse::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&ClientWorld_PlayersLocationsEntry_DoNotUse_globals_);
+  ::google::protobuf::internal::PrefetchToLocalCache(
+      ::google::protobuf::internal::MessageGlobalsBase::ToParseTableBase(&ClientWorld_PlayersLocationsEntry_DoNotUse_globals_));
+  return ClientWorld_PlayersLocationsEntry_DoNotUse_globals_.GetClassData();
+}
+#endif  // !PROTOBUF_MESSAGE_GLOBALS
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_CONSTINIT
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 const ClientWorld_PlayersLocationsEntry_DoNotUse::ParseTableT_
+    ClientWorld_PlayersLocationsEntry_DoNotUse::_table_ =
+        ClientWorld_PlayersLocationsEntry_DoNotUse::InternalGenerateParseTable_(ClientWorld_PlayersLocationsEntry_DoNotUse_class_data_.base());
+#endif  // !PROTOBUF_MESSAGE_GLOBALS
+// ===================================================================
+
+ClientWorld::ClientWorld(::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(arena, ClientWorld_get_class_data()) {
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:game.ClientWorld)
+}
+PROTOBUF_NDEBUG_INLINE ClientWorld::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    [[maybe_unused]] ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
+    [[maybe_unused]] const ::game::ClientWorld& from_msg)
+      : _has_bits_{from._has_bits_},
+        _cached_size_{0},
+        items_ {
+          visibility, ::_pbi::InternalMetadataOffset::Build<
+              ::game::ClientWorld,
+              PROTOBUF_FIELD_OFFSET(::game::ClientWorld, _impl_.items_)>()
+          , from.items_
+        }
+        ,
+        npcs_ {
+          visibility, ::_pbi::InternalMetadataOffset::Build<
+              ::game::ClientWorld,
+              PROTOBUF_FIELD_OFFSET(::game::ClientWorld, _impl_.npcs_)>()
+          , from.npcs_
+        }
+        ,
+        locations_ {
+          visibility, ::_pbi::InternalMetadataOffset::Build<
+              ::game::ClientWorld,
+              PROTOBUF_FIELD_OFFSET(::game::ClientWorld, _impl_.locations_)>()
+          , from.locations_
+        }
+        ,
+        players_ {
+          visibility, ::_pbi::InternalMetadataOffset::Build<
+              ::game::ClientWorld,
+              PROTOBUF_FIELD_OFFSET(::game::ClientWorld, _impl_.players_)>()
+          , from.players_
+        }
+        ,
+        players_locations_ {
+          visibility, ::_pbi::InternalMetadataOffset::Build<
+              ::game::ClientWorld,
+              PROTOBUF_FIELD_OFFSET(::game::ClientWorld, _impl_.players_locations_)>()
+          , from.players_locations_
+        }
+     {}
+
+ClientWorld::ClientWorld(
+    ::google::protobuf::Arena* PROTOBUF_NULLABLE arena,
+    const ClientWorld& from)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(arena, ClientWorld_get_class_data()) {
+
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  ClientWorld* const _this = this;
+  (void)_this;
+  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
+      from._internal_metadata_);
+  new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
+  ::uint32_t cached_has_bits = _impl_._has_bits_[0];
+  _impl_.myself_ = (CheckHasBit(cached_has_bits, 0x00000008U))
+                ? ::google::protobuf::Message::CopyConstruct(arena, *from._impl_.myself_)
+                : nullptr;
+  _impl_.start_location_id_ = from._impl_.start_location_id_;
+
+  // @@protoc_insertion_point(copy_constructor:game.ClientWorld)
+}
+PROTOBUF_NDEBUG_INLINE ClientWorld::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    [[maybe_unused]] ::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
+      : _cached_size_{0},
+        items_ { visibility, ::_pbi::InternalMetadataOffset::Build<
+            ::game::ClientWorld,
+            PROTOBUF_FIELD_OFFSET(::game::ClientWorld, _impl_.items_)>()
+         }
+        ,
+        npcs_ { visibility, ::_pbi::InternalMetadataOffset::Build<
+            ::game::ClientWorld,
+            PROTOBUF_FIELD_OFFSET(::game::ClientWorld, _impl_.npcs_)>()
+         }
+        ,
+        locations_ { visibility, ::_pbi::InternalMetadataOffset::Build<
+            ::game::ClientWorld,
+            PROTOBUF_FIELD_OFFSET(::game::ClientWorld, _impl_.locations_)>()
+         }
+        ,
+        players_ { visibility, ::_pbi::InternalMetadataOffset::Build<
+            ::game::ClientWorld,
+            PROTOBUF_FIELD_OFFSET(::game::ClientWorld, _impl_.players_)>()
+         }
+        ,
+        players_locations_ { visibility, ::_pbi::InternalMetadataOffset::Build<
+            ::game::ClientWorld,
+            PROTOBUF_FIELD_OFFSET(::game::ClientWorld, _impl_.players_locations_)>()
+         }
+     {}
+
+inline void ClientWorld::SharedCtor(::_pb::Arena* PROTOBUF_NULLABLE arena) {
+  new (&_impl_) Impl_(internal_visibility(), arena);
+  ::memset(reinterpret_cast<char*>(&_impl_) +
+               offsetof(Impl_, myself_),
+           0,
+           offsetof(Impl_, start_location_id_) -
+               offsetof(Impl_, myself_) +
+               sizeof(Impl_::start_location_id_));
+}
+ClientWorld::~ClientWorld() {
+  // @@protoc_insertion_point(destructor:game.ClientWorld)
+  SharedDtor(*this);
+}
+inline void ClientWorld::SharedDtor(MessageLite& self) {
+  ClientWorld& this_ = static_cast<ClientWorld&>(self);
+  if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
+    this_.CheckHasBitConsistency();
+  }
+  this_._internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  ABSL_DCHECK(this_.GetArena() == nullptr);
+  delete this_._impl_.myself_;
+  this_._impl_.~Impl_();
+}
+
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 const
+    ::google::protobuf::internal::ClassDataFull ClientWorld_class_data_ =
+        ClientWorld::InternalGenerateClassData_(ClientWorld_globals_._default);
+
+PROTOBUF_ATTRIBUTE_WEAK const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+ClientWorld::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&ClientWorld_class_data_);
+  ::google::protobuf::internal::PrefetchToLocalCache(ClientWorld_class_data_.tc_table);
+  return ClientWorld_class_data_.base();
+}
+#else
+PROTOBUF_ATTRIBUTE_WEAK const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+ClientWorld::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&ClientWorld_globals_);
+  ::google::protobuf::internal::PrefetchToLocalCache(
+      ::google::protobuf::internal::MessageGlobalsBase::ToParseTableBase(&ClientWorld_globals_));
+  return ClientWorld_globals_.GetClassData();
+}
+#endif  // !PROTOBUF_MESSAGE_GLOBALS
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_CONSTINIT
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 const ClientWorld::ParseTableT_
+    ClientWorld::_table_ =
+        ClientWorld::InternalGenerateParseTable_(ClientWorld_class_data_.base());
+#endif  // !PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_NOINLINE void ClientWorld::Clear() {
+// @@protoc_insertion_point(message_clear_start:game.ClientWorld)
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (BatchCheckHasBit(cached_has_bits, 0x0000000fU)) {
+    if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+      _impl_.items_.Clear();
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000002U)) {
+      _impl_.npcs_.Clear();
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000004U)) {
+      _impl_.locations_.Clear();
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000008U)) {
+      ABSL_DCHECK(_impl_.myself_ != nullptr);
+      _impl_.myself_->Clear();
+    }
+  }
+  if (BatchCheckHasBit(cached_has_bits, 0x00000070U)) {
+    _impl_.start_location_id_ = ::uint64_t{0u};
+    if (CheckHasBit(cached_has_bits, 0x00000020U)) {
+      _impl_.players_.Clear();
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000040U)) {
+      _impl_.players_locations_.Clear();
+    }
+  }
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+}
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+::uint8_t* PROTOBUF_NONNULL ClientWorld::_InternalSerialize(
+    const ::google::protobuf::MessageLite& base, ::uint8_t* PROTOBUF_NONNULL target,
+    ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) {
+  const ClientWorld& this_ = static_cast<const ClientWorld&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+::uint8_t* PROTOBUF_NONNULL ClientWorld::_InternalSerialize(
+    ::uint8_t* PROTOBUF_NONNULL target,
+    ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
+  const ClientWorld& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
+    this_.CheckHasBitConsistency();
+  }
+  // @@protoc_insertion_point(serialize_to_array_start:game.ClientWorld)
+  ::uint32_t cached_has_bits = 0;
+  (void)cached_has_bits;
+
+  cached_has_bits = this_._impl_._has_bits_[0];
+  // repeated .game.Item items = 1;
+  if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+    for (unsigned i = 0, n = static_cast<unsigned>(
+                             this_._internal_items_size());
+         i < n; i++) {
+      const auto& repfield = this_._internal_items().Get(i);
+      target =
+          ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+              1, repfield, repfield.GetCachedSize(),
+              target, stream);
+    }
+  }
+
+  // repeated .game.Npc npcs = 2;
+  if (CheckHasBit(cached_has_bits, 0x00000002U)) {
+    for (unsigned i = 0, n = static_cast<unsigned>(
+                             this_._internal_npcs_size());
+         i < n; i++) {
+      const auto& repfield = this_._internal_npcs().Get(i);
+      target =
+          ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+              2, repfield, repfield.GetCachedSize(),
+              target, stream);
+    }
+  }
+
+  // repeated .game.Location locations = 3;
+  if (CheckHasBit(cached_has_bits, 0x00000004U)) {
+    for (unsigned i = 0, n = static_cast<unsigned>(
+                             this_._internal_locations_size());
+         i < n; i++) {
+      const auto& repfield = this_._internal_locations().Get(i);
+      target =
+          ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+              3, repfield, repfield.GetCachedSize(),
+              target, stream);
+    }
+  }
+
+  // uint64 start_location_id = 4;
+  if (CheckHasBit(cached_has_bits, 0x00000010U)) {
+    if (this_._internal_start_location_id() != 0) {
+      target = stream->EnsureSpace(target);
+      target = ::_pbi::WireFormatLite::WriteUInt64ToArray(
+          4, this_._internal_start_location_id(), target);
+    }
+  }
+
+  // map<uint64, string> players = 5;
+  if (CheckHasBit(cached_has_bits, 0x00000020U)) {
+    if (!this_._internal_players().empty()) {
+      using MapType = ::google::protobuf::Map<::uint64_t, ::std::string>;
+      using WireHelper = _pbi::MapEntryFuncs<::uint64_t, ::std::string,
+                                     _pbi::WireFormatLite::TYPE_UINT64,
+                                     _pbi::WireFormatLite::TYPE_STRING>;
+      const auto& field = this_._internal_players();
+
+      if (stream->IsSerializationDeterministic() && field.size() > 1) {
+        for (const auto& entry : ::google::protobuf::internal::MapSorterFlat<MapType>(field)) {
+          target = WireHelper::InternalSerialize(
+              5, entry.first, entry.second, target, stream);
+          ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+              entry.second.data(), static_cast<int>(entry.second.length()),
+ ::google::protobuf::internal::WireFormatLite::SERIALIZE, "game.ClientWorld.players");
+        }
+      } else {
+        for (const auto& entry : field) {
+          target = WireHelper::InternalSerialize(
+              5, entry.first, entry.second, target, stream);
+          ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+              entry.second.data(), static_cast<int>(entry.second.length()),
+ ::google::protobuf::internal::WireFormatLite::SERIALIZE, "game.ClientWorld.players");
+        }
+      }
+    }
+  }
+
+  // map<uint64, uint64> players_locations = 6;
+  if (CheckHasBit(cached_has_bits, 0x00000040U)) {
+    if (!this_._internal_players_locations().empty()) {
+      using MapType = ::google::protobuf::Map<::uint64_t, ::uint64_t>;
+      using WireHelper = _pbi::MapEntryFuncs<::uint64_t, ::uint64_t,
+                                     _pbi::WireFormatLite::TYPE_UINT64,
+                                     _pbi::WireFormatLite::TYPE_UINT64>;
+      const auto& field = this_._internal_players_locations();
+
+      if (stream->IsSerializationDeterministic() && field.size() > 1) {
+        for (const auto& entry : ::google::protobuf::internal::MapSorterFlat<MapType>(field)) {
+          target = WireHelper::InternalSerialize(
+              6, entry.first, entry.second, target, stream);
+        }
+      } else {
+        for (const auto& entry : field) {
+          target = WireHelper::InternalSerialize(
+              6, entry.first, entry.second, target, stream);
+        }
+      }
+    }
+  }
+
+  // .game.Player myself = 7;
+  if (CheckHasBit(cached_has_bits, 0x00000008U)) {
+    target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+        7, *this_._impl_.myself_, this_._impl_.myself_->GetCachedSize(), target,
+        stream);
+  }
+
+  if (ABSL_PREDICT_FALSE(this_._internal_metadata_.have_unknown_fields())) {
+    target =
+        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+            this_._internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:game.ClientWorld)
+  return target;
+}
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+::size_t ClientWorld::ByteSizeLong(const MessageLite& base) {
+  const ClientWorld& this_ = static_cast<const ClientWorld&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+::size_t ClientWorld::ByteSizeLong() const {
+  const ClientWorld& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  // @@protoc_insertion_point(message_byte_size_start:game.ClientWorld)
+  ::size_t total_size = 0;
+
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void)cached_has_bits;
+
+  ::_pbi::Prefetch5LinesFrom7Lines(&this_);
+  cached_has_bits = this_._impl_._has_bits_[0];
+  if (BatchCheckHasBit(cached_has_bits, 0x0000007fU)) {
+    // repeated .game.Item items = 1;
+    if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+      total_size += 1UL * this_._internal_items_size();
+      for (const auto& msg : this_._internal_items()) {
+        total_size += ::google::protobuf::internal::WireFormatLite::MessageSize(msg);
+      }
+    }
+    // repeated .game.Npc npcs = 2;
+    if (CheckHasBit(cached_has_bits, 0x00000002U)) {
+      total_size += 1UL * this_._internal_npcs_size();
+      for (const auto& msg : this_._internal_npcs()) {
+        total_size += ::google::protobuf::internal::WireFormatLite::MessageSize(msg);
+      }
+    }
+    // repeated .game.Location locations = 3;
+    if (CheckHasBit(cached_has_bits, 0x00000004U)) {
+      total_size += 1UL * this_._internal_locations_size();
+      for (const auto& msg : this_._internal_locations()) {
+        total_size += ::google::protobuf::internal::WireFormatLite::MessageSize(msg);
+      }
+    }
+    // .game.Player myself = 7;
+    if (CheckHasBit(cached_has_bits, 0x00000008U)) {
+      total_size += 1 +
+                    ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.myself_);
+    }
+    // uint64 start_location_id = 4;
+    if (CheckHasBit(cached_has_bits, 0x00000010U)) {
+      if (this_._internal_start_location_id() != 0) {
+        total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(
+            this_._internal_start_location_id());
+      }
+    }
+    // map<uint64, string> players = 5;
+    if (CheckHasBit(cached_has_bits, 0x00000020U)) {
+      total_size +=
+          1 * ::google::protobuf::internal::FromIntSize(this_._internal_players_size());
+      for (const auto& entry : this_._internal_players()) {
+        total_size += _pbi::MapEntryFuncs<::uint64_t, ::std::string,
+                                       _pbi::WireFormatLite::TYPE_UINT64,
+                                       _pbi::WireFormatLite::TYPE_STRING>::ByteSizeLong(entry.first, entry.second);
+      }
+    }
+    // map<uint64, uint64> players_locations = 6;
+    if (CheckHasBit(cached_has_bits, 0x00000040U)) {
+      total_size +=
+          1 * ::google::protobuf::internal::FromIntSize(this_._internal_players_locations_size());
+      for (const auto& entry : this_._internal_players_locations()) {
+        total_size += _pbi::MapEntryFuncs<::uint64_t, ::uint64_t,
+                                       _pbi::WireFormatLite::TYPE_UINT64,
+                                       _pbi::WireFormatLite::TYPE_UINT64>::ByteSizeLong(entry.first, entry.second);
+      }
+    }
+  }
+  return this_.MaybeComputeUnknownFieldsSize(total_size,
+                                             &this_._impl_._cached_size_);
+}
+
+void ClientWorld::MergeImpl(::google::protobuf::MessageLite& to_msg,
+                      const ::google::protobuf::MessageLite& from_msg) {
+   auto* const _this = static_cast<ClientWorld*>(&to_msg);
+  auto& from = static_cast<const ClientWorld&>(from_msg);
+  if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
+    from.CheckHasBitConsistency();
+  }
+  ::google::protobuf::Arena* arena = _this->GetArena();
+  // @@protoc_insertion_point(class_specific_merge_from_start:game.ClientWorld)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void)cached_has_bits;
+
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (BatchCheckHasBit(cached_has_bits, 0x0000007fU)) {
+    if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+      _this->_internal_mutable_items()->InternalMergeFromWithArena(
+          ::google::protobuf::MessageLite::internal_visibility(), arena,
+          from._internal_items());
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000002U)) {
+      _this->_internal_mutable_npcs()->InternalMergeFromWithArena(
+          ::google::protobuf::MessageLite::internal_visibility(), arena,
+          from._internal_npcs());
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000004U)) {
+      _this->_internal_mutable_locations()->InternalMergeFromWithArena(
+          ::google::protobuf::MessageLite::internal_visibility(), arena,
+          from._internal_locations());
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000008U)) {
+      ABSL_DCHECK(from._impl_.myself_ != nullptr);
+      if (_this->_impl_.myself_ == nullptr) {
+        _this->_impl_.myself_ = ::google::protobuf::Message::CopyConstruct(arena, *from._impl_.myself_);
+      } else {
+        _this->_impl_.myself_->MergeFrom(*from._impl_.myself_);
+      }
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000010U)) {
+      if (from._internal_start_location_id() != 0) {
+        _this->_impl_.start_location_id_ = from._impl_.start_location_id_;
+      }
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000020U)) {
+      _this->_impl_.players_.MergeFrom(from._impl_.players_);
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000040U)) {
+      _this->_impl_.players_locations_.MergeFrom(from._impl_.players_locations_);
+    }
+  }
+  _this->_impl_._has_bits_[0] |= cached_has_bits;
+  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
+      from._internal_metadata_);
+}
+
+void ClientWorld::CopyFrom(const ClientWorld& from) {
+  // @@protoc_insertion_point(class_specific_copy_from_start:game.ClientWorld)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+
+void ClientWorld::InternalSwap(ClientWorld* PROTOBUF_RESTRICT PROTOBUF_NONNULL other) {
+  using ::std::swap;
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  _impl_.items_.InternalSwap(&other->_impl_.items_);
+  _impl_.npcs_.InternalSwap(&other->_impl_.npcs_);
+  _impl_.locations_.InternalSwap(&other->_impl_.locations_);
+  ::google::protobuf::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(ClientWorld, _impl_.start_location_id_)
+      + sizeof(ClientWorld::_impl_.start_location_id_)
+      - PROTOBUF_FIELD_OFFSET(ClientWorld, _impl_.myself_)>(
+          reinterpret_cast<char*>(&_impl_.myself_),
+          reinterpret_cast<char*>(&other->_impl_.myself_));
+  _impl_.players_.InternalSwap(&other->_impl_.players_);
+  _impl_.players_locations_.InternalSwap(&other->_impl_.players_locations_);
+}
+
+::google::protobuf::Metadata ClientWorld::GetMetadata() const {
   return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
 }
 // ===================================================================
@@ -11822,6 +13497,82 @@ void PlayerStateChanged::InternalSwap(PlayerStateChanged* PROTOBUF_RESTRICT PROT
 }
 // ===================================================================
 
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+InitWorld_PlayersEntry_DoNotUse::InitWorld_PlayersEntry_DoNotUse() : SuperType(InitWorld_PlayersEntry_DoNotUse_get_class_data()) {}
+InitWorld_PlayersEntry_DoNotUse::InitWorld_PlayersEntry_DoNotUse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
+    : SuperType(arena, InitWorld_PlayersEntry_DoNotUse_get_class_data()) {}
+#else   // PROTOBUF_CUSTOM_VTABLE
+InitWorld_PlayersEntry_DoNotUse::InitWorld_PlayersEntry_DoNotUse() : SuperType() {}
+InitWorld_PlayersEntry_DoNotUse::InitWorld_PlayersEntry_DoNotUse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena) : SuperType(arena) {}
+#endif  // PROTOBUF_CUSTOM_VTABLE
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 const
+    ::google::protobuf::internal::ClassDataFull InitWorld_PlayersEntry_DoNotUse_class_data_ =
+        InitWorld_PlayersEntry_DoNotUse::InternalGenerateClassData_(InitWorld_PlayersEntry_DoNotUse_globals_._default);
+
+// including ~ all the vtables and everything they use become part
+// of the same ~ SCC.
+PROTOBUF_ATTRIBUTE_WEAK const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+InitWorld_PlayersEntry_DoNotUse::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&InitWorld_PlayersEntry_DoNotUse_class_data_);
+  ::google::protobuf::internal::PrefetchToLocalCache(InitWorld_PlayersEntry_DoNotUse_class_data_.tc_table);
+  return InitWorld_PlayersEntry_DoNotUse_class_data_.base();
+}
+#else
+PROTOBUF_ATTRIBUTE_WEAK const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+InitWorld_PlayersEntry_DoNotUse::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&InitWorld_PlayersEntry_DoNotUse_globals_);
+  ::google::protobuf::internal::PrefetchToLocalCache(
+      ::google::protobuf::internal::MessageGlobalsBase::ToParseTableBase(&InitWorld_PlayersEntry_DoNotUse_globals_));
+  return InitWorld_PlayersEntry_DoNotUse_globals_.GetClassData();
+}
+#endif  // !PROTOBUF_MESSAGE_GLOBALS
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_CONSTINIT
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 const InitWorld_PlayersEntry_DoNotUse::ParseTableT_
+    InitWorld_PlayersEntry_DoNotUse::_table_ =
+        InitWorld_PlayersEntry_DoNotUse::InternalGenerateParseTable_(InitWorld_PlayersEntry_DoNotUse_class_data_.base());
+#endif  // !PROTOBUF_MESSAGE_GLOBALS
+// ===================================================================
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+InitWorld_PlayersLocationsEntry_DoNotUse::InitWorld_PlayersLocationsEntry_DoNotUse() : SuperType(InitWorld_PlayersLocationsEntry_DoNotUse_get_class_data()) {}
+InitWorld_PlayersLocationsEntry_DoNotUse::InitWorld_PlayersLocationsEntry_DoNotUse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
+    : SuperType(arena, InitWorld_PlayersLocationsEntry_DoNotUse_get_class_data()) {}
+#else   // PROTOBUF_CUSTOM_VTABLE
+InitWorld_PlayersLocationsEntry_DoNotUse::InitWorld_PlayersLocationsEntry_DoNotUse() : SuperType() {}
+InitWorld_PlayersLocationsEntry_DoNotUse::InitWorld_PlayersLocationsEntry_DoNotUse(::google::protobuf::Arena* PROTOBUF_NULLABLE arena) : SuperType(arena) {}
+#endif  // PROTOBUF_CUSTOM_VTABLE
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 const
+    ::google::protobuf::internal::ClassDataFull InitWorld_PlayersLocationsEntry_DoNotUse_class_data_ =
+        InitWorld_PlayersLocationsEntry_DoNotUse::InternalGenerateClassData_(InitWorld_PlayersLocationsEntry_DoNotUse_globals_._default);
+
+// including ~ all the vtables and everything they use become part
+// of the same ~ SCC.
+PROTOBUF_ATTRIBUTE_WEAK const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+InitWorld_PlayersLocationsEntry_DoNotUse::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&InitWorld_PlayersLocationsEntry_DoNotUse_class_data_);
+  ::google::protobuf::internal::PrefetchToLocalCache(InitWorld_PlayersLocationsEntry_DoNotUse_class_data_.tc_table);
+  return InitWorld_PlayersLocationsEntry_DoNotUse_class_data_.base();
+}
+#else
+PROTOBUF_ATTRIBUTE_WEAK const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+InitWorld_PlayersLocationsEntry_DoNotUse::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&InitWorld_PlayersLocationsEntry_DoNotUse_globals_);
+  ::google::protobuf::internal::PrefetchToLocalCache(
+      ::google::protobuf::internal::MessageGlobalsBase::ToParseTableBase(&InitWorld_PlayersLocationsEntry_DoNotUse_globals_));
+  return InitWorld_PlayersLocationsEntry_DoNotUse_globals_.GetClassData();
+}
+#endif  // !PROTOBUF_MESSAGE_GLOBALS
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_CONSTINIT
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 const InitWorld_PlayersLocationsEntry_DoNotUse::ParseTableT_
+    InitWorld_PlayersLocationsEntry_DoNotUse::_table_ =
+        InitWorld_PlayersLocationsEntry_DoNotUse::InternalGenerateParseTable_(InitWorld_PlayersLocationsEntry_DoNotUse_class_data_.base());
+#endif  // !PROTOBUF_MESSAGE_GLOBALS
+// ===================================================================
+
 InitWorld::InitWorld(::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
     : ::google::protobuf::Message(arena, InitWorld_get_class_data()) {
@@ -11857,6 +13608,20 @@ PROTOBUF_NDEBUG_INLINE InitWorld::Impl_::Impl_(
               PROTOBUF_FIELD_OFFSET(::game::InitWorld, _impl_.locations_)>()
           , from.locations_
         }
+        ,
+        players_ {
+          visibility, ::_pbi::InternalMetadataOffset::Build<
+              ::game::InitWorld,
+              PROTOBUF_FIELD_OFFSET(::game::InitWorld, _impl_.players_)>()
+          , from.players_
+        }
+        ,
+        players_locations_ {
+          visibility, ::_pbi::InternalMetadataOffset::Build<
+              ::game::InitWorld,
+              PROTOBUF_FIELD_OFFSET(::game::InitWorld, _impl_.players_locations_)>()
+          , from.players_locations_
+        }
      {}
 
 InitWorld::InitWorld(
@@ -11873,6 +13638,10 @@ InitWorld::InitWorld(
   _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
       from._internal_metadata_);
   new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
+  ::uint32_t cached_has_bits = _impl_._has_bits_[0];
+  _impl_.you_ = (CheckHasBit(cached_has_bits, 0x00000008U))
+                ? ::google::protobuf::Message::CopyConstruct(arena, *from._impl_.you_)
+                : nullptr;
   _impl_.start_location_id_ = from._impl_.start_location_id_;
 
   // @@protoc_insertion_point(copy_constructor:game.InitWorld)
@@ -11895,11 +13664,26 @@ PROTOBUF_NDEBUG_INLINE InitWorld::Impl_::Impl_(
             ::game::InitWorld,
             PROTOBUF_FIELD_OFFSET(::game::InitWorld, _impl_.locations_)>()
          }
+        ,
+        players_ { visibility, ::_pbi::InternalMetadataOffset::Build<
+            ::game::InitWorld,
+            PROTOBUF_FIELD_OFFSET(::game::InitWorld, _impl_.players_)>()
+         }
+        ,
+        players_locations_ { visibility, ::_pbi::InternalMetadataOffset::Build<
+            ::game::InitWorld,
+            PROTOBUF_FIELD_OFFSET(::game::InitWorld, _impl_.players_locations_)>()
+         }
      {}
 
 inline void InitWorld::SharedCtor(::_pb::Arena* PROTOBUF_NULLABLE arena) {
   new (&_impl_) Impl_(internal_visibility(), arena);
-  _impl_.start_location_id_ = {};
+  ::memset(reinterpret_cast<char*>(&_impl_) +
+               offsetof(Impl_, you_),
+           0,
+           offsetof(Impl_, start_location_id_) -
+               offsetof(Impl_, you_) +
+               sizeof(Impl_::start_location_id_));
 }
 InitWorld::~InitWorld() {
   // @@protoc_insertion_point(destructor:game.InitWorld)
@@ -11912,6 +13696,7 @@ inline void InitWorld::SharedDtor(MessageLite& self) {
   }
   this_._internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
   ABSL_DCHECK(this_.GetArena() == nullptr);
+  delete this_._impl_.you_;
   this_._impl_.~Impl_();
 }
 
@@ -11949,7 +13734,7 @@ PROTOBUF_NOINLINE void InitWorld::Clear() {
   (void) cached_has_bits;
 
   cached_has_bits = _impl_._has_bits_[0];
-  if (BatchCheckHasBit(cached_has_bits, 0x00000007U)) {
+  if (BatchCheckHasBit(cached_has_bits, 0x0000000fU)) {
     if (CheckHasBit(cached_has_bits, 0x00000001U)) {
       _impl_.items_.Clear();
     }
@@ -11959,8 +13744,20 @@ PROTOBUF_NOINLINE void InitWorld::Clear() {
     if (CheckHasBit(cached_has_bits, 0x00000004U)) {
       _impl_.locations_.Clear();
     }
+    if (CheckHasBit(cached_has_bits, 0x00000008U)) {
+      ABSL_DCHECK(_impl_.you_ != nullptr);
+      _impl_.you_->Clear();
+    }
   }
-  _impl_.start_location_id_ = ::uint64_t{0u};
+  if (BatchCheckHasBit(cached_has_bits, 0x00000070U)) {
+    _impl_.start_location_id_ = ::uint64_t{0u};
+    if (CheckHasBit(cached_has_bits, 0x00000020U)) {
+      _impl_.players_.Clear();
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000040U)) {
+      _impl_.players_locations_.Clear();
+    }
+  }
   _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
 }
@@ -12024,12 +13821,71 @@ PROTOBUF_NOINLINE void InitWorld::Clear() {
   }
 
   // uint64 start_location_id = 4;
-  if (CheckHasBit(cached_has_bits, 0x00000008U)) {
+  if (CheckHasBit(cached_has_bits, 0x00000010U)) {
     if (this_._internal_start_location_id() != 0) {
       target = stream->EnsureSpace(target);
       target = ::_pbi::WireFormatLite::WriteUInt64ToArray(
           4, this_._internal_start_location_id(), target);
     }
+  }
+
+  // map<uint64, string> players = 5;
+  if (CheckHasBit(cached_has_bits, 0x00000020U)) {
+    if (!this_._internal_players().empty()) {
+      using MapType = ::google::protobuf::Map<::uint64_t, ::std::string>;
+      using WireHelper = _pbi::MapEntryFuncs<::uint64_t, ::std::string,
+                                     _pbi::WireFormatLite::TYPE_UINT64,
+                                     _pbi::WireFormatLite::TYPE_STRING>;
+      const auto& field = this_._internal_players();
+
+      if (stream->IsSerializationDeterministic() && field.size() > 1) {
+        for (const auto& entry : ::google::protobuf::internal::MapSorterFlat<MapType>(field)) {
+          target = WireHelper::InternalSerialize(
+              5, entry.first, entry.second, target, stream);
+          ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+              entry.second.data(), static_cast<int>(entry.second.length()),
+ ::google::protobuf::internal::WireFormatLite::SERIALIZE, "game.InitWorld.players");
+        }
+      } else {
+        for (const auto& entry : field) {
+          target = WireHelper::InternalSerialize(
+              5, entry.first, entry.second, target, stream);
+          ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+              entry.second.data(), static_cast<int>(entry.second.length()),
+ ::google::protobuf::internal::WireFormatLite::SERIALIZE, "game.InitWorld.players");
+        }
+      }
+    }
+  }
+
+  // map<uint64, uint64> players_locations = 6;
+  if (CheckHasBit(cached_has_bits, 0x00000040U)) {
+    if (!this_._internal_players_locations().empty()) {
+      using MapType = ::google::protobuf::Map<::uint64_t, ::uint64_t>;
+      using WireHelper = _pbi::MapEntryFuncs<::uint64_t, ::uint64_t,
+                                     _pbi::WireFormatLite::TYPE_UINT64,
+                                     _pbi::WireFormatLite::TYPE_UINT64>;
+      const auto& field = this_._internal_players_locations();
+
+      if (stream->IsSerializationDeterministic() && field.size() > 1) {
+        for (const auto& entry : ::google::protobuf::internal::MapSorterFlat<MapType>(field)) {
+          target = WireHelper::InternalSerialize(
+              6, entry.first, entry.second, target, stream);
+        }
+      } else {
+        for (const auto& entry : field) {
+          target = WireHelper::InternalSerialize(
+              6, entry.first, entry.second, target, stream);
+        }
+      }
+    }
+  }
+
+  // .game.Player you = 7;
+  if (CheckHasBit(cached_has_bits, 0x00000008U)) {
+    target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+        7, *this_._impl_.you_, this_._impl_.you_->GetCachedSize(), target,
+        stream);
   }
 
   if (ABSL_PREDICT_FALSE(this_._internal_metadata_.have_unknown_fields())) {
@@ -12057,7 +13913,7 @@ PROTOBUF_NOINLINE void InitWorld::Clear() {
 
   ::_pbi::Prefetch5LinesFrom7Lines(&this_);
   cached_has_bits = this_._impl_._has_bits_[0];
-  if (BatchCheckHasBit(cached_has_bits, 0x0000000fU)) {
+  if (BatchCheckHasBit(cached_has_bits, 0x0000007fU)) {
     // repeated .game.Item items = 1;
     if (CheckHasBit(cached_has_bits, 0x00000001U)) {
       total_size += 1UL * this_._internal_items_size();
@@ -12079,11 +13935,36 @@ PROTOBUF_NOINLINE void InitWorld::Clear() {
         total_size += ::google::protobuf::internal::WireFormatLite::MessageSize(msg);
       }
     }
-    // uint64 start_location_id = 4;
+    // .game.Player you = 7;
     if (CheckHasBit(cached_has_bits, 0x00000008U)) {
+      total_size += 1 +
+                    ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.you_);
+    }
+    // uint64 start_location_id = 4;
+    if (CheckHasBit(cached_has_bits, 0x00000010U)) {
       if (this_._internal_start_location_id() != 0) {
         total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(
             this_._internal_start_location_id());
+      }
+    }
+    // map<uint64, string> players = 5;
+    if (CheckHasBit(cached_has_bits, 0x00000020U)) {
+      total_size +=
+          1 * ::google::protobuf::internal::FromIntSize(this_._internal_players_size());
+      for (const auto& entry : this_._internal_players()) {
+        total_size += _pbi::MapEntryFuncs<::uint64_t, ::std::string,
+                                       _pbi::WireFormatLite::TYPE_UINT64,
+                                       _pbi::WireFormatLite::TYPE_STRING>::ByteSizeLong(entry.first, entry.second);
+      }
+    }
+    // map<uint64, uint64> players_locations = 6;
+    if (CheckHasBit(cached_has_bits, 0x00000040U)) {
+      total_size +=
+          1 * ::google::protobuf::internal::FromIntSize(this_._internal_players_locations_size());
+      for (const auto& entry : this_._internal_players_locations()) {
+        total_size += _pbi::MapEntryFuncs<::uint64_t, ::uint64_t,
+                                       _pbi::WireFormatLite::TYPE_UINT64,
+                                       _pbi::WireFormatLite::TYPE_UINT64>::ByteSizeLong(entry.first, entry.second);
       }
     }
   }
@@ -12105,7 +13986,7 @@ void InitWorld::MergeImpl(::google::protobuf::MessageLite& to_msg,
   (void)cached_has_bits;
 
   cached_has_bits = from._impl_._has_bits_[0];
-  if (BatchCheckHasBit(cached_has_bits, 0x0000000fU)) {
+  if (BatchCheckHasBit(cached_has_bits, 0x0000007fU)) {
     if (CheckHasBit(cached_has_bits, 0x00000001U)) {
       _this->_internal_mutable_items()->InternalMergeFromWithArena(
           ::google::protobuf::MessageLite::internal_visibility(), arena,
@@ -12122,9 +14003,23 @@ void InitWorld::MergeImpl(::google::protobuf::MessageLite& to_msg,
           from._internal_locations());
     }
     if (CheckHasBit(cached_has_bits, 0x00000008U)) {
+      ABSL_DCHECK(from._impl_.you_ != nullptr);
+      if (_this->_impl_.you_ == nullptr) {
+        _this->_impl_.you_ = ::google::protobuf::Message::CopyConstruct(arena, *from._impl_.you_);
+      } else {
+        _this->_impl_.you_->MergeFrom(*from._impl_.you_);
+      }
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000010U)) {
       if (from._internal_start_location_id() != 0) {
         _this->_impl_.start_location_id_ = from._impl_.start_location_id_;
       }
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000020U)) {
+      _this->_impl_.players_.MergeFrom(from._impl_.players_);
+    }
+    if (CheckHasBit(cached_has_bits, 0x00000040U)) {
+      _this->_impl_.players_locations_.MergeFrom(from._impl_.players_locations_);
     }
   }
   _this->_impl_._has_bits_[0] |= cached_has_bits;
@@ -12147,7 +14042,14 @@ void InitWorld::InternalSwap(InitWorld* PROTOBUF_RESTRICT PROTOBUF_NONNULL other
   _impl_.items_.InternalSwap(&other->_impl_.items_);
   _impl_.npcs_.InternalSwap(&other->_impl_.npcs_);
   _impl_.locations_.InternalSwap(&other->_impl_.locations_);
-  swap(_impl_.start_location_id_, other->_impl_.start_location_id_);
+  ::google::protobuf::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(InitWorld, _impl_.start_location_id_)
+      + sizeof(InitWorld::_impl_.start_location_id_)
+      - PROTOBUF_FIELD_OFFSET(InitWorld, _impl_.you_)>(
+          reinterpret_cast<char*>(&_impl_.you_),
+          reinterpret_cast<char*>(&other->_impl_.you_));
+  _impl_.players_.InternalSwap(&other->_impl_.players_);
+  _impl_.players_locations_.InternalSwap(&other->_impl_.players_locations_);
 }
 
 ::google::protobuf::Metadata InitWorld::GetMetadata() const {
@@ -12194,6 +14096,19 @@ void CommandDelta::set_allocated_message_command(::game::MessageCommand* PROTOBU
   }
   // @@protoc_insertion_point(field_set_allocated:game.CommandDelta.message_command)
 }
+void CommandDelta::set_allocated_name_set_command(::game::NameSetCommand* PROTOBUF_NULLABLE name_set_command) {
+  ::google::protobuf::Arena* message_arena = GetArena();
+  clear_delta_type();
+  if (name_set_command) {
+    ::google::protobuf::Arena* submessage_arena = name_set_command->GetArena();
+    if (message_arena != submessage_arena) {
+      name_set_command = ::google::protobuf::internal::GetOwnedMessage(message_arena, name_set_command, submessage_arena);
+    }
+    set_has_name_set_command();
+    _impl_.delta_type_.name_set_command_ = name_set_command;
+  }
+  // @@protoc_insertion_point(field_set_allocated:game.CommandDelta.name_set_command)
+}
 CommandDelta::CommandDelta(::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
 #if defined(PROTOBUF_CUSTOM_VTABLE)
     : ::google::protobuf::Message(arena, CommandDelta_get_class_data()) {
@@ -12236,6 +14151,9 @@ CommandDelta::CommandDelta(
         break;
       case kMessageCommand:
         _impl_.delta_type_.message_command_ = ::google::protobuf::Message::CopyConstruct(arena, *from._impl_.delta_type_.message_command_);
+        break;
+      case kNameSetCommand:
+        _impl_.delta_type_.name_set_command_ = ::google::protobuf::Message::CopyConstruct(arena, *from._impl_.delta_type_.name_set_command_);
         break;
   }
 
@@ -12293,6 +14211,14 @@ void CommandDelta::clear_delta_type() {
         delete _impl_.delta_type_.message_command_;
       } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
         ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.delta_type_.message_command_);
+      }
+      break;
+    }
+    case kNameSetCommand: {
+      if (GetArena() == nullptr) {
+        delete _impl_.delta_type_.name_set_command_;
+      } else if (::google::protobuf::internal::DebugHardenClearOneofMessageOnArena()) {
+        ::google::protobuf::internal::MaybePoisonAfterClear(_impl_.delta_type_.name_set_command_);
       }
       break;
     }
@@ -12378,6 +14304,12 @@ PROTOBUF_NOINLINE void CommandDelta::Clear() {
           stream);
       break;
     }
+    case kNameSetCommand: {
+      target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+          4, *this_._impl_.delta_type_.name_set_command_, this_._impl_.delta_type_.name_set_command_->GetCachedSize(), target,
+          stream);
+      break;
+    }
     default:
       break;
   }
@@ -12421,6 +14353,12 @@ PROTOBUF_NOINLINE void CommandDelta::Clear() {
     case kMessageCommand: {
       total_size += 1 +
                     ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.delta_type_.message_command_);
+      break;
+    }
+    // .game.NameSetCommand name_set_command = 4;
+    case kNameSetCommand: {
+      total_size += 1 +
+                    ::google::protobuf::internal::WireFormatLite::MessageSize(*this_._impl_.delta_type_.name_set_command_);
       break;
     }
     case DELTA_TYPE_NOT_SET: {
@@ -12477,6 +14415,14 @@ void CommandDelta::MergeImpl(::google::protobuf::MessageLite& to_msg,
           _this->_impl_.delta_type_.message_command_ = ::google::protobuf::Message::CopyConstruct(arena, *from._impl_.delta_type_.message_command_);
         } else {
           _this->_impl_.delta_type_.message_command_->MergeFrom(*from._impl_.delta_type_.message_command_);
+        }
+        break;
+      }
+      case kNameSetCommand: {
+        if (oneof_needs_init) {
+          _this->_impl_.delta_type_.name_set_command_ = ::google::protobuf::Message::CopyConstruct(arena, *from._impl_.delta_type_.name_set_command_);
+        } else {
+          _this->_impl_.delta_type_.name_set_command_->MergeFrom(*from._impl_.delta_type_.name_set_command_);
         }
         break;
       }
@@ -13135,6 +15081,220 @@ void MessageCommand::InternalSwap(MessageCommand* PROTOBUF_RESTRICT PROTOBUF_NON
 }
 
 ::google::protobuf::Metadata MessageCommand::GetMetadata() const {
+  return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
+}
+// ===================================================================
+
+NameSetCommand::NameSetCommand(::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(arena, NameSetCommand_get_class_data()) {
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  SharedCtor(arena);
+  // @@protoc_insertion_point(arena_constructor:game.NameSetCommand)
+}
+PROTOBUF_NDEBUG_INLINE NameSetCommand::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    [[maybe_unused]] ::google::protobuf::Arena* PROTOBUF_NULLABLE arena, const Impl_& from,
+    [[maybe_unused]] const ::game::NameSetCommand& from_msg)
+      : _has_bits_{from._has_bits_},
+        _cached_size_{0},
+        name_(arena, from.name_) {}
+
+NameSetCommand::NameSetCommand(
+    ::google::protobuf::Arena* PROTOBUF_NULLABLE arena,
+    const NameSetCommand& from)
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+    : ::google::protobuf::Message(arena, NameSetCommand_get_class_data()) {
+
+#else   // PROTOBUF_CUSTOM_VTABLE
+    : ::google::protobuf::Message(arena) {
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  NameSetCommand* const _this = this;
+  (void)_this;
+  _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
+      from._internal_metadata_);
+  new (&_impl_) Impl_(internal_visibility(), arena, from._impl_, from);
+
+  // @@protoc_insertion_point(copy_constructor:game.NameSetCommand)
+}
+PROTOBUF_NDEBUG_INLINE NameSetCommand::Impl_::Impl_(
+    [[maybe_unused]] ::google::protobuf::internal::InternalVisibility visibility,
+    [[maybe_unused]] ::google::protobuf::Arena* PROTOBUF_NULLABLE arena)
+      : _cached_size_{0},
+        name_(arena) {}
+
+inline void NameSetCommand::SharedCtor(::_pb::Arena* PROTOBUF_NULLABLE arena) {
+  new (&_impl_) Impl_(internal_visibility(), arena);
+}
+NameSetCommand::~NameSetCommand() {
+  // @@protoc_insertion_point(destructor:game.NameSetCommand)
+  SharedDtor(*this);
+}
+inline void NameSetCommand::SharedDtor(MessageLite& self) {
+  NameSetCommand& this_ = static_cast<NameSetCommand&>(self);
+  if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
+    this_.CheckHasBitConsistency();
+  }
+  this_._internal_metadata_.Delete<::google::protobuf::UnknownFieldSet>();
+  ABSL_DCHECK(this_.GetArena() == nullptr);
+  this_._impl_.name_.Destroy();
+  this_._impl_.~Impl_();
+}
+
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 const
+    ::google::protobuf::internal::ClassDataFull NameSetCommand_class_data_ =
+        NameSetCommand::InternalGenerateClassData_(NameSetCommand_globals_._default);
+
+PROTOBUF_ATTRIBUTE_WEAK const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+NameSetCommand::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&NameSetCommand_class_data_);
+  ::google::protobuf::internal::PrefetchToLocalCache(NameSetCommand_class_data_.tc_table);
+  return NameSetCommand_class_data_.base();
+}
+#else
+PROTOBUF_ATTRIBUTE_WEAK const ::google::protobuf::internal::ClassData* PROTOBUF_NONNULL
+NameSetCommand::GetClassData() const {
+  ::google::protobuf::internal::PrefetchToLocalCache(&NameSetCommand_globals_);
+  ::google::protobuf::internal::PrefetchToLocalCache(
+      ::google::protobuf::internal::MessageGlobalsBase::ToParseTableBase(&NameSetCommand_globals_));
+  return NameSetCommand_globals_.GetClassData();
+}
+#endif  // !PROTOBUF_MESSAGE_GLOBALS
+#ifndef PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_CONSTINIT
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 const NameSetCommand::ParseTableT_
+    NameSetCommand::_table_ =
+        NameSetCommand::InternalGenerateParseTable_(NameSetCommand_class_data_.base());
+#endif  // !PROTOBUF_MESSAGE_GLOBALS
+PROTOBUF_NOINLINE void NameSetCommand::Clear() {
+// @@protoc_insertion_point(message_clear_start:game.NameSetCommand)
+  ::google::protobuf::internal::TSanWrite(&_impl_);
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
+  if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+    _impl_.name_.ClearNonDefaultToEmpty();
+  }
+  _impl_._has_bits_.Clear();
+  _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
+}
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+::uint8_t* PROTOBUF_NONNULL NameSetCommand::_InternalSerialize(
+    const ::google::protobuf::MessageLite& base, ::uint8_t* PROTOBUF_NONNULL target,
+    ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) {
+  const NameSetCommand& this_ = static_cast<const NameSetCommand&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+::uint8_t* PROTOBUF_NONNULL NameSetCommand::_InternalSerialize(
+    ::uint8_t* PROTOBUF_NONNULL target,
+    ::google::protobuf::io::EpsCopyOutputStream* PROTOBUF_NONNULL stream) const {
+  const NameSetCommand& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
+    this_.CheckHasBitConsistency();
+  }
+  // @@protoc_insertion_point(serialize_to_array_start:game.NameSetCommand)
+  ::uint32_t cached_has_bits = 0;
+  (void)cached_has_bits;
+
+  cached_has_bits = this_._impl_._has_bits_[0];
+  // string name = 1;
+  if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+    if (!this_._internal_name().empty()) {
+      const ::std::string& _s = this_._internal_name();
+      ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+          _s.data(), static_cast<int>(_s.length()), ::google::protobuf::internal::WireFormatLite::SERIALIZE, "game.NameSetCommand.name");
+      target = stream->WriteStringMaybeAliased(1, _s, target);
+    }
+  }
+
+  if (ABSL_PREDICT_FALSE(this_._internal_metadata_.have_unknown_fields())) {
+    target =
+        ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
+            this_._internal_metadata_.unknown_fields<::google::protobuf::UnknownFieldSet>(::google::protobuf::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:game.NameSetCommand)
+  return target;
+}
+
+#if defined(PROTOBUF_CUSTOM_VTABLE)
+::size_t NameSetCommand::ByteSizeLong(const MessageLite& base) {
+  const NameSetCommand& this_ = static_cast<const NameSetCommand&>(base);
+#else   // PROTOBUF_CUSTOM_VTABLE
+::size_t NameSetCommand::ByteSizeLong() const {
+  const NameSetCommand& this_ = *this;
+#endif  // PROTOBUF_CUSTOM_VTABLE
+  // @@protoc_insertion_point(message_byte_size_start:game.NameSetCommand)
+  ::size_t total_size = 0;
+
+  ::uint32_t cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void)cached_has_bits;
+
+   {
+    // string name = 1;
+    cached_has_bits = this_._impl_._has_bits_[0];
+    if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+      if (!this_._internal_name().empty()) {
+        total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                        this_._internal_name());
+      }
+    }
+  }
+  return this_.MaybeComputeUnknownFieldsSize(total_size,
+                                             &this_._impl_._cached_size_);
+}
+
+void NameSetCommand::MergeImpl(::google::protobuf::MessageLite& to_msg,
+                      const ::google::protobuf::MessageLite& from_msg) {
+   auto* const _this = static_cast<NameSetCommand*>(&to_msg);
+  auto& from = static_cast<const NameSetCommand&>(from_msg);
+  if constexpr (::_pbi::DebugHardenCheckHasBitConsistency()) {
+    from.CheckHasBitConsistency();
+  }
+  // @@protoc_insertion_point(class_specific_merge_from_start:game.NameSetCommand)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
+  (void)cached_has_bits;
+
+  cached_has_bits = from._impl_._has_bits_[0];
+  if (CheckHasBit(cached_has_bits, 0x00000001U)) {
+    if (!from._internal_name().empty()) {
+      _this->_internal_set_name(from._internal_name());
+    } else {
+      if (_this->_impl_.name_.IsDefault()) {
+        _this->_internal_set_name("");
+      }
+    }
+  }
+  _this->_impl_._has_bits_[0] |= cached_has_bits;
+  _this->_internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
+      from._internal_metadata_);
+}
+
+void NameSetCommand::CopyFrom(const NameSetCommand& from) {
+  // @@protoc_insertion_point(class_specific_copy_from_start:game.NameSetCommand)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+
+void NameSetCommand::InternalSwap(NameSetCommand* PROTOBUF_RESTRICT PROTOBUF_NONNULL other) {
+  using ::std::swap;
+  auto* arena = GetArena();
+  ABSL_DCHECK_EQ(arena, other->GetArena());
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.name_, &other->_impl_.name_, arena);
+}
+
+::google::protobuf::Metadata NameSetCommand::GetMetadata() const {
   return ::google::protobuf::Message::GetMetadataImpl(GetClassData()->full());
 }
 // @@protoc_insertion_point(namespace_scope)

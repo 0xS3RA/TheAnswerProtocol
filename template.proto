@@ -147,7 +147,19 @@ message World
     repeated Npc npcs = 2;
     repeated Location locations = 3;
     uint64 start_location_id = 4;
-    map<uint64, uint64> players = 5; // <player id, location id>
+    repeated Player players = 5;
+    map<uint64, uint64> players_locations = 6; // <player id, location id>
+}
+
+message ClientWorld
+{
+    repeated Item items = 1;
+    repeated Npc npcs = 2;
+    repeated Location locations = 3;
+    uint64 start_location_id = 4;
+    map<uint64, string> players = 5;           // player id, name
+    map<uint64, uint64> players_locations = 6; // <player id, location id>
+    Player myself = 7;
 }
 
 // Message pour les deltas (mises à jour partielles du monde)
@@ -251,6 +263,9 @@ message InitWorld
     repeated Npc npcs = 2;
     repeated Location locations = 3;
     uint64 start_location_id = 4;
+    map<uint64, string> players = 5;           // Player id, name
+    map<uint64, uint64> players_locations = 6; // <player id, location id>
+    Player you = 7;
 }
 
 message CommandDelta
@@ -260,6 +275,7 @@ message CommandDelta
         InteractionCommand interaction_command = 1;
         AttackCommand attack_command = 2;
         MessageCommand message_command = 3;
+        NameSetCommand name_set_command = 4;
     }
 }
 
@@ -277,4 +293,9 @@ message AttackCommand
 message MessageCommand
 {
     string message = 1;
+}
+
+message NameSetCommand
+{
+    string name = 1;
 }

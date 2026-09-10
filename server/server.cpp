@@ -473,10 +473,33 @@ void server_loop(ThreadSafeQueue<Socket>& pending_connections, game::World& worl
 
         Socket socket;
         while (pending_connections.try_pop(socket)) {
-            auto runner = std::make_unique<Runner>(next_player_id++, std::move(socket));
+
+            game::Player newPlayer{};
+            newPlayer.set_id(next_player_id++);
+            game::RcvStatus status{};
+            auto command_ = socket.receive_message<game::CommandDelta>(status);
+
+            if (status != game::RcvStatus::OK)
+                continue;
+            if (!command_.has_value())
+                continue;
+            if (command_->delta_type_case() != game::CommandDelta::kNameSetCommand)
+                continue;
+
+            auto* name_set = (command_.value()).mutable_name_set_command();
+            newPlayer.set_name(name_set->name());
+            newPlayer.set_hp(100);
+            newPlayer.set_money_amount(10);
+            newPlayer.set_state(game::PlayerState::CHILLING);
+
+            auto runner = std::make_unique<Runner>(newPlayer.id(), std::move(socket));
             runner->start();
-            world.mutable_players()->operator[](runner->get_player_id()) =
+
+            (*world.mutable_players_locations())[runner->get_player_id()] =
                 world.start_location_id();
+            *world.add_players() = newPlayer;
+
+            runner->send_world_init(world, newPlayer);
             runners.push_back(std::move(runner));
             std::cout << "New player connected : " << runner->get_player_id() << std::endl;
         }

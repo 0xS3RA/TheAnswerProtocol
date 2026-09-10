@@ -94,6 +94,31 @@ public:
         outgoingQueue.push(change);
     }
 
+    void send_world_init(const game::World& world, game::Player& player)
+    {
+        game::WorldDelta worldInit{};
+        auto* delta = worldInit.mutable_world_initiation();
+
+        delta->set_start_location_id(world.start_location_id());
+        for (const auto& item : world.items()) {
+            *delta->add_items() = item;
+        }
+        for (const auto& npc : world.npcs()) {
+            *delta->add_npcs() = npc;
+        }
+        for (const auto& location : world.locations()) {
+            *delta->add_locations() = location;
+        }
+        for (const auto& player : world.players()) {
+            (*delta->mutable_players())[player.id()] = player.name();
+        }
+        for (const auto& [player_id, location_id] : world.players_locations()) {
+            (*delta->mutable_players_locations())[player_id] = location_id;
+        }
+        *delta->mutable_you() = player;
+        outgoingQueue.push(worldInit);
+    }
+
     bool poll_incoming(game::CommandDelta& command)
     {
         return incomingQueue.try_pop(command);
