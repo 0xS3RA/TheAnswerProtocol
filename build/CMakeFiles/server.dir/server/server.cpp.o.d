@@ -394,7 +394,10 @@ CMakeFiles/server.dir/server/server.cpp.o: \
  /usr/include/google/protobuf/explicitly_constructed.h \
  /usr/include/google/protobuf/generated_message_tctable_decl.h \
  /usr/include/google/protobuf/message_lite.h \
+ /usr/include/google/protobuf/class_data.h \
+ /usr/include/google/protobuf/message_traits.h \
  /usr/include/google/protobuf/metadata_lite.h \
+ /usr/include/google/protobuf/type_id.h \
  /usr/include/google/protobuf/parse_context.h \
  /usr/include/absl/strings/internal/resize_uninitialized.h \
  /usr/include/absl/strings/resize_and_overwrite.h \
@@ -448,6 +451,7 @@ CMakeFiles/server.dir/server/server.cpp.o: \
  /usr/include/absl/container/internal/hashtable_debug_hooks.h \
  /usr/include/absl/container/internal/hashtablez_sampler.h \
  /usr/include/absl/profiling/internal/sample_recorder.h \
+ /usr/include/absl/log/log.h \
  /usr/include/google/protobuf/descriptor_lite.h \
  /usr/include/google/protobuf/extension_set.h \
  /usr/include/absl/container/btree_map.h \
@@ -508,6 +512,13 @@ CMakeFiles/server.dir/server/server.cpp.o: \
  /home/bernardo/Documents/42/M5/TheAnswerProtocol/vendor/yaml-cpp/include/yaml-cpp/node/emit.h \
  /home/bernardo/Documents/42/M5/TheAnswerProtocol/server/../common/template.pb.h \
  /home/bernardo/Documents/42/M5/TheAnswerProtocol/server/Runner.hpp \
+ /usr/include/sys/epoll.h /usr/include/sys/ioctl.h \
+ /usr/include/bits/ioctls.h /usr/include/asm/ioctls.h \
+ /usr/include/asm-generic/ioctls.h /usr/include/linux/ioctl.h \
+ /usr/include/asm/ioctl.h /usr/include/asm-generic/ioctl.h \
+ /usr/include/linux/sockios.h /usr/include/bits/ioctl-types.h \
+ /usr/include/sys/ttydefaults.h /usr/include/bits/epoll.h \
+ /usr/include/sys/eventfd.h /usr/include/bits/eventfd.h \
  /home/bernardo/Documents/42/M5/TheAnswerProtocol/server/../common/ThreadSafeQueue.hpp \
  /usr/include/c++/16/queue /usr/include/c++/16/bits/stl_queue.h \
  /usr/include/c++/16/mutex /usr/include/c++/16/bits/std_mutex.h \

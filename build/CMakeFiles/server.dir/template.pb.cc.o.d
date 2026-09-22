@@ -379,7 +379,10 @@ CMakeFiles/server.dir/template.pb.cc.o: \
  /usr/include/google/protobuf/explicitly_constructed.h \
  /usr/include/google/protobuf/generated_message_tctable_decl.h \
  /usr/include/google/protobuf/message_lite.h \
+ /usr/include/google/protobuf/class_data.h \
+ /usr/include/google/protobuf/message_traits.h \
  /usr/include/google/protobuf/metadata_lite.h \
+ /usr/include/google/protobuf/type_id.h \
  /usr/include/google/protobuf/parse_context.h \
  /usr/include/absl/strings/internal/resize_uninitialized.h \
  /usr/include/absl/strings/resize_and_overwrite.h \
@@ -433,6 +436,7 @@ CMakeFiles/server.dir/template.pb.cc.o: \
  /usr/include/absl/container/internal/hashtable_debug_hooks.h \
  /usr/include/absl/container/internal/hashtablez_sampler.h \
  /usr/include/absl/profiling/internal/sample_recorder.h \
+ /usr/include/absl/log/log.h \
  /usr/include/google/protobuf/descriptor_lite.h \
  /usr/include/google/protobuf/extension_set.h \
  /usr/include/absl/container/btree_map.h \

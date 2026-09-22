@@ -36,11 +36,14 @@ include_directories(
 # exécutables
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
 add_executable(server
   server/server.cpp
   ${PROTO_SRCS}
   ${PROTO_HDRS}
 )
+
 target_link_libraries(server PRIVATE
   protobuf::libprotobuf
   absl::log_internal_check_op
@@ -59,6 +62,7 @@ target_link_libraries(gui PRIVATE
 
 add_executable(cli
   cli/cli.cpp
+  cli/handles.cpp
   ${PROTO_SRCS}
   ${PROTO_HDRS}
 )

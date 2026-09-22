@@ -31,6 +31,12 @@
 },
 {
   "directory": "/home/bernardo/Documents/42/M5/TheAnswerProtocol/build",
+  "command": "/usr/bin/c++  -I/home/bernardo/Documents/42/M5/TheAnswerProtocol -I/home/bernardo/Documents/42/M5/TheAnswerProtocol/build -I/home/bernardo/Documents/42/M5/TheAnswerProtocol/vendor/yaml-cpp/include -std=gnu++20 -Wall -Wextra -Werror -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -o CMakeFiles/cli.dir/cli/handles.cpp.o -c /home/bernardo/Documents/42/M5/TheAnswerProtocol/cli/handles.cpp",
+  "file": "/home/bernardo/Documents/42/M5/TheAnswerProtocol/cli/handles.cpp",
+  "output": "CMakeFiles/cli.dir/cli/handles.cpp.o"
+},
+{
+  "directory": "/home/bernardo/Documents/42/M5/TheAnswerProtocol/build",
   "command": "/usr/bin/c++  -I/home/bernardo/Documents/42/M5/TheAnswerProtocol -I/home/bernardo/Documents/42/M5/TheAnswerProtocol/build -I/home/bernardo/Documents/42/M5/TheAnswerProtocol/vendor/yaml-cpp/include -std=gnu++20 -Wall -Wextra -Werror -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -o CMakeFiles/cli.dir/template.pb.cc.o -c /home/bernardo/Documents/42/M5/TheAnswerProtocol/build/template.pb.cc",
   "file": "/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/template.pb.cc",
   "output": "CMakeFiles/cli.dir/template.pb.cc.o"

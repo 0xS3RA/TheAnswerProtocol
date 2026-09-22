@@ -461,6 +461,7 @@ void sendMessageToEveryone(game::WorldDelta& message, std::vector<std::unique_pt
 {
     for (auto& runner : runners) {
         runner->send_change(message);
+        runner->notify_new();
     }
 }
 
@@ -492,7 +493,8 @@ void server_loop(ThreadSafeQueue<Socket>& pending_connections, game::World& worl
             newPlayer.set_money_amount(10);
             newPlayer.set_state(game::PlayerState::CHILLING);
 
-            auto runner = std::make_unique<Runner>(newPlayer.id(), std::move(socket));
+            auto runner =
+                std::make_unique<Runner>(newPlayer.id(), newPlayer.name(), std::move(socket));
             runner->start();
 
             (*world.mutable_players_locations())[runner->get_player_id()] =
@@ -500,8 +502,17 @@ void server_loop(ThreadSafeQueue<Socket>& pending_connections, game::World& worl
             *world.add_players() = newPlayer;
 
             runner->send_world_init(world, newPlayer);
+            runner->notify_new();
+            std::cout << "New player connected : " << runner->get_player_name()
+                      << " with ID : " << runner->get_player_id() << std::endl;
+            // for (auto& player : runners) {
+            //     game::WorldDelta newPlayerNotification{};
+            //     auto* delta = newPlayerNotification.mutable_player_connected();
+            //     *(delta->mutable_player_name()) = newPlayer.name();
+            //     delta->set_player_id(newPlayer.id());
+            //     player->send_change(newPlayerNotification);
+            // }
             runners.push_back(std::move(runner));
-            std::cout << "New player connected : " << runner->get_player_id() << std::endl;
         }
 
         for (auto& runner : runners) {
@@ -513,16 +524,22 @@ void server_loop(ThreadSafeQueue<Socket>& pending_connections, game::World& worl
                 switch (command.delta_type_case()) {
                 // HANDLE INTERACTION COMMAND
                 case game::CommandDelta::kInteractionCommand: {
+                    std::cout << "Received Interaction Command from " << runner->get_player_name()
+                              << " (" << runner->get_player_id() << ")" << std::endl;
                     // const auto& cmd = command.interaction_command();
                     break;
                 }
                 // HANDLE ATTACK COMMAND
                 case game::CommandDelta::kAttackCommand: {
+                    std::cout << "received attack command from " << runner->get_player_name()
+                              << " (" << runner->get_player_id() << ")" << std::endl;
                     // const auto& cmd = command.attack_command();
                     break;
                 }
                 // HANDLE MESSAGE COMMAND
                 case game::CommandDelta::kMessageCommand: {
+                    std::cout << "received Message command from " << runner->get_player_name()
+                              << " (" << runner->get_player_id() << ")" << std::endl;
                     const auto& cmd = command.message_command();
                     if (runner->is_running()) {
                         game::WorldDelta delta;
@@ -530,12 +547,18 @@ void server_loop(ThreadSafeQueue<Socket>& pending_connections, game::World& worl
                         message_delta->set_player_id(runner->get_player_id());
                         message_delta->set_message(cmd.message());
                         sendMessageToEveryone(delta, runners);
+                        std::cout << "Sent message : ''" << cmd.message() << "'' to everyone"
+                                  << std::endl;
                     }
                     else {
                         game::WorldDelta delta;
                         auto* unauthorized_command = delta.mutable_unauthorized_command();
                         unauthorized_command->set_response("Cannot send the message!");
                         runner->send_change(delta);
+                        runner->notify_new();
+                        std::cout << "Message command refused, this player is not currently "
+                                     "supposed to be connected"
+                                  << std::endl;
                     }
                     break;
                 }
@@ -575,7 +598,8 @@ int main()
         return (perror("Listen error"), EXIT_FAILURE);
 
     // WORLD INIT
-    init_world("world.yaml", world);
+    if (!init_world("world.yaml", world))
+        return 0;
 
     // SERVER LOOP (Takes commands from the queue, do the job and pushes responses
     // to queue)

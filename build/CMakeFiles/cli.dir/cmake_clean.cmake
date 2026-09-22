@@ -2,6 +2,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/cli.dir/link.d"
   "CMakeFiles/cli.dir/cli/cli.cpp.o"
   "CMakeFiles/cli.dir/cli/cli.cpp.o.d"
+  "CMakeFiles/cli.dir/cli/handles.cpp.o"
+  "CMakeFiles/cli.dir/cli/handles.cpp.o.d"
   "CMakeFiles/cli.dir/template.pb.cc.o"
   "CMakeFiles/cli.dir/template.pb.cc.o.d"
   "bin/cli"

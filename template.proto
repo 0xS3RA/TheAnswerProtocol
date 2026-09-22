@@ -157,9 +157,11 @@ message ClientWorld
     repeated Npc npcs = 2;
     repeated Location locations = 3;
     uint64 start_location_id = 4;
-    map<uint64, string> players = 5;           // player id, name
-    map<uint64, uint64> players_locations = 6; // <player id, location id>
-    Player myself = 7;
+    map<uint64, string> players = 5;             // player id, name
+    map<uint64, uint64> players_locations = 6;   // player id, location id
+    map<uint64, uint64> players_hp = 7;          // player id, hp
+    map<uint64, PlayerState> players_states = 8; // player id, state
+    Player myself = 9;
 }
 
 // Message pour les deltas (mises à jour partielles du monde)
@@ -172,16 +174,15 @@ message WorldDelta
         PlayerHpChanged player_hp_changed = 3;
         NpcHpChanged npc_hp_changed = 4;
         PlayerMoved player_moved = 5;
-        NpcMoved npc_moved = 6;
-        DoorUnlock door_unlock = 7;
-        PlayerStateChanged player_state_changed = 8;
-        MessageReceived message_received = 9;
+        DoorUnlock door_unlock = 6;
+        PlayerStateChanged player_state_changed = 7;
+        MessageReceived message_received = 8;
 
         // WHEN CONNECTING TO SERVER
-        InitWorld world_initiation = 10;
-        PlayerConnected player_connected = 11;
-        PlayerDisconnected player_disconnected = 12;
-        UnauthorizedCommand unauthorized_command = 13;
+        InitWorld world_initiation = 9;
+        PlayerConnected player_connected = 10;
+        PlayerDisconnected player_disconnected = 11;
+        UnauthorizedCommand unauthorized_command = 12;
     }
 }
 
@@ -239,17 +240,12 @@ message PlayerMoved
     uint64 new_location_id = 2;
 }
 
-message NpcMoved
-{
-    uint64 npc_id = 1;
-    uint64 new_location_id = 2;
-}
-
 message DoorUnlock
-{                         // When unlocking a door:
-    uint64 exit_id = 1;   // 1. Server checks if the user has the correct item
-    uint64 player_id = 2; // 2. server sends a PlayerInventoryChanged to use the item
-} // 3. server send a DoorUnlock to unlock the door
+{                                 // When unlocking a door:
+    uint64 location_id = 1;       // 1. Server checks if the user has the correct item
+    uint64 player_id = 2;         // 2. server sends a PlayerInventoryChanged to use the item
+    Direction exit_direction = 3; // 3. server send a DoorUnlock to unlock the door
+}
 
 message PlayerStateChanged
 {
@@ -265,7 +261,9 @@ message InitWorld
     uint64 start_location_id = 4;
     map<uint64, string> players = 5;           // Player id, name
     map<uint64, uint64> players_locations = 6; // <player id, location id>
-    Player you = 7;
+    map<uint64, uint64> players_hp = 7;
+    map<uint64, PlayerState> players_states = 8;
+    Player you = 9;
 }
 
 message CommandDelta

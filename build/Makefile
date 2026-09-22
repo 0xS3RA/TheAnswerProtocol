@@ -595,6 +595,30 @@ cli/cli.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cli.dir/build.make CMakeFiles/cli.dir/cli/cli.cpp.s
 .PHONY : cli/cli.cpp.s
 
+cli/handles.o: cli/handles.cpp.o
+.PHONY : cli/handles.o
+
+# target to build an object file
+cli/handles.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cli.dir/build.make CMakeFiles/cli.dir/cli/handles.cpp.o
+.PHONY : cli/handles.cpp.o
+
+cli/handles.i: cli/handles.cpp.i
+.PHONY : cli/handles.i
+
+# target to preprocess a source file
+cli/handles.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cli.dir/build.make CMakeFiles/cli.dir/cli/handles.cpp.i
+.PHONY : cli/handles.cpp.i
+
+cli/handles.s: cli/handles.cpp.s
+.PHONY : cli/handles.s
+
+# target to generate assembly for a file
+cli/handles.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cli.dir/build.make CMakeFiles/cli.dir/cli/handles.cpp.s
+.PHONY : cli/handles.cpp.s
+
 gui/gui.o: gui/gui.cpp.o
 .PHONY : gui/gui.o
 
@@ -719,6 +743,9 @@ help:
 	@echo "... cli/cli.o"
 	@echo "... cli/cli.i"
 	@echo "... cli/cli.s"
+	@echo "... cli/handles.o"
+	@echo "... cli/handles.i"
+	@echo "... cli/handles.s"
 	@echo "... gui/gui.o"
 	@echo "... gui/gui.i"
 	@echo "... gui/gui.s"

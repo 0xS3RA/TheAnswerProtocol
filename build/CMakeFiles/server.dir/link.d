@@ -83,7 +83,7 @@ bin/server: \
   /usr/lib/libz.so.1 \
   /usr/lib/libabsl_die_if_null.so.2608.0.0 \
   /usr/lib/libabsl_statusor.so.2608.0.0 \
-  /usr/lib/libutf8_validity.so.35.1.0 \
+  /usr/lib/libutf8_validity.so.36.1.0 \
   /usr/lib/libabsl_log_internal_conditions.so.2608.0.0 \
   /usr/lib/libabsl_log_internal_conditions.so.2608.0.0 \
   /usr/lib/libabsl_log_internal_conditions.so.2608.0.0 \
@@ -273,7 +273,7 @@ vendor/yaml-cpp/libyaml-cpp.a:
 
 /usr/lib/libabsl_statusor.so.2608.0.0:
 
-/usr/lib/libutf8_validity.so.35.1.0:
+/usr/lib/libutf8_validity.so.36.1.0:
 
 /usr/lib/libabsl_log_internal_conditions.so.2608.0.0:
 

@@ -3,6 +3,7 @@ bin/cli: \
   /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o \
   /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o \
   CMakeFiles/cli.dir/cli/cli.cpp.o \
+  CMakeFiles/cli.dir/cli/handles.cpp.o \
   CMakeFiles/cli.dir/template.pb.cc.o \
   /usr/lib/libprotobuf.so \
   /usr/lib/libabsl_log_internal_check_op.so.2608.0.0 \
@@ -84,7 +85,7 @@ bin/cli: \
   /usr/lib/libz.so.1 \
   /usr/lib/libabsl_die_if_null.so.2608.0.0 \
   /usr/lib/libabsl_statusor.so.2608.0.0 \
-  /usr/lib/libutf8_validity.so.35.1.0 \
+  /usr/lib/libutf8_validity.so.36.1.0 \
   /usr/lib/libabsl_log_internal_conditions.so.2608.0.0 \
   /usr/lib/libabsl_log_internal_conditions.so.2608.0.0 \
   /usr/lib/libabsl_log_internal_conditions.so.2608.0.0 \
@@ -181,7 +182,7 @@ bin/cli: \
   /usr/lib/libdvdread.so.8 \
   /usr/lib/libmodplug.so.1 \
   /usr/lib/libopenmpt.so.0 \
-  /usr/lib/libbluray.so.3 \
+  /usr/lib/libbluray.so.4 \
   /usr/lib32/libgmp.so.10 \
   /usr/lib/libgmp.so.10 \
   /usr/lib32/libgnutls.so.30 \
@@ -329,6 +330,8 @@ bin/cli: \
 /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o:
 
 CMakeFiles/cli.dir/cli/cli.cpp.o:
+
+CMakeFiles/cli.dir/cli/handles.cpp.o:
 
 CMakeFiles/cli.dir/template.pb.cc.o:
 
@@ -492,7 +495,7 @@ CMakeFiles/cli.dir/template.pb.cc.o:
 
 /usr/lib/libabsl_statusor.so.2608.0.0:
 
-/usr/lib/libutf8_validity.so.35.1.0:
+/usr/lib/libutf8_validity.so.36.1.0:
 
 /usr/lib/libabsl_log_internal_conditions.so.2608.0.0:
 
@@ -686,7 +689,7 @@ CMakeFiles/cli.dir/template.pb.cc.o:
 
 /usr/lib/libopenmpt.so.0:
 
-/usr/lib/libbluray.so.3:
+/usr/lib/libbluray.so.4:
 
 /usr/lib32/libgmp.so.10:
 

@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/bernardo/Documents/42/M5/TheAnswerProtocol/cli/cli.cpp" "CMakeFiles/cli.dir/cli/cli.cpp.o" "gcc" "CMakeFiles/cli.dir/cli/cli.cpp.o.d"
+  "/home/bernardo/Documents/42/M5/TheAnswerProtocol/cli/handles.cpp" "CMakeFiles/cli.dir/cli/handles.cpp.o" "gcc" "CMakeFiles/cli.dir/cli/handles.cpp.o.d"
   "/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/template.pb.cc" "CMakeFiles/cli.dir/template.pb.cc.o" "gcc" "CMakeFiles/cli.dir/template.pb.cc.o.d"
   "" "bin/cli" "gcc" "CMakeFiles/cli.dir/link.d"
   )
