@@ -2,72 +2,107 @@ cmake_minimum_required(VERSION 3.20)
 project(TheAnswerProtocol LANGUAGES CXX)
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
-
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-add_compile_options(-Wall -Wextra -Werror)
+include(FetchContent)
 
-option(ENABLE_SANITIZERS "Activer ASan et UBSan" OFF)
-if (ENABLE_SANITIZERS)
-  add_compile_options(-ggdb3 -O0 -fsanitize=address,undefined)
-  add_link_options(-fsanitize=address,undefined)
-endif()
+# 1. Dépendances externes (compilées avec leurs propres règles, sans nos flags stricts)
+set(protobuf_BUILD_TESTS OFF CACHE BOOL "" FORCE)
+set(protobuf_BUILD_PROTOC_BINARIES ON CACHE BOOL "" FORCE)
 
-# Dépendances protobuf et yaml-cpp
-find_package(Protobuf REQUIRED)
-find_package(absl REQUIRED)
-find_package(PkgConfig REQUIRED)
+FetchContent_Declare(
+  protobuf
+  GIT_REPOSITORY https://github.com/protocolbuffers/protobuf.git
+  GIT_TAG v27.3
+)
+FetchContent_MakeAvailable(protobuf)
 
-pkg_check_modules(NOTCURSES REQUIRED IMPORTED_TARGET notcurses)
+# FetchContent_Declare(
+#   absl
+#   GIT_REPOSITORY https://github.com/abseil/abseil-cpp.git
+#   GIT_TAG 20240116.2
+# )
+# FetchContent_MakeAvailable(absl)
 
-add_subdirectory(vendor/yaml-cpp EXCLUDE_FROM_ALL)
+FetchContent_Declare(
+  yaml-cpp
+  GIT_REPOSITORY https://github.com/jbeder/yaml-cpp.git
+  GIT_TAG 0.8.0
+)
+FetchContent_MakeAvailable(yaml-cpp)
 
-# Génération du code c++ à partir du template proto
-protobuf_generate_cpp(PROTO_SRCS PROTO_HDRS template.proto)
+# 2. Génération du code C++ à partir du template.proto
+set(PROTO_FILE "${CMAKE_CURRENT_SOURCE_DIR}/template.proto")
+set(PROTO_SRCS "${CMAKE_CURRENT_BINARY_DIR}/common/template.pb.cc")
+set(PROTO_HDRS "${CMAKE_CURRENT_BINARY_DIR}/common/template.pb.h")
+
+add_custom_command(
+    OUTPUT
+        ${PROTO_SRCS}
+        ${PROTO_HDRS}
+
+    COMMAND
+        $<TARGET_FILE:protoc>
+        --cpp_out=${CMAKE_CURRENT_BINARY_DIR}
+        -I${CMAKE_CURRENT_SOURCE_DIR}
+        ${PROTO_FILE}
+
+    DEPENDS
+        ${PROTO_FILE}
+        protoc
+
+    COMMENT "Génération des sources C++ pour template.proto"
+
+    VERBATIM
+)
+
+add_library(protocol_cpp STATIC
+    ${PROTO_SRCS}
+    ${PROTO_HDRS}
+)
+target_link_libraries(protocol_cpp PUBLIC protobuf::libprotobuf)
+target_include_directories(protocol_cpp PUBLIC ${CMAKE_CURRENT_BINARY_DIR})
 
 include_directories(
   ${CMAKE_CURRENT_SOURCE_DIR}
   ${CMAKE_CURRENT_BINARY_DIR}
-  ${PROTOBUF_INCLUDE_DIRS}
-  vendor/yaml-cpp/include
 )
 
-# exécutables
+# 3. Exécutables de votre projet
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
-set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
-
-add_executable(server
-  server/server.cpp
-  ${PROTO_SRCS}
-  ${PROTO_HDRS}
-)
-
+add_executable(server server/server.cpp)
 target_link_libraries(server PRIVATE
-  protobuf::libprotobuf
+  protocol_cpp
   absl::log_internal_check_op
   yaml-cpp
 )
 
-add_executable(gui
-  gui/gui.cpp
-  ${PROTO_SRCS}
-  ${PROTO_HDRS}
-)
+add_executable(gui gui/gui.cpp)
 target_link_libraries(gui PRIVATE
-  protobuf::libprotobuf
+  protocol_cpp
   absl::log_internal_check_op
 )
 
-add_executable(cli
-  cli/cli.cpp
-  cli/handles.cpp
-  ${PROTO_SRCS}
-  ${PROTO_HDRS}
-)
+add_executable(cli cli/cli.cpp cli/handles.cpp)
 target_link_libraries(cli PRIVATE
-  protobuf::libprotobuf
+  protocol_cpp
   absl::log_internal_check_op
-  PkgConfig::NOTCURSES
 )
+
+# 4. Vos flags stricts appliqués UNIQUEMENT sur vos binaires (server, gui, cli)
+# On exclut volontairement protocol_cpp, protobuf, absl et yaml-cpp pour leur faire confiance.
+set(MY_TARGETS server gui cli)
+
+foreach(target ${MY_TARGETS})
+  target_compile_options(${target} PRIVATE -Wall -Wextra -Werror)
+endforeach()
+
+option(ENABLE_SANITIZERS "Activer ASan et UBSan" OFF)
+if (ENABLE_SANITIZERS)
+  foreach(target ${MY_TARGETS})
+    target_compile_options(${target} PRIVATE -ggdb3 -O0 -fsanitize=address,undefined)
+    target_link_options(${target} PRIVATE -fsanitize=address,undefined)
+  endforeach()
+endif()

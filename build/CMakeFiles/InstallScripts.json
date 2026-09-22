@@ -1,9 +1,0 @@
-{
-	"InstallScripts" : 
-	[
-		"/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/cmake_install.cmake",
-		"/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/vendor/yaml-cpp/cmake_install.cmake",
-		"/home/bernardo/Documents/42/M5/TheAnswerProtocol/build/vendor/yaml-cpp/util/cmake_install.cmake"
-	],
-	"Parallel" : false
-}
