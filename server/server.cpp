@@ -8,7 +8,7 @@
 #include <vector>
 #include <yaml-cpp/yaml.h>
 
-#include "../common/template.pb.h"
+#include "template.pb.h"
 #include "Runner.hpp"
 #include "common/Socket.hpp"
 #include "common/ThreadSafeQueue.hpp"

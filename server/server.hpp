@@ -6,7 +6,7 @@
 #include <thread>
 #include <iostream>
 
-#include "../common/Socket.hpp"
+#include "common/Socket.hpp"
 
 
 void server_loop(Socket socket);

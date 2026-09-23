@@ -6,9 +6,9 @@
 #include <sys/eventfd.h>
 #include <thread>
 
-#include "../common/Socket.hpp"
-#include "../common/ThreadSafeQueue.hpp"
-#include "../common/template.pb.h"
+#include "common/Socket.hpp"
+#include "common/ThreadSafeQueue.hpp"
+#include "template.pb.h"
 
 class Runner {
 private:

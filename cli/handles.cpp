@@ -1,5 +1,5 @@
 #include "cli.hpp"
-#include "common/template.pb.h"
+#include "template.pb.h"
 
 void handleWorldInit(game::WorldDelta& worldInit, game::ClientWorld& localWorld)
 {

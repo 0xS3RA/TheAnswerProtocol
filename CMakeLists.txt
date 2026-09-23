@@ -32,10 +32,27 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(yaml-cpp)
 
-# 2. Génération du code C++ à partir du template.proto
-set(PROTO_FILE "${CMAKE_CURRENT_SOURCE_DIR}/template.proto")
-set(PROTO_SRCS "${CMAKE_CURRENT_BINARY_DIR}/common/template.pb.cc")
-set(PROTO_HDRS "${CMAKE_CURRENT_BINARY_DIR}/common/template.pb.h")
+# 2. Génération du code C++ à partir de template.proto
+
+set(PROTO_FILE
+    "${CMAKE_CURRENT_SOURCE_DIR}/template.proto"
+)
+
+set(PROTO_GEN_DIR
+    "${CMAKE_CURRENT_BINARY_DIR}/common"
+)
+
+set(PROTO_SRCS
+    "${PROTO_GEN_DIR}/template.pb.cc"
+)
+
+set(PROTO_HDRS
+    "${PROTO_GEN_DIR}/template.pb.h"
+)
+
+# protoc ne crée pas forcément le répertoire de sortie racine,
+# donc on le crée explicitement.
+file(MAKE_DIRECTORY "${PROTO_GEN_DIR}")
 
 add_custom_command(
     OUTPUT
@@ -43,14 +60,14 @@ add_custom_command(
         ${PROTO_HDRS}
 
     COMMAND
-        $<TARGET_FILE:protoc>
-        --cpp_out=${CMAKE_CURRENT_BINARY_DIR}
+        $<TARGET_FILE:protobuf::protoc>
+        --cpp_out=${PROTO_GEN_DIR}
         -I${CMAKE_CURRENT_SOURCE_DIR}
         ${PROTO_FILE}
 
     DEPENDS
         ${PROTO_FILE}
-        protoc
+        protobuf::protoc
 
     COMMENT "Génération des sources C++ pour template.proto"
 
@@ -61,12 +78,15 @@ add_library(protocol_cpp STATIC
     ${PROTO_SRCS}
     ${PROTO_HDRS}
 )
-target_link_libraries(protocol_cpp PUBLIC protobuf::libprotobuf)
-target_include_directories(protocol_cpp PUBLIC ${CMAKE_CURRENT_BINARY_DIR})
 
-include_directories(
-  ${CMAKE_CURRENT_SOURCE_DIR}
-  ${CMAKE_CURRENT_BINARY_DIR}
+target_link_libraries(protocol_cpp
+    PUBLIC
+        protobuf::libprotobuf
+)
+
+target_include_directories(protocol_cpp
+    PUBLIC
+        ${PROTO_GEN_DIR}
 )
 
 # 3. Exécutables de votre projet
@@ -97,6 +117,9 @@ set(MY_TARGETS server gui cli)
 
 foreach(target ${MY_TARGETS})
   target_compile_options(${target} PRIVATE -Wall -Wextra -Werror)
+  target_include_directories(${target} PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}
+  )
 endforeach()
 
 option(ENABLE_SANITIZERS "Activer ASan et UBSan" OFF)

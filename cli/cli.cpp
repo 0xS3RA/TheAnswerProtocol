@@ -1,9 +1,8 @@
 #include "cli.hpp"
-#include "../common/template.pb.h"
+#include "template.pb.h"
 #include "Runner.hpp"
 #include <ios>
 #include <limits>
-#include <notcurses/notcurses.h>
 #include <string>
 
 void game_loop(Socket server_socket, std::string_view name)
