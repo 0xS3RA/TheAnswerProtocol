@@ -1,108 +1,139 @@
-# The available items are declared and put inside a list of items
+start_room: loc.square
+respawn_room: loc.square
+
 items:
-  ale:
+  item.bread:
+    name: "Loaf of Bread"
+    description: "A warm loaf baked this morning."
+    obtainable: true
+  item.ale:
     name: "Frothy Ale"
-    description: "A refreshing drink that restores energy."
+    description: "A refreshing mug from the village tavern."
     obtainable: true
-    effects: ["energy_buff:1"]
-    usage: "self"
-  healPotion:
-    name: "healing elixir"
-    description: "A crazy good beverage that makes u feel better"
+  item.herbs:
+    name: "Healing Herbs"
+    description: "Fragrant herbs sought by the village healer."
     obtainable: true
-    effects: ["heal:100"]
-    usage: "self"
-  guardKey:
-    name: "Guard's key"
-    description: "The well kept guard key needed to enter the closed cave"
+  item.torch:
+    name: "Old Torch"
+    description: "A battered but usable wooden torch."
     obtainable: true
-    effects: ["key:0"]
-    usage: "world"
+  item.coin:
+    name: "Gold Coin"
+    description: "A heavy coin awarded for helping the village."
+    obtainable: true
+  item.sword:
+    name: "Iron Sword"
+    description: "A balanced sword that adds five attack damage."
+    obtainable: true
+    attack_bonus: 5
 
-
-# The available npcs are declared and put inside a list of npcs
 npcs:
-  guard:
-    name: "Village Guard"
-    description: "A stern-looking guard watching over the square."
-    dialogue: ["Stay safe, traveler.", "The roads can be dangerous."]
-    hp: 50
-    inventory: ["guardKey:1", "ale:1"]
-    temperament: "defensive"
-    money: 50
-  merchant:
-    name: "Shop Keeper"
-    description: "A friendly merchant eager to trade."
-    dialogue: ["Welcome to my shop!", "What can I get for you today?"]
-    hp: 15
-    inventory: ["healPotion:5:25"] # name:quantity:price
-    temperament: "defensive"
-    money: 0
-  bartender:
-    name: "Barman Joe"
-    description: "A charismatic barman wanting you to get wasted"
-    dialogue: ["Hello young alcoholic!", "What can I get for you today?"]
-    hp: 15
-    inventory: ["ale:10"]
-    temperament: "defensive"
-    money: 0
-  goblin:
-    name: "Cave Goblin"
-    description: "A ugly and dangerous little goblin"
+  npc.baker:
+    name: "Village Baker"
+    description: "A flour-covered baker arranging fresh loaves."
+    dialogue: ["Fresh bread, straight from the oven!", "The northern path reaches the old watchtower."]
     hp: 30
-    temperament: "aggressive"
-    money: 50
+  npc.barkeep:
+    name: "Barkeep"
+    description: "The cheerful owner of the Copper Mug."
+    dialogue: ["Welcome to the Copper Mug.", "Travellers say goblins hide below the clearing."]
+    hp: 35
+  npc.merchant:
+    name: "Village Merchant"
+    description: "A travelling merchant looking for medicinal plants."
+    dialogue: ["I need healing herbs from the forest clearing."]
+    hp: 40
+    quest: quest.herbs
+  npc.guard:
+    name: "Village Guard"
+    description: "A vigilant guard watching the northern road."
+    dialogue: ["A goblin in the crypt threatens the village."]
+    hp: 60
+    quest: quest.goblin
+  npc.bandit:
+    name: "Forest Bandit"
+    description: "A highwayman blocking the forest path."
+    hostile: true
+    hp: 25
+    attack: 6
+  npc.goblin:
+    name: "Cave Goblin"
+    description: "A dangerous goblin armed with a chipped dagger."
+    hostile: true
+    hp: 30
+    attack: 8
+  npc.skeleton:
+    name: "Crypt Skeleton"
+    description: "An animated skeleton guarding the old tomb."
+    hostile: true
+    hp: 20
+    attack: 5
 
+quests:
+  quest.herbs:
+    giver: npc.merchant
+    description: "Bring one bundle of Healing Herbs to the merchant."
+    kind: fetch
+    target: item.herbs
+    amount: 1
+    reward: item.coin
+  quest.goblin:
+    giver: npc.guard
+    description: "Defeat the Cave Goblin and return to the guard."
+    kind: defeat
+    target: npc.goblin
+    amount: 1
+    reward: item.sword
 
-# Set up the whole world, and for each npcs or items, create a new one with a unique id
-# (We can have multiple heal potions, but with uniques ids)
-#
-world:
-  locations:
-    start:
-      name: "Village Square"
-      description: "A bustling square with cobblestone paths."
-      exits:
-        north: "main_avenue"
-    main_avenue:
-      name: "Main Avenue"
-      description: "The place you need to go through to go anywhere"
-      exits:
-      - direction: "east"
-        location_name: "tavern"
-        is_locked: false
-      - direction: west
-        location_name : "shop"
-        is_locked: false
-      - direction: north
-        location_name: "locked_cave"
-        is_locked: true
-        unlock_item: guardKey
-      spawns:
-      - npc_type: "guard"
-        count: 1
-    tavern:
-      name: "The Prancing Pony"
-      description: "A cozy tavern filled with warmth and laughter."
-      exits:
-        west: "start"
-      items: ["ale"]
-      spawns:
-      - npc_type: "bartender"
-        count: 1
-    shop:
-      name: "General Store"
-      description: "Shelves lined with various goods and supplies."
-      exits:
-        east: "start"
-      spawns:
-      - npc_type: "merchant"
-        count: 1
-    locked_cave:
-      name: "Locked Cave"
-      description: "A cave locked by the king, they say it's dangerous inside"
-      exits:
-        south: "main_avenue"
-      spawns:
-      - npc_type: "goblin"
-        count: 2
+rooms:
+  loc.square:
+    name: "Village Square"
+    description: "Cobblestone paths meet around an old fountain."
+    exits: {north: loc.bakery, east: loc.market, west: loc.tavern, south: loc.well}
+    npcs: [npc.merchant]
+  loc.bakery:
+    name: "Village Bakery"
+    description: "Warm air carries the scent of fresh bread."
+    exits: {south: loc.square, east: loc.north_gate}
+    items: [item.bread]
+    npcs: [npc.baker]
+  loc.north_gate:
+    name: "North Gate"
+    description: "An iron gate opens toward the forest."
+    exits: {west: loc.bakery, south: loc.market, east: loc.watchtower}
+    npcs: [npc.guard]
+  loc.watchtower:
+    name: "Old Watchtower"
+    description: "The ruined tower overlooks the forest canopy."
+    exits: {west: loc.north_gate, south: loc.forest_path}
+    items: [item.torch]
+  loc.market:
+    name: "Market Street"
+    description: "Empty stalls line a broad street."
+    exits: {west: loc.square, north: loc.north_gate, east: loc.forest_path}
+  loc.forest_path:
+    name: "Forest Path"
+    description: "A narrow trail winds between ancient trees."
+    exits: {west: loc.market, north: loc.watchtower, south: loc.clearing}
+    npcs: [npc.bandit]
+  loc.clearing:
+    name: "Forest Clearing"
+    description: "Sunlight reaches a patch of medicinal plants."
+    exits: {north: loc.forest_path, down: loc.crypt}
+    items: [item.herbs]
+  loc.crypt:
+    name: "Forgotten Crypt"
+    description: "Cold stone steps descend among broken tombs."
+    exits: {up: loc.clearing}
+    npcs: [npc.goblin, npc.skeleton]
+  loc.tavern:
+    name: "The Copper Mug"
+    description: "A small tavern filled with quiet conversation."
+    exits: {east: loc.square}
+    items: [item.ale]
+    npcs: [npc.barkeep]
+  loc.well:
+    name: "Old Well"
+    description: "A moss-covered well marks a peaceful dead end."
+    exits: {north: loc.square}

@@ -1,131 +1,72 @@
 cmake_minimum_required(VERSION 3.20)
 project(TheAnswerProtocol LANGUAGES CXX)
 
-set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin")
 
 include(FetchContent)
+find_package(yaml-cpp QUIET)
+if(NOT yaml-cpp_FOUND)
+    set(YAML_CPP_BUILD_TESTS OFF CACHE BOOL "" FORCE)
+    set(YAML_CPP_BUILD_TOOLS OFF CACHE BOOL "" FORCE)
+    FetchContent_Declare(
+        yaml-cpp
+        GIT_REPOSITORY https://github.com/jbeder/yaml-cpp.git
+        GIT_TAG yaml-cpp-0.9.0
+    )
+    FetchContent_MakeAvailable(yaml-cpp)
+endif()
 
-# 1. Dépendances externes (compilées avec leurs propres règles, sans nos flags stricts)
-set(protobuf_BUILD_TESTS OFF CACHE BOOL "" FORCE)
-set(protobuf_BUILD_PROTOC_BINARIES ON CACHE BOOL "" FORCE)
+find_package(Threads REQUIRED)
 
-FetchContent_Declare(
-  protobuf
-  GIT_REPOSITORY https://github.com/protocolbuffers/protobuf.git
-  GIT_TAG v27.3
+add_library(tap_common
+    common/Logger.cpp
+    common/Protocol.cpp
+    common/Socket.cpp
 )
-FetchContent_MakeAvailable(protobuf)
+target_include_directories(tap_common PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}")
+target_link_libraries(tap_common PUBLIC Threads::Threads)
 
-# FetchContent_Declare(
-#   absl
-#   GIT_REPOSITORY https://github.com/abseil/abseil-cpp.git
-#   GIT_TAG 20240116.2
-# )
-# FetchContent_MakeAvailable(absl)
-
-FetchContent_Declare(
-  yaml-cpp
-  GIT_REPOSITORY https://github.com/jbeder/yaml-cpp.git
-  GIT_TAG yaml-cpp-0.9.0
+add_library(tap_game
+    server/Game.cpp
+    server/World.cpp
 )
-FetchContent_MakeAvailable(yaml-cpp)
+target_include_directories(tap_game PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}")
+target_link_libraries(tap_game PUBLIC tap_common yaml-cpp)
 
-# 2. Génération du code C++ à partir de template.proto
+add_executable(tap-server server/server.cpp)
+target_link_libraries(tap-server PRIVATE tap_game)
 
-set(PROTO_FILE
-    "${CMAKE_CURRENT_SOURCE_DIR}/template.proto"
-)
+add_executable(tap-cli cli/cli.cpp)
+target_link_libraries(tap-cli PRIVATE tap_common)
 
-set(PROTO_GEN_DIR
-    "${CMAKE_CURRENT_BINARY_DIR}/common"
-)
-
-set(PROTO_SRCS
-    "${PROTO_GEN_DIR}/template.pb.cc"
-)
-
-set(PROTO_HDRS
-    "${PROTO_GEN_DIR}/template.pb.h"
-)
-
-# protoc ne crée pas forcément le répertoire de sortie racine,
-# donc on le crée explicitement.
-file(MAKE_DIRECTORY "${PROTO_GEN_DIR}")
-
-add_custom_command(
-    OUTPUT
-        ${PROTO_SRCS}
-        ${PROTO_HDRS}
-
-    COMMAND
-        $<TARGET_FILE:protobuf::protoc>
-        --cpp_out=${PROTO_GEN_DIR}
-        -I${CMAKE_CURRENT_SOURCE_DIR}
-        ${PROTO_FILE}
-
-    DEPENDS
-        ${PROTO_FILE}
-        protobuf::protoc
-
-    COMMENT "Génération des sources C++ pour template.proto"
-
-    VERBATIM
-)
-
-add_library(protocol_cpp STATIC
-    ${PROTO_SRCS}
-    ${PROTO_HDRS}
-)
-
-target_link_libraries(protocol_cpp
-    PUBLIC
-        protobuf::libprotobuf
-)
-
-target_include_directories(protocol_cpp
-    PUBLIC
-        ${PROTO_GEN_DIR}
-)
-
-# 3. Exécutables de votre projet
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
-
-add_executable(server server/server.cpp)
-target_link_libraries(server PRIVATE
-  protocol_cpp
-  absl::log_internal_check_op
-  yaml-cpp
-)
-
-add_executable(gui gui/gui.cpp)
-target_link_libraries(gui PRIVATE
-  protocol_cpp
-  absl::log_internal_check_op
-)
-
-add_executable(cli cli/cli.cpp cli/handles.cpp)
-target_link_libraries(cli PRIVATE
-  protocol_cpp
-  absl::log_internal_check_op
-)
-
-# 4. Vos flags stricts appliqués UNIQUEMENT sur vos binaires (server, gui, cli)
-# On exclut volontairement protocol_cpp, protobuf, absl et yaml-cpp pour leur faire confiance.
-set(MY_TARGETS server gui cli)
-
-foreach(target ${MY_TARGETS})
-  target_compile_options(${target} PRIVATE -Wall -Wextra -Werror)
-  target_include_directories(${target} PRIVATE
-    ${CMAKE_CURRENT_SOURCE_DIR}
-  )
+set(TAP_TARGETS tap_common tap_game tap-server tap-cli)
+foreach(target IN LISTS TAP_TARGETS)
+    target_compile_options(${target} PRIVATE -Wall -Wextra -Wpedantic -Werror)
 endforeach()
 
-option(ENABLE_SANITIZERS "Activer ASan et UBSan" OFF)
-if (ENABLE_SANITIZERS)
-  foreach(target ${MY_TARGETS})
-    target_compile_options(${target} PRIVATE -ggdb3 -O0 -fsanitize=address,undefined)
-    target_link_options(${target} PRIVATE -fsanitize=address,undefined)
-  endforeach()
+option(ENABLE_SANITIZERS "Enable address and undefined behavior sanitizers" OFF)
+if(ENABLE_SANITIZERS)
+    foreach(target IN LISTS TAP_TARGETS)
+        target_compile_options(${target} PRIVATE -O0 -g3 -fsanitize=address,undefined)
+        target_link_options(${target} PRIVATE -fsanitize=address,undefined)
+    endforeach()
+endif()
+
+include(CTest)
+if(BUILD_TESTING)
+    add_executable(tap-tests tests/tests.cpp)
+    target_link_libraries(tap-tests PRIVATE tap_game)
+    target_compile_options(tap-tests PRIVATE -Wall -Wextra -Wpedantic -Werror)
+    target_compile_definitions(
+        tap-tests PRIVATE TAP_WORLD_PATH="${CMAKE_CURRENT_SOURCE_DIR}/world.yaml"
+    )
+    if(ENABLE_SANITIZERS)
+        target_compile_options(tap-tests PRIVATE -O0 -g3 -fsanitize=address,undefined)
+        target_link_options(tap-tests PRIVATE -fsanitize=address,undefined)
+    endif()
+    add_test(NAME tap-tests COMMAND tap-tests)
 endif()
